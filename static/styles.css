@@ -28,3 +28,43 @@
 	width: 100%;
 	background-size: 100%;
 }
+
+/* preview */
+.c-preview--img {
+	width: 100%;
+	height: auto;
+}
+
+/* color */
+.color--blue {
+ color:	#0C3EF1;
+}
+
+.color--gray {
+	color: #A0A0A0;
+}
+
+.color--purple {
+	color: #BB43F4;
+}
+
+/* bacground */
+.bkg--blue-transparent {
+ background: rgba(12, 62, 241, 0.1);
+}
+
+.bkg--yellow-transparent {
+	background: rgba(241, 232, 12, 0.3);
+}
+
+.bkg--purple-transparent {
+	background: rgba(168, 12, 241, 0.1);
+}
+
+.bkg--purple {
+	background: #BB43F4;
+}
+
+.max-h--200 {
+	max-height: 200px;
+}
