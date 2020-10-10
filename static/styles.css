@@ -65,6 +65,22 @@
 	background: #BB43F4;
 }
 
+.bkg--blue {
+	background: #CFF0FC;
+}
+
+.bkg--green {
+	background: #C0F5E9;
+}
+
+.bkg--yellow {
+	background: #FFEAB8;
+}
+
+.bkg--pink {
+	background: #FFDAF5;
+}
+
 .max-h--200 {
 	max-height: 200px;
 }
@@ -74,4 +90,18 @@
 	min-width: 5rem;
 	max-width: 5rem;
 	max-height: 5rem;
+}
+
+.fade-out {
+	position: relative;
+}
+
+.fade-out::before {
+	content: '';
+	background: url(../static/img/fade-out.png);
+	position: absolute;
+	height: 40px;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
