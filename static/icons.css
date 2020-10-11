@@ -46,3 +46,7 @@
 .icon-add:before {
   content: "\e906";
 }
+
+.g-modal {
+  display: none;
+}

@@ -16,11 +16,20 @@
   <link rel="manifest" href="/static/manifest.json">
   <link type="text/plain" rel="author" href="/humans.txt">
   <meta name="generator" content="Clay (https://github.com/lucuma/clay)" />
+  <link rel="stylesheet" href="/static/modal.css">
   {% block head %}{% endblock %}
 </head>
 <body>
   {% block content %}{% endblock %}
+  <div class="modal">
+    <div class="modal-inner">
+      <span data-modal-close>&times;</span>
+      <div class="modal-content"></div>
+    </div>
+  </div>
+  <script src="/static/modal.js"></script>
   <script src="/static/scripts.js?v=1.0"></script>
+  <script>var vanillaModal = new VanillaModal.default()</script>
   {% block scripts %}{% endblock %}
 </body>
 </html>
