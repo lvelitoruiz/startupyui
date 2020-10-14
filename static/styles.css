@@ -105,3 +105,11 @@
 	left: 0;
 	right: 0;
 }
+
+.items-tabs {
+	display: none;
+}
+
+.tabs-active {
+	display: grid;
+}

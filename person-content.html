@@ -70,29 +70,29 @@
       <div class="mt-4">
         <ul class="flex overflow-auto pb-4 md:justify-center">
           <li class="pr-12 pl-5 md:pl-0">
-            <a class="whitespace-no-wrap color--blue font-bold hover:color--blue" href="#">Curated<span class="pl-2 color--gray font-normal">12</span></a>
+            <a class="trigger-tabs whitespace-no-wrap color--blue font-bold hover:color--blue" href="#curated">Curated<span class="pl-2 color--gray font-normal">12</span></a>
           </li>
           <li class="pr-12">
-            <a class="whitespace-no-wrap hover:color--blue" href="#">Authored<span class="pl-2 color--gray">5</span></a>
+            <a class="trigger-tabs whitespace-no-wrap hover:color--blue" href="#authored">Authored<span class="pl-2 color--gray">5</span></a>
           </li>
           <li class="pr-12">
-            <a class="whitespace-no-wrap hover:color--blue" href="#">Mentioned In<span class="pl-2 color--gray">2</span></a>
+            <a class="trigger-tabs whitespace-no-wrap hover:color--blue" href="#mentioned">Mentioned In<span class="pl-2 color--gray">2</span></a>
           </li>
           <li class="pr-12">
-            <a class="whitespace-no-wrap hover:color--blue" href="#">Roles<span class="pl-2 color--gray">5</span></a>
+            <a class="trigger-tabs whitespace-no-wrap hover:color--blue" href="#rol">Roles<span class="pl-2 color--gray">5</span></a>
           </li>
           <li class="pr-12 md:pr-0">
-            <a class="whitespace-no-wrap hover:color--blue" href="#">Watching<span class="pl-2 color--gray">5</span></a>
+            <a class="trigger-tabs whitespace-no-wrap hover:color--blue" href="#watching">Watching<span class="pl-2 color--gray">5</span></a>
           </li>
         </ul>
       </div>
       
       <div class="md:mt-6">
         <!-- Curated -->
-        <div class="grid md:grid-cols-2">
+        <div class="items-tabs grid md:grid-cols-2 tabs-active" id="curated">
           <div class="p-5 pt-6 md:border-r border-solid">
             <div class="flex">
-              <p class="mr-10">Mentioned In <span class="color--gray">5</span></p>
+              <p class="mr-10">Curated Content <span class="color--gray">5</span></p>
               <i class="icon-add text-2xl color--gray cursor-pointer"></i>
             </div>
             <div>
@@ -331,7 +331,7 @@
         </div>
 
         <!-- Authored -->
-        <div class="md:grid grid-cols-8 gap-4 mt-8 md:mt-12">
+        <div class="items-tabs md:grid grid-cols-8 gap-4 mt-8 md:mt-12" id="authored">
           <div class="md:col-start-3 col-span-4">
             <div class="p-5">
               <div class="flex mt-6 flex-col justify-between md:items-center md:flex-row">
@@ -399,7 +399,7 @@
         </div>
 
         <!-- Mentioned In -->
-        <div class="md:grid grid-cols-8 gap-4 mt-8 md:mt-12">
+        <div class="items-tabs md:grid grid-cols-8 gap-4 mt-8 md:mt-12" id="mentioned">
           <div class="md:col-start-3 col-span-4">
             <div class="p-5">
               <div class="flex mt-6 flex-col justify-between md:items-center md:flex-row">
@@ -529,7 +529,7 @@
         </div>
 
         <!-- Roles -->
-        <div class="md:grid grid-cols-10 gap-4 mt-8 md:mt-12">
+        <div class="items-tabs md:grid grid-cols-10 gap-4 mt-8 md:mt-12" id="rol">
           <div class="md:col-start-4 col-span-4">
             <div class="p-5 pb-0">
               <h3 class="font-bold pb-2 md:pl-5 pb-0">Design</h3>
@@ -601,7 +601,7 @@
         </div>
 
         <!-- Watching -->
-        <div class="md:grid grid-cols-8 gap-4 mt-8 md:mt-12">
+        <div class="items-tabs md:grid grid-cols-8 gap-4 mt-8 md:mt-12" id="watching">
           <div class="md:col-start-3 col-span-4">
             
             <div class="mt-4">
