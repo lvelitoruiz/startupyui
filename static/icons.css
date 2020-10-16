@@ -25,24 +25,34 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-eye-black:before {
+  content: "\e907";
+}
+
 .icon-eye:before {
   content: "\e900";
 }
+
 .icon-nav:before {
   content: "\e901";
 }
+
 .icon-twitter:before {
   content: "\e902";
 }
+
 .icon-iso:before {
   content: "\e903";
 }
+
 .icon-link:before {
   content: "\e904";
 }
+
 .icon-info:before {
   content: "\e905";
 }
+
 .icon-add:before {
   content: "\e906";
 }
