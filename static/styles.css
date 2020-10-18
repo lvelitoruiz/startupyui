@@ -113,3 +113,25 @@
 .tabs-active {
 	display: grid;
 }
+
+.search {
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.search.active {
+	justify-content: center;
+	cursor: initial;
+}
+
+.search.active .search--icon {
+	display: none;
+}
+
+.search.active .search--content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
