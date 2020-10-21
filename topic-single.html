@@ -6,30 +6,22 @@
 {%- endblock %}
 
 {% block content %}
-<header class="c-header">
-  <div class="c-header--top items-center justify-between flex">
-    <a class="pl-4 text-xl" href=""><h1 class="ff-conv-PxGrotesk text-white">Startupy</h1></a>
-    <div>
-      <a class="text-white p-2 font-bold text-xs" href="">Our Manifesto</a>
-      <a class="text-white p-2 font-bold text-xs" href="">Join Membership</a>
-      <a class="text-white p-2 pr-4 font-bold text-xs" href="">Login</a>
-    </div>
-  </div>
-</header>
+
+{%- include 'header.html' %}
 
 <main>
   <section class="container mx-auto">
-    <div class="lg:grid grid-cols-6 gap-4 mt-8 lg:mt-12">
+    <div class="lg:grid grid-cols-6 gap-4 pt-12">
       <div class="md:col-start-2 col-span-4">
-        <div class="p-5">
+        <div class="p-4 md:p-5">
           <div class="flex">
-            <div class="mr-4 lg:mr-8">
+            <div>
               <div class="flex items-center justify-center lg:h-20 lg:w-20 mt-6">
               </div>
             </div>
             <div>
-              <div class="flex items-center">
-                <h2 class="text-2xl md:text-4xl font-bold">The Future of Warehousing</h2>
+              <div class="flex items-center mb-4">
+                <h2 class="text-2xl leading-tight md:text-4xl font-bold pr-6">Carbon Offsetting and Carbon Removal</h2>
                 <i class="icon-eye-black text-4xl ml-3 color--blue"></i>
               </div>
               <div class="flex items-center color--gray">
@@ -86,10 +78,12 @@
       </div>
     </div>
   </section>
+
   <section class="border-solid border-t border-b mt-10">
     <div class="container mx-auto">
-      <div class="search active p-5">
-        <svg class="h-6 w-6 search--icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <!-- Agregar clase Active para mostrar el search -->
+      <div class="search p-5">
+        <svg class="h-6 w-full search--icon md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -112,11 +106,27 @@
       </div>
     </div>
   </section>
+
   <section>
     <div class="container mx-auto">
       <div class="grid md:grid-cols-2">
-        <div class="p-5 pt-6 md:border-r border-solid">
-          <div class="flex">
+        
+        <div class="pl-4 pt-4 mt-2 md:hidden">
+          <div class="flex items-center">
+            <span>Connected Content</span>
+            <svg class="h-4 w-4 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
+        
+        <div class="p-4 pt-6 md:border-r border-solid md:p-5 select-item active">
+          <div class="hidden md:flex">
             <p class="mr-10">Connected Content <span class="color--gray">5</span></p>
             <i class="icon-add text-2xl color--gray cursor-pointer" data-ref="#box1" data-modal-open></i>
           </div>
@@ -161,7 +171,7 @@
             <div class="mt-2">
               <div class="flex">
                 <div class="flex items-center bg-black px-1">
-                  <h3 class="text-2xl font-bold text-white">We need to take CO2 out of the sky</h3>
+                  <h3 class="text-md font-bold text-white md:text-2xl">We need to take CO2 out of the sky</h3>
                   <i class="icon-eye ml-2 text-3xl text-white"></i>
                 </div>
               </div>
@@ -223,8 +233,8 @@
             </div>
             <div class="mt-2">
               <div class="flex">
-                <div class="flex items-center bg-black px-1 max-w-md">
-                  <h3 class="text-2xl font-bold text-white">Startups that offer new paths tohomeownership</h3>
+                <div class="flex items-center bg-black px-1 md:max-w-md">
+                  <h3 class="text-md font-bold text-white md:text-2xl">Startups that offer new paths tohomeownership</h3>
                   <i class="icon-eye ml-2 text-3xl text-white"></i>
                 </div>
               </div>
@@ -253,126 +263,97 @@
             </div>
           </div>
         </div>
-        <div>
-          <div class="flex p-5 pt-6 pb-0">
+
+        <div class="select-item">
+          <div class="p-5 pt-6 pb-0 hidden md:flex">
             <p class="mr-10">Connected Companies <span class="color--gray">10</span></p>
             <i class="icon-add text-2xl color--gray cursor-pointer"></i>
           </div>
-          <div class="flex border-solid border-b p-5">
-            <div class="box-img flex items-center justify-center bg-black">
-              <span class="text-white font-bold">CS</span>
-            </div>
-            <div class="pl-4">
-              <div class="flex items-center flex-wrap">
-                <p class="font-bold mr-3">
-                  Comrad Socks
-                </p>
-                <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                  <i class="icon-link"></i>
-                  <span>robert-fox</span>
-                </a>
-                <i class="icon-eye text-xl color--gray"></i>
+          <div>
+            <div class="flex border-solid border-b p-5 hidden md:flex">
+              <div class="box-img flex items-center justify-center bg-black">
+                <span class="text-white font-bold">CS</span>
               </div>
-              <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+              <div class="pl-4">
+                <div class="flex items-center flex-wrap">
+                  <p class="font-bold mr-3">
+                    BioClarity
+                  </p>
+                  <span class="text-xs bkg--green px-2 py-1 mr-3">Public</span>
+                  <span class="text-xs color--gray mr-3">Founded 2020</span>
+                  <span class="text-xs color--gray mr-3">Chicago $1.2M</span>
+                </div>
+                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+              </div>
             </div>
-          </div>
-          <div class="flex border-solid border-b p-5">
-            <div class="box-img flex items-center justify-center bg-black">
-              <span class="text-white font-bold">CS</span>
-            </div>
-            <div class="pl-4">
-              <div class="flex items-center flex-wrap">
-                <p class="font-bold mr-3">
+            <div class="border-solid border-b p-4 md:hidden">
+              <div class="flex items-center">
+                <div class="box-img flex items-center justify-center bg-black">
+                  <span class="text-white font-bold">CS</span>
+                </div>
+                <p class="font-bold ml-3 mr-3 w-full">
                   BioClarity
                 </p>
-                <span class="text-xs bkg--green px-2 py-1 mr-3">Public</span>
-                <span class="text-xs color--gray mr-3">Founded 2020</span>
-                <span class="text-xs color--gray mr-3">Chicago $1.2M</span>
-              </div>
-              <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
-            </div>
-          </div>
-          <div class="flex border-solid border-b p-5">
-            <div class="box-img flex items-center justify-center bg-black">
-              <span class="text-white font-bold">CS</span>
-            </div>
-            <div class="pl-4">
-              <div class="flex items-center flex-wrap">
-                <p class="font-bold mr-3">
-                  Brightside
-                </p>
-                <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
-                <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                  <i class="icon-link"></i>
-                  <span>brightside.com</span>
-                </a>
                 <i class="icon-eye text-xl color--gray"></i>
               </div>
-              <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+              <div class="pt-4">
+                <div class="flex items-center flex-wrap mb-2">
+                  <span class="text-xs bkg--green px-2 py-1 mr-3">Public</span>
+                  <span class="text-xs color--gray mr-3">Founded 2020</span>
+                  <span class="text-xs color--gray mr-3">Chicago $1.2M</span>
+                </div>
+                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+              </div>
             </div>
           </div>
-          <div class="flex border-solid border-b p-5">
-            <div class="box-img flex items-center justify-center bg-black">
-              <span class="text-white font-bold">CS</span>
+          <div>
+            <div class="flex border-solid border-b p-5 hidden md:flex">
+              <div class="box-img flex items-center justify-center bg-black">
+                <span class="text-white font-bold">CS</span>
+              </div>
+              <div class="pl-4">
+                <div class="flex items-center flex-wrap">
+                  <p class="font-bold mr-3">
+                    Brightside
+                  </p>
+                  <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                  <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                    <i class="icon-link"></i>
+                    <span>brightside.com</span>
+                  </a>
+                  <i class="icon-eye text-xl color--gray"></i>
+                </div>
+                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+              </div>
             </div>
-            <div class="pl-4">
-              <div class="flex items-center flex-wrap">
-                <p class="font-bold mr-3">
+            <div class="border-solid border-b p-4 md:hidden">
+              <div class="flex items-center">
+                <div class="box-img flex items-center justify-center bg-black">
+                  <span class="text-white font-bold">CS</span>
+                </div>
+                <p class="font-bold ml-3 mr-3 w-full">
                   Mighty
                 </p>
-                <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
-                <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                  <i class="icon-link"></i>
-                  <span>mighty.com</span>
-                </a>
                 <i class="icon-eye text-xl color--gray"></i>
               </div>
-              <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
-            </div>
-          </div>
-          <div class="flex border-solid border-b p-5">
-            <div class="box-img flex items-center justify-center bg-black">
-              <span class="text-white font-bold">CS</span>
-            </div>
-            <div class="pl-4">
-              <div class="flex items-center flex-wrap">
-                <p class="font-bold mr-3">
-                  Comrad Socks
-                </p>
-                <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                  <i class="icon-link"></i>
-                  <span>robert-fox</span>
-                </a>
-                <i class="icon-eye text-xl color--gray"></i>
+              <div class="pt-4">
+                <div class="flex items-center flex-wrap mb-2">
+                  <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                  <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                    <i class="icon-link"></i>
+                    <span>mighty.com</span>
+                  </a>
+                </div>
+                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
               </div>
-              <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
-            </div>
-          </div>
-          <div class="flex border-solid border-b p-5">
-            <div class="box-img flex items-center justify-center bg-black">
-              <span class="text-white font-bold">CS</span>
-            </div>
-            <div class="pl-4">
-              <div class="flex items-center flex-wrap">
-                <p class="font-bold mr-3">
-                  Comrad Socks
-                </p>
-                <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                  <i class="icon-link"></i>
-                  <span>robert-fox</span>
-                </a>
-                <i class="icon-eye text-xl color--gray"></i>
-              </div>
-              <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
-    <div class="mt-2">
+
+    <div class="mt-2 hidden md:block">
       <div class="container mx-auto">
         <div class="md:grid grid-cols-8 gap-4 mt-8 md:mt-12">
           <div class="md:col-span-2">
@@ -566,7 +547,7 @@
                   <div class="mt-2">
                     <div class="flex">
                       <div class="flex items-center bg-black px-1">
-                        <h3 class="text-2xl font-bold text-white">We need to take CO2 out of the sky</h3>
+                        <h3 class="text-md font-bold text-white md:text-2xl">We need to take CO2 out of the sky</h3>
                         <i class="icon-eye ml-2 text-3xl text-white"></i>
                       </div>
                     </div>
@@ -628,8 +609,8 @@
                   </div>
                   <div class="mt-2">
                     <div class="flex">
-                      <div class="flex items-center bg-black px-1 max-w-md">
-                        <h3 class="text-2xl font-bold text-white">Startups that offer new paths tohomeownership</h3>
+                      <div class="flex items-center bg-black px-1 md:max-w-md">
+                        <h3 class="text-md font-bold text-white md:text-2xl">Startups that offer new paths tohomeownership</h3>
                         <i class="icon-eye ml-2 text-3xl text-white"></i>
                       </div>
                     </div>
@@ -745,7 +726,6 @@
     </div>
   </section>
 </main>
-
 
 {%- endblock %}
 

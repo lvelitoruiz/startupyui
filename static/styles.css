@@ -86,10 +86,10 @@
 }
 
 .box-img {
-	min-height: 5rem;
-	min-width: 5rem;
-	max-width: 5rem;
-	max-height: 5rem;
+	min-height: 4rem;
+	min-width: 4rem;
+	max-width: 4rem;
+	max-height: 4rem;
 }
 
 .fade-out {
@@ -121,6 +121,10 @@
 	cursor: pointer;
 }
 
+.search .search--content {
+	display: none;
+}
+
 .search.active {
 	justify-content: center;
 	cursor: initial;
@@ -134,4 +138,29 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.select-item {
+	display: none;
+}
+
+.select-item.active {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	.select-item {
+		display: block;
+	}
+	
+	.select-item.active {
+		display: block;
+	}
+
+	.box-img {
+		min-height: 5rem;
+		min-width: 5rem;
+		max-width: 5rem;
+		max-height: 5rem;
+	}
 }
