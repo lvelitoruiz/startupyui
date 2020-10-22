@@ -1,10 +1,10 @@
 <main>
   <section class="container mx-auto">
-    <div class="md:grid grid-cols-6 gap-4 mt-8 md:mt-12">
+    <div class="md:grid grid-cols-6 gap-4 pt-12">
       <div class="md:col-start-2 col-span-4">
-        <div class="p-5">
+        <div class="p-4 md:p-5">
           <div class="flex">
-            <div class="mr-4 md:mr-8">
+            <div class="mr-4 md:mr-8 hidden md:block">
               <div class="border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-6">
                 <span class="text-xs md:text-base">SM</span>
               </div>
@@ -15,7 +15,7 @@
                 <span class="ml-2 text-xs">fabric-skincare</span>
               </div>
               <div class="flex items-center">
-                <h2 class="text-2xl md:text-4xl font-bold">Stephenopolus Mclongname</h2>
+                <h2 class="text-2xl leading-tight md:text-4xl font-bold">Stephenopolus Mclongname</h2>
                 <i class="icon-eye text-4xl ml-3"></i>
               </div>
               <div class="my-4">
@@ -90,8 +90,8 @@
       <div class="md:mt-6">
         <!-- Curated -->
         <div class="items-tabs grid md:grid-cols-2 tabs-active" id="curated">
-          <div class="p-5 pt-6 md:border-r border-solid">
-            <div class="flex">
+          <div class="p-4 pt-6 md:border-r border-solid md:p-5">
+            <div class="hidden md:flex">
               <p class="mr-10">Curated Content <span class="color--gray">5</span></p>
               <i class="icon-add text-2xl color--gray cursor-pointer"></i>
             </div>
@@ -208,132 +208,225 @@
               </div>
             </div>
           </div>
-          <div>
-            <div class="flex p-5 pt-6 pb-0">
-              <p class="mr-10">Curated Companies <span class="color--gray">10</span></p>
+          <div class="">
+            <div class="p-5 pt-6 pb-0 hidden md:flex">
+              <p class="mr-10">Connected Companies <span class="color--gray">10</span></p>
               <i class="icon-add text-2xl color--gray cursor-pointer"></i>
             </div>
-            <div class="flex border-solid border-b p-5">
-              <div class="box-img flex items-center justify-center bg-black">
-                <span class="text-white font-bold">CS</span>
-              </div>
-              <div class="pl-4">
-                <div class="flex items-center flex-wrap">
-                  <p class="font-bold mr-3">
-                    Comrad Socks
-                  </p>
-                  <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                  <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                    <i class="icon-link"></i>
-                    <span>robert-fox</span>
-                  </a>
-                  <i class="icon-eye text-xl color--gray"></i>
+            <div>
+              <div class="flex border-solid border-b p-5 hidden md:flex">
+                <div class="box-img flex items-center justify-center bg-black">
+                  <span class="text-white font-bold">CS</span>
                 </div>
-                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                <div class="pl-4">
+                  <div class="flex items-center flex-wrap">
+                    <p class="font-bold mr-3">
+                      BioClarity
+                    </p>
+                    <span class="text-xs bkg--green px-2 py-1 mr-3">Public</span>
+                    <span class="text-xs color--gray mr-3">Founded 2020</span>
+                    <span class="text-xs color--gray mr-3">Chicago $1.2M</span>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
               </div>
-            </div>
-            <div class="flex border-solid border-b p-5">
-              <div class="box-img flex items-center justify-center bg-black">
-                <span class="text-white font-bold">CS</span>
-              </div>
-              <div class="pl-4">
-                <div class="flex items-center flex-wrap">
-                  <p class="font-bold mr-3">
+              <div class="border-solid border-b p-4 md:hidden">
+                <div class="flex items-center">
+                  <div class="box-img flex items-center justify-center bg-black">
+                    <span class="text-white font-bold">CS</span>
+                  </div>
+                  <p class="font-bold ml-3 mr-3 w-full">
                     BioClarity
                   </p>
-                  <span class="text-xs bkg--green px-2 py-1 mr-3">Public</span>
-                  <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                    <i class="icon-link"></i>
-                    <span>bioclarity.com</span>
-                  </a>
                   <i class="icon-eye text-xl color--gray"></i>
                 </div>
-                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
-              </div>
-            </div>
-            <div class="flex border-solid border-b p-5">
-              <div class="box-img flex items-center justify-center bg-black">
-                <span class="text-white font-bold">CS</span>
-              </div>
-              <div class="pl-4">
-                <div class="flex items-center flex-wrap">
-                  <p class="font-bold mr-3">
-                    Brightside
-                  </p>
-                  <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
-                  <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                    <i class="icon-link"></i>
-                    <span>brightside.com</span>
-                  </a>
-                  <i class="icon-eye text-xl color--gray"></i>
+                <div class="pt-4">
+                  <div class="flex items-center flex-wrap mb-2">
+                    <span class="text-xs bkg--green px-2 py-1 mr-3">Public</span>
+                    <span class="text-xs color--gray mr-3">Founded 2020</span>
+                    <span class="text-xs color--gray mr-3">Chicago $1.2M</span>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
                 </div>
-                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
               </div>
             </div>
-            <div class="flex border-solid border-b p-5">
-              <div class="box-img flex items-center justify-center bg-black">
-                <span class="text-white font-bold">CS</span>
+            <div>
+              <div class="flex border-solid border-b p-5 hidden md:flex">
+                <div class="box-img flex items-center justify-center bg-black">
+                  <span class="text-white font-bold">CS</span>
+                </div>
+                <div class="pl-4">
+                  <div class="flex items-center flex-wrap">
+                    <p class="font-bold mr-3">
+                      Brightside
+                    </p>
+                    <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>brightside.com</span>
+                    </a>
+                    <i class="icon-eye text-xl color--gray"></i>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
               </div>
-              <div class="pl-4">
-                <div class="flex items-center flex-wrap">
-                  <p class="font-bold mr-3">
+              <div class="border-solid border-b p-4 md:hidden">
+                <div class="flex items-center">
+                  <div class="box-img flex items-center justify-center bg-black">
+                    <span class="text-white font-bold">CS</span>
+                  </div>
+                  <p class="font-bold ml-3 mr-3 w-full">
                     Mighty
                   </p>
-                  <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
-                  <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                    <i class="icon-link"></i>
-                    <span>mighty.com</span>
-                  </a>
                   <i class="icon-eye text-xl color--gray"></i>
                 </div>
-                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                <div class="pt-4">
+                  <div class="flex items-center flex-wrap mb-2">
+                    <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>mighty.com</span>
+                    </a>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
               </div>
             </div>
-            <div class="flex border-solid border-b p-5">
-              <div class="box-img flex items-center justify-center bg-black">
-                <span class="text-white font-bold">CS</span>
+            <div>
+              <div class="flex border-solid border-b p-5 hidden md:flex">
+                <div class="box-img flex items-center justify-center bg-black">
+                  <span class="text-white font-bold">CS</span>
+                </div>
+                <div class="pl-4">
+                  <div class="flex items-center flex-wrap">
+                    <p class="font-bold mr-3">
+                      Brightside
+                    </p>
+                    <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>brightside.com</span>
+                    </a>
+                    <i class="icon-eye text-xl color--gray"></i>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
               </div>
-              <div class="pl-4">
-                <div class="flex items-center flex-wrap">
-                  <p class="font-bold mr-3">
-                    Comrad Socks
+              <div class="border-solid border-b p-4 md:hidden">
+                <div class="flex items-center">
+                  <div class="box-img flex items-center justify-center bg-black">
+                    <span class="text-white font-bold">CS</span>
+                  </div>
+                  <p class="font-bold ml-3 mr-3 w-full">
+                    Mighty
                   </p>
-                  <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                  <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                    <i class="icon-link"></i>
-                    <span>robert-fox</span>
-                  </a>
                   <i class="icon-eye text-xl color--gray"></i>
                 </div>
-                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                <div class="pt-4">
+                  <div class="flex items-center flex-wrap mb-2">
+                    <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>mighty.com</span>
+                    </a>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
               </div>
             </div>
-            <div class="flex border-solid border-b p-5">
-              <div class="box-img flex items-center justify-center bg-black">
-                <span class="text-white font-bold">CS</span>
+            <div>
+              <div class="flex border-solid border-b p-5 hidden md:flex">
+                <div class="box-img flex items-center justify-center bg-black">
+                  <span class="text-white font-bold">CS</span>
+                </div>
+                <div class="pl-4">
+                  <div class="flex items-center flex-wrap">
+                    <p class="font-bold mr-3">
+                      Brightside
+                    </p>
+                    <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>brightside.com</span>
+                    </a>
+                    <i class="icon-eye text-xl color--gray"></i>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
               </div>
-              <div class="pl-4">
-                <div class="flex items-center flex-wrap">
-                  <p class="font-bold mr-3">
-                    Comrad Socks
+              <div class="border-solid border-b p-4 md:hidden">
+                <div class="flex items-center">
+                  <div class="box-img flex items-center justify-center bg-black">
+                    <span class="text-white font-bold">CS</span>
+                  </div>
+                  <p class="font-bold ml-3 mr-3 w-full">
+                    Mighty
                   </p>
-                  <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                  <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                    <i class="icon-link"></i>
-                    <span>robert-fox</span>
-                  </a>
                   <i class="icon-eye text-xl color--gray"></i>
                 </div>
-                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                <div class="pt-4">
+                  <div class="flex items-center flex-wrap mb-2">
+                    <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>mighty.com</span>
+                    </a>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
               </div>
             </div>
+            <div>
+              <div class="flex border-solid border-b p-5 hidden md:flex">
+                <div class="box-img flex items-center justify-center bg-black">
+                  <span class="text-white font-bold">CS</span>
+                </div>
+                <div class="pl-4">
+                  <div class="flex items-center flex-wrap">
+                    <p class="font-bold mr-3">
+                      Brightside
+                    </p>
+                    <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>brightside.com</span>
+                    </a>
+                    <i class="icon-eye text-xl color--gray"></i>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
+              </div>
+              <div class="border-solid border-b p-4 md:hidden">
+                <div class="flex items-center">
+                  <div class="box-img flex items-center justify-center bg-black">
+                    <span class="text-white font-bold">CS</span>
+                  </div>
+                  <p class="font-bold ml-3 mr-3 w-full">
+                    Mighty
+                  </p>
+                  <i class="icon-eye text-xl color--gray"></i>
+                </div>
+                <div class="pt-4">
+                  <div class="flex items-center flex-wrap mb-2">
+                    <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>mighty.com</span>
+                    </a>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           </div>
         </div>
 
         <!-- Authored -->
-        <div class="items-tabs md:grid grid-cols-8 gap-4 mt-8 md:mt-12" id="authored">
+        <div class="items-tabs md:grid md:grid-cols-8 gap-4 mt-8 md:mt-12" id="authored">
           <div class="md:col-start-3 col-span-4">
-            <div class="p-5">
+            <div class="p-4 md:p-5">
               <div class="flex mt-6 flex-col justify-between md:items-center md:flex-row">
                 <div class="flex items-center">
                   <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
@@ -399,9 +492,9 @@
         </div>
 
         <!-- Mentioned In -->
-        <div class="items-tabs md:grid grid-cols-8 gap-4 mt-8 md:mt-12" id="mentioned">
+        <div class="items-tabs md:grid md:grid-cols-8 gap-4 mt-8 md:mt-12" id="mentioned">
           <div class="md:col-start-3 col-span-4">
-            <div class="p-5">
+            <div class="p-4 md:p-5">
               <div class="flex mt-6 flex-col justify-between md:items-center md:flex-row">
                 <div class="flex items-center">
                   <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
@@ -529,71 +622,140 @@
         </div>
 
         <!-- Roles -->
-        <div class="items-tabs md:grid grid-cols-10 gap-4 mt-8 md:mt-12" id="rol">
+        <div class="items-tabs md:grid md:grid-cols-10 gap-4 mt-8 md:mt-12" id="rol">
           <div class="md:col-start-4 col-span-4">
-            <div class="p-5 pb-0">
-              <h3 class="font-bold pb-2 md:pl-5 pb-0">Design</h3>
-              <div class="flex border-solid border-b pb-5 md:p-5">
-                <div class="box-img flex items-center justify-center bg-black">
-                  <span class="text-white font-bold">CS</span>
+            <div>
+              <h3 class="font-bold pb-2 pl-4 md:pl-5 pb-0">Design</h3>
+              <div>
+                <div class="flex border-solid border-b p-4 hidden md:flex md:p-5">
+                  <div class="box-img flex items-center justify-center bg-black">
+                    <span class="text-white font-bold">CS</span>
+                  </div>
+                  <div class="pl-4">
+                    <div class="flex items-center flex-wrap">
+                      <p class="font-bold mr-3">
+                        Brightside
+                      </p>
+                      <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                      <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                        <i class="icon-link"></i>
+                        <span>brightside.com</span>
+                      </a>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                  </div>
                 </div>
-                <div class="pl-4">
-                  <div class="flex items-center flex-wrap">
-                    <p class="font-bold mr-3">
-                      Comrad Socks
+                <div class="border-solid border-b p-4 md:hidden">
+                  <div class="flex items-center">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <p class="font-bold ml-3 mr-3 w-full">
+                      Mighty
                     </p>
-                    <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                      <i class="icon-link"></i>
-                      <span>robert-fox</span>
-                    </a>
                     <i class="icon-eye text-xl color--gray"></i>
                   </div>
-                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                  <div class="pt-4">
+                    <div class="flex items-center flex-wrap mb-2">
+                      <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                      <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                        <i class="icon-link"></i>
+                        <span>mighty.com</span>
+                      </a>
+                    </div>
+                    <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-5 pb-0">
-              <h3 class="font-bold pb-2 md:pl-5 pb-0">Design</h3>
-              <div class="flex border-solid border-b pb-5 md:p-5">
-                <div class="box-img flex items-center justify-center bg-black">
-                  <span class="text-white font-bold">CS</span>
+            <div>
+              <h3 class="font-bold pb-2 pl-4 pt-4 md:pl-5 pb-0">Design</h3>
+              <div>
+                <div class="flex border-solid border-b p-4 hidden md:flex md:p-5">
+                  <div class="box-img flex items-center justify-center bg-black">
+                    <span class="text-white font-bold">CS</span>
+                  </div>
+                  <div class="pl-4">
+                    <div class="flex items-center flex-wrap">
+                      <p class="font-bold mr-3">
+                        Brightside
+                      </p>
+                      <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                      <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                        <i class="icon-link"></i>
+                        <span>brightside.com</span>
+                      </a>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                  </div>
                 </div>
-                <div class="pl-4">
-                  <div class="flex items-center flex-wrap">
-                    <p class="font-bold mr-3">
-                      Comrad Socks
+                <div class="border-solid border-b p-4 md:hidden">
+                  <div class="flex items-center">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <p class="font-bold ml-3 mr-3 w-full">
+                      Mighty
                     </p>
-                    <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                      <i class="icon-link"></i>
-                      <span>robert-fox</span>
-                    </a>
                     <i class="icon-eye text-xl color--gray"></i>
                   </div>
-                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                  <div class="pt-4">
+                    <div class="flex items-center flex-wrap mb-2">
+                      <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                      <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                        <i class="icon-link"></i>
+                        <span>mighty.com</span>
+                      </a>
+                    </div>
+                    <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-5 pb-0">
-              <h3 class="font-bold pb-2 md:pl-5 pb-0">Design</h3>
-              <div class="flex border-solid border-b pb-5 md:p-5">
-                <div class="box-img flex items-center justify-center bg-black">
-                  <span class="text-white font-bold">CS</span>
+            <div>
+              <h3 class="font-bold pb-2 pl-4 pt-4 md:pl-5 pb-0">Design</h3>
+              <div>
+                <div class="flex border-solid border-b p-4 hidden md:flex md:p-5">
+                  <div class="box-img flex items-center justify-center bg-black">
+                    <span class="text-white font-bold">CS</span>
+                  </div>
+                  <div class="pl-4">
+                    <div class="flex items-center flex-wrap">
+                      <p class="font-bold mr-3">
+                        Brightside
+                      </p>
+                      <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                      <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                        <i class="icon-link"></i>
+                        <span>brightside.com</span>
+                      </a>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                  </div>
                 </div>
-                <div class="pl-4">
-                  <div class="flex items-center flex-wrap">
-                    <p class="font-bold mr-3">
-                      Comrad Socks
+                <div class="border-solid border-b p-4 md:hidden">
+                  <div class="flex items-center">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <p class="font-bold ml-3 mr-3 w-full">
+                      Mighty
                     </p>
-                    <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                      <i class="icon-link"></i>
-                      <span>robert-fox</span>
-                    </a>
                     <i class="icon-eye text-xl color--gray"></i>
                   </div>
-                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                  <div class="pt-4">
+                    <div class="flex items-center flex-wrap mb-2">
+                      <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                      <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                        <i class="icon-link"></i>
+                        <span>mighty.com</span>
+                      </a>
+                    </div>
+                    <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -601,7 +763,7 @@
         </div>
 
         <!-- Watching -->
-        <div class="items-tabs md:grid grid-cols-8 gap-4 mt-8 md:mt-12" id="watching">
+        <div class="items-tabs md:grid md:grid-cols-8 gap-4 mt-8 md:mt-12" id="watching">
           <div class="md:col-start-3 col-span-4">
             
             <div class="mt-4">
@@ -669,27 +831,49 @@
               </div>
             </div>
 
-            <div class="border-solid border-t">
-              <div class="flex p-5 md:py-5 md:px-0">
+            <div>
+              <div class="flex border-solid border-t p-5 hidden md:flex">
                 <div class="box-img flex items-center justify-center bg-black">
                   <span class="text-white font-bold">CS</span>
                 </div>
                 <div class="pl-4">
                   <div class="flex items-center flex-wrap">
                     <p class="font-bold mr-3">
-                      Comrad Socks
+                      Brightside
                     </p>
-                    <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                    <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
                     <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
                       <i class="icon-link"></i>
-                      <span>robert-fox</span>
+                      <span>brightside.com</span>
                     </a>
                     <i class="icon-eye text-xl color--gray"></i>
                   </div>
                   <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
                 </div>
               </div>
+              <div class="border-solid border-t p-4 md:hidden">
+                <div class="flex items-center">
+                  <div class="box-img flex items-center justify-center bg-black">
+                    <span class="text-white font-bold">CS</span>
+                  </div>
+                  <p class="font-bold ml-3 mr-3 w-full">
+                    Mighty
+                  </p>
+                  <i class="icon-eye text-xl color--gray"></i>
+                </div>
+                <div class="pt-4">
+                  <div class="flex items-center flex-wrap mb-2">
+                    <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>mighty.com</span>
+                    </a>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
+              </div>
             </div>
+            
             <div class="border-solid border-t">
               <div class="p-5 md:p-0">
                 <div class="flex mt-6 flex-col justify-between md:items-center md:flex-row">
