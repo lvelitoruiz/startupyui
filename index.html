@@ -6,19 +6,12 @@
 {%- endblock %}
 
 {% block content %}
-<header class="c-header">
-  <div class="c-header--top items-center justify-between flex">
-    <a class="pl-4 text-xl" href=""><h1 class="ff-conv-PxGrotesk text-white">Startupy</h1></a>
-    <div>
-      <a class="text-white p-2 font-bold text-xs" href="">Our Manifesto</a>
-      <a class="text-white p-2 font-bold text-xs" href="">Join Membership</a>
-      <a class="text-white p-2 pr-4 font-bold text-xs" href="">Login</a>
-    </div>
-  </div>
-</header>
+
+{%- include 'header.html' %}
 
 {%- include 'main.html' %}
 
+{%- include 'footer.html' %}
 
 {%- endblock %}
 

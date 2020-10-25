@@ -25,6 +25,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-add-circle:before {
+  content: "\e90b";
+}
+
+.icon-share:before {
+  content: "\e908";
+}
+
+.icon-insta:before {
+  content: "\e909";
+}
+
+.icon-message:before {
+  content: "\e90a";
+}
+
 .icon-eye-black:before {
   content: "\e907";
 }

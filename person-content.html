@@ -1,22 +1,26 @@
 <main>
   <section class="container mx-auto">
-    <div class="md:grid grid-cols-6 gap-4 pt-12">
+    <div class="md:grid grid-cols-6 gap-4 top-header">
       <div class="md:col-start-2 col-span-4">
         <div class="p-4 md:p-5">
           <div class="flex">
             <div class="mr-4 md:mr-8 hidden md:block">
-              <div class="border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-6">
-                <span class="text-xs md:text-base">SM</span>
+              <div class="border-solid border border-color--blue rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-6">
+                <span class="text-xs md:text-base color--blue">SM</span>
               </div>
             </div>
             <div>
-              <div class="flex items-center color--gray font-bold">
-                <i class="icon-eye text-base"></i>
-                <span class="ml-2 text-xs">fabric-skincare</span>
+              <div class="flex">
+                <span class="text-xs bkg--blue2 px-2 py-1 mr-3 text-white">Public</span>
+                <div class="flex items-center color--gray font-bold">
+                  <i class="icon-eye text-base"></i>
+                  <span class="ml-2 text-xs">fabric-skincare</span>
+                </div>
               </div>
               <div class="flex items-center">
                 <h2 class="text-2xl leading-tight md:text-4xl font-bold">Stephenopolus Mclongname</h2>
                 <i class="icon-eye text-4xl ml-3"></i>
+                <i class="icon-message text-4xl ml-3"></i>
               </div>
               <div class="my-4">
                 <p>High-quality skincare basics at an incredible value.</p>
@@ -425,7 +429,7 @@
 
         <!-- Authored -->
         <div class="items-tabs md:grid md:grid-cols-8 gap-4 mt-8 md:mt-12" id="authored">
-          <div class="md:col-start-3 col-span-4">
+          <div class="md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4">
             <div class="p-4 md:p-5">
               <div class="flex mt-6 flex-col justify-between md:items-center md:flex-row">
                 <div class="flex items-center">
@@ -493,7 +497,7 @@
 
         <!-- Mentioned In -->
         <div class="items-tabs md:grid md:grid-cols-8 gap-4 mt-8 md:mt-12" id="mentioned">
-          <div class="md:col-start-3 col-span-4">
+          <div class="md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4">
             <div class="p-4 md:p-5">
               <div class="flex mt-6 flex-col justify-between md:items-center md:flex-row">
                 <div class="flex items-center">
@@ -623,7 +627,7 @@
 
         <!-- Roles -->
         <div class="items-tabs md:grid md:grid-cols-10 gap-4 mt-8 md:mt-12" id="rol">
-          <div class="md:col-start-4 col-span-4">
+          <div class="md:col-start-3 md:col-span-6 lg:col-start-4 lg:col-span-4">
             <div>
               <h3 class="font-bold pb-2 pl-4 md:pl-5 pb-0">Design</h3>
               <div>
@@ -764,9 +768,9 @@
 
         <!-- Watching -->
         <div class="items-tabs md:grid md:grid-cols-8 gap-4 mt-8 md:mt-12" id="watching">
-          <div class="md:col-start-3 col-span-4">
+          <div class="md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4">
             
-            <div class="mt-4">
+            <div class="mt-4 hidden md:block">
               <ul class="flex overflow-auto pb-10 md:justify-center">
                 <li class="pr-6 pl-5 md:pl-0">
                   <a class="text-sm whitespace-no-wrap color--gray" href="#">Show Only</a>
@@ -786,25 +790,46 @@
               </ul>
             </div>
 
-            <div class="flex p-5 md:py-5 md:px-0">
-              <div>
-                <div class="border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+            <div>
+              <div class="flex p-5 hidden md:flex">
+                <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
                   <span class="text-xs md:text-base">RF</span>
                 </div>
+                <div class="pl-4">
+                  <div class="flex items-center flex-wrap">
+                    <p class="font-bold mr-3">
+                      Comrad Socks
+                    </p>
+                    <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>robert-fox</span>
+                    </a>
+                    <i class="icon-eye text-xl color--gray"></i>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
               </div>
-              <div class="pl-4">
-                <div class="flex items-center flex-wrap">
-                  <p class="font-bold mr-3">
+              <div class="p-4 md:hidden">
+                <div class="flex items-center">
+                  <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+                    <span class="text-xs md:text-base">RF</span>
+                  </div>
+                  <p class="font-bold ml-3 mr-3 w-full">
                     Comrad Socks
                   </p>
-                  <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
-                  <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
-                    <i class="icon-link"></i>
-                    <span>robert-fox</span>
-                  </a>
                   <i class="icon-eye text-xl color--gray"></i>
                 </div>
-                <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                <div class="pt-4">
+                  <div class="flex items-center flex-wrap mb-2">
+                    <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                    <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                      <i class="icon-link"></i>
+                      <span>robert-fox</span>
+                    </a>
+                  </div>
+                  <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                </div>
               </div>
             </div>
 
