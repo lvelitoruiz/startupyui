@@ -51,7 +51,7 @@
 }
 
 .top-header {
-	padding-top: 140px;
+	padding-top: 120px;
 }
 
 .nav-mobile {
@@ -113,6 +113,10 @@
 
 .bkg--green {
 	background: #C0F5E9;
+}
+
+.bkg--green-2 {
+	background: #2CF10C;
 }
 
 .bkg--yellow {
@@ -214,6 +218,20 @@
 	min-height: 300px;
 }
 
+.line-vertical {
+	width: 1px;
+	background: #EEEEEE;
+}	
+
+.line-horizontal::before {
+	content: "";
+	width: 32px;
+	position: absolute;
+	height: 1px;
+	background: #EEEEEE;
+	left: -32px;
+}
+
 @media screen and (min-width: 768px) {
 	.nav-mobile.active {
 		display: none;
@@ -243,11 +261,17 @@
 		font-size: 60px;
 	}
 
-	.top-header {
-		padding-top: 240px;
-	}
-
 	.box-add-img {
 		height: 384px;
+	}
+
+	.top-header {
+		padding-top: 160px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.top-header {
+		padding-top: 190px;
 	}
 }
