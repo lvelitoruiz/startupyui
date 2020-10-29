@@ -275,3 +275,13 @@
 		padding-top: 190px;
 	}
 }
+
+.paywall {
+	background: rgba(0, 0, 0, 0.9);
+	opacity: 0.95;
+	backdrop-filter: blur(10px);
+	color: white;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
