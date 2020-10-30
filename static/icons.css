@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-eye-close:before {
+  content: "\e90c";
+}
+
 .icon-add-circle:before {
   content: "\e90b";
 }

@@ -42,12 +42,20 @@
 	display: flex;
 	align-items: center;
 	font-size: 40px;
-	min-width: 150px;
 	justify-content: flex-end;
 }
 
 .c-header .nav span {
 	cursor: pointer;
+}
+
+.search-mobile {
+	position: absolute;
+	background: white;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 }
 
 .top-header {
@@ -256,11 +264,6 @@
 		font-size: 120px;
 	}
 
-	.c-header .nav {
-		align-items: center;
-		font-size: 60px;
-	}
-
 	.box-add-img {
 		height: 384px;
 	}
@@ -268,11 +271,28 @@
 	.top-header {
 		padding-top: 160px;
 	}
+
+	.c-header .nav {
+		align-items: center;
+		font-size: 60px;
+	}
+
+	.search-mobile {
+		position: initial;
+		left: initial;
+		right: initial;
+		top: initial;
+		bottom: initial;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	.top-header {
 		padding-top: 190px;
+	}
+
+	.c-header .nav {
+		justify-content: space-evenly;
 	}
 }
 
@@ -284,4 +304,12 @@
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+}
+
+.text-cut {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+	display: block;
 }
