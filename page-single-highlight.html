@@ -1,0 +1,102 @@
+{% extends "_layout.html" %}
+
+{% block title %}Startupy{% endblock %}
+
+{% block head %}
+{%- endblock %}
+
+{% block content %}
+
+{%- include 'header.html' %}
+
+<section class="top-header">
+  <div class="container mx-auto">
+    <div class="items-tabs md:grid md:grid-cols-12 mt-8 md:mt-12 tabs-active" id="mentioned-in">
+      <div class="hidden md:block md:col-start-1 md:col-span-3 lg:col-start-2 lg:col-span-2 h-mt--136">
+        <div class="line-left">
+          <div class="mr-10">
+            <div class="flex flex-wrap justify-end">
+              <span class="color--blue bkg--blue-transparent px-2 py-1 ml-2 mb-2 text-sm">Future of Housing</span>
+              <div class="flex color--gray cursor-pointer items-center ml-2 mb-2">
+                <i class="icon-add text-2xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-6 lg:col-span-6">
+        <div class="p-4 md:p-0">
+          <div class="flex mt-6 items-center justify-between">
+            <div class="flex items-center">
+              <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+                <span class="text-xs">JN</span>
+              </div>
+              <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
+            </div>
+            <div>
+              <a class="text-xs font-bold mr-4" href="">
+                <i class="icon-link"></i>
+                <span>Share</span>
+              </a>
+              <a class="text-xs font-bold" href="">
+                <i class="icon-share"></i>
+                <span>Visit</span>
+              </a>
+            </div>
+          </div>
+          <div class="mt-2">
+            <div class="flex">
+              <div class="flex items-center bg-black px-1 max-w-md">
+                <h3 class="text-md font-bold text-white md:text-2xl">Startups that offer new paths to homeownership</h3>
+                <i class="icon-eye ml-2 text-3xl text-white"></i>
+              </div>
+            </div>
+            <div>
+              <div class="border border-solid border-black p-2">
+                <div class="flex mb-6">
+                  <span class="text-sm font-bold">Ryan Orbuch</span>
+                  <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+                </div>
+                <span class="color--gray text-xs font-bold">TL;DR</span>
+                <p class="mb-4">""High home prices and a limited supply of homes have made it difficult for some people to enter the market.</p>
+                <p class="mb-4">People with steady incomes but less-than-perfect credit are often shut out of buying homes because they can’t qualify for mortgage, or do not have sufficient money saved for a down-payment.”</p>
+                <p class="mb-4">“Millennials, in particular, face steep obstacles to homeownership because of student-loan debt/low savings.Some new startups have thus emerged to offer new paths to homeownership:</p>
+                <p class="mb-4">1. Bypass down payments/mortgages with lease-to-own contracts:<br><span class="color--blue">Divvy</span> - $180M raised with <span class="color--blue">a16z</span>/Caffeinated/Max <span class="color--blue">Levchin.</span><br>Divvy buys homes with cash on consumers behalf. The buyers only pay ½% down and move in for a 3-year lease. Divvy charges monthly rent, with 20% of the payment going toward equity to buy the home. After 3 years, the consumer will own 10% of the home, which is enough to qualify for a mortgage. If individuals decide not to buy the home, they walk away with 10% of the sale.</p>
+                <p class="mb-4">2. <span class="color--blue">Divvy</span> makes most of its money from rent, but also from the appreciation of the home at sale.”</p>
+                <div class="flex color--gray cursor-pointer items-center pb-2 pt-4">
+                  <i class="icon-add text-2xl"></i>
+                  <span class="ml-2 text-xs font-bold">Add Highlight</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img class="w-full" src="./static/img/bk-box.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block md:col-span-3 lg:col-span-2 h-mt--136">
+        <div class="line-right">
+          <div class="ml-10">
+            <div class="flex flex-wrap">
+              <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Upequity</span>
+              <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Flyhomes</span>
+              <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">ZeroDown</span>
+              <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Divvy Homes</span>
+              <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                <i class="icon-add text-2xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- include 'footer.html' %}
+
+{%- endblock %}
+
+{% block scripts %}
+{%- endblock %}
