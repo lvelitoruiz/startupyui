@@ -240,7 +240,7 @@
   
   <section class="border-solid border-t mt-10">
     <div class="container mx-auto">
-      <div class="mt-4">
+      <div class="mt-4 hidden md:block">
         <ul class="flex overflow-auto pb-4 md:justify-center">
           <li class="pr-12 pl-5 md:pl-0">
             <a class="trigger-tabs whitespace-no-wrap color--blue font-bold hover:color--blue" href="#mentioned-in">Mentioned In<span class="pl-2 color--gray font-normal">12</span></a>
@@ -255,6 +255,27 @@
             <a class="trigger-tabs whitespace-no-wrap hover:color--blue" href="#relationships">Relationships<span class="pl-2 color--gray">5</span></a>
           </li>
         </ul>
+      </div>
+
+      <!-- Dropdown -->
+      <div class="m-4 md:hidden">
+        <div class="relative">
+          <button class="flex items-center h-8 pr-2 focus:outline-none">
+            <span class="text-sm leading-none">
+              Curated
+            </span>
+            <svg class="w-4 h-4 mt-px ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="absolute bg-white flex flex-col w-40 top-0 border border-black shadow-lg">
+            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Curated</a>
+            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Authored</a>
+            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Mentioned In</a>
+            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Relationships</a>
+            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Watching</a>
+          </div>
+        </div>
       </div>
       
       <div class="md:mt-6">
