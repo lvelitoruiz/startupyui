@@ -44,7 +44,7 @@
                 <p class="w-full">Create a new company</p>
                 <a class="whitespace-no-wrap font-bold" href="">Create New</a>
               </div>
-              <div class="h-full fade-out">
+              <div class="h-full fade-out-top">
                 <div class="h-full overflow-auto md:h-64">
                   <div class="mb-10 md:mb-0">
                     <div class="box-hover border-solid border-b p-4">
@@ -158,7 +158,103 @@
           </div>
           <div class="mr-4 md:mr-8">
             <span class="font-bold text-xs">Founded</span>
-            <a href="" class="color--gray block">+ Add</a>
+            <a href="" class="color--gray block" data-ref="#box2" data-modal-open>+ Add</a>
+            <div class="g-modal" id="box2">
+              <div class="g-modal__schedule">
+                <div class="flex items-center mb-4">
+                  <p class="font-bold m-0 pr-2">Adding content to:</p>
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Future of Housing</span>
+                </div>
+                <div class="flex items-center border-b border-solid pb-6 w-full">
+                  <div class="text-cut">
+                    <div class="flex items-center w-full">
+                      <span class="icon-attaching"></span>
+                      <p class="ml-2 text-cut">Epdisode No. 23 - In Case it’s Really Las Case it’s Really Las</p>
+                    </div>
+                  </div>
+                  <a class="whitespace-no-wrap ml-3 font-bold text-sm" href="">Reply All</a>
+                  <a class="whitespace-no-wrap ml-3 font-bold text-sm" href="">Gimlet Media</a>
+                </div>
+                <div class="h-full fade-out-top">
+                  <div class="h-full overflow-auto md:h-64">
+                    <div class="mb-10 md:mb-0">
+                      <div class="mt-4">
+                        <p class="text-sm font-bold mb-1">Title</p>
+                        <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" name="" id="">
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-sm font-bold mb-1">URL</p>
+                        <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" placeholder="yoururl.com" name="" id="">
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-sm font-bold mb-1">Content Type</p>
+                        <div class="relative w-full">
+                          <button class="h-50 w-full border-solid border border-black px-4 py-3 flex items-center h-8 justify-between focus:outline-none">
+                            <span class="text-sm leading-none text-gray-500">
+                              Choose
+                            </span>
+                            <svg class="w-4 h-4 mt-px ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                          </button>
+                          <div class="absolute bg-white flex flex-col w-full border border-black shadow-lg">
+                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Curated</a>
+                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Authored</a>
+                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Mentioned In</a>
+                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Relationships</a>
+                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Watching</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <div class="mt-4 mr-4 w-full">
+                          <p class="text-sm font-bold mb-1">Author (Optional)</p>
+                          <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" placeholder="Find or create Author" type="text" name="" id="">
+                        </div>
+                        <div class="mt-4 ml-4 w-full">
+                          <p class="text-sm font-bold mb-1">Publisher (Optional)</p>
+                          <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" placeholder="Find or create Publisher" type="text" name="" id="">
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-sm font-bold mb-1">Highlights</p>
+                        <textarea class="w-full border-solid border border-black px-4 py-3 focus:outline-none" placeholder="Add highlights to help readers get key insights quickly" type="text" name="" cols="30" rows="5" id=""></textarea>
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-sm font-bold mb-1">Topic Tags</p>
+                        <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" placeholder="Add topic tags to help with discoverability" name="" id="">
+                      </div>
+                      <div class="flex flex-wrap items-center mb-4">
+                        <div class="flex items-center mr-4 mt-2">
+                          <span class="color--blue bkg--blue-transparent px-2 py-1">Topic I Just Added</span>
+                          <svg class="h-4 w-4 color--gray cursor-pointer ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                          </svg>
+                        </div>
+                        <div class="flex items-center mr-4 mt-2">
+                          <span class="color--blue bkg--blue-transparent px-2 py-1">Another One</span>
+                          <svg class="h-4 w-4 color--gray cursor-pointer ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-sm font-bold mb-1">Companies Mentioned</p>
+                        <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" placeholder="Add topic tags to help with discoverability" name="" id="">
+                      </div>
+                      <div class="mt-4 mb-8">
+                        <p class="text-sm font-bold mb-1">People Mentioned</p>
+                        <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" placeholder="Add topic tags to help with discoverability" name="" id="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer justify-between">
+                  <button class="py-2 px-4">Back</button>
+                  <button class="bg-black text-white py-2 px-4">Next</button>
+                </div>
+              </div>
+            </div>
             <p>2019</p>
           </div>
           <div class="mr-4 md:mr-8">

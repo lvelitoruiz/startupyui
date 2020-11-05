@@ -168,6 +168,21 @@
 	background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 }
 
+.fade-out-top {
+	position: relative;
+}
+
+.fade-out-top::before {
+	content: '';
+	position: absolute;
+	height: 40px;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+	z-index: 9;
+}
+
 .items-tabs {
 	display: none;
 }
@@ -303,6 +318,11 @@
 	height: 30px !important;
 }
 
+[data-modal-close]:hover {
+	background: black !important;
+	color: white !important;
+}
+
 .modal-content {
 	padding: 20px 20px 40px !important;
 	height: 100%;
@@ -349,6 +369,10 @@
 
 .link-green:hover {
 	color: #2CF10C;
+}
+
+.h-50 {
+	height: 50px;
 }
 
 @media screen and (min-width: 768px) {
