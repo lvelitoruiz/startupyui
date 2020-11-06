@@ -1,0 +1,45 @@
+{% extends "_layout.html" %}
+
+{% block title %}Startupy{% endblock %}
+
+{% block head %}
+{%- endblock %}
+
+{% block content %}
+
+{%- include 'header.html' %}
+
+<main>
+  <section class="container mx-auto">
+    <div class="top-header">
+      <div class="flex items-center justify-center pt-4 pt-b md:pt-8 md:pb-8">
+        <span class="color--gray mr-6 text-base md:text-xl lg:text-2xl">
+          What’s Cool
+        </span>    
+        <span class="text-base md:text-xl lg:text-2xl">
+          My Feed
+        </span>    
+      </div>
+    </div>
+  </section>
+
+  <section class="comming-soon">
+    <div class="container">
+      <div class="lg:grid lg:grid-cols-10 p-4">
+        <div class="lg:col-start-2 lg:col-span-3">
+          <p class="text-white text-4xl font-bold">Coming Soon</p>
+        </div>
+        <div class="lg:col-span-6">
+          <p class="text-white">Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{%- include 'footer.html' %}
+
+{%- endblock %}
+
+{% block scripts %}
+{%- endblock %}

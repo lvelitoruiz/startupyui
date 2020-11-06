@@ -582,3 +582,13 @@
 .styled-checkbox:checked + label:after {
   box-shadow: none;
 }
+
+.comming-soon {
+	background-image: url("./img/comming-soon.jpg");
+	min-height: 550px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
