@@ -215,6 +215,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 
 .select-item {
@@ -393,6 +394,10 @@
 }
 
 @media screen and (min-width: 768px) {
+	.search.active .search--content {
+		flex-direction: row;
+	}
+
 	.modal-inner {
 		width: 600px;
 		height: auto;
