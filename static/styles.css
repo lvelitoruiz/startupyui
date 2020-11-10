@@ -96,7 +96,11 @@
 
 .border-color--blue {
 	border-color:	#0C3EF1;
- }
+}
+
+.placeholder-blue-color::placeholder {
+	color: rgba(12, 62, 241, 0.5);
+}
 
 /* bacground */
 .bkg--blue-transparent {
@@ -147,6 +151,10 @@
 	max-height: 200px;
 }
 
+.max-h--600 {
+	max-height: 600px;
+}
+
 .box-img {
 	min-height: 4rem;
 	min-width: 4rem;
@@ -161,7 +169,7 @@
 .fade-out::before {
 	content: '';
 	position: absolute;
-	height: 110px;
+	height: 50px;
 	bottom: 1px;
 	left: 1px;
 	right: 1px;
@@ -596,4 +604,23 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.banner-home {
+	background-image: url("./img/banner-home.jpg");
+	min-height: 550px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+
+.min-banner {
+	background-image: url("./img/min-banner.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
 }
