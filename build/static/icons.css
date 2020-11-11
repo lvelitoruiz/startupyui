@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../static/fonts/icomoon.eot?8rms7c');
+  src:  url('../static/fonts/icomoon.eot?8rms7c#iefix') format('embedded-opentype'),
+    url('../static/fonts/icomoon.ttf?8rms7c') format('truetype'),
+    url('../static/fonts/icomoon.woff?8rms7c') format('woff'),
+    url('../static/fonts/icomoon.svg?8rms7c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-attaching:before {
+  content: "\e90e";
+}
+
+.icon-play:before {
+  content: "\e90d";
+}
+
+.icon-eye-close:before {
+  content: "\e90c";
+}
+
+.icon-add-circle:before {
+  content: "\e90b";
+}
+
+.icon-share:before {
+  content: "\e908";
+}
+
+.icon-insta:before {
+  content: "\e909";
+}
+
+.icon-message:before {
+  content: "\e90a";
+}
+
+.icon-eye-black:before {
+  content: "\e907";
+}
+
+.icon-eye:before {
+  content: "\e900";
+}
+
+.icon-nav:before {
+  content: "\e901";
+}
+
+.icon-twitter:before {
+  content: "\e902";
+}
+
+.icon-iso:before {
+  content: "\e903";
+}
+
+.icon-link:before {
+  content: "\e904";
+}
+
+.icon-info:before {
+  content: "\e905";
+}
+
+.icon-add:before {
+  content: "\e906";
+}
+
+.g-modal {
+  display: none;
+}

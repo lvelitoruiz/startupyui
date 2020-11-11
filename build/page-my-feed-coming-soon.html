@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Startupy</title>
+  <link rel="stylesheet" href="static/normalize.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <link rel="stylesheet" href="static/fonts.css" type="text/css" />
+  <link rel="stylesheet" href="static/icons.css" type="text/css" />
+  <meta name="theme-color" content="#f6f2ef">
+  <link rel="icon" href="static/favicon.svg">
+  <link rel="mask-icon" href="static/mask-icon.svg" color="#000000">
+  <link rel="apple-touch-icon" href="static/apple-touch-icon.png">
+  <link rel="manifest" href="static/manifest.json">
+  <link type="text/plain" rel="author" href="humans.txt">
+  <meta name="generator" content="Clay (https://github.com/lucuma/clay)" />
+  <link rel="stylesheet" href="static/modal.css">
+  
+</head>
+<body>
+  <header class="c-header fixed w-full z-20 border-solid border-b">
+  <div class="c-header--top items-center justify-center flex md:justify-between">
+    <a class="text-xl md:pl-4" href=""><h1 class="ff-conv-PxGrotesk text-white">Startupy</h1></a>
+    <div class="hidden md:block"> 
+      <a class="text-white p-2 font-bold text-xs" href="">Our Manifesto</a>
+      <a class="text-white p-2 font-bold text-xs" href="">Join Membership</a>
+      <a class="text-white p-2 pr-4 font-bold text-xs" href="">Login</a>
+    </div>
+  </div>
+  <div class="bg-white">
+    <div class="container mx-auto">
+      <div class="flex items-center relative lg:grid lg:grid-cols-8">
+        <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
+          <span class="iso icon-iso text-black pl-4 hidden"></span>
+          <span class="iso icon-eye-close text-black pl-4"></span>
+        </div>
+        <div class="md:col-span-6 lg:p-0">
+          <!-- Nav init -->
+          <div> 
+            <div class="flex items-center lg:grid lg:grid-cols-10">
+              <div class="md:col-start-1 md:col-span-10 lg:col-start-2 lg:col-span-10">
+                <div class="flex">
+                  <div class="hidden p-4 border-solid border-l whitespace-no-wrap lg:block">
+                    <ul class="text-xs">
+                      <li class="font-bold pb-2">Trending Topics</li>
+                      <li><a href="">Assistive Tech</a></li>
+                      <li><a href="">Personalized Finance</a></li>
+                      <li><a href="">Safety Tech</a></li>
+                      <li><a href="">Future of Warehousing</a></li>
+                      <li><a href="">Sustainable Brands</a></li>
+                    </ul>
+                  </div>
+                  <div class="hidden p-4 border-solid border-l whitespace-no-wrap lg:block">
+                    <ul class="text-xs">
+                      <li class="font-bold pb-2">Trending Topics</li>
+                      <li><a href="">Assistive Tech</a></li>
+                      <li><a href="">Personalized Finance</a></li>
+                      <li><a href="">Safety Tech</a></li>
+                      <li><a href="">Future of Warehousing</a></li>
+                      <li><a href="">Sustainable Brands</a></li>
+                    </ul>
+                  </div>
+                  <div class="hidden p-4 border-solid border-l w-full lg:block">
+                    <span class="font-bold pb-2 text-xs">Community Stats</span>
+                    <div class="flex">
+                      <div class="w-full">
+                        <span class="text-xs">Membership</span>
+                      </div>
+                      <div class="w-full">
+                        <span class="text-xs">Membership</span>
+                      </div>
+                      <div class="w-full">
+                        <span class="text-xs">Membership</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden p-4 border-solid border-l border-r lg:block">
+                    <span class="font-bold pb-2 text-xs">Mood</span>
+                    <div>
+                      <img class="img-mood" src="./static/img/mood.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Nav search -->
+          <div class="hidden search-mobile">
+            <div class="search active p-5">
+              <div class="search--content">
+                <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input class="text-2xl focus:outline-none" type="text" placeholder="Search companies, content, topics, and people">
+                <div class="flex items-center hidden">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 ml-4">in: Sustainable Fashion</span>
+                  <p class="px-2 py-1">+</p>
+                  <span class="color--blue bkg--blue-transparent px-2 py-1">in: Sustainable Fashion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Nav options -->
+          <div class="hidden">
+            <div class="flex items-center justify-center">
+              <div class="w-full text-center">
+                <a class="hover:underline" href="">Topics</a>
+              </div>
+              <div class="w-full text-center">
+                <a class="hover:underline" href="">Companies</a>
+              </div>
+              <div class="w-full text-center">
+                <a class="hover:underline" href="">People</a>
+              </div>
+              <div class="w-full flex justify-center">
+                <img class="w-10" src="./static/img/iso-color.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
+          <div class="p-4 nav">
+            <span class="icon-nav"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- agregar clase active para mostrar el nav -->
+  <div class="nav-mobile flex absolute bg-white w-full p-4 justify-between items-end">
+    <div>
+      <ul>
+        <li class="mb-4">
+          <a class="text-sm font-bold" href="">Our Manifesto</a>
+        </li>
+        <li class="mb-4">
+          <a class="text-sm font-bold" href="">Join Membership</a>
+        </li>
+        <li class="mb-4">
+          <a class="text-sm font-bold" href="">Login</a>
+        </li>
+      </ul>
+      <div class="flex">
+        <a class="ml-2 mr-2 text-xl" href="">
+          <span class="icon-twitter"></span>
+        </a>
+        <a class="ml-2 mr-2 text-xl" href="">
+          <span class="icon-twitter"></span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <ul class="text-right">
+        <li class="mb-6">
+          <a class="text-2xl" href="">Topics</a>
+        </li>
+        <li class="mb-6">
+          <a class="text-2xl" href="">Companies</a>
+        </li>
+        <li class="mb-6">
+          <a class="text-2xl" href="">People</a>
+        </li>
+      </ul>
+      <div class="flex justify-end">
+        <img src="./static/img/iso-color.svg" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="container mx-auto">
+    <div class="top-header">
+      <div class="flex items-center justify-center pt-4 pt-b md:pt-8 md:pb-8">
+        <span class="color--gray mr-6 text-base md:text-xl lg:text-2xl">
+          What’s Cool
+        </span>    
+        <span class="text-base md:text-xl lg:text-2xl">
+          My Feed
+        </span>    
+      </div>
+    </div>
+  </section>
+
+  <section class="comming-soon">
+    <div class="container">
+      <div class="lg:grid lg:grid-cols-10 p-4">
+        <div class="lg:col-start-2 lg:col-span-3">
+          <p class="text-white text-4xl font-bold">Coming Soon</p>
+        </div>
+        <div class="lg:col-span-6">
+          <p class="text-white">Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main><footer class="border-solid border-t">
+  <div class="container mx-auto">
+    <div class="lg:grid grid-cols-3 gap-4 pt-10 pb-12">
+      <div class="p-4 md:col-span-2 lg:p-0">
+        <div class="pb-12 md:grid grid-cols-8 gap-4 md:pb-0">
+          <div class="pb-12 flex justify-between md:col-span-2 md:pb-0">
+            <a class="text-xl pr-32 ff-conv-PxGrotesk text-black lg:pl-4" href="">
+              Startupy
+            </a>
+            <div class="flex justify-center md:hidden">
+              <a class="ml-2 mr-2 text-xl" href="">
+                <span class="icon-twitter"></span>
+              </a>
+              <a class="ml-2 mr-2 text-xl" href="">
+                <span class="icon-insta"></span>
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-5">
+            <p class="font-bold leading-none text-sm">We send the only email you need toread to keep your pulse on early stage startups.</p>
+            <div class="mt-3 bg-white border border-solid border-black px-4 py-2 text-black flex items-center" id="submitBox">
+              <span class="font-bold xl:text-xl">Email</span>
+              <input class="placeholder-black bg-transparent focus:outline-none py-2 px-4 block w-full placeholder-opacity-50 appearance-none leading-normal xl:text-xl" type="email" placeholder="you@mail.com" id="email">
+              <button class="opacity-75 xl:text-xl" id="submitButton">Submit</button>
+            </div>
+          </div>
+          <div class="md:col-span-1 hidden md:block">
+            <div class="flex justify-center">
+              <a class="ml-2 mr-2 text-xl" href="">
+                <span class="icon-twitter"></span>
+              </a>
+              <a class="ml-2 mr-2 text-xl" href="">
+                <span class="icon-insta"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex p-4 lg:p-0">
+        <ul class="w-full mr-8 whitespace-no-wrap text-sm md:text-base">
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Manifesto</a>
+          </li>
+          <li>
+            <a href="">Shop</a>
+          </li>
+        </ul>
+        <ul class="w-full mr-8 whitespace-no-wrap text-sm md:text-base">
+          <li>
+            <a href="">Community</a>
+          </li>
+          <li>
+            <a href="">Membership</a>
+          </li>
+          <li>
+            <a href="">Become a Curator</a>
+          </li>
+          <li>
+            <a href="">Roadmap</a>
+          </li>
+        </ul>
+        <ul class="w-full mr-2 whitespace-no-wrap text-sm md:text-base">
+          <li>
+            <a href="">FAQs</a>
+          </li>
+          <li>
+            <a href="">Terms of Use</a>
+          </li>
+          <li>
+            <a href="">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img class="img-footer w-full" src="./static/img/footer-bk.jpg" alt="">
+  </div>
+  <div class="bg-black h-5 w-full"></div>
+</footer>
+  <div class="modal">
+    <div class="modal-inner">
+      <span data-modal-close>&times;</span>
+      <div class="modal-content"></div>
+    </div>
+  </div>
+  <script src="static/modal.js"></script>
+  <script src="static/scripts.js?v=1.0"></script>
+  <script>var vanillaModal = new VanillaModal.default()</script>
+  
+</body>
+</html>
