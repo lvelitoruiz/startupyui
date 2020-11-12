@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Startupy</title>
+  <link rel="stylesheet" href="static/normalize.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <link rel="stylesheet" href="static/fonts.css" type="text/css" />
+  <link rel="stylesheet" href="static/icons.css" type="text/css" />
+  <meta name="theme-color" content="#f6f2ef">
+  <link rel="icon" href="static/favicon.svg">
+  <link rel="mask-icon" href="static/mask-icon.svg" color="#000000">
+  <link rel="apple-touch-icon" href="static/apple-touch-icon.png">
+  <link rel="manifest" href="static/manifest.json">
+  <link type="text/plain" rel="author" href="humans.txt">
+  <meta name="generator" content="Clay (https://github.com/lucuma/clay)" />
+  <link rel="stylesheet" href="static/modal.css">
+  
+</head>
+<body>
+  
+
+<header class="c-header fixed w-full z-20 border-solid border-b">
+  <div class="c-header--top items-center justify-center flex md:justify-between">
+    <a class="text-xl md:pl-4" href=""><h1 class="ff-conv-PxGrotesk text-white">Startupy</h1></a>
+    <div class="hidden md:block"> 
+      <a class="text-white p-2 font-bold text-xs" href="">Our Manifesto</a>
+      <a class="text-white p-2 font-bold text-xs" href="">Join Membership</a>
+      <a class="text-white p-2 pr-4 font-bold text-xs" href="">Login</a>
+    </div>
+  </div>
+  <div class="bg-white">
+    <div class="container mx-auto">
+      <div class="flex items-center relative lg:grid lg:grid-cols-8">
+        <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
+          <span class="iso icon-iso text-black pl-4 hidden"></span>
+          <span class="iso icon-eye-close text-black pl-4"></span>
+        </div>
+        <div class="md:col-span-6 lg:p-0">
+          <div class="hidden"> 
+            <div class="flex items-center lg:grid lg:grid-cols-10">
+              <div class="md:col-start-1 md:col-span-10 lg:col-start-2 lg:col-span-10">
+                <div class="flex">
+                  <div class="hidden p-4 border-solid border-l whitespace-no-wrap lg:block">
+                    <ul class="text-xs">
+                      <li class="font-bold pb-2">Trending Topics</li>
+                      <li><a href="">Assistive Tech</a></li>
+                      <li><a href="">Personalized Finance</a></li>
+                      <li><a href="">Safety Tech</a></li>
+                      <li><a href="">Future of Warehousing</a></li>
+                      <li><a href="">Sustainable Brands</a></li>
+                    </ul>
+                  </div>
+                  <div class="hidden p-4 border-solid border-l whitespace-no-wrap lg:block">
+                    <ul class="text-xs">
+                      <li class="font-bold pb-2">Trending Topics</li>
+                      <li><a href="">Assistive Tech</a></li>
+                      <li><a href="">Personalized Finance</a></li>
+                      <li><a href="">Safety Tech</a></li>
+                      <li><a href="">Future of Warehousing</a></li>
+                      <li><a href="">Sustainable Brands</a></li>
+                    </ul>
+                  </div>
+                  <div class="hidden p-4 border-solid border-l w-full lg:block">
+                    <span class="font-bold pb-2 text-xs">Community Stats</span>
+                    <div class="flex">
+                      <div class="w-full">
+                        <span class="text-xs">Membership</span>
+                      </div>
+                      <div class="w-full">
+                        <span class="text-xs">Membership</span>
+                      </div>
+                      <div class="w-full">
+                        <span class="text-xs">Membership</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden p-4 border-solid border-l border-r lg:block">
+                    <span class="font-bold pb-2 text-xs">Mood</span>
+                    <div>
+                      <img class="img-mood" src="./static/img/mood.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-mobile">
+            <div class="search active p-5">
+              <div class="search--content">
+                <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input class="text-2xl focus:outline-none" type="text" placeholder="Search companies, content, topics, and people">
+                <div class="flex items-center hidden">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 ml-4">in: Sustainable Fashion</span>
+                  <p class="px-2 py-1">+</p>
+                  <span class="color--blue bkg--blue-transparent px-2 py-1">in: Sustainable Fashion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
+          <div class="p-4 nav">
+            <span class="icon-nav"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- agregar clase active para mostrar el nav -->
+  <div class="nav-mobile flex absolute bg-white w-full p-4 justify-between items-end">
+    <div>
+      <ul>
+        <li class="mb-4">
+          <a class="text-sm font-bold" href="">Our Manifesto</a>
+        </li>
+        <li class="mb-4">
+          <a class="text-sm font-bold" href="">Join Membership</a>
+        </li>
+        <li class="mb-4">
+          <a class="text-sm font-bold" href="">Login</a>
+        </li>
+      </ul>
+      <div class="flex">
+        <a class="ml-2 mr-2 text-xl" href="">
+          <span class="icon-twitter"></span>
+        </a>
+        <a class="ml-2 mr-2 text-xl" href="">
+          <span class="icon-twitter"></span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <ul class="text-right">
+        <li class="mb-6">
+          <a class="text-2xl" href="">Topics</a>
+        </li>
+        <li class="mb-6">
+          <a class="text-2xl" href="">Companies</a>
+        </li>
+        <li class="mb-6">
+          <a class="text-2xl" href="">People</a>
+        </li>
+      </ul>
+      <div class="flex justify-end">
+        <img src="./static/img/iso-color.svg" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="top-header">
+      <div class="container mx-auto">
+        <div class="md:grid grid-cols-8 gap-4">
+          <div class="hidden md:block md:col-span-3 lg:col-span-2"><div class="p-5">
+  <p class="text-sm m-0">Filter by:</p>
+  <ul class="mt-6 ml-3 mr-3">
+    <li class="cursor-pointer border-solid border-b">
+      <span class="flex items-center py-4">
+        <span class="h-4 w-4 bg-black mr-2"></span>
+        <span class="mr-2">Topics</span>
+        <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+      </span>
+      <ul>
+        <li>
+          <div class="g-search flex items-center p-2 mb-4">
+            <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <input class="w-full focus:outline-none" type="search" name="" id="" placeholder="Search">
+          </div>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+          <label for="styled-checkbox-1" class="flex items-center">3D Startups</label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
+          <label for="styled-checkbox-2" class="flex items-center">API Startups</label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3">
+          <label for="styled-checkbox-3" class="flex items-center">Big Data, ML, &amp; Software Inf</label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
+          <label for="styled-checkbox-4" class="flex items-center"><span class="text-cut">Carbon Offsetting and Carbasd carbasd</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-5" type="checkbox" value="value5">
+          <label for="styled-checkbox-5" class="flex items-center"><span class="text-cut">D2C Brands &amp; DNVBs</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-6" type="checkbox" value="value6">
+          <label for="styled-checkbox-6" class="flex items-center"><span class="text-cut">Crowdfunding</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-7" type="checkbox" value="value7">
+          <label for="styled-checkbox-7" class="flex items-center"><span class="text-cut">E-Commerce &amp; Retail</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-8" type="checkbox" value="value8">
+          <label for="styled-checkbox-8" class="flex items-center"><span class="text-cut">Fintech Infrastructure</span></label>
+        </li>
+        <li class="pb-8">
+          <input class="styled-checkbox" id="styled-checkbox-9" type="checkbox" value="value9">
+          <label for="styled-checkbox-9" class="flex items-center"><span class="text-cut">Future of Real Estate</span></label>
+        </li>
+      </ul>
+    </li>
+    <li class="cursor-pointer border-solid border-b">
+      <span class="flex items-center py-4">
+        <span class="h-4 w-4 bg-black mr-2"></span>
+        <span class="mr-2">Companies</span>
+        <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+      </span>
+      <ul>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-10" type="checkbox" value="value10">
+          <label for="styled-checkbox-10" class="flex items-center"><span class="text-cut">Agency or Consultancy</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-11" type="checkbox" value="value11">
+          <label for="styled-checkbox-11" class="flex items-center"><span class="text-cut">Investment Fund</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-12" type="checkbox" value="value12">
+          <label for="styled-checkbox-12" class="flex items-center"><span class="text-cut">Publisher</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-13" type="checkbox" value="value13">
+          <label for="styled-checkbox-13" class="flex items-center"><span class="text-cut">Startup</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-14" type="checkbox" value="value14">
+          <label for="styled-checkbox-14" class="flex items-center"><span class="text-cut">Post-mortem</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-15" type="checkbox" value="value15">
+          <label for="styled-checkbox-15" class="flex items-center"><span class="text-cut">Aquired</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-16" type="checkbox" value="value16">
+          <label for="styled-checkbox-16" class="flex items-center"><span class="text-cut">Public</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-17" type="checkbox" value="value17">
+          <label for="styled-checkbox-17" class="flex items-center"><span class="text-cut">Prelaunch</span></label>
+        </li>
+        <li class="pb-4">
+          <div>
+            <input class="styled-checkbox" id="styled-checkbox-18" type="checkbox" value="value18">
+            <label for="styled-checkbox-18" class="flex items-center"><span class="text-cut">Location</span></label>
+          </div>
+          <div class="relative ml-5">
+            <div class="g-search flex items-center p-2 mt-1">
+              <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+              <input class="w-full focus:outline-none" type="search" name="" id="" placeholder="Search">
+            </div>
+            <div class="absolute bg-white flex flex-col w-full z-10 border border-black shadow-lg">
+              <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Curated</a>
+              <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Authored</a>
+              <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Mentioned In</a>
+              <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Relationships</a>
+              <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Watching</a>
+            </div>
+          </div>
+        </li>
+        <li class="pb-4">
+          <div>
+            <input class="styled-checkbox" id="styled-checkbox-19" type="checkbox" value="value19">
+            <label for="styled-checkbox-19" class="flex items-center"><span class="text-cut">Founded</span></label>
+          </div>
+          <div class="flex ml-5">
+            <div class="g-search flex items-center p-2 mt-1">
+              <input class="w-full focus:outline-none" type="search" name="" id="" placeholder="Start Date">
+            </div>
+            <div class="g-search flex items-center p-2 mt-1 border-solid border-l border-black">
+              <input class="w-full focus:outline-none" type="search" name="" id="" placeholder="Start Date">
+            </div>
+          </div>
+        </li>
+        <li class="pb-8">
+          <div>
+            <input class="styled-checkbox" id="styled-checkbox-20" type="checkbox" value="value20">
+            <label for="styled-checkbox-20" class="flex items-center"><span class="text-cut">Funding Amount</span></label>
+          </div>
+          <div class="p-2 ml-5 mt-1">
+            componente
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="flex items-center cursor-pointer border-solid border-b pt-4 pb-8">
+      <span class="h-4 w-4 bg-black mr-2"></span>
+      <span class="mr-2">People</span>
+    </li>
+    <li class="cursor-pointer border-solid border-b">
+      <span class="flex items-center py-4">
+        <span class="h-4 w-4 bg-black mr-2"></span>
+        <span class="mr-2">Credits</span>
+        <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+      </span>
+      <ul>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-20" type="checkbox" value="value20">
+          <label for="styled-checkbox-20" class="flex items-center"><span class="text-cut">Author</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-21" type="checkbox" value="value21">
+          <label for="styled-checkbox-21" class="flex items-center"><span class="text-cut">Investor</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-22" type="checkbox" value="value22">
+          <label for="styled-checkbox-22" class="flex items-center"><span class="text-cut">Founder</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-23" type="checkbox" value="value23">
+          <label for="styled-checkbox-23" class="flex items-center"><span class="text-cut">Curator</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-24" type="checkbox" value="value24">
+          <label for="styled-checkbox-24" class="flex items-center"><span class="text-cut">Design</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-25" type="checkbox" value="value25">
+          <label for="styled-checkbox-25" class="flex items-center"><span class="text-cut">Copywriting</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-26" type="checkbox" value="value26">
+          <label for="styled-checkbox-26" class="flex items-center"><span class="text-cut">Marketing</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-27" type="checkbox" value="value27">
+          <label for="styled-checkbox-27" class="flex items-center"><span class="text-cut">Tech</span></label>
+        </li>
+        <li class="pb-4">
+          <input class="styled-checkbox" id="styled-checkbox-28" type="checkbox" value="value28">
+          <label for="styled-checkbox-28" class="flex items-center"><span class="text-cut">Products</span></label>
+        </li>
+        <li class="pb-8">
+          <input class="styled-checkbox" id="styled-checkbox-29" type="checkbox" value="value29">
+          <label for="styled-checkbox-29" class="flex items-center"><span class="text-cut">Operations</span></label>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+          </div>
+          <div class="md:col-span-5 lg:col-span-6">
+            <div class="p-5">
+              <div class="hidden md:block">
+                <ul class="flex overflow-auto pb-10 md:justify-end">
+                  <li class="pr-6 pl-5 md:pl-0">
+                    <span class="text-sm whitespace-no-wrap">Sort by:</span>
+                  </li>
+                  <li class="pr-6">
+                    <a class="text-sm whitespace-no-wrap" href="#">Alphabetical</a>
+                  </li>
+                  <li class="pr-6">
+                    <a class="text-sm whitespace-no-wrap" href="#">Date Added</a>
+                  </li>
+                  <li>
+                    <a class="text-sm whitespace-no-wrap" href="#">Most Connected</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="lg:ml-20">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">10</span> Topics</p>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Femtech</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">API Startups</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Artificial Intelligence</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">The Future of Venture Capital</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Ecommerce + Retail</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Another Topic Result</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b pb-4 items-center mb-10">
+                  <a class="color--gray font-bold text-sm" href="">Show more results</a>
+                </div>
+              </div>
+              <div class="lg:ml-20">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">10</span> Companies</p>
+                </div>
+                <div>
+                  <div class="flex border-solid border-b py-4 hidden md:flex md:py-5">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Brightside
+                        </p>
+                        <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>brightside.com</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="border-solid border-b py-4 md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img flex items-center justify-center bg-black">
+                        <span class="text-white font-bold">CS</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Mighty
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>mighty.com</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex border-solid border-b py-4 hidden md:flex md:py-5">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Brightside
+                        </p>
+                        <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>brightside.com</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="border-solid border-b py-4 md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img flex items-center justify-center bg-black">
+                        <span class="text-white font-bold">CS</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Mighty
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>mighty.com</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex border-solid border-b py-4 hidden md:flex md:py-5">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Brightside
+                        </p>
+                        <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>brightside.com</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="border-solid border-b py-4 md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img flex items-center justify-center bg-black">
+                        <span class="text-white font-bold">CS</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Mighty
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>mighty.com</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex border-solid border-b py-4 hidden md:flex md:py-5">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Brightside
+                        </p>
+                        <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>brightside.com</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="border-solid border-b py-4 md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img flex items-center justify-center bg-black">
+                        <span class="text-white font-bold">CS</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Mighty
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>mighty.com</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:ml-20 mt-8">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">4</span> Content</p>
+                </div>
+                <div class="g-modal" id="box1">
+                  <div class="g-modal-small g-modal__schedule">
+                    <div class="schedule-item--title">
+                      <h3 class="title mt-0 mb-10 c-black">Texto Dumy</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet finibus ligula. Proin iaculis lacus sit amet mi tempor, ac pulvinar est aliquam. Curabitur eget mattis nulla. Sed ut iaculis risus. Morbi in laoreet orci, quis ullamcorper lorem. Donec commodo dapibus eros at scelerisque. Suspendisse a velit efficitur, blandit quam vitae, pretium ante. Nunc venenatis lacus nec mi vulputate, ultrices ultricies nulla suscipit. Integer non arcu ac turpis consectetur ultrices. Vestibulum ullamcorper odio augue, in bibendum ligula lacinia molestie. Vestibulum quis nisl a tortor congue dignissim. Mauris vestibulum velit sed sagittis ultricies. Proin quis faucibus nunc.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-solid border-b pb-6">
+                  <div class="flex mt-6 items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+                        <span class="text-xs">JN</span>
+                      </div>
+                      <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
+                    </div>
+                    <div>
+                      <a class="text-xs font-bold mr-4" href="">
+                        <i class="icon-link"></i>
+                        <span>Share</span>
+                      </a>
+                      <a class="text-xs font-bold" href="">
+                        <i class="icon-share"></i>
+                        <span>Visit</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainability &amp; Climate Change</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Carbon Offsetting and Carbon Removal</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Future of Fashion</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Brands</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Fashion</span>
+                    <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <div class="flex">
+                      <div class="flex items-center bg-black px-1">
+                        <h3 class="text-md font-bold text-white md:text-2xl">We need to take CO2 out of the sky</h3>
+                        <i class="icon-eye ml-2 text-3xl text-white"></i>
+                      </div>
+                    </div>
+                    <div class="fade-out">
+                      <div class="border border-solid border-black p-2 max-h--200 overflow-auto">
+                        <div class="flex mb-6">
+                          <span class="text-sm font-bold">Ryan Orbuch</span>
+                          <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+                        </div>
+                        <span class="color--gray text-xs font-bold">TL;DR</span>
+                        <p>"0-gigaton-scale negative emissions are necessary in essentially every emissions reduction scenario. We have no choice but to fund, research, and deploy them if we’re serious about keeping warming to 2 degrees; or close to it. We are not even close to on track. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient monte</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img class="w-full" src="./static/img/bk-box.png" alt="">
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Then I Met You</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Fuzzco</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Taschen</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Dieux Skin</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">SkinTe</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Crate &amp; Barrel</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Hansel From Basel</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Need Supply</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Another Co.</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Yet While</span>
+                    <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-10">
+                  <div class="flex mt-6 items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+                        <span class="text-xs">JN</span>
+                      </div>
+                      <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
+                    </div>
+                    <div>
+                      <a class="text-xs font-bold mr-4" href="">
+                        <i class="icon-link"></i>
+                        <span>Share</span>
+                      </a>
+                      <a class="text-xs font-bold" href="">
+                        <i class="icon-share"></i>
+                        <span>Visit</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Future of Housing</span>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <div class="flex">
+                      <div class="flex items-center bg-black px-1 md:max-w-md">
+                        <h3 class="text-md font-bold text-white md:text-2xl">Startups that offer new paths tohomeownership</h3>
+                        <i class="icon-eye ml-2 text-3xl text-white"></i>
+                      </div>
+                    </div>
+                    <div class="fade-out">
+                      <div class="border border-solid border-black p-2 max-h--200 overflow-auto">
+                        <div class="flex mb-6">
+                          <span class="text-sm font-bold">Ryan Orbuch</span>
+                          <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+                        </div>
+                        <span class="color--gray text-xs font-bold">TL;DR</span>
+                        <p class="pb-3">"0-gigaton-scale negative emissions are necessary in essentially every emissions reduction scenario. We have no choice but to fund, research, and deploy them if we’re serious about keeping warming to 2 degrees; or close to it. We are not even close to on track. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient monte</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img src="./static/img/bk-box.png" alt="">
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Upequity</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Flyhomes</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">ZeroDown</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Divvy Homes</span>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:ml-20 mt-20 border-solid border-t mt-16 pt-8">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">2</span> Startupy Members</p>
+                </div>
+                <div>
+                  <div class="flex py-5 hidden md:flex border-solid border-b">
+                    <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+                      <span class="text-xs md:text-base">RF</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Comrad Socks
+                        </p>
+                        <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>robert-fox</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="py-4 border-solid border-b md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+                        <span class="text-xs md:text-base">RF</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Comrad Socks
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>robert-fox</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex pt-5 pb-20 hidden md:flex border-solid border-b">
+                    <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+                      <span class="text-xs md:text-base">RF</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Comrad Socks
+                        </p>
+                        <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>robert-fox</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="pt-5 pb-20 border-solid border-b md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+                        <span class="text-xs md:text-base">RF</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Comrad Socks
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>robert-fox</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:ml-20 mt-8 mt-16">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">2</span> People</p>
+                </div>
+                <div class="mt-6">
+                  <div class="flex mb-8">
+                    <p class="flex bkg--yellow-transparent px-2 py-1">
+                      <span class="mr-2">Brooklyn Simmons</span>
+                      <span class="text-xs bg-yellow-400 px-2 py-1 mr-1">Founder</span>
+                    </p>
+                  </div>
+                  <div class="flex mb-8">
+                    <p class="flex bkg--yellow-transparent px-2 py-1">
+                      <span class="mr-2">Kathryn Murphy</span>
+                      <span class="text-xs bg-yellow-400 px-2 py-1">Founder</span>
+                    </p>
+                  </div>
+                  <div class="flex mb-8">
+                    <p class="flex bkg--yellow-transparent px-2 py-1">
+                      <span class="mr-2">Fuzzco</span>
+                      <span class="text-xs bg-yellow-400 px-2 py-1">Founder</span>
+                    </p>
+                  </div>
+                  <div class="flex mb-8">
+                    <p class="flex bkg--yellow-transparent px-2 py-1">
+                      <span class="mr-2">Sequioa Capital</span>
+                      <span class="text-xs bg-yellow-400 px-2 py-1">Founder</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="md:hidden"><div class="btn-nav">
+  <button class="bkg--gray px-6 py-3 w-full m-4">Sort</button>
+  <button class="bkg--gray px-6 py-3 w-full m-4">Filter</button>
+</div>
+<div class="btn-nav--content active">
+  <div class="flex flex-col h-full">
+    <div class="flex items-center border-b border-solid">
+      <p class="m-4 w-full text-2xl">Filter</p>
+      <button class="bg-black text-white px-6 py-2 m-4">Close</button>
+    </div>
+    <div class="h-full overflow-auto">
+      <div>
+        <ul class="flex mx-4 flex-col border-b border-solid pt-4 pb-8">
+          <li class="pb-3">
+            <span class="text-xs whitespace-no-wrap">Sort by:</span>
+          </li>
+          <li class="pb-3">
+            <a class="text-sm font-bold" href="#">Alphabetical</a>
+          </li>
+          <li class="pb-3">
+            <a class="text-sm" href="#">Date Added</a>
+          </li>
+          <li class="pb-3">
+            <a class="text-sm" href="#">Most Connected</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="mx-4">
+          <li class=" border-solid border-b">
+            <span class="flex items-center py-6">
+              <span class="h-4 w-4 bg-black mr-2"></span>
+              <span class="mr-2">Topics</span>
+              <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+            </span>
+            <ul class="ml-6">
+              <li>
+                <div class="g-search flex items-center p-2 mb-4">
+                  <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+                  <input class="w-full focus:outline-none" type="search" name="" id="" placeholder="Search">
+                </div>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+                <label for="styled-checkbox-1" class="flex items-center">3D Startups</label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
+                <label for="styled-checkbox-2" class="flex items-center">API Startups</label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3">
+                <label for="styled-checkbox-3" class="flex items-center">Big Data, ML, &amp; Software Inf</label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
+                <label for="styled-checkbox-4" class="flex items-center"><span class="text-cut">Carbon Offsetting and Carbasd carbasd</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-5" type="checkbox" value="value5">
+                <label for="styled-checkbox-5" class="flex items-center"><span class="text-cut">D2C Brands &amp; DNVBs</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-6" type="checkbox" value="value6">
+                <label for="styled-checkbox-6" class="flex items-center"><span class="text-cut">Crowdfunding</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-7" type="checkbox" value="value7">
+                <label for="styled-checkbox-7" class="flex items-center"><span class="text-cut">E-Commerce &amp; Retail</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-8" type="checkbox" value="value8">
+                <label for="styled-checkbox-8" class="flex items-center"><span class="text-cut">Fintech Infrastructure</span></label>
+              </li>
+              <li class="pb-8">
+                <input class="styled-checkbox" id="styled-checkbox-9" type="checkbox" value="value9">
+                <label for="styled-checkbox-9" class="flex items-center"><span class="text-cut">Future of Real Estate</span></label>
+              </li>
+            </ul>
+          </li>
+          <li class=" border-solid border-b">
+            <span class="flex items-center py-6">
+              <span class="h-4 w-4 bg-black mr-2"></span>
+              <span class="mr-2">Companies</span>
+              <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+            </span>
+            <ul class="ml-6">
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-10" type="checkbox" value="value10">
+                <label for="styled-checkbox-10" class="flex items-center"><span class="text-cut">Agency or Consultancy</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-11" type="checkbox" value="value11">
+                <label for="styled-checkbox-11" class="flex items-center"><span class="text-cut">Investment Fund</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-12" type="checkbox" value="value12">
+                <label for="styled-checkbox-12" class="flex items-center"><span class="text-cut">Publisher</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-13" type="checkbox" value="value13">
+                <label for="styled-checkbox-13" class="flex items-center"><span class="text-cut">Startup</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-14" type="checkbox" value="value14">
+                <label for="styled-checkbox-14" class="flex items-center"><span class="text-cut">Post-mortem</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-15" type="checkbox" value="value15">
+                <label for="styled-checkbox-15" class="flex items-center"><span class="text-cut">Aquired</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-16" type="checkbox" value="value16">
+                <label for="styled-checkbox-16" class="flex items-center"><span class="text-cut">Public</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-17" type="checkbox" value="value17">
+                <label for="styled-checkbox-17" class="flex items-center"><span class="text-cut">Prelaunch</span></label>
+              </li>
+              <li class="pb-4">
+                <div>
+                  <input class="styled-checkbox" id="styled-checkbox-18" type="checkbox" value="value18">
+                  <label for="styled-checkbox-18" class="flex items-center"><span class="text-cut">Location</span></label>
+                </div>
+                <div class="relative ml-5">
+                  <div class="g-search flex items-center p-2 mt-1">
+                    <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input class="w-full focus:outline-none" type="search" name="" id="" placeholder="Search">
+                  </div>
+                  <div class="absolute bg-white flex flex-col w-full z-10 border border-black shadow-lg">
+                    <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Curated</a>
+                    <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Authored</a>
+                    <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Mentioned In</a>
+                    <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Relationships</a>
+                    <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Watching</a>
+                  </div>
+                </div>
+              </li>
+              <li class="pb-4">
+                <div>
+                  <input class="styled-checkbox" id="styled-checkbox-19" type="checkbox" value="value19">
+                  <label for="styled-checkbox-19" class="flex items-center"><span class="text-cut">Founded</span></label>
+                </div>
+                <div class="flex ml-5">
+                  <div class="g-search flex items-center p-2 mt-1">
+                    <input class="w-full focus:outline-none" type="search" name="" id="" placeholder="Start Date">
+                  </div>
+                  <div class="g-search flex items-center p-2 mt-1 border-solid border-l border-black">
+                    <input class="w-full focus:outline-none" type="search" name="" id="" placeholder="Start Date">
+                  </div>
+                </div>
+              </li>
+              <li class="pb-8">
+                <div>
+                  <input class="styled-checkbox" id="styled-checkbox-20" type="checkbox" value="value20">
+                  <label for="styled-checkbox-20" class="flex items-center"><span class="text-cut">Funding Amount</span></label>
+                </div>
+                <div class="p-2 ml-5 mt-1">
+                  componente
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="flex items-center  border-solid border-b py-6">
+            <span class="h-4 w-4 bg-black mr-2"></span>
+            <span class="mr-2">People</span>
+          </li>
+          <li class=" border-solid border-b">
+            <span class="flex items-center py-6">
+              <span class="h-4 w-4 bg-black mr-2"></span>
+              <span class="mr-2">Credits</span>
+              <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+            </span>
+            <ul class="ml-6">
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-20" type="checkbox" value="value20">
+                <label for="styled-checkbox-20" class="flex items-center"><span class="text-cut">Author</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-21" type="checkbox" value="value21">
+                <label for="styled-checkbox-21" class="flex items-center"><span class="text-cut">Investor</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-22" type="checkbox" value="value22">
+                <label for="styled-checkbox-22" class="flex items-center"><span class="text-cut">Founder</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-23" type="checkbox" value="value23">
+                <label for="styled-checkbox-23" class="flex items-center"><span class="text-cut">Curator</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-24" type="checkbox" value="value24">
+                <label for="styled-checkbox-24" class="flex items-center"><span class="text-cut">Design</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-25" type="checkbox" value="value25">
+                <label for="styled-checkbox-25" class="flex items-center"><span class="text-cut">Copywriting</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-26" type="checkbox" value="value26">
+                <label for="styled-checkbox-26" class="flex items-center"><span class="text-cut">Marketing</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-27" type="checkbox" value="value27">
+                <label for="styled-checkbox-27" class="flex items-center"><span class="text-cut">Tech</span></label>
+              </li>
+              <li class="pb-4">
+                <input class="styled-checkbox" id="styled-checkbox-28" type="checkbox" value="value28">
+                <label for="styled-checkbox-28" class="flex items-center"><span class="text-cut">Products</span></label>
+              </li>
+              <li class="pb-8">
+                <input class="styled-checkbox" id="styled-checkbox-29" type="checkbox" value="value29">
+                <label for="styled-checkbox-29" class="flex items-center"><span class="text-cut">Operations</span></label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex items-center border-t border-solid">
+      <button class="bkg--gray px-6 py-3 w-full m-4">Clear (2)</button>
+      <button class="bg-black text-white px-6 py-3 w-full m-4">Apply</button>
+    </div>
+  </div>
+</div>
+  </section>
+</main><footer class="border-solid border-t">
+  <div class="container mx-auto">
+    <div class="lg:grid grid-cols-3 gap-4 pt-10 pb-12">
+      <div class="p-4 md:col-span-2 lg:p-0">
+        <div class="pb-12 md:grid grid-cols-8 gap-4 md:pb-0">
+          <div class="pb-12 flex justify-between md:col-span-2 md:pb-0">
+            <a class="text-xl pr-32 ff-conv-PxGrotesk text-black lg:pl-4" href="">
+              Startupy
+            </a>
+            <div class="flex justify-center md:hidden">
+              <a class="ml-2 mr-2 text-xl" href="">
+                <span class="icon-twitter"></span>
+              </a>
+              <a class="ml-2 mr-2 text-xl" href="">
+                <span class="icon-insta"></span>
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-5">
+            <p class="font-bold leading-none text-sm">We send the only email you need toread to keep your pulse on early stage startups.</p>
+            <div class="mt-3 bg-white border border-solid border-black px-4 py-2 text-black flex items-center" id="submitBox">
+              <span class="font-bold xl:text-xl">Email</span>
+              <input class="placeholder-black bg-transparent focus:outline-none py-2 px-4 block w-full placeholder-opacity-50 appearance-none leading-normal xl:text-xl" type="email" placeholder="you@mail.com" id="email">
+              <button class="opacity-75 xl:text-xl" id="submitButton">Submit</button>
+            </div>
+          </div>
+          <div class="md:col-span-1 hidden md:block">
+            <div class="flex justify-center">
+              <a class="ml-2 mr-2 text-xl" href="">
+                <span class="icon-twitter"></span>
+              </a>
+              <a class="ml-2 mr-2 text-xl" href="">
+                <span class="icon-insta"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex p-4 lg:p-0">
+        <ul class="w-full mr-8 whitespace-no-wrap text-sm md:text-base">
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Manifesto</a>
+          </li>
+          <li>
+            <a href="">Shop</a>
+          </li>
+        </ul>
+        <ul class="w-full mr-8 whitespace-no-wrap text-sm md:text-base">
+          <li>
+            <a href="">Community</a>
+          </li>
+          <li>
+            <a href="">Membership</a>
+          </li>
+          <li>
+            <a href="">Become a Curator</a>
+          </li>
+          <li>
+            <a href="">Roadmap</a>
+          </li>
+        </ul>
+        <ul class="w-full mr-2 whitespace-no-wrap text-sm md:text-base">
+          <li>
+            <a href="">FAQs</a>
+          </li>
+          <li>
+            <a href="">Terms of Use</a>
+          </li>
+          <li>
+            <a href="">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img class="img-footer w-full" src="./static/img/footer-bk.jpg" alt="">
+  </div>
+  <div class="bg-black h-5 w-full"></div>
+</footer>
+  <div class="modal">
+    <div class="modal-inner">
+      <span data-modal-close>&times;</span>
+      <div class="modal-content"></div>
+    </div>
+  </div>
+  <script src="static/modal.js"></script>
+  <script src="static/scripts.js?v=1.0"></script>
+  <script>var vanillaModal = new VanillaModal.default()</script>
+  
+</body>
+</html>
