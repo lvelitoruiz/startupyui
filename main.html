@@ -499,7 +499,7 @@
             
                         <div class="flex items-center mr-4 mt-2" id="id1">
                           <span class="color--blue bkg--blue-transparent px-2 py-1">Topic I Just Added</span>
-                          <span onclick="javascript:removeElement('id1'); return false;" >
+                          <span class="addTrigger" rel="id1" >
                             <svg class="h-4 w-4 color--gray cursor-pointer ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
@@ -508,8 +508,8 @@
             
                         <div class="flex items-center mr-4 mt-2" id="ga2">
                           <span class="color--blue bkg--blue-transparent px-2 py-1">Another One</span>
-                          <span>
-                            <svg class="h-4 w-4 color--gray cursor-pointer ml-1" onclick="removeElement('ga2')"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <span class="addTrigger" rel="ga2">
+                            <svg class="h-4 w-4 color--gray cursor-pointer ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                           </span>
@@ -1607,9 +1607,5 @@
 </main>
 <script>
             
-  function removeElement(elementId) {
-      // Removes an element from the document
-      var element = document.getElementById(elementId);
-      element.parentNode.removeChild(element);
-  }
+  
   </script>
