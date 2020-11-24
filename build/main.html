@@ -153,11 +153,48 @@
         </div>
         <div class="flex mb-8 items-start">
           <div class="mr-4 md:mr-8">
-            <span class="font-bold text-xs">Status</span>
-            <p>Prelaunch</p>
+            <div class="box-info">
+              <span class="font-bold text-xs">Status</span>
+              <p class="launchEdit">Prelaunch</p>
+              <div class="box-info-edit hidden">
+                <div class="flex items-center justify-between text-xs p-1 bg-white">
+                  <span class="font-bold">Status</span>
+                  <a class="color--red closeBox" href="">Cancel</a>
+                </div>
+                <div>
+                  <ul>
+                    <li class="flex items-center p-1 cursor-pointer">
+                      <svg class="w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>Prelaunch</span>
+                    </li>
+                    <li class="flex items-center p-1 cursor-pointer">
+                      <span class="ml-5">Prelaunch</span>
+                    </li>
+                    <li class="flex items-center p-1 cursor-pointer">
+                      <span class="ml-5">Prelaunch</span>
+                    </li>
+                    <li class="flex items-center p-1 cursor-pointer">
+                      <span class="ml-5">Prelaunch</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="mr-4 md:mr-8">
-            <span class="font-bold text-xs">Founded</span>
+            <div class="box-info">
+              <span class="font-bold text-xs">Founded</span>
+              <p class="launchEdit">2019</p>
+              <div class="box-info-edit hidden">
+                <div class="flex items-center justify-between text-xs p-1 bg-white">
+                  <span class="font-bold">Founded</span>
+                  <a class="color--red closeBox" href="">Cancel</a>
+                </div>
+                <input class="bg-transparent p-1 focus:outline-none w-full" type="text">
+              </div>
+            </div>
             <a href="" class="color--gray block" data-ref="#box2" data-modal-open>+ Add</a>
             <div class="g-modal" id="box2">
               <div class="g-modal__schedule">
@@ -178,9 +215,51 @@
                 <div class="h-full fade-out-top">
                   <div class="h-full overflow-auto md:h-64">
                     <div class="mb-10 md:mb-0">
-                      <div class="mt-4">
-                        <p class="text-sm font-bold mb-1">Title</p>
-                        <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" name="" id="">
+                      <div class="flex">
+                        <div class="mt-4 mr-4 w-full">
+                          <p class="text-sm font-bold mb-1">Title</p>
+                          <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" placeholder="Find or create Author" type="text" name="" id="">
+                        </div>
+                        <div class="mt-4 ml-4 w-full">
+                          <p class="text-sm font-bold mb-1">Company Type</p>
+                          <div class="relative w-full">
+                            <button class="h-50 w-full border-solid border border-black px-4 py-3 flex items-center h-8 justify-between focus:outline-none">
+                              <span class="text-sm leading-none text-gray-500">
+                                Choose
+                              </span>
+                              <svg class="w-4 h-4 mt-px ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                              </svg>
+                            </button>
+                            <div class="absolute bg-white flex flex-col w-full border border-black shadow-lg z-10">
+                              <label class="custom-radio-checkbox px-3 py-2">
+                                <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+                                <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+                                <span class="custom-radio-checkbox__text">Startup</span>
+                              </label>
+                              <label class="custom-radio-checkbox px-3 py-2">
+                                <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+                                <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+                                <span class="custom-radio-checkbox__text">Startup</span>
+                              </label>
+                              <label class="custom-radio-checkbox px-3 py-2">
+                                <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+                                <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+                                <span class="custom-radio-checkbox__text">Startup</span>
+                              </label>
+                              <label class="custom-radio-checkbox px-3 py-2">
+                                <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+                                <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+                                <span class="custom-radio-checkbox__text">Startup</span>
+                              </label>
+                              <label class="custom-radio-checkbox px-3 py-2">
+                                <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+                                <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+                                <span class="custom-radio-checkbox__text">Startup</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div class="mt-4">
                         <p class="text-sm font-bold mb-1">URL</p>
@@ -255,10 +334,19 @@
                 </div>
               </div>
             </div>
-            <p>2019</p>
           </div>
           <div class="mr-4 md:mr-8">
-            <span class="font-bold text-xs">Location</span>
+            <div class="box-info">
+              <span class="font-bold text-xs">Location</span>
+              <p class="launchEdit">USA</p>
+              <div class="box-info-edit hidden">
+                <div class="flex items-center justify-between text-xs p-1 bg-white">
+                  <span class="font-bold">Location</span>
+                  <a class="color--red closeBox" href="">Cancel</a>
+                </div>
+                <input class="bg-transparent p-1 focus:outline-none w-full" type="text">
+              </div>
+            </div>
             <a href="" class="color--gray block" data-ref="#box3" data-modal-open>+ Add</a>
             <div class="g-modal" id="box3">
               <div class="g-modal__schedule">
@@ -412,26 +500,173 @@
                 </div>
               </div>
             </div>
-            <p>USA</p>
           </div>
           <div class="mr-4 md:mr-8">
-            <span class="font-bold text-xs">Funding</span>
-            <a href="" class="color--gray block">+ Add</a>
-            <p>$1M</p>
+            <div class="box-info">
+              <span class="font-bold text-xs">Funding</span>
+              <p class="launchEdit">$1M</p>
+              <div class="box-info-edit hidden">
+                <div class="flex items-center justify-between text-xs p-1 bg-white">
+                  <span class="font-bold">Funding</span>
+                  <a class="color--red closeBox" href="">Cancel</a>
+                </div>
+                <input class="bg-transparent p-1 focus:outline-none w-full" type="text">
+              </div>
+            </div>
+            <a href="" class="color--gray block" data-ref="#boxtopic" data-modal-open>+ Add</a>
+            <div class="g-modal" id="boxtopic">
+              <div class="g-modal__schedule">
+                <div class="flex items-center mb-4">
+                  <p class="font-bold m-0 pr-2">Adding Topics to:</p>
+                </div>
+                <div class="flex items-center border-b border-solid pb-6 w-full">
+                  <div class="text-cut">
+                    <div class="flex items-center w-full">
+                      <span class="icon-attaching"></span>
+                      <p class="ml-2 text-cut">Epdisode No. 23 - In Case it’s Really Las Case it’s Really Las</p>
+                    </div>
+                  </div>
+                </div>
+            
+            
+                <div class="h-full fade-out-top">
+                  <div class="h-full overflow-auto md:h-64">
+                    <div class="mb-10 md:mb-0">
+                      <div class="mt-4">
+                        <p class="text-sm font-bold mb-1">Topic Tags</p>
+                        <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" placeholder="Add topic tags to help with discoverability" name="" id="">
+                      </div>
+            
+                      <div class="flex flex-wrap items-center mb-4">
+            
+                        <div class="flex items-center mr-4 mt-2" id="id1">
+                          <span class="color--blue bkg--blue-transparent px-2 py-1">Topic I Just Added</span>
+                          <span class="addTrigger" rel="id1" >
+                            <svg class="h-4 w-4 color--gray cursor-pointer ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                          </span>
+                        </div>
+            
+                        <div class="flex items-center mr-4 mt-2" id="ga2">
+                          <span class="color--blue bkg--blue-transparent px-2 py-1">Another One</span>
+                          <span class="addTrigger" rel="ga2">
+                            <svg class="h-4 w-4 color--gray cursor-pointer ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                          </span>
+            
+                        </div>
+            
+                      </div>
+            
+                    </div>
+                  </div>
+                </div>
+            
+            
+                <div class="modal-footer justify-between">
+                  <button class="bg-black text-white py-2 px-4">Save</button>
+                </div>
+              </div>
+            </div>
+  
           </div>
         </div>
         <div class="flex mb-12 items-center flex-wrap">
-          <a class="text-xs font-bold mr-8" href="">
-            <i class="icon-link"></i>
-            <span>fabricskincare.com</span>
-          </a>
-          <a class="text-xs font-bold mr-8" href="">
-            <i class="icon-twitter"></i>
-            <span>hifabric</span>
-          </a>
-          <a class="text-xs font-bold mr-8 color--gray" href="">
-            <span>+ Add Link</span>
-          </a>
+          <div class="flex flex-col">
+            <a class="text-xs mr-8 color--gray" href="">
+              <i class="icon-link"></i>
+              <span>Add</span>
+            </a>
+            <a class="text-xs font-bold mr-8" href="">
+              <i class="icon-link"></i>
+              <span>fabricskincare.com</span>
+            </a>
+          </div>
+          <div class="flex flex-col">
+            <a class="text-xs mr-8 color--gray" href="" data-ref="#boxblank" data-modal-open>
+              <i class="icon-twitter"></i>
+              <span>Add</span>
+            </a>
+            <div class="g-modal" id="boxblank">
+              <div class="g-modal__schedule">
+                <div class="flex items-center mb-4">
+                  <p class="font-bold m-0 pr-2">Adding similar company to:</p>
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Future of Housing</span>
+                </div>
+                <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" placeholder="Find an existing record or create a new one">
+                <div class="h-full fade-out-top">
+                  <div class="h-full overflow-auto md:h-64">
+                  </div>
+                </div>
+                <div class="modal-footer justify-end">
+                  <button class="bg-black text-white py-2 px-4">Next</button>
+                </div>
+              </div>
+            </div>
+            <a class="text-xs font-bold mr-8" href="">
+              <i class="icon-twitter"></i>
+              <span>hifabric</span>
+            </a>
+          </div>
+          <div class="flex flex-col">
+            <a class="text-xs mr-8 color--gray" href="" data-ref="#boxalert" data-modal-open>
+              <i class="icon-lnk"></i>
+              <span>Add</span>
+            </a>
+            <div class="g-modal" id="boxalert">
+              <div class="g-modal__schedule">
+                <div class="flex items-center mb-4">
+                  <p class="font-bold m-0 pr-2">Adding similar company to:</p>
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Future of Housing</span>
+                </div>
+                <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" placeholder="Find an existing record or create a new one">
+                <div class="h-full fade-out-top">
+                  <div class="h-full overflow-auto md:h-64">
+                  </div>
+                </div>
+                <div class="modal-footer justify-end">
+                  <button class="bg-black text-white py-2 px-4">Next</button>
+                </div>
+                <div class="g-modal-alert">
+                  <div class="w-4/5 md:w-3/5 lg:w-3/6">
+                    <p class="font-bold">Confirm Close</p>
+                    <p>Are you sure you want to close? You will lose the content you’ve added.</p>
+                    <div class="flex mt-8">
+                      <button class="bg-white text-black py-2 px-4 mr-2 whitespace-no-wrap">Go Back</button>
+                      <button class="w-full bkg--red text-black py-2 px-4 ml-2 whitespace-no-wrap">Confirm & Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="text-xs font-bold mr-8" href="">
+              <i class="icon-lnk"></i>
+              <span>hifabric</span>
+            </a>
+          </div>
+          <div class="flex flex-col">
+            <a class="text-xs mr-8 color--gray" href="">
+              <i class="icon-insta"></i>
+              <span>Add</span>
+            </a>
+            <a class="text-xs font-bold mr-8" href="">
+              <i class="icon-insta"></i>
+              <span>hifabric</span>
+            </a>
+          </div>
+          <div class="flex flex-col">
+            <a class="text-xs mr-8 color--gray" href="">
+              <i class="icon-fb"></i>
+              <span>Add</span>
+            </a>
+            <a class="text-xs font-bold mr-8" href="">
+              <i class="icon-fb"></i>
+              <span>hifabric</span>
+            </a>
+          </div>
+          
         </div>
         <div class="border-solid border-t pt-2 pb-5">
           <div class="flex items-center">
@@ -457,10 +692,25 @@
             <span class="text-xs font-bold">Founders</span>
             <i class="icon-info color--gray text-sm pl-1"></i>
           </div>
-          <div class="flex mt-2 items-center flex-wrap">
-            <span class="bkg--yellow-transparent px-2 py-1 mr-2 mb-2">Eleanor Pena</span>
-            <span class="bkg--yellow-transparent px-2 py-1 mr-2 mb-2">API Startups</span>
-            <span class="bkg--yellow-transparent px-2 py-1 mr-2 mb-2">Artificial Intelligence</span>
+          <div class="flex flex-wrap mt-1">
+            <div class="flex items-center mb-2">
+              <div class="border-solid border border-black rounded-full h-8 w-8 flex items-center justify-center mr-1">
+                <span class="text-xs font-bold">HR</span>
+              </div>
+              <p class="text-xs m-0 mr-6 font-bold">Person Name</p>
+            </div>
+            <div class="flex items-center mb-2">
+              <div class="border-solid border border-black rounded-full h-8 w-8 flex items-center justify-center mr-1">
+                <span class="text-xs font-bold">EE</span>
+              </div>
+              <p class="text-xs m-0 mr-6 font-bold">Other Person</p>
+            </div>
+            <div class="flex items-center mb-2">
+              <div class="border-solid border border-black rounded-full h-8 w-8 flex items-center justify-center mr-1">
+                <span class="text-xs font-bold">EE</span>
+              </div>
+              <p class="text-xs m-0 mr-6 font-bold">Other Person</p>
+            </div>
             <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
               <i class="icon-add text-2xl"></i>
               <span class="ml-2 text-xs">No known Topics, add one!</span>
@@ -620,8 +870,10 @@
           </li>
         </ul>
       </div>
+    </div>
 
       <!-- Dropdown -->
+    <div class="container mx-auto">
       <div class="m-4 md:hidden">
         <div class="relative">
           <button class="flex items-center h-8 pr-2 focus:outline-none">
@@ -641,152 +893,184 @@
           </div>
         </div>
       </div>
+    </div>
       
       <div class="md:mt-6">
-        <!-- not result -->
-        <div class="not-result flex items-center justify-center">
-          <div class="flex color--gray cursor-pointer items-center">
-            <i class="icon-add text-2xl"></i>
-            <span class="ml-2 text-xs">No known Topics, add one!</span>
-          </div>
-        </div>
 
         <!-- mentioned in -->
-        <div class="items-tabs md:grid md:grid-cols-8 gap-4 mt-8 md:mt-12 tabs-active" id="mentioned-in">
-          <div class="md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4">
-            <div class="p-4 md:p-5">
-              <div class="flex mt-6 items-center justify-between">
-                <div class="flex items-center">
-                  <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
-                    <span class="text-xs">JN</span>
-                  </div>
-                  <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
-                </div>
-                <div>
-                  <a class="text-xs font-bold mr-4" href="">
-                    <i class="icon-link"></i>
-                    <span>Share</span>
+        <div class="items-tabs tabs-active" id="mentioned-in">
+          
+          <!-- message -->
+          <div class="container mx-auto">
+            <div class="md:grid md:grid-cols-12 gap-4 mt-8 md:mt-12">
+              <div class="md:col-start-3 md:col-span-8 lg:col-start-4 lg:col-span-6">
+                <div class="p-6 bkg--gray">
+                  <a class="flex justify-end" href="">
+                    <svg class="w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                   </a>
-                  <a class="text-xs font-bold" href="">
-                    <i class="icon-share"></i>
-                    <span>Visit</span>
-                  </a>
-                </div>
-              </div>
-              <div class="flex mt-5 items-center flex-wrap">
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainability &amp; Climate Change</span>
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Carbon Offsetting and Carbon Removal</span>
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Future of Fashion</span>
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Brands</span>
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Fashion</span>
-                <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
-                <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
-                  <i class="icon-add text-2xl"></i>
-                </div>
-              </div>
-              <div class="mt-2">
-                <div class="flex">
-                  <div class="flex items-center bg-black px-1">
-                    <h3 class="text-md font-bold text-white md:text-2xl">We need to take CO2 out of the sky</h3>
-                    <i class="icon-eye ml-2 text-3xl text-white"></i>
-                  </div>
-                </div>
-                <div class="fade-out">
-                  <div class="border border-solid border-black p-2 max-h--200 overflow-auto">
-                    <div class="flex mb-6">
-                      <span class="text-sm font-bold">Ryan Orbuch</span>
-                      <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
-                    </div>
-                    <span class="color--gray text-xs font-bold">TL;DR</span>
-                    <p>"0-gigaton-scale negative emissions are necessary in essentially every emissions reduction scenario. We have no choice but to fund, research, and deploy them if we’re serious about keeping warming to 2 degrees; or close to it. We are not even close to on track. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient monte</p>
-                  </div>
-                </div>
-                <div>
-                  <img class="w-full" src="./static/img/bk-box.png" alt="">
-                </div>
-              </div>
-              <div class="flex mt-5 items-center flex-wrap">
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Then I Met You</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Fuzzco</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Taschen</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Dieux Skin</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">SkinTe</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Crate &amp; Barrel</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Hansel From Basel</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Need Supply</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Another Co.</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Yet While</span>
-                <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
-                <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
-                  <i class="icon-add text-2xl"></i>
+                  <p>A company's greatest asset is its people. This includes those that are never highlighted on a company website and never showcased to the outside world on professional networking sites. Whether it's a freelance copywriter, a design studio, or the angel investor who wrote the first check, we want to celebrate the people behind the scenes.</p>
                 </div>
               </div>
             </div>
-            <div class="p-4 md:p-5">
-              <div class="flex mt-6 items-center justify-between">
-                <div class="flex items-center">
-                  <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
-                    <span class="text-xs">JN</span>
-                  </div>
-                  <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
-                </div>
-                <div>
-                  <a class="text-xs font-bold mr-4" href="">
-                    <i class="icon-link"></i>
-                    <span>Share</span>
-                  </a>
-                  <a class="text-xs font-bold" href="">
-                    <i class="icon-share"></i>
-                    <span>Visit</span>
-                  </a>
-                </div>
-              </div>
-              <div class="flex mt-5 items-center flex-wrap">
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainability &amp; Climate Change</span>
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Carbon Offsetting and Carbon Removal</span>
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Future of Fashion</span>
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Brands</span>
-                <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Fashion</span>
-                <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
-                <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
-                  <i class="icon-add text-2xl"></i>
-                </div>
-              </div>
-              <div class="mt-2">
-                <div class="flex">
-                  <div class="flex items-center bg-black px-1">
-                    <h3 class="text-md font-bold text-white md:text-2xl">We need to take CO2 out of the sky</h3>
-                    <i class="icon-eye ml-2 text-3xl text-white"></i>
-                  </div>
-                </div>
-                <div class="fade-out">
-                  <div class="border border-solid border-black p-2 max-h--200 overflow-auto">
-                    <div class="flex mb-6">
-                      <span class="text-sm font-bold">Ryan Orbuch</span>
-                      <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+          </div>
+
+          <!-- contribute -->
+          <div class="h-32 flex items-center justify-center">
+            <div class="flex cursor-pointer items-center">
+              <i class="icon-eyes-add text-6xl"></i>
+              <span class="ml-2 font-bold text-sm">Contribute</span>
+            </div>
+          </div>
+
+          <!-- not result -->
+          <div class="not-result text-white flex-col">
+            <div class="flex cursor-pointer items-center">
+              <i class="icon-eyes-add text-6xl"></i>
+              <span class="ml-2 font-bold text-sm">Contribute</span>
+            </div>
+            <p class="text-center text-sm">There’s nothing here ... yet.<br><a class="underline" href="">Become a member</a> to nudge a Curator</p>
+          </div>
+
+          <div class="container mx-auto">
+            <div class="md:grid md:grid-cols-8 gap-4 mt-8 md:mt-12">
+              <div class="md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-4">
+                <div class="p-4 md:p-5">
+                  <div class="flex mt-6 items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+                        <span class="text-xs">JN</span>
+                      </div>
+                      <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
                     </div>
-                    <span class="color--gray text-xs font-bold">TL;DR</span>
-                    <p>"0-gigaton-scale negative emissions are necessary in essentially every emissions reduction scenario. We have no choice but to fund, research, and deploy them if we’re serious about keeping warming to 2 degrees; or close to it. We are not even close to on track. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient monte</p>
+                    <div>
+                      <a class="text-xs font-bold mr-4" href="">
+                        <i class="icon-link"></i>
+                        <span>Share</span>
+                      </a>
+                      <a class="text-xs font-bold" href="">
+                        <i class="icon-share"></i>
+                        <span>Visit</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainability &amp; Climate Change</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Carbon Offsetting and Carbon Removal</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Future of Fashion</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Brands</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Fashion</span>
+                    <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <div class="flex">
+                      <div class="flex items-center bg-black px-1">
+                        <h3 class="text-md font-bold text-white md:text-2xl">We need to take CO2 out of the sky</h3>
+                        <i class="icon-eye ml-2 text-3xl text-white"></i>
+                      </div>
+                    </div>
+                    <div class="fade-out">
+                      <div class="border border-solid border-black p-2 max-h--200 overflow-auto">
+                        <div class="flex mb-6">
+                          <span class="text-sm font-bold">Ryan Orbuch</span>
+                          <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+                        </div>
+                        <span class="color--gray text-xs font-bold">TL;DR</span>
+                        <p>"0-gigaton-scale negative emissions are necessary in essentially every emissions reduction scenario. We have no choice but to fund, research, and deploy them if we’re serious about keeping warming to 2 degrees; or close to it. We are not even close to on track. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient monte</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img class="w-full" src="./static/img/bk-box.png" alt="">
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Then I Met You</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Fuzzco</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Taschen</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Dieux Skin</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">SkinTe</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Crate &amp; Barrel</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Hansel From Basel</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Need Supply</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Another Co.</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Yet While</span>
+                    <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <img class="w-full" src="./static/img/bk-box.png" alt="">
-                </div>
-              </div>
-              <div class="flex mt-5 items-center flex-wrap">
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Then I Met You</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Fuzzco</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Taschen</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Dieux Skin</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">SkinTe</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Crate &amp; Barrel</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Hansel From Basel</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Need Supply</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Another Co.</span>
-                <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Yet While</span>
-                <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
-                <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
-                  <i class="icon-add text-2xl"></i>
+                <div class="p-4 md:p-5">
+                  <div class="flex mt-6 items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+                        <span class="text-xs">JN</span>
+                      </div>
+                      <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
+                    </div>
+                    <div>
+                      <a class="text-xs font-bold mr-4" href="">
+                        <i class="icon-link"></i>
+                        <span>Share</span>
+                      </a>
+                      <a class="text-xs font-bold" href="">
+                        <i class="icon-share"></i>
+                        <span>Visit</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainability &amp; Climate Change</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Carbon Offsetting and Carbon Removal</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Future of Fashion</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Brands</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 text-sm">Sustainable Fashion</span>
+                    <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <div class="flex">
+                      <div class="flex items-center bg-black px-1">
+                        <h3 class="text-md font-bold text-white md:text-2xl">We need to take CO2 out of the sky</h3>
+                        <i class="icon-eye ml-2 text-3xl text-white"></i>
+                      </div>
+                    </div>
+                    <div class="fade-out">
+                      <div class="border border-solid border-black p-2 max-h--200 overflow-auto">
+                        <div class="flex mb-6">
+                          <span class="text-sm font-bold">Ryan Orbuch</span>
+                          <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+                        </div>
+                        <span class="color--gray text-xs font-bold">TL;DR</span>
+                        <p>"0-gigaton-scale negative emissions are necessary in essentially every emissions reduction scenario. We have no choice but to fund, research, and deploy them if we’re serious about keeping warming to 2 degrees; or close to it. We are not even close to on track. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient monte</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img class="w-full" src="./static/img/bk-box.png" alt="">
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Then I Met You</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Fuzzco</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Taschen</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Dieux Skin</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">SkinTe</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Crate &amp; Barrel</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Hansel From Basel</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Need Supply</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Another Co.</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm">Yet While</span>
+                    <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1404,3 +1688,7 @@
     </div>
   </section>
 </main>
+<script>
+            
+  
+  </script>

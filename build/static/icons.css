@@ -25,6 +25,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-eye-ellipse:before {
+  content: "\e912";
+}
+
+.icon-eye-home:before {
+  content: "\e913";
+}
+
+.icon-eyes-add:before {
+  content: "\e90f";
+}
+
+.icon-fb:before {
+  content: "\e910";
+}
+
+.icon-lnk:before {
+  content: "\e911";
+}
+
 .icon-attaching:before {
   content: "\e90e";
 }
