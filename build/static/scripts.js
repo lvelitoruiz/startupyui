@@ -10,6 +10,13 @@ var searchBox = document.getElementsByClassName("search--content");
 var eyeIcon = document.getElementById("icon-changer");
 var menuIcon = document.getElementById("menuicon");
 
+var first = document.getElementById("header-first");
+var scroller = document.getElementById("header-scroll");
+var second = document.getElementById("header-second");
+var third = document.getElementById("header-third");
+
+var inputAllow = true;
+
 window.onload = function () {
   if (searchBox.length >= 1) {
     console.log("we have a box here");
@@ -49,31 +56,42 @@ window.onload = function () {
 window.onscroll = function () {
   if (searchBox.length >= 1) {
     let y = window.scrollY;
-    let first = document.getElementById("header-first");
-    let second = document.getElementById("header-second");
-    let third = document.getElementById("header-third");
 
     if (y >= 100) {
       eyeIcon.classList.remove("icon-eye-home");
       eyeIcon.classList.add("icon-iso");
       first.classList.add("hidden");
-      second.classList.remove("hidden");
-      menuIcon.addEventListener("click", function () {
-        second.classList.add("hidden");
-        third.classList.remove("hidden");
-        eyeIcon.classList.remove("icon-iso");
-        eyeIcon.classList.add("icon-eye-close");
-      });
+      scroller.classList.remove("hidden");
+      menuIcon.addEventListener("click", showInput);
     } else {
       eyeIcon.classList.remove("icon-eye-close");
       eyeIcon.classList.remove("icon-iso");
       eyeIcon.classList.add("icon-eye-home");
-      second.classList.add("hidden");
+      scroller.classList.add("hidden");
+      second.classList.remove("hidden");
       third.classList.add("hidden");
       first.classList.remove("hidden");
+      menuIcon.removeEventListener("click", showInput);
+      inputAllow = true;
     }
   }
 };
+
+function showInput() {
+  if (inputAllow == true) {
+    second.classList.add("hidden");
+    third.classList.remove("hidden");
+    eyeIcon.classList.remove("icon-iso");
+    eyeIcon.classList.add("icon-eye-close");
+    inputAllow = false;
+  } else {
+    second.classList.remove("hidden");
+    third.classList.add("hidden");
+    eyeIcon.classList.add("icon-iso");
+    eyeIcon.classList.remove("icon-eye-close");
+    inputAllow = true;
+  }
+}
 
 function launchEditInfo(event) {
   let element = event.target;
