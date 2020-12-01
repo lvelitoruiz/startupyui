@@ -1,12 +1,32 @@
 var triggers = document.getElementsByClassName("trigger-tabs");
 var addTriggers = document.getElementsByClassName("addTrigger");
 var tabs = document.getElementsByClassName("items-tabs");
-var editBoxes = document.getElementsByClassName("box-info-edit"); 
+var editBoxes = document.getElementsByClassName("box-info-edit");
 
 var editTriggers = document.getElementsByClassName("launchEdit");
 var closeTriggers = document.getElementsByClassName("closeBox");
 
+var searchBox = document.getElementsByClassName("search--content");
+
 window.onload = function () {
+  if (searchBox.length >= 1) {
+    console.log("we have a box here");
+    let inputHere = searchBox[0].getElementsByTagName("input");
+    let pholder = inputHere[0].getAttribute("placeholder");
+    let wide = pholder.length;
+    inputHere[0].style.width = wide * 11 + "px";
+
+    inputHere[0].addEventListener("input", function () {
+      let inputcontent = inputHere[0].value;
+      if (inputcontent.length >= 1) {
+        let wider = inputcontent.length;
+        inputHere[0].style.width = wider * 11 + "px";
+      } else {
+        inputHere[0].style.width = wide * 11 + "px";
+      }
+    });
+  }
+
   for (let i = 0; i < triggers.length; i++) {
     triggers[i].addEventListener("click", changeTab);
   }
@@ -24,11 +44,10 @@ window.onload = function () {
   }
 };
 
-
 function launchEditInfo(event) {
   let element = event.target;
   let elementParent = element.parentNode;
-  let editInfo = elementParent.getElementsByClassName('box-info-edit');
+  let editInfo = elementParent.getElementsByClassName("box-info-edit");
 
   for (let i = 0; i < editBoxes.length; i++) {
     editBoxes[i].classList.add("hidden");
@@ -43,9 +62,7 @@ function closeBox(event) {
   let element = event.target;
   let parent = element.parentNode.parentNode;
   parent.classList.add("hidden");
-  
 }
-
 
 function changeTab(event) {
   event.preventDefault();
