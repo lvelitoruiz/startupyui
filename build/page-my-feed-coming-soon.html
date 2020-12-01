@@ -38,11 +38,14 @@
       <div class="flex items-center relative lg:grid lg:grid-cols-8">
         <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
           <span class="iso icon-iso text-black pl-4 hidden"></span>
-          <span class="iso icon-eye-close text-black pl-4"></span>
+          <span
+            id="icon-changer"
+            class="iso icon-eye-home text-black pl-4"
+          ></span>
         </div>
         <div class="md:col-span-6 lg:p-0">
           <!-- Nav init -->
-          <div>
+          <div id="header-first">
             <div class="flex items-center lg:grid lg:grid-cols-10">
               <div
                 class="md:col-start-1 md:col-span-10 lg:col-start-2 lg:col-span-10"
@@ -103,7 +106,7 @@
             </div>
           </div>
           <!-- Nav search -->
-          <div class="hidden search-mobile">
+          <div class="hidden search-mobile" id="header-second">
             <div class="search active p-5">
               <div class="search--content">
                 <svg
@@ -137,7 +140,7 @@
             </div>
           </div>
           <!-- Nav options -->
-          <div class="hidden">
+          <div class="hidden" id="header-third">
             <div class="flex items-center justify-center">
               <div class="w-full text-center">
                 <a class="hover:underline" href="">Topics</a>
@@ -156,7 +159,7 @@
         </div>
         <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
           <div class="p-4 nav">
-            <span class="icon-nav"></span>
+            <span class="icon-nav" id="menuicon"></span>
           </div>
         </div>
       </div>

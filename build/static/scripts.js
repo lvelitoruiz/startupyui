@@ -7,6 +7,8 @@ var editTriggers = document.getElementsByClassName("launchEdit");
 var closeTriggers = document.getElementsByClassName("closeBox");
 
 var searchBox = document.getElementsByClassName("search--content");
+var eyeIcon = document.getElementById("icon-changer");
+var menuIcon = document.getElementById("menuicon");
 
 window.onload = function () {
   if (searchBox.length >= 1) {
@@ -41,6 +43,35 @@ window.onload = function () {
 
   for (let i = 0; i < closeTriggers.length; i++) {
     closeTriggers[i].addEventListener("click", closeBox, true);
+  }
+};
+
+window.onscroll = function () {
+  if (searchBox.length >= 1) {
+    let y = window.scrollY;
+    let first = document.getElementById("header-first");
+    let second = document.getElementById("header-second");
+    let third = document.getElementById("header-third");
+
+    if (y >= 100) {
+      eyeIcon.classList.remove("icon-eye-home");
+      eyeIcon.classList.add("icon-iso");
+      first.classList.add("hidden");
+      second.classList.remove("hidden");
+      menuIcon.addEventListener("click", function () {
+        second.classList.add("hidden");
+        third.classList.remove("hidden");
+        eyeIcon.classList.remove("icon-iso");
+        eyeIcon.classList.add("icon-eye-close");
+      });
+    } else {
+      eyeIcon.classList.remove("icon-eye-close");
+      eyeIcon.classList.remove("icon-iso");
+      eyeIcon.classList.add("icon-eye-home");
+      second.classList.add("hidden");
+      third.classList.add("hidden");
+      first.classList.remove("hidden");
+    }
   }
 };
 
