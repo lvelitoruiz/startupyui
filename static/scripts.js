@@ -17,6 +17,8 @@ var third = document.getElementById("header-third");
 
 var inputAllow = true;
 
+var extenders = document.getElementsByClassName("fade-out");
+
 window.onload = function () {
   if (searchBox.length >= 1) {
     console.log("we have a box here");
@@ -51,6 +53,13 @@ window.onload = function () {
   for (let i = 0; i < closeTriggers.length; i++) {
     closeTriggers[i].addEventListener("click", closeBox, true);
   }
+
+  if (extenders.length > 0) {
+    for (let i = 0; i < extenders.length; i++) {
+      let elmt = extenders[i].getElementsByTagName("div")[0];
+      elmt.addEventListener("click", extendBox.bind(null, elmt), true);
+    }
+  }
 };
 
 window.onscroll = function () {
@@ -76,6 +85,15 @@ window.onscroll = function () {
     }
   }
 };
+
+function extendBox(elmt) {
+  console.log(elmt);
+  if (elmt.style.maxHeight == "3000px") {
+    elmt.style.maxHeight = "";
+  } else {
+    elmt.style.maxHeight = "3000px";
+  }
+}
 
 function showInput() {
   if (inputAllow == true) {
