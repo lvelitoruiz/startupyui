@@ -36,6 +36,7 @@
 .c-header .img-mood {
   min-height: 94px;
   min-width: 94px;
+  max-height: 94px;
 }
 
 .c-header .nav {
@@ -741,4 +742,8 @@
 
 .launchEdit {
   cursor: pointer;
+}
+
+.bg-hover:hover {
+  background: url("./img/memphis.png");
 }
