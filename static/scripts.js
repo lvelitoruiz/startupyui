@@ -60,6 +60,12 @@ window.onload = function () {
       elmt.addEventListener("click", extendBox.bind(null, elmt), true);
     }
   }
+
+  tippy("#myButton", {
+    content: "<strong>Bolded content</strong>",
+    allowHTML: true,
+    interactive: true,
+  });
 };
 
 window.onscroll = function () {

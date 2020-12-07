@@ -1,26 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Startupy</title>
-  <link rel="stylesheet" href="static/normalize.css">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="static/styles.css?v=1.0">
-  <link rel="stylesheet" href="static/fonts.css" type="text/css" />
-  <link rel="stylesheet" href="static/icons.css" type="text/css" />
-  <meta name="theme-color" content="#f6f2ef">
-  <link rel="icon" href="static/favicon.svg">
-  <link rel="mask-icon" href="static/mask-icon.svg" color="#000000">
-  <link rel="apple-touch-icon" href="static/apple-touch-icon.png">
-  <link rel="manifest" href="static/manifest.json">
-  <link type="text/plain" rel="author" href="humans.txt">
-  <meta name="generator" content="Clay (https://github.com/lucuma/clay)" />
-  <link rel="stylesheet" href="static/modal.css">
-  
-</head>
-<body>
-  
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Startupy</title>
+    <link rel="stylesheet" href="static/normalize.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/styles.css?v=1.0" />
+    <link rel="stylesheet" href="static/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="static/icons.css" type="text/css" />
+    <meta name="theme-color" content="#f6f2ef" />
+    <link rel="icon" href="static/favicon.svg" />
+    <link rel="mask-icon" href="static/mask-icon.svg" color="#000000" />
+    <link rel="apple-touch-icon" href="static/apple-touch-icon.png" />
+    <link rel="manifest" href="static/manifest.json" />
+    <link type="text/plain" rel="author" href="humans.txt" />
+    <meta name="generator" content="Clay (https://github.com/lucuma/clay)" />
+    <link rel="stylesheet" href="static/modal.css" />
+    
+  </head>
+  <body>
+    
 
 <div>
   <img class="img-header w-full" src="./static/img/footer-bk.jpg" alt="">
@@ -332,15 +335,19 @@
   </div>
   <div class="bg-black h-5 w-full"></div>
 </footer>
-  <div class="modal">
-    <div class="modal-inner">
-      <span data-modal-close>&times;</span>
-      <div class="modal-content"></div>
+    <div class="modal">
+      <div class="modal-inner">
+        <span data-modal-close>&times;</span>
+        <div class="modal-content"></div>
+      </div>
     </div>
-  </div>
-  <script src="static/modal.js"></script>
-  <script src="static/scripts.js?v=1.0"></script>
-  <script>var vanillaModal = new VanillaModal.default()</script>
-  
-</body>
+    <script src="static/modal.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="static/scripts.js?v=1.0"></script>
+    <script>
+      var vanillaModal = new VanillaModal.default();
+    </script>
+    
+  </body>
 </html>
