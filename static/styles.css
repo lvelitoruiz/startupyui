@@ -756,3 +756,19 @@
   opacity: 1;
   border-radius: 0;
 }
+
+.img-mood {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scale(1, 1);
+  transform-origin: top right;
+}
+
+.img-mood:hover {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scale(2, 2);
+  transform-origin: top right;
+}
