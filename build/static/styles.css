@@ -171,6 +171,10 @@
   max-height: 4rem;
 }
 
+.min-w-4 {
+  min-width: 1rem;
+}
+
 .fade-out {
   position: relative;
 }
@@ -213,6 +217,12 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  position: relative;
+}
+
+.search .floating-text {
+  position: absolute;
+  right: 15px;
 }
 
 .search .search--content {
@@ -233,6 +243,12 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
+}
+
+.search-header.active .search--content {
+  flex-direction: row;
+  padding-right: 80px;
 }
 
 .select-item {
@@ -446,8 +462,18 @@
 }
 
 @media screen and (min-width: 768px) {
+  .search .floating-text {
+    position: absolute;
+    right: 0;
+  }
+
+  .search-header.active .search--content {
+    padding-right: 0;
+  }
+
   .search.active .search--content {
     flex-direction: row;
+    width: 80%;
   }
 
   .modal-inner {
@@ -746,4 +772,29 @@
 
 .bg-hover:hover {
   background: url("./img/memphis.png");
+}
+
+.tippy-box {
+  min-width: 250px;
+  max-width: 250px;
+  width: 250px;
+  background-color: black;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.img-mood {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scale(1, 1);
+  transform-origin: top right;
+}
+
+.img-mood:hover {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scale(2, 2);
+  transform-origin: top right;
 }

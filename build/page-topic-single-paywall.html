@@ -119,10 +119,10 @@
           <!-- Nav search -->
           <div class="hidden" id="header-scroll">
             <div class="search-mobile" id="header-second">
-              <div class="search active p-5">
+              <div class="search search-header active p-5">
                 <div class="search--content">
                   <svg
-                    class="h-4 w-4 mr-3 color--gray"
+                    class="h-4 w-4 mr-3 color--gray min-w-4"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -135,7 +135,7 @@
                     ></path>
                   </svg>
                   <input
-                    class="text-2xl focus:outline-none"
+                    class="text-xl md:text-2xl focus:outline-none"
                     type="text"
                     placeholder="Search companies, content, topics, and people"
                   />
@@ -149,6 +149,17 @@
                       >in: Sustainable Fashion</span
                     >
                   </div>
+                </div>
+                <div class="flex items-center floating-text">
+                  <svg class="h-6 md:w-6 color--gray text-sm cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  <span class="border-solid border color--gray text-sm pl-1 pr-1 ml-1">ESC</span>
                 </div>
               </div>
             </div>
