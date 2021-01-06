@@ -798,3 +798,7 @@
   transform: scale(2, 2);
   transform-origin: top right;
 }
+
+::selection {
+  background-color: #2cf10c;
+}
