@@ -802,3 +802,15 @@
 ::selection {
   background-color: #2cf10c;
 }
+
+.home-banner {
+  background-image: url(../static/img/landing/banner.jpg);
+  min-height: 200px;
+  padding-top: 300px;
+}
+
+.text-container-landing {
+  position: relative;
+  min-height: 20px;
+  overflow: hidden;
+}
