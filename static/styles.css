@@ -772,3 +772,11 @@
   transform: scale(2, 2);
   transform-origin: top right;
 }
+
+div::selection,
+p::selection,
+ul::selection,
+textarea::selection,
+input::selection {
+  background-color: #2cf10c !important;
+}

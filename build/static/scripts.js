@@ -66,6 +66,53 @@ window.onload = function () {
     allowHTML: true,
     interactive: true,
   });
+
+  tippy("#myJosh", {
+    content: `
+    <div>
+      <div class="flex justify-between">
+        <div class="flex flex-col w-100">
+          <div class="flex items-center">  
+            <p class="font-bold mr-3 text-xs">Comrad Socks</p>
+            <span class="text-xs bkg--blue2 px-2 py-1 mr-3">Mature</span>
+          </div>
+          <div class="flex items-center">
+            <i class="icon-eye-black text-xs text-white pr-2"></i>
+            <span class="text-xs">sari-azout</span>
+          </div>
+        </div>
+        <i class="icon-eye-black text-xl text-white"></i>
+      </div>
+      <p class="text-xs text-white pt-2 pb-4 pr-3">This is a little bio for the hover bubble that is here.</p>
+      <div class="flex items-center flex-wrap">
+        <span class="text-xs pr-2">Design <b>Fuzzco</b></span>
+        <span class="text-xs pr-2">Design <b>Fuzzco</b></span>
+      </div>
+    </div>`,
+    allowHTML: true,
+    interactive: true,
+  });
+
+  tippy("#myTag", {
+    content: `
+    <div>
+      <div class="flex justify-between w-100"> 
+        <p class="font-bold mr-3 text-xs text-cut">The Future of Venture Capitan Capitan</p>
+        <i class="icon-eye-black text-xl text-white"></i>
+      </div>
+      <div class="flex items-center">
+        <i class="icon-eye-black text-xs text-white pr-2"></i>
+        <span class="text-xs">sari-azout</span>
+      </div>
+      <p class="text-xs text-white pt-2 pb-4 pr-3">02/21/20 Last Updated</p>
+      <div class="flex items-center flex-wrap">
+        <span class="text-xs pr-2"><b>284</b> Companies</span>
+        <span class="text-xs pr-2"><b>284</b> Companies</span>
+      </div>
+    </div>`,
+    allowHTML: true,
+    interactive: true,
+  });
 };
 
 window.onscroll = function () {
