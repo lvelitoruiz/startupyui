@@ -24,6 +24,29 @@
   </head>
   <body>
     {% block content %}{% endblock %}
+    <div class="overlay-menu" id="parentOverlay">
+      <ul class="overlay-menu-items" id="menu-left">
+        <li>
+          <a href="#">Add Company</a>
+        </li>
+        <li>
+          <a href="#">Add Topic</a>
+        </li>
+      </ul>
+      <img
+        src="./static/img/blue-eye.svg"
+        id="overlayTrigger"
+        class="overlay-menu-trigger"
+      />
+      <ul class="overlay-menu-items" id="menu-right">
+        <li>
+          <a href="#">Add Content</a>
+        </li>
+        <li>
+          <a href="#">Add People</a>
+        </li>
+      </ul>
+    </div>
     <div class="modal">
       <div class="modal-inner">
         <span data-modal-close>&times;</span>

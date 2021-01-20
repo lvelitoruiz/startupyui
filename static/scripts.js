@@ -6,6 +6,8 @@ var editBoxes = document.getElementsByClassName("box-info-edit");
 var editTriggers = document.getElementsByClassName("launchEdit");
 var closeTriggers = document.getElementsByClassName("closeBox");
 
+var menuResTrigger = document.getElementById("menuicon-responsive");
+
 var searchBox = document.getElementsByClassName("search--content");
 var eyeIcon = document.getElementById("icon-changer");
 var menuIcon = document.getElementById("menuicon");
@@ -14,6 +16,7 @@ var first = document.getElementById("header-first");
 var scroller = document.getElementById("header-scroll");
 var second = document.getElementById("header-second");
 var third = document.getElementById("header-third");
+var overlayTriggerImage = document.getElementById("overlayTrigger");
 
 var inputAllow = true;
 
@@ -37,6 +40,10 @@ window.onload = function () {
       }
     });
   }
+
+  menuResTrigger.addEventListener("click", openMenuRes);
+
+  overlayTriggerImage.addEventListener("click", openOverlayMenu);
 
   for (let i = 0; i < triggers.length; i++) {
     triggers[i].addEventListener("click", changeTab);
@@ -208,4 +215,19 @@ function removeElement(event) {
   let elementId = this.getAttribute("rel");
   let element = document.getElementById(elementId);
   element.parentNode.removeChild(element);
+}
+
+function openMenuRes() {
+  let menuRes = document.getElementById("responsive-menu");
+  menuRes.classList.toggle("open");
+}
+
+function openOverlayMenu() {
+  let elParent = document.getElementById("parentOverlay");
+  let menusOverlay = document.getElementsByClassName("overlay-menu-items");
+
+  elParent.classList.toggle("opened");
+  for (let i = 0; i < menusOverlay.length; i++) {
+    menusOverlay[i].classList.toggle("opened");
+  }
 }

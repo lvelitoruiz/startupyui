@@ -12,10 +12,14 @@
     </div>
     <div class="hidden">
       <div class="flex items-center">
-        <div class="border-solid border border-gray-600 bg-white rounded-full h-8 w-8 flex items-center justify-center">
+        <div
+          class="border-solid border border-gray-600 bg-white rounded-full h-8 w-8 flex items-center justify-center"
+        >
           <span class="text-xs">JN</span>
         </div>
-        <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 text-white">Josh N.</span>
+        <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 text-white"
+          >Josh N.</span
+        >
       </div>
     </div>
   </div>
@@ -91,6 +95,35 @@
               </div>
             </div>
           </div>
+          <!-- responsive navigation -->
+          <div class="res-menu" id="responsive-menu">
+            <ul class="res-menu-list">
+              <li>
+                <a class="hover:underline" href="">Join</a>
+              </li>
+            </ul>
+            <ul class="res-menu-list align-right">
+              <li>
+                <a class="hover:underline" href="">Login</a>
+              </li>
+              <li>
+                <a class="hover:underline" href="">Topics</a>
+              </li>
+              <li>
+                <a class="hover:underline" href="">Companies</a>
+              </li>
+              <li>
+                <a class="hover:underline" href="">People</a>
+              </li>
+              <li>
+                <img
+                  class="res-menu-img"
+                  src="./static/img/iso-color.svg"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
           <!-- Nav search -->
           <div class="hidden" id="header-scroll">
             <div class="search-mobile" id="header-second">
@@ -126,7 +159,12 @@
                   </div>
                 </div>
                 <div class="flex items-center floating-text">
-                  <svg class="h-6 md:w-6 color--gray text-sm cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg
+                    class="h-6 md:w-6 color--gray text-sm cursor-pointer"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -134,7 +172,10 @@
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                  <span class="border-solid border color--gray text-sm pl-1 pr-1 ml-1">ESC</span>
+                  <span
+                    class="border-solid border color--gray text-sm pl-1 pr-1 ml-1"
+                    >ESC</span
+                  >
                 </div>
               </div>
             </div>
@@ -160,6 +201,7 @@
         <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
           <div class="p-4 nav">
             <span class="icon-nav" id="menuicon"></span>
+            <span class="icon-nav" id="menuicon-responsive"></span>
           </div>
         </div>
       </div>
