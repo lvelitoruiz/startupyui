@@ -10,8 +10,8 @@
       <a class="text-white p-2 font-bold text-xs" href="">Join Membership</a>
       <a class="text-white p-2 pr-4 font-bold text-xs" href="">Login</a>
     </div>
-    <div class="hidden">
-      <div class="flex items-center">
+    <div class="hidden relative">
+      <div class="flex items-center cursor-pointer">
         <div
           class="border-solid border border-gray-600 bg-white rounded-full h-8 w-8 flex items-center justify-center"
         >
@@ -20,6 +20,11 @@
         <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 text-white"
           >Josh N.</span
         >
+      </div>
+      <div class="absolute bg-black flex flex-col w-full z-10 border border-black shadow-lg items-end box-login">
+        <a class="flex text-white items-center h-8 px-5 text-sm w-full justify-end hover:bg-gray-200 whitespace-no-wrap hover:text-black" href="#">My Profile</a>
+        <a class="flex text-white items-center h-8 px-5 text-sm w-full justify-end hover:bg-gray-200 whitespace-no-wrap hover:text-black" href="#">My Account</a>
+        <a class="flex text-white items-center h-8 px-5 text-sm w-full justify-end hover:bg-gray-200 whitespace-no-wrap hover:text-black" href="#">Log Out</a>
       </div>
     </div>
   </div>
@@ -219,13 +224,13 @@
             <!-- Nav options -->
             <div class="hidden" id="header-third">
               <div class="flex items-center justify-center">
-                <div class="w-full text-center">
+                <div class="w-full text-center px-5">
                   <a class="hover:underline" href="">Topics</a>
                 </div>
-                <div class="w-full text-center">
+                <div class="w-full text-center px-5">
                   <a class="hover:underline" href="">Companies</a>
                 </div>
-                <div class="w-full text-center">
+                <div class="w-full text-center px-5">
                   <a class="hover:underline" href="">People</a>
                 </div>
                 <div class="w-full flex justify-center">
