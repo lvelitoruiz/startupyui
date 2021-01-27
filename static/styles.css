@@ -823,16 +823,17 @@
 .overlay-menu {
   display: flex;
   position: fixed;
-  bottom: 25px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
-  height: 86px;
+  height: 96px;
   overflow: hidden;
   /* background-color: white; */
   padding: 0 15px;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
+  justify-content: center;
 }
 
 .overlay-menu.opened {
@@ -840,6 +841,7 @@
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
+  width: 100%;
 }
 
 .overlay-menu-items {
