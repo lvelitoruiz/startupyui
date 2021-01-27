@@ -890,6 +890,10 @@
     display: none;
   }
 
+  .overlay-menu {
+    display: none;
+  }
+
   #responsive-menu {
     display: none;
     position: absolute;
@@ -897,9 +901,10 @@
     background: white;
     width: 100%;
     min-height: 20px;
-    overflow: hidden;
+    overflow: auto;
     margin: 0;
     left: 0;
+    max-height: 100vh;
   }
 
   .white-menu {
