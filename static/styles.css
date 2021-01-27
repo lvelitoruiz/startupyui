@@ -978,3 +978,27 @@
     line-height: 20px;
   }
 }
+
+.box-container-dropdown {
+  position: relative;
+}
+
+.extensible-box {
+  position: absolute;
+  background: white;
+  min-height: 0px;
+  overflow: hidden;
+  z-index: 200;
+  max-height: 0px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.extensible-box.open {
+  max-height: 157px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  overflow: auto;
+}
