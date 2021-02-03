@@ -1015,3 +1015,7 @@
   width: 140px;
   padding: 10px 0;
 }
+
+#remove-text {
+  display: none;
+}

@@ -22,6 +22,8 @@ var inputAllow = true;
 
 var extenders = document.getElementsByClassName("fade-out");
 
+let cleaner = document.querySelector('#remove-text');
+
 window.onload = function () {
   if (searchBox.length >= 1) {
     console.log("we have a box here");
@@ -34,12 +36,21 @@ window.onload = function () {
       let inputcontent = inputHere[0].value;
       if (inputcontent.length >= 1) {
         let wider = inputcontent.length;
+        cleaner.style.display = 'block';
         inputHere[0].style.width = wider * 11 + "px";
       } else {
+        cleaner.style.display = 'none';
         inputHere[0].style.width = wide * 11 + "px";
       }
     });
   }
+
+
+  menuIcon.addEventListener("click", showInput);
+
+  eyeIcon.addEventListener('click', showMenuInput);
+
+  cleaner.addEventListener('click', cleanInput);
 
   menuResTrigger.addEventListener("click", openMenuRes);
 
@@ -127,24 +138,33 @@ window.onscroll = function () {
     let y = window.scrollY;
 
     if (y >= 100) {
-      eyeIcon.classList.remove("icon-eye-home");
-      eyeIcon.classList.add("icon-iso");
+      // eyeIcon.classList.remove("icon-eye-home");
+      // eyeIcon.classList.add("icon-iso");
       first.classList.add("hidden");
       scroller.classList.remove("hidden");
-      menuIcon.addEventListener("click", showInput);
     } else {
       eyeIcon.classList.remove("icon-eye-close");
       eyeIcon.classList.remove("icon-iso");
       eyeIcon.classList.add("icon-eye-home");
-      scroller.classList.add("hidden");
+      // scroller.classList.add("hidden");
       second.classList.remove("hidden");
       third.classList.add("hidden");
-      first.classList.remove("hidden");
-      menuIcon.removeEventListener("click", showInput);
+      // first.classList.remove("hidden");
+      // menuIcon.removeEventListener("click", showInput);
       inputAllow = true;
     }
   }
 };
+
+function cleanInput() {
+  let inputHere = document.querySelector('#input-search-one');
+  let pholder = inputHere.getAttribute("placeholder");
+  let wide = pholder.length;
+  inputHere.value = "";
+  cleaner.style.display = 'none';
+  inputHere.style.width = wide * 11 + "px";
+
+}
 
 function extendBox(elmt) {
   console.log(elmt);
@@ -230,4 +250,11 @@ function openOverlayMenu() {
   for (let i = 0; i < menusOverlay.length; i++) {
     menusOverlay[i].classList.toggle("opened");
   }
+}
+
+function showMenuInput() {
+  console.log('iterations');
+  first.classList.toggle('hidden');
+  scroller.classList.toggle('hidden');
+  eyeIcon.classList.toggle("icon-iso");
 }

@@ -40,7 +40,7 @@
         </div>
         <div class="md:col-span-6 lg:p-0">
           <!-- Nav init -->
-          <div id="header-first">
+          <div id="header-first" class="hidden">
             <div class="flex items-center lg:grid lg:grid-cols-10">
               <div
                 class="md:col-start-1 md:col-span-10 lg:col-start-2 lg:col-span-10"
@@ -167,7 +167,7 @@
             </div>
           </div>
           <!-- Nav search -->
-          <div class="hidden" id="header-scroll">
+          <div class="" id="header-scroll">
             <div class="search-mobile" id="header-second">
               <div class="search search-header active p-5">
                 <div class="search--content">
@@ -187,6 +187,7 @@
                   <input
                     class="text-xl md:text-2xl focus:outline-none"
                     type="text"
+                    id="input-search-one"
                     placeholder="Search companies, content, topics, and people"
                   />
                   <div class="flex items-center hidden">
@@ -203,6 +204,7 @@
                 <div class="flex items-center floating-text">
                   <svg
                     class="h-6 md:w-6 color--gray text-sm cursor-pointer"
+                    id="remove-text"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
