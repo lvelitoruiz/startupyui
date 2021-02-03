@@ -50,6 +50,14 @@
   cursor: pointer;
 }
 
+.c-header .nav span:hover {
+  cursor: pointer;
+  background: black;
+  color: #fff;
+  border-radius: 100%;
+  box-sizing: content-box;
+}
+
 .search-mobile {
   position: absolute;
   background: white;

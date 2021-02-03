@@ -139,18 +139,19 @@ window.onscroll = function () {
     let y = window.scrollY;
 
     if (y >= 100) {
-      // eyeIcon.classList.remove("icon-eye-home");
-      // eyeIcon.classList.add("icon-iso");
+      eyeIcon.classList.add("icon-eye-home");
+      eyeIcon.classList.remove("icon-iso");
       first.classList.add("hidden");
       scroller.classList.remove("hidden");
+      second.classList.remove("hidden");
     } else {
       eyeIcon.classList.remove("icon-eye-close");
-      eyeIcon.classList.remove("icon-iso");
-      eyeIcon.classList.add("icon-eye-home");
-      // scroller.classList.add("hidden");
-      second.classList.remove("hidden");
+      eyeIcon.classList.add("icon-iso");
+      eyeIcon.classList.remove("icon-eye-home");
+      scroller.classList.add("hidden");
+      // second.classList.add("hidden");
       third.classList.add("hidden");
-      // first.classList.remove("hidden");
+      first.classList.remove("hidden");
       // menuIcon.removeEventListener("click", showInput);
       inputAllow = true;
     }
@@ -254,8 +255,16 @@ function openOverlayMenu() {
 }
 
 function showMenuInput() {
-  console.log('iterations');
   first.classList.toggle('hidden');
   scroller.classList.toggle('hidden');
-  eyeIcon.classList.toggle("icon-iso");
+  // eyeIcon.classList.toggle("icon-iso");
+    if (searchBox.length >= 1) {
+    let y = window.scrollY;
+
+    if (y >= 100) {
+      
+    } else {
+      
+    }
+  }
 }
