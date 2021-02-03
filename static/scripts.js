@@ -27,6 +27,8 @@ var extenders = document.getElementsByClassName("fade-out");
 
 let cleaner = document.querySelector('#remove-text');
 
+var clasesToUse = '';
+
 window.onload = function () {
   if (searchBox.length >= 1) {
     console.log("we have a box here");
@@ -56,6 +58,9 @@ window.onload = function () {
   cleaner.addEventListener('click', cleanInput);
 
   menuResTrigger.addEventListener("click", openMenuRes);
+
+  eyeIcon.addEventListener("mouseover", changeicon);
+  eyeIcon.addEventListener("mouseout", changeicon2);
 
   overlayTriggerImage.addEventListener("click", openOverlayMenu);
 
@@ -171,6 +176,17 @@ function cleanInput() {
   cleaner.style.display = 'none';
   inputHere.style.width = wide * 11 + "px";
 
+}
+
+function changeicon() {
+  let clases = eyeIcon.getAttribute('class');
+  console.log(clases);
+  clasesToUse = clases;
+  eyeIcon.setAttribute('class', 'iso text-black pl-4 icon-eye-ellipse');
+}
+
+function changeicon2() {
+  eyeIcon.setAttribute('class', clasesToUse);
 }
 
 function extendBox(elmt) {
