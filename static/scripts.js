@@ -18,6 +18,7 @@ var second = document.getElementById("header-second");
 var third = document.getElementById("header-third");
 var overlayTriggerImage = document.getElementById("overlayTrigger");
 
+
 var inputAllow = true;
 
 var extenders = document.getElementsByClassName("fade-out");
