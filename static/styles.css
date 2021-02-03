@@ -1027,6 +1027,10 @@
 #remove-text {
   display: none;
 }
+
+.items-login-hover a:hover {
+  text-decoration: underline;
+}
 /* 
 #icon-changer {
   display: inline-block;
