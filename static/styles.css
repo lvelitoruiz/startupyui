@@ -1027,3 +1027,19 @@
 #remove-text {
   display: none;
 }
+/* 
+#icon-changer {
+  display: inline-block;
+  width: 136px;
+  height: 136px;
+}
+
+#icon-changer:hover {
+  background: url(./img/eye-line-planet.svg) no-repeat center center;
+  background-size: 120px;
+}
+
+#icon-changer:hover:before {
+  display: none;
+  background: black;
+} */

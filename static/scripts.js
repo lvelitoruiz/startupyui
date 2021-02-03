@@ -18,6 +18,8 @@ var second = document.getElementById("header-second");
 var third = document.getElementById("header-third");
 var overlayTriggerImage = document.getElementById("overlayTrigger");
 
+var showInputScroll = true;
+
 
 var inputAllow = true;
 
@@ -139,11 +141,13 @@ window.onscroll = function () {
     let y = window.scrollY;
 
     if (y >= 100) {
-      eyeIcon.classList.add("icon-eye-home");
-      eyeIcon.classList.remove("icon-iso");
-      first.classList.add("hidden");
-      scroller.classList.remove("hidden");
-      second.classList.remove("hidden");
+      if(showInputScroll) {
+        eyeIcon.classList.add("icon-eye-home");
+        eyeIcon.classList.remove("icon-iso");
+        first.classList.add("hidden");
+        scroller.classList.remove("hidden");
+        second.classList.remove("hidden");
+      }
     } else {
       eyeIcon.classList.remove("icon-eye-close");
       eyeIcon.classList.add("icon-iso");
@@ -154,6 +158,7 @@ window.onscroll = function () {
       first.classList.remove("hidden");
       // menuIcon.removeEventListener("click", showInput);
       inputAllow = true;
+      showInputScroll = true;
     }
   }
 };
@@ -184,12 +189,14 @@ function showInput() {
     eyeIcon.classList.remove("icon-iso");
     eyeIcon.classList.add("icon-eye-close");
     inputAllow = false;
+    showInputScroll = false;
   } else {
     second.classList.remove("hidden");
     third.classList.add("hidden");
     eyeIcon.classList.add("icon-iso");
     eyeIcon.classList.remove("icon-eye-close");
     inputAllow = true;
+    showInputScroll = true;
   }
 }
 
