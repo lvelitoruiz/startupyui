@@ -1053,6 +1053,7 @@
   max-height: 0px;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
+  border: none;
 }
 
 .convoBoxItems.opened {
@@ -1060,9 +1061,16 @@
   max-height: 600px;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
+  border: 1px solid #000;
+  border-top: none;
 }
 
 .custom-radio-checkbox span,
 .custom-radio-checkbox input {
+  pointer-events: none;
+}
+
+.showConvo span,
+.showConvo svg {
   pointer-events: none;
 }
