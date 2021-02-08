@@ -29,6 +29,9 @@ let cleaner = document.querySelector('#remove-text');
 
 var clasesToUse = '';
 
+var convoTriggers = document.getElementsByClassName('showConvo');
+var selectElements = document.getElementsByClassName('custom-radio-checkbox');
+
 window.onload = function () {
   if (searchBox.length >= 1) {
     console.log("we have a box here");
@@ -48,6 +51,10 @@ window.onload = function () {
         inputHere[0].style.width = wide * 11 + "px";
       }
     });
+  }
+
+  for(let i = 0; i < convoTriggers.length; i++) {
+    convoTriggers[i].addEventListener('click',showConvoOpen);
   }
 
 
@@ -78,6 +85,10 @@ window.onload = function () {
 
   for (let i = 0; i < closeTriggers.length; i++) {
     closeTriggers[i].addEventListener("click", closeBox, true);
+  }
+
+  for (let i = 0; i < selectElements.length; i++) {
+    selectElements[i].addEventListener("click", getValueItem, true);
   }
 
   if (extenders.length > 0) {
@@ -291,3 +302,28 @@ function showMenuInput() {
     }
   }
 }
+
+function showConvoOpen() {
+  console.log('evening');
+  let targetted = event.target;
+  let parent = targetted.parentNode;
+  let convo = parent.getElementsByClassName('convoBoxItems')[0];
+  convo.classList.toggle('opened');
+}
+
+function getValueItem() {
+  event.stopImmediatePropagation();
+  let targetted = event.target;
+  console.log('this is the target: ',targetted);
+  let valueHolder = targetted.getElementsByTagName('input')[0];
+  console.log('this is the value holder',valueHolder);
+  valueHolder.checked = !valueHolder.checked;;
+  let value = valueHolder.value;
+  if(valueHolder.checked) {
+    console.log('add name');
+  } else {
+    console.log('remove name');
+  }
+}
+
+

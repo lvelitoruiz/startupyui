@@ -6,6 +6,8 @@ var editBoxes = document.getElementsByClassName("box-info-edit");
 var editTriggers = document.getElementsByClassName("launchEdit");
 var closeTriggers = document.getElementsByClassName("closeBox");
 
+var menuResTrigger = document.getElementById("menuicon-responsive");
+
 var searchBox = document.getElementsByClassName("search--content");
 var eyeIcon = document.getElementById("icon-changer");
 var menuIcon = document.getElementById("menuicon");
@@ -14,10 +16,21 @@ var first = document.getElementById("header-first");
 var scroller = document.getElementById("header-scroll");
 var second = document.getElementById("header-second");
 var third = document.getElementById("header-third");
+var overlayTriggerImage = document.getElementById("overlayTrigger");
+
+var showInputScroll = true;
+
 
 var inputAllow = true;
 
 var extenders = document.getElementsByClassName("fade-out");
+
+let cleaner = document.querySelector('#remove-text');
+
+var clasesToUse = '';
+
+var convoTriggers = document.getElementsByClassName('showConvo');
+var selectElements = document.getElementsByClassName('custom-radio-checkbox');
 
 window.onload = function () {
   if (searchBox.length >= 1) {
@@ -31,12 +44,32 @@ window.onload = function () {
       let inputcontent = inputHere[0].value;
       if (inputcontent.length >= 1) {
         let wider = inputcontent.length;
+        cleaner.style.display = 'block';
         inputHere[0].style.width = wider * 11 + "px";
       } else {
+        cleaner.style.display = 'none';
         inputHere[0].style.width = wide * 11 + "px";
       }
     });
   }
+
+  for(let i = 0; i < convoTriggers.length; i++) {
+    convoTriggers[i].addEventListener('click',showConvoOpen);
+  }
+
+
+  menuIcon.addEventListener("click", showInput);
+
+  eyeIcon.addEventListener('click', showMenuInput);
+
+  cleaner.addEventListener('click', cleanInput);
+
+  menuResTrigger.addEventListener("click", openMenuRes);
+
+  eyeIcon.addEventListener("mouseover", changeicon);
+  eyeIcon.addEventListener("mouseout", changeicon2);
+
+  overlayTriggerImage.addEventListener("click", openOverlayMenu);
 
   for (let i = 0; i < triggers.length; i++) {
     triggers[i].addEventListener("click", changeTab);
@@ -52,6 +85,10 @@ window.onload = function () {
 
   for (let i = 0; i < closeTriggers.length; i++) {
     closeTriggers[i].addEventListener("click", closeBox, true);
+  }
+
+  for (let i = 0; i < selectElements.length; i++) {
+    selectElements[i].addEventListener("click", getValueItem, true);
   }
 
   if (extenders.length > 0) {
@@ -120,24 +157,48 @@ window.onscroll = function () {
     let y = window.scrollY;
 
     if (y >= 100) {
-      eyeIcon.classList.remove("icon-eye-home");
-      eyeIcon.classList.add("icon-iso");
-      first.classList.add("hidden");
-      scroller.classList.remove("hidden");
-      menuIcon.addEventListener("click", showInput);
+      if(showInputScroll) {
+        eyeIcon.classList.add("icon-eye-home");
+        eyeIcon.classList.remove("icon-iso");
+        first.classList.add("hidden");
+        scroller.classList.remove("hidden");
+        second.classList.remove("hidden");
+      }
     } else {
       eyeIcon.classList.remove("icon-eye-close");
-      eyeIcon.classList.remove("icon-iso");
-      eyeIcon.classList.add("icon-eye-home");
+      eyeIcon.classList.add("icon-iso");
+      eyeIcon.classList.remove("icon-eye-home");
       scroller.classList.add("hidden");
-      second.classList.remove("hidden");
+      // second.classList.add("hidden");
       third.classList.add("hidden");
       first.classList.remove("hidden");
-      menuIcon.removeEventListener("click", showInput);
+      // menuIcon.removeEventListener("click", showInput);
       inputAllow = true;
+      showInputScroll = true;
     }
   }
 };
+
+function cleanInput() {
+  let inputHere = document.querySelector('#input-search-one');
+  let pholder = inputHere.getAttribute("placeholder");
+  let wide = pholder.length;
+  inputHere.value = "";
+  cleaner.style.display = 'none';
+  inputHere.style.width = wide * 11 + "px";
+
+}
+
+function changeicon() {
+  let clases = eyeIcon.getAttribute('class');
+  console.log(clases);
+  clasesToUse = clases;
+  eyeIcon.setAttribute('class', 'iso text-black pl-4 icon-eye-ellipse');
+}
+
+function changeicon2() {
+  eyeIcon.setAttribute('class', clasesToUse);
+}
 
 function extendBox(elmt) {
   console.log(elmt);
@@ -155,12 +216,14 @@ function showInput() {
     eyeIcon.classList.remove("icon-iso");
     eyeIcon.classList.add("icon-eye-close");
     inputAllow = false;
+    showInputScroll = false;
   } else {
     second.classList.remove("hidden");
     third.classList.add("hidden");
     eyeIcon.classList.add("icon-iso");
     eyeIcon.classList.remove("icon-eye-close");
     inputAllow = true;
+    showInputScroll = true;
   }
 }
 
@@ -209,3 +272,58 @@ function removeElement(event) {
   let element = document.getElementById(elementId);
   element.parentNode.removeChild(element);
 }
+
+function openMenuRes() {
+  let menuRes = document.getElementById("responsive-menu");
+  menuRes.classList.toggle("open");
+}
+
+function openOverlayMenu() {
+  let elParent = document.getElementById("parentOverlay");
+  let menusOverlay = document.getElementsByClassName("overlay-menu-items");
+
+  elParent.classList.toggle("opened");
+  for (let i = 0; i < menusOverlay.length; i++) {
+    menusOverlay[i].classList.toggle("opened");
+  }
+}
+
+function showMenuInput() {
+  first.classList.toggle('hidden');
+  scroller.classList.toggle('hidden');
+  // eyeIcon.classList.toggle("icon-iso");
+    if (searchBox.length >= 1) {
+    let y = window.scrollY;
+
+    if (y >= 100) {
+      
+    } else {
+      
+    }
+  }
+}
+
+function showConvoOpen() {
+  console.log('evening');
+  let targetted = event.target;
+  let parent = targetted.parentNode;
+  let convo = parent.getElementsByClassName('convoBoxItems')[0];
+  convo.classList.toggle('opened');
+}
+
+function getValueItem() {
+  event.stopImmediatePropagation();
+  let targetted = event.target;
+  console.log('this is the target: ',targetted);
+  let valueHolder = targetted.getElementsByTagName('input')[0];
+  console.log('this is the value holder',valueHolder);
+  valueHolder.checked = !valueHolder.checked;;
+  let value = valueHolder.value;
+  if(valueHolder.checked) {
+    console.log('add name');
+  } else {
+    console.log('remove name');
+  }
+}
+
+

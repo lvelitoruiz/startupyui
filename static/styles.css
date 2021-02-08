@@ -1047,3 +1047,22 @@
   display: none;
   background: black;
 } */
+
+.convoBoxItems {
+  min-height: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.convoBoxItems.opened {
+  min-height: 0px;
+  max-height: 600px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.custom-radio-checkbox span,
+.custom-radio-checkbox input {
+  pointer-events: none;
+}
