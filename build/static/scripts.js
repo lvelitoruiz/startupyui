@@ -66,9 +66,6 @@ window.onload = function () {
 
   menuResTrigger.addEventListener("click", openMenuRes);
 
-  eyeIcon.addEventListener("mouseover", changeicon);
-  eyeIcon.addEventListener("mouseout", changeicon2);
-
   overlayTriggerImage.addEventListener("click", openOverlayMenu);
 
   for (let i = 0; i < triggers.length; i++) {
@@ -314,9 +311,7 @@ function showConvoOpen() {
 function getValueItem() {
   event.stopImmediatePropagation();
   let targetted = event.target;
-  console.log('this is the target: ',targetted);
   let valueHolder = targetted.getElementsByTagName('input')[0];
-  console.log('this is the value holder',valueHolder);
   valueHolder.checked = !valueHolder.checked;;
   let value = valueHolder.value;
   if(valueHolder.checked) {
