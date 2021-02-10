@@ -25,7 +25,7 @@
   <body>
     <header class="c-header fixed w-full z-20 border-solid border-b">
   <div
-    class="c-header--top items-center justify-center flex md:justify-between"
+    class="c-header--top items-login-hover items-center justify-center flex md:justify-between"
   >
     <a class="text-xl md:pl-4" href=""
       ><h1 class="ff-conv-PxGrotesk text-white">Startupy</h1></a
@@ -35,12 +35,21 @@
       <a class="text-white p-2 font-bold text-xs" href="">Join Membership</a>
       <a class="text-white p-2 pr-4 font-bold text-xs" href="">Login</a>
     </div>
-    <div class="hidden">
-      <div class="flex items-center">
-        <div class="border-solid border border-gray-600 bg-white rounded-full h-8 w-8 flex items-center justify-center">
+    <div class="hidden relative">
+      <div class="flex items-center cursor-pointer">
+        <div
+          class="border-solid border border-gray-600 bg-white rounded-full h-8 w-8 flex items-center justify-center"
+        >
           <span class="text-xs">JN</span>
         </div>
-        <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 text-white">Josh N.</span>
+        <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 text-white"
+          >Josh N.</span
+        >
+      </div>
+      <div class="absolute bg-black flex flex-col w-full z-10 border border-black shadow-lg items-end box-login">
+        <a class="flex text-white items-center h-8 px-5 text-sm w-full justify-end hover:bg-gray-200 whitespace-no-wrap hover:text-black" href="#">My Profile</a>
+        <a class="flex text-white items-center h-8 px-5 text-sm w-full justify-end hover:bg-gray-200 whitespace-no-wrap hover:text-black" href="#">My Account</a>
+        <a class="flex text-white items-center h-8 px-5 text-sm w-full justify-end hover:bg-gray-200 whitespace-no-wrap hover:text-black" href="#">Log Out</a>
       </div>
     </div>
   </div>
@@ -51,12 +60,12 @@
           <span class="iso icon-iso text-black pl-4 hidden"></span>
           <span
             id="icon-changer"
-            class="iso icon-eye-home text-black pl-4"
+            class="iso icon-eye-home icon-iso text-black pl-4"
           ></span>
         </div>
         <div class="md:col-span-6 lg:p-0">
           <!-- Nav init -->
-          <div id="header-first">
+          <div id="header-first" class="">
             <div class="flex items-center lg:grid lg:grid-cols-10">
               <div
                 class="md:col-start-1 md:col-span-10 lg:col-start-2 lg:col-span-10"
@@ -116,6 +125,72 @@
               </div>
             </div>
           </div>
+          <!-- responsive navigation -->
+          <div class="res-menu" id="responsive-menu">
+            <div class="white-menu">
+              <ul class="res-menu-list">
+                <li>
+                  <a class="hover:underline" href="">Join</a>
+                </li>
+              </ul>
+              <ul class="res-menu-list align-right">
+                <li>
+                  <a class="hover:underline" href="">Login</a>
+                </li>
+                <li>
+                  <a class="hover:underline" href="">Topics</a>
+                </li>
+                <li>
+                  <a class="hover:underline" href="">Companies</a>
+                </li>
+                <li>
+                  <a class="hover:underline" href="">People</a>
+                </li>
+                <li>
+                  <img
+                    class="res-menu-img"
+                    src="./static/img/iso-color.svg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="gray-menu">
+              <ul class="gray-menu-list">
+                <li>
+                  <a href="">About</a>
+                </li>
+                <li>
+                  <a href="">Merch</a>
+                </li>
+              </ul>
+              <ul class="gray-menu-list">
+                <li>
+                  <a href="">Community</a>
+                </li>
+                <li>
+                  <a href="">Join Membership</a>
+                </li>
+                <li>
+                  <a href="">Become a Curator</a>
+                </li>
+                <li>
+                  <a href="">Roadmap</a>
+                </li>
+              </ul>
+              <ul class="gray-menu-list">
+                <li>
+                  <a href="">FAQs</a>
+                </li>
+                <li>
+                  <a href="">Terms of Use</a>
+                </li>
+                <li>
+                  <a href="">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <!-- Nav search -->
           <div class="hidden" id="header-scroll">
             <div class="search-mobile" id="header-second">
@@ -137,6 +212,7 @@
                   <input
                     class="text-xl md:text-2xl focus:outline-none"
                     type="text"
+                    id="input-search-one"
                     placeholder="Search companies, content, topics, and people"
                   />
                   <div class="flex items-center hidden">
@@ -151,7 +227,13 @@
                   </div>
                 </div>
                 <div class="flex items-center floating-text">
-                  <svg class="h-6 md:w-6 color--gray text-sm cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg
+                    class="h-6 md:w-6 color--gray text-sm cursor-pointer"
+                    id="remove-text"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -159,20 +241,23 @@
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                  <span class="border-solid border color--gray text-sm pl-1 pr-1 ml-1">ESC</span>
+                  <span
+                    class="border-solid border color--gray text-sm pl-1 pr-1 ml-1"
+                    >ESC</span
+                  >
                 </div>
               </div>
             </div>
             <!-- Nav options -->
             <div class="hidden" id="header-third">
               <div class="flex items-center justify-center">
-                <div class="w-full text-center">
+                <div class="w-full text-center px-5">
                   <a class="hover:underline" href="">Topics</a>
                 </div>
-                <div class="w-full text-center">
+                <div class="w-full text-center px-5">
                   <a class="hover:underline" href="">Companies</a>
                 </div>
-                <div class="w-full text-center">
+                <div class="w-full text-center px-5">
                   <a class="hover:underline" href="">People</a>
                 </div>
                 <div class="w-full flex justify-center">
@@ -185,6 +270,7 @@
         <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
           <div class="p-4 nav">
             <span class="icon-nav" id="menuicon"></span>
+            <span class="icon-nav" id="menuicon-responsive"></span>
           </div>
         </div>
       </div>
@@ -486,119 +572,102 @@
           </div>
         </div>
       </div>
-      <div class="items-tabs md:grid md:grid-cols-12 tabs-active">
-        <div class="md:col-span-3 h-mt-md--80">
-          <div class="line-left">
-            <div class="px-4 md:mr-10 p-0">
-              <div class="flex flex-wrap md:justify-end">
-                <span
-                  class="color--blue bkg--blue-transparent px-2 py-1 mb-2 text-sm mr-2 md:ml-2 md:mr-0"
-                  >Future of Housing</span
-                >
-                <div
-                  class="flex color--gray cursor-pointer items-center mb-2 mr-2 md:ml-2 md:mr-0"
-                >
-                  <i class="icon-add text-2xl"></i>
-                </div>
+      <div class="items-tabs md:grid md:grid-cols-12 tabs-active mt-2">
+        <div class="items-tab md:col-span-12 items-tabs-container md:grid md:grid-cols-12">
+          <div class="md:col-span-6 md:col-start-4 lg:col-span-6 lg:col-start-4">
+            <div class="flex">
+              <div class="flex items-center bg-black px-1 bg-hover max-w-md bg-hover bg-hover">
+                <h3 class="text-md text-white md:text-2xl">
+                  Startups that offer new paths tohomeownership
+                </h3>
+                <i class="icon-eye ml-2 text-3xl text-white"></i>
               </div>
             </div>
           </div>
         </div>
-        <div class="md:col-span-6 lg:col-span-6">
-          <div class="px-4 md:p-0">
-            <div class="mt-2">
-              <div class="flex">
-                <div
-                  class="flex items-center bg-black px-1 bg-hover max-w-md bg-hover bg-hover"
-                >
-                  <h3 class="text-md text-white md:text-2xl">
-                    Startups that offer new paths tohomeownership
-                  </h3>
-                  <i class="icon-eye ml-2 text-3xl text-white"></i>
-                </div>
-              </div>
-              <div>
-                <div class="border border-solid border-black p-2">
-                  <div class="flex mb-6">
-                    <span class="text-sm font-bold">Ryan Orbuch</span>
-                    <span class="text-sm color--gray ml-2"
-                      >Mar 25, 2020 5min</span
-                    >
-                  </div>
-                  <span class="color--gray text-xs font-bold">TL;DR</span>
-                  <p class="mb-4">
-                    ""High home prices and a limited supply of homes have made
-                    it difficult for some people to enter the market.
-                  </p>
-                  <p class="mb-4">
-                    People with steady incomes but less-than-perfect credit are
-                    often shut out of buying homes because they can’t qualify
-                    for mortgage, or do not have sufficient money saved for a
-                    down-payment.”
-                  </p>
-                  <p class="mb-4">
-                    “Millennials, in particular, face steep obstacles to
-                    homeownership because of student-loan debt/low savings.Some
-                    new startups have thus emerged to offer new paths to
-                    homeownership:
-                  </p>
-                  <p class="mb-4">
-                    1. Bypass down payments/mortgages with lease-to-own
-                    contracts:<br /><span class="color--blue">Divvy</span> -
-                    $180M raised with
-                    <span class="color--blue">a16z</span>/Caffeinated/Max
-                    <span class="color--blue">Levchin.</span><br />Divvy buys
-                    homes with cash on consumers behalf. The buyers only pay ½%
-                    down and move in for a 3-year lease. Divvy charges monthly
-                    rent, with 20% of the payment going toward equity to buy the
-                    home. After 3 years, the consumer will own 10% of the home,
-                    which is enough to qualify for a mortgage. If individuals
-                    decide not to buy the home, they walk away with 10% of the
-                    sale.
-                  </p>
-                  <p class="mb-4">
-                    2. <span class="color--blue">Divvy</span> makes most of its
-                    money from rent, but also from the appreciation of the home
-                    at sale.”
-                  </p>
-                  <div
-                    class="flex color--gray cursor-pointer items-center pb-2 pt-4"
-                  >
+        <div class="items-tab md:col-span-12 items-tabs-container md:grid md:grid-cols-12">
+          <div class="md:col-span-3">
+            <div class="line-left">
+              <div class="px-4 md:mr-10 p-0">
+                <div class="flex flex-wrap md:justify-end">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 mb-2 text-sm mr-2 md:ml-2 md:mr-0">Future of
+                    Housing</span>
+                  <div class="flex color--gray cursor-pointer items-center mb-2 mr-2 md:ml-2 md:mr-0">
                     <i class="icon-add text-2xl"></i>
-                    <span class="ml-2 text-xs font-bold">Add Highlight</span>
                   </div>
                 </div>
               </div>
-              <div>
-                <img class="w-full" src="./static/img/bk-box.png" alt="" />
+            </div>
+          </div>
+          <div class="md:col-span-6 lg:col-span-6">
+            <div class="px-4 md:p-0">
+              <div class="mt-0">
+                
+                <div>
+                  <div class="border border-solid border-black p-2">
+                    <div class="flex mb-6">
+                      <span class="text-sm font-bold">Ryan Orbuch</span>
+                      <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+                    </div>
+                    <span class="color--gray text-xs font-bold">TL;DR</span>
+                    <p class="mb-4">
+                      ""High home prices and a limited supply of homes have made
+                      it difficult for some people to enter the market.
+                    </p>
+                    <p class="mb-4">
+                      People with steady incomes but less-than-perfect credit are
+                      often shut out of buying homes because they can’t qualify
+                      for mortgage, or do not have sufficient money saved for a
+                      down-payment.”
+                    </p>
+                    <p class="mb-4">
+                      “Millennials, in particular, face steep obstacles to
+                      homeownership because of student-loan debt/low savings.Some
+                      new startups have thus emerged to offer new paths to
+                      homeownership:
+                    </p>
+                    <p class="mb-4">
+                      1. Bypass down payments/mortgages with lease-to-own
+                      contracts:<br /><span class="color--blue">Divvy</span> -
+                      $180M raised with
+                      <span class="color--blue">a16z</span>/Caffeinated/Max
+                      <span class="color--blue">Levchin.</span><br />Divvy buys
+                      homes with cash on consumers behalf. The buyers only pay ½%
+                      down and move in for a 3-year lease. Divvy charges monthly
+                      rent, with 20% of the payment going toward equity to buy the
+                      home. After 3 years, the consumer will own 10% of the home,
+                      which is enough to qualify for a mortgage. If individuals
+                      decide not to buy the home, they walk away with 10% of the
+                      sale.
+                    </p>
+                    <p class="mb-4">
+                      2. <span class="color--blue">Divvy</span> makes most of its
+                      money from rent, but also from the appreciation of the home
+                      at sale.”
+                    </p>
+                    <div class="flex color--gray cursor-pointer items-center pb-2 pt-4">
+                      <i class="icon-add text-2xl"></i>
+                      <span class="ml-2 text-xs font-bold">Add Highlight</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <img class="w-full" src="./static/img/bk-box.png" alt="" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="md:col-span-3 h-mt-md--80">
-          <div class="line-right">
-            <div class="p-4 md:ml-10 md:p-0">
-              <div class="flex flex-wrap">
-                <span
-                  class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize"
-                  >Upequity</span
-                >
-                <span
-                  class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize"
-                  >Flyhomes</span
-                >
-                <span
-                  class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize"
-                  >ZeroDown</span
-                >
-                <span
-                  class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize"
-                  >Divvy Homes</span
-                >
-                <div
-                  class="flex color--gray cursor-pointer items-center mr-2 mb-2"
-                >
-                  <i class="icon-add text-2xl"></i>
+          <div class="md:col-span-3">
+            <div class="line-right">
+              <div class="p-4 md:ml-10 md:p-0">
+                <div class="flex flex-wrap">
+                  <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Upequity</span>
+                  <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Flyhomes</span>
+                  <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">ZeroDown</span>
+                  <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Divvy Homes</span>
+                  <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                    <i class="icon-add text-2xl"></i>
+                  </div>
                 </div>
               </div>
             </div>
@@ -651,74 +720,69 @@
         </div>
       </div>
       <div class="items-tabs md:grid md:grid-cols-12 tabs-active">
-        <div
-          class="md:col-start-1 md:col-span-3 lg:col-start-2 lg:col-span-2 md:mt-10"
-        >
-          <div class="">
-            <div class="px-4 md:mr-10 p-0">
-              <div class="flex flex-wrap md:justify-end">
-                <div
-                  class="flex color--gray cursor-pointer justify-end text-right items-center mb-2 mr-2 md:ml-2 md:mr-0 flex-wrap"
-                >
-                  <i class="icon-add text-2xl"></i>
-                  <p class="text-sm">No topics tagged, add one!</p>
-                </div>
+        <div class="items-tab md:col-span-12 items-tabs-container md:grid md:grid-cols-12">
+          <div class="md:col-span-6 md:col-start-4 lg:col-span-6 lg:col-start-4">
+            <div class="flex">
+              <div class="flex items-center bg-black px-1 bg-hover max-w-md bg-hover bg-hover">
+                <h3 class="text-md text-white md:text-2xl">
+                  We need to take CO2 out of the sky
+                </h3>
+            
+                <i class="icon-eye ml-2 text-3xl text-white"></i>
               </div>
             </div>
           </div>
         </div>
-        <div class="md:col-span-6 lg:col-span-6">
-          <div class="px-4 md:p-0">
-            <div class="mt-2">
-              <div class="flex">
-                <div
-                  class="flex items-center bg-black px-1 bg-hover max-w-md bg-hover bg-hover"
-                >
-                  <h3 class="text-md text-white md:text-2xl">
-                    We need to take CO2 out of the sky
-                  </h3>
-
-                  <i class="icon-eye ml-2 text-3xl text-white"></i>
-                </div>
-              </div>
-              <div class="">
-                <div
-                  class="border border-solid border-black p-2 max-h--200 overflow-auto"
-                >
-                  <div class="flex mb-6">
-                    <span class="text-sm font-bold">Ryan Orbuch</span>
-                    <span class="text-sm color--gray ml-2"
-                      >Mar 25, 2020 5min</span
-                    >
-                  </div>
+        <div class="items-tab md:col-span-12 items-tabs-container md:grid md:grid-cols-12">
+          <div class="md:col-start-1 md:col-span-3 lg:col-start-2 lg:col-span-2 md:mt-0">
+            <div class="">
+              <div class="px-4 md:mr-10 p-0">
+                <div class="flex flex-wrap md:justify-end">
                   <div
-                    class="flex color--gray cursor-pointer items-center mb-1"
-                  >
+                    class="flex color--gray cursor-pointer justify-end text-right items-center mb-2 mr-2 md:ml-2 md:mr-0 flex-wrap">
                     <i class="icon-add text-2xl"></i>
-                    <span class="ml-2 text-xs font-bold">Add Highlight</span>
+                    <p class="text-sm">No topics tagged, add one!</p>
                   </div>
                 </div>
               </div>
-              <div>
-                <img class="w-full" src="./static/img/bk-box.png" alt="" />
+            </div>
+          </div>
+          <div class="md:col-span-6 lg:col-span-6">
+            <div class="px-4 md:p-0">
+              <div class="mt-0">
+          
+                <div class="">
+                  <div class="border border-solid border-black p-2 max-h--200 overflow-auto">
+                    <div class="flex mb-6">
+                      <span class="text-sm font-bold">Ryan Orbuch</span>
+                      <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+                    </div>
+                    <div class="flex color--gray cursor-pointer items-center mb-1">
+                      <i class="icon-add text-2xl"></i>
+                      <span class="ml-2 text-xs font-bold">Add Highlight</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <img class="w-full" src="./static/img/bk-box.png" alt="" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="md:col-span-3 lg:col-span-2 md:mt-10">
-          <div class="">
-            <div class="p-4 md:ml-10 md:p-0">
-              <div class="flex flex-wrap">
-                <div
-                  class="flex color--gray cursor-pointer items-center mr-2 mb-2 flex-wrap"
-                >
-                  <i class="icon-add text-2xl"></i>
-                  <p class="text-sm">No topics tagged, add one!</p>
+          <div class="md:col-span-3 lg:col-span-2 md:mt-0">
+            <div class="">
+              <div class="p-4 md:ml-10 md:p-0">
+                <div class="flex flex-wrap">
+                  <div class="flex color--gray cursor-pointer items-center mr-2 mb-2 flex-wrap">
+                    <i class="icon-add text-2xl"></i>
+                    <p class="text-sm">No topics tagged, add one!</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
     </div>
     <div class="border-b border-solid pb-16">
@@ -1170,6 +1234,29 @@
   </div>
   <div class="bg-black h-5 w-full"></div>
 </footer>
+    <div class="overlay-menu" id="parentOverlay">
+      <ul class="overlay-menu-items" id="menu-left">
+        <li>
+          <a href="#">Add Company</a>
+        </li>
+        <li>
+          <a href="#">Add Topic</a>
+        </li>
+      </ul>
+      <img
+        src="./static/img/blue-eye.svg"
+        id="overlayTrigger"
+        class="overlay-menu-trigger"
+      />
+      <ul class="overlay-menu-items" id="menu-right">
+        <li>
+          <a href="#">Add Content</a>
+        </li>
+        <li>
+          <a href="#">Add People</a>
+        </li>
+      </ul>
+    </div>
     <div class="modal">
       <div class="modal-inner">
         <span data-modal-close>&times;</span>

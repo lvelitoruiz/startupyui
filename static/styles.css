@@ -50,6 +50,14 @@
   cursor: pointer;
 }
 
+.c-header .nav span:hover {
+  cursor: pointer;
+  background: black;
+  color: #fff;
+  border-radius: 100%;
+  box-sizing: content-box;
+}
+
 .search-mobile {
   position: absolute;
   background: white;
@@ -482,7 +490,7 @@
   }
 
   .modal-content {
-    padding: 40px 40px 80px !important;
+    padding: 40px 40px 140px !important;
   }
 
   .h-mt-md--80 {
@@ -1018,4 +1026,51 @@
 
 #remove-text {
   display: none;
+}
+
+.items-login-hover a:hover {
+  text-decoration: underline;
+}
+/* 
+#icon-changer {
+  display: inline-block;
+  width: 136px;
+  height: 136px;
+}
+
+#icon-changer:hover {
+  background: url(./img/eye-line-planet.svg) no-repeat center center;
+  background-size: 120px;
+}
+
+#icon-changer:hover:before {
+  display: none;
+  background: black;
+} */
+
+.convoBoxItems {
+  min-height: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+
+.convoBoxItems.opened {
+  min-height: 0px;
+  max-height: 600px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #000;
+  border-top: none;
+}
+
+.custom-radio-checkbox span,
+.custom-radio-checkbox input {
+  pointer-events: none;
+}
+
+.showConvo span,
+.showConvo svg {
+  pointer-events: none;
 }
