@@ -26,6 +26,7 @@ var inputAllow = true;
 var extenders = document.getElementsByClassName("fade-out");
 
 let cleaner = document.querySelector('#remove-text');
+let cleaner2 = document.querySelector('#esc-sign');
 
 var clasesToUse = '';
 
@@ -45,9 +46,11 @@ window.onload = function () {
       if (inputcontent.length >= 1) {
         let wider = inputcontent.length;
         cleaner.style.display = 'block';
+        cleaner2.style.display = 'block';
         inputHere[0].style.width = wider * 11 + "px";
       } else {
         cleaner.style.display = 'none';
+        cleaner2.style.display = 'none';
         inputHere[0].style.width = wide * 11 + "px";
       }
     });

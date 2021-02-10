@@ -1074,3 +1074,7 @@
 .showConvo svg {
   pointer-events: none;
 }
+
+#esc-sign {
+  display: none;
+}
