@@ -813,8 +813,10 @@
 
 .home-banner {
   background-image: url(../static/img/landing/banner.jpg);
-  min-height: 200px;
+  min-height: 400px;
   padding-top: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-container-landing {
