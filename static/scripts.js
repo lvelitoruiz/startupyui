@@ -66,9 +66,6 @@ window.onload = function () {
 
   menuResTrigger.addEventListener("click", openMenuRes);
 
-  eyeIcon.addEventListener("mouseover", changeicon);
-  eyeIcon.addEventListener("mouseout", changeicon2);
-
   overlayTriggerImage.addEventListener("click", openOverlayMenu);
 
   for (let i = 0; i < triggers.length; i++) {
