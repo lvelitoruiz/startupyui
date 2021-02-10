@@ -291,14 +291,15 @@ function openOverlayMenu() {
 function showMenuInput() {
   first.classList.toggle('hidden');
   scroller.classList.toggle('hidden');
-  // eyeIcon.classList.toggle("icon-iso");
+  eyeIcon.classList.toggle("icon-iso");
+  eyeIcon.classList.toggle("icon-eye-home");
     if (searchBox.length >= 1) {
     let y = window.scrollY;
 
     if (y >= 100) {
       
     } else {
-      
+      // eyeIcon.classList.add("icon-home");
     }
   }
 }
