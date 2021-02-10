@@ -819,6 +819,12 @@
   background-size: cover;
 }
 
+.home-banner-2 {
+  background-image: url(../static/img/bg-black.jpg);
+  background-size: initial;
+  background-repeat: repeat;
+}
+
 .text-container-landing {
   position: relative;
   min-height: 20px;
