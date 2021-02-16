@@ -820,7 +820,7 @@
 }
 
 .home-banner-2 {
-  background-image: url(../static/img/bg-black.jpg);
+  background-image: url(../static/img/bg-black-2.jpg);
   background-size: initial;
   background-repeat: repeat;
 }
@@ -1031,6 +1031,8 @@
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
   overflow: auto;
+  border: 1px solid #000;
+  border-top: none;
 }
 
 .box-login {
@@ -1092,4 +1094,8 @@
 
 #esc-sign {
   display: none;
+}
+
+.no-border-top {
+  border-top: none !important;
 }
