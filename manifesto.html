@@ -1,10 +1,10 @@
 {% extends "_layout.html" %} {% block title %}Startupy{% endblock %} {% block
   head %} {%- endblock %} {% block content %} {%- include 'header.html' %}
 
-<section class="home-banner grid grid-cols-5 gap-5 items-end">
+<section class="home-banner home-banner-2 grid grid-cols-5 gap-5 items-end">
   <div class="col-span-1 hidden md:flex"></div>
   <div class="col-span-5 md:col-span-4 flex">
-    <h2 class="py-1 ff-mono-bold bg-white text-3xl leading-none md:text-4xl">Membership</h2>
+    <h2 class="py-1 ff-mono-bold bg-white text-3xl leading-none md:text-4xl">The year is 2020.</h2>
   </div>
 </section>
   
@@ -28,9 +28,17 @@
     </div>
     <div class="col-span-5 md:col-span-4 pt-10">
       <div class="w-12/12 pl-3 pr-3 md:w-11/12 pl-0 pr-0 lg:w-9/12">
-        <p class="ff-mono-bold text-xl leading-7 pb-10 md:text-4xl md:leading-10">Startupy is where you stay up to speed on the pulse of startup culture.</p>
+        <p class="ff-mono-bold text-xl leading-7 pb-10 md:text-4xl md:leading-10">We spend endless hours falling down Internet rabbit holes. Caught in a stream of newsletters, podcasts, and Twitter threads, we surf the web, jumping from thought to thought, tab to tab, hoping for an intellectual breakthrough, exhilarated, but exhausted.</p>
+        <div class="pt-10">
+          <span class="ff-mono-light text-opacity-25 text-white">Our Problem</span>
+          <p class="ff-mono-light leading-6 text-md text-white md:text-2xl md:leading-8">We are entering the golden age of writing. But knowledge is scattered — buried in the deep corners of the interwebs, found only by chance, and consumed in fleeting social media feeds that strip context and discourage reflection.</p>
+        </div>
       </div>
     </div>
+  </section>
+
+  <section class="bg-black justify-center pt-10 md:flex images-over">
+    <img src="./static/img/text.png" alt="">
   </section>
 
   <section class="grid grid-cols-5 gap-5 bg-black text-white fondo" id="solution">
@@ -40,60 +48,9 @@
     </div>
     <div class="col-span-5 md:col-span-4 pt-10">
       <div class="w-12/12 pl-3 pr-3 md:w-11/12 pl-0 pr-0 lg:w-9/12">
-        <div>
-          <span class="bg-white text-black text-sm pl-1 pr-1">Get exclusive access to a growing library of:</span>
-        </div>
-        <div class="flex border-b border-solid border-black pt-6 pb-6 md:pb-20">
-          <div class="flex flex-col w-full">
-            <span class="md:text-2xl lg:text-4xl ff-mono-regular color--green">3,200</span>
-            <span class="text-xs md:text-base font-bold">Companies</span>
-          </div>
-          <div class="flex flex-col w-full">
-            <span class="md:text-2xl lg:text-4xl ff-mono-regular color--green">2,400</span>
-            <span class="text-xs md:text-base font-bold">Topics</span>
-          </div>
-          <div class="flex flex-col w-full">
-            <span class="md:text-2xl lg:text-4xl ff-mono-regular color--green">1,200</span>
-            <span class="text-xs md:text-base font-bold">Content</span>
-          </div>
-          <div class="flex flex-col w-full">
-            <span class="md:text-2xl lg:text-4xl ff-mono-regular color--green">960</span>
-            <span class="text-xs md:text-base font-bold">People</span>
-          </div>
-        </div>
-        <div class="flex justify-center py-12">
-          <div class="w-full flex">
-            <div class="flex flex-col">
-              <div class="flex items-center mb-4">
-                <span class="bg-white text-black text-sm pl-1 pr-1">Yearly</span>
-                <span class="bkg--green-2 pl-1 pr-1 text-sm text-black">Save 25%</span>
-              </div>
-              <div class="flex mt-2 mb-12">
-                <p class="text-xs color--gray md:text-base">$</p>
-                <p class="leading-none ff-mono-regular text-2xl md:text-4xl">12.5</p>
-                <p class="self-end color--gray">/ Month</p>
-              </div>
-              <div class="mb-10">
-                <button class="bkg--green-2 text-black font-bold px-6 py-5">Join Yearly</button>
-              </div>
-            </div>
-          </div>
-          <div class="w-full flex">
-            <div class="flex flex-col">
-              <div class="flex items-center mb-4">
-                <span class="bg-white text-black text-sm pl-1 pr-1">Monthly</span>
-              </div>
-              <div class="flex mt-2 mb-12">
-                <p class="text-xs color--gray md:text-base">$</p>
-                <p class="leading-none ff-mono-regular text-2xl md:text-4xl">20</p>
-                <p class="self-end color--gray">/ Month</p>
-              </div>
-              <div class="mb-10">
-                <button class="bkg--green-2 text-black font-bold px-6 py-5">Join Monthly</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <span class="ff-mono-light text-opacity-25 text-white">The Solution</span>
+        <p class="ff-mono-light leading-6 text-md text-white pb-10 md:text-2xl md:leading-8">Founders, funders, creatives, and creators need a dedicated place to collect and connect the dots. That’s why we built startupy: a community-powered database for startup knowledge, organized associatively.</p>
+        <!-- <p class="pb-10 pt-10 ff-mono-bold text-xl leading-7 md:text-4xl md:leading-10">Startupy is a living, breathing, and surprisingly delightful place to fall down the Internet rabbit hole and stay up to speed on the pulse of startup culture.With Startupy, we’re not just creating a database, but an infrastructure for a new type of knowledge exchange.</p> -->
       </div>
     </div>
   </section>
@@ -171,4 +128,4 @@
   </section>
 </section>
 
-{%- include 'footer-2.html' %} {%- endblock %} {% block scripts %} {%- endblock %}
+{%- include 'footer-3.html' %} {%- endblock %} {% block scripts %} {%- endblock %}
