@@ -32,6 +32,9 @@ var clasesToUse = "";
 var convoTriggers = document.getElementsByClassName("showConvo");
 var selectElements = document.getElementsByClassName("custom-radio-checkbox");
 
+var dateInput1 = document.querySelector("#date1");
+var dateInput2 = document.querySelector("#date2");
+
 window.onload = function () {
   if (searchBox.length >= 1) {
     console.log("we have a box here");
@@ -54,6 +57,16 @@ window.onload = function () {
       }
     });
   }
+
+  var picker1 = new Pikaday({
+    field: document.getElementById("date1"),
+    theme: "triangle-theme",
+  });
+
+  var picker2 = new Pikaday({
+    field: document.getElementById("date2"),
+    theme: "triangle-theme",
+  });
 
   for (let i = 0; i < convoTriggers.length; i++) {
     convoTriggers[i].addEventListener("click", showConvoOpen);

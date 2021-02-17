@@ -437,6 +437,7 @@
 
 .g-search input {
   background: transparent;
+  width: 100%;
 }
 
 .g-search:hover {
@@ -1101,7 +1102,7 @@
 }
 
 .gb--gray {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
 .slider {
