@@ -490,7 +490,7 @@
   }
 
   .modal-content {
-    padding: 40px 40px 140px !important;
+    padding: 40px 40px 78px !important;
   }
 
   .h-mt-md--80 {
@@ -1098,6 +1098,10 @@
 
 .no-border-top {
   border-top: none !important;
+}
+
+.gb--gray {
+  background-color: #EEEEEE;
 }
 
 .slider {
