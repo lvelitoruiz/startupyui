@@ -69,7 +69,9 @@ window.onload = function () {
 
   menuResTrigger.addEventListener("click", openMenuRes);
 
-  overlayTriggerImage.addEventListener("click", openOverlayMenu);
+  if(overlayTriggerImage != null){
+    overlayTriggerImage.addEventListener("click", openOverlayMenu);
+  }
 
   for (let i = 0; i < triggers.length; i++) {
     triggers[i].addEventListener("click", changeTab);
