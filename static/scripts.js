@@ -20,18 +20,20 @@ var overlayTriggerImage = document.getElementById("overlayTrigger");
 
 var showInputScroll = true;
 
-
 var inputAllow = true;
 
 var extenders = document.getElementsByClassName("fade-out");
 
-let cleaner = document.querySelector('#remove-text');
-let cleaner2 = document.querySelector('#esc-sign');
+let cleaner = document.querySelector("#remove-text");
+let cleaner2 = document.querySelector("#esc-sign");
 
-var clasesToUse = '';
+var clasesToUse = "";
 
-var convoTriggers = document.getElementsByClassName('showConvo');
-var selectElements = document.getElementsByClassName('custom-radio-checkbox');
+var convoTriggers = document.getElementsByClassName("showConvo");
+var selectElements = document.getElementsByClassName("custom-radio-checkbox");
+
+var dateInput1 = document.querySelector("#date1");
+var dateInput2 = document.querySelector("#date2");
 
 window.onload = function () {
   if (searchBox.length >= 1) {
@@ -45,27 +47,36 @@ window.onload = function () {
       let inputcontent = inputHere[0].value;
       if (inputcontent.length >= 1) {
         let wider = inputcontent.length;
-        cleaner.style.display = 'block';
-        cleaner2.style.display = 'block';
+        cleaner.style.display = "block";
+        cleaner2.style.display = "block";
         inputHere[0].style.width = wider * 11 + "px";
       } else {
-        cleaner.style.display = 'none';
-        cleaner2.style.display = 'none';
+        cleaner.style.display = "none";
+        cleaner2.style.display = "none";
         inputHere[0].style.width = wide * 11 + "px";
       }
     });
   }
 
-  for(let i = 0; i < convoTriggers.length; i++) {
-    convoTriggers[i].addEventListener('click',showConvoOpen);
-  }
+  var picker1 = new Pikaday({
+    field: document.getElementById("date1"),
+    theme: "triangle-theme",
+  });
 
+  var picker2 = new Pikaday({
+    field: document.getElementById("date2"),
+    theme: "triangle-theme",
+  });
+
+  for (let i = 0; i < convoTriggers.length; i++) {
+    convoTriggers[i].addEventListener("click", showConvoOpen);
+  }
 
   menuIcon.addEventListener("click", showInput);
 
-  eyeIcon.addEventListener('click', showMenuInput);
+  eyeIcon.addEventListener("click", showMenuInput);
 
-  cleaner.addEventListener('click', cleanInput);
+  cleaner.addEventListener("click", cleanInput);
 
   menuResTrigger.addEventListener("click", openMenuRes);
 
@@ -159,7 +170,7 @@ window.onscroll = function () {
     let y = window.scrollY;
 
     if (y >= 100) {
-      if(showInputScroll) {
+      if (showInputScroll) {
         eyeIcon.classList.add("icon-eye-home");
         eyeIcon.classList.remove("icon-iso");
         first.classList.add("hidden");
@@ -182,24 +193,23 @@ window.onscroll = function () {
 };
 
 function cleanInput() {
-  let inputHere = document.querySelector('#input-search-one');
+  let inputHere = document.querySelector("#input-search-one");
   let pholder = inputHere.getAttribute("placeholder");
   let wide = pholder.length;
   inputHere.value = "";
-  cleaner.style.display = 'none';
+  cleaner.style.display = "none";
   inputHere.style.width = wide * 11 + "px";
-
 }
 
 function changeicon() {
-  let clases = eyeIcon.getAttribute('class');
+  let clases = eyeIcon.getAttribute("class");
   console.log(clases);
   clasesToUse = clases;
-  eyeIcon.setAttribute('class', 'iso text-black pl-4 icon-eye-ellipse');
+  eyeIcon.setAttribute("class", "iso text-black pl-4 icon-eye-ellipse");
 }
 
 function changeicon2() {
-  eyeIcon.setAttribute('class', clasesToUse);
+  eyeIcon.setAttribute("class", clasesToUse);
 }
 
 function extendBox(elmt) {
@@ -291,15 +301,14 @@ function openOverlayMenu() {
 }
 
 function showMenuInput() {
-  first.classList.toggle('hidden');
-  scroller.classList.toggle('hidden');
+  first.classList.toggle("hidden");
+  scroller.classList.toggle("hidden");
   eyeIcon.classList.toggle("icon-iso");
   eyeIcon.classList.toggle("icon-eye-home");
-    if (searchBox.length >= 1) {
+  if (searchBox.length >= 1) {
     let y = window.scrollY;
 
     if (y >= 100) {
-      
     } else {
       // eyeIcon.classList.add("icon-home");
     }
@@ -307,24 +316,72 @@ function showMenuInput() {
 }
 
 function showConvoOpen() {
-  console.log('evening');
+  console.log("evening");
   let targetted = event.target;
   let parent = targetted.parentNode;
-  let convo = parent.getElementsByClassName('convoBoxItems')[0];
-  convo.classList.toggle('opened');
+  let convo = parent.getElementsByClassName("convoBoxItems")[0];
+  convo.classList.toggle("opened");
 }
 
 function getValueItem() {
   event.stopImmediatePropagation();
   let targetted = event.target;
-  let valueHolder = targetted.getElementsByTagName('input')[0];
-  valueHolder.checked = !valueHolder.checked;;
+  let valueHolder = targetted.getElementsByTagName("input")[0];
+  valueHolder.checked = !valueHolder.checked;
   let value = valueHolder.value;
-  if(valueHolder.checked) {
-    console.log('add name');
+  if (valueHolder.checked) {
+    console.log("add name");
   } else {
-    console.log('remove name');
+    console.log("remove name");
   }
 }
 
+let slider = document.querySelectorAll(".slider")[0];
+let thumb = slider.querySelector(".circular-indicator-used");
 
+thumb.onmousedown = function (event) {
+  event.preventDefault(); // prevent selection start (browser action)
+
+  let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+  // shiftY not needed, the thumb moves only horizontally
+
+  document.addEventListener("mousemove", onMouseMove);
+  document.addEventListener("mouseup", onMouseUp);
+
+  function onMouseMove(event) {
+    let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
+    let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+    let unitValue = rightEdge / 100;
+    let millions = newLeft / unitValue;
+
+    // the pointer is out of slider => lock the thumb within the bounaries
+    if (newLeft <= 0) {
+      newLeft = 0;
+      millions = 1;
+    }
+    if (newLeft > rightEdge) {
+      newLeft = rightEdge;
+      millions = 100;
+    }
+
+    console.log(millions);
+    let millionCounter = document.querySelectorAll(".million-counter")[0];
+
+    if (millions >= 100) {
+      millionCounter.innerHTML = Math.floor(millions) + "m+";
+    } else {
+      millionCounter.innerHTML = Math.floor(millions) + "m";
+    }
+
+    thumb.style.left = newLeft + "px";
+  }
+
+  function onMouseUp() {
+    document.removeEventListener("mouseup", onMouseUp);
+    document.removeEventListener("mousemove", onMouseMove);
+  }
+};
+
+thumb.ondragstart = function () {
+  return false;
+};

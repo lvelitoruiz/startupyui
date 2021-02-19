@@ -25,6 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-elbow:before {
+  content: "\e914";
+}
+
+.icon-add-black:before {
+  content: "\e915";
+}
+
 .icon-eye-ellipse:before {
   content: "\e912";
 }
