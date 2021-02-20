@@ -24,8 +24,8 @@ var inputAllow = true;
 
 var extenders = document.getElementsByClassName("fade-out");
 
-let cleaner = document.querySelector("#remove-text");
-let cleaner2 = document.querySelector("#esc-sign");
+var cleaner = document.querySelector("#remove-text");
+var cleaner2 = document.querySelector("#esc-sign");
 
 var clasesToUse = "";
 
@@ -130,7 +130,7 @@ window.onload = function () {
     <div>
       <div class="flex justify-between">
         <div class="flex flex-col w-100">
-          <div class="flex items-center">  
+          <div class="flex items-center">
             <p class="font-bold mr-3 text-xs">Comrad Socks</p>
             <span class="text-xs bkg--blue2 px-2 py-1 mr-3">Mature</span>
           </div>
@@ -154,7 +154,7 @@ window.onload = function () {
   tippy("#myTag", {
     content: `
     <div>
-      <div class="flex justify-between w-100"> 
+      <div class="flex justify-between w-100">
         <p class="font-bold mr-3 text-xs text-cut">The Future of Venture Capitan Capitan</p>
         <i class="icon-eye-black text-xl text-white"></i>
       </div>
@@ -364,7 +364,7 @@ function getValueItem() {
   }
 }
 
-let slider = document.querySelectorAll(".slider")[0];
+var slider = document.querySelectorAll(".slider")[0];
 if(slider != undefined){
 
     let thumb = slider.querySelector(".circular-indicator-used");
