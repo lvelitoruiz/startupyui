@@ -72,13 +72,21 @@ window.onload = function () {
     convoTriggers[i].addEventListener("click", showConvoOpen);
   }
 
-  menuIcon.addEventListener("click", showInput);
+  if(menuIcon != null){
+    menuIcon.addEventListener("click", showInput);
+  }
 
-  eyeIcon.addEventListener("click", showMenuInput);
+  if(eyeIcon != null ){
+    eyeIcon.addEventListener("click", showMenuInput);
+  }
 
-  cleaner.addEventListener("click", cleanInput);
+  if(cleaner != null ){
+    cleaner.addEventListener("click", cleanInput);
+  }
 
-  menuResTrigger.addEventListener("click", openMenuRes);
+  if(menuResTrigger != null){
+    menuResTrigger.addEventListener("click", openMenuRes);
+  }
 
   if(overlayTriggerImage != null){
     overlayTriggerImage.addEventListener("click", openOverlayMenu);
@@ -171,17 +179,25 @@ window.onscroll = function () {
 
     if (y >= 100) {
       if (showInputScroll) {
-        eyeIcon.classList.add("icon-eye-home");
-        eyeIcon.classList.remove("icon-iso");
+        if(eyeIcon != null) {
+            eyeIcon.classList.add("icon-eye-home");
+            eyeIcon.classList.remove("icon-iso");
+        }
         first.classList.add("hidden");
-        scroller.classList.remove("hidden");
+        if(scroller != null) {
+            scroller.classList.remove("hidden");
+        }
         second.classList.remove("hidden");
       }
     } else {
-      eyeIcon.classList.remove("icon-eye-close");
-      eyeIcon.classList.add("icon-iso");
-      eyeIcon.classList.remove("icon-eye-home");
-      scroller.classList.add("hidden");
+      if(eyeIcon != null){
+        eyeIcon.classList.remove("icon-eye-close");
+        eyeIcon.classList.add("icon-iso");
+        eyeIcon.classList.remove("icon-eye-home");
+      }
+      if(scroller != null) {
+        scroller.classList.add("hidden");
+      }
       // second.classList.add("hidden");
       third.classList.add("hidden");
       first.classList.remove("hidden");
@@ -202,14 +218,18 @@ function cleanInput() {
 }
 
 function changeicon() {
-  let clases = eyeIcon.getAttribute("class");
-  console.log(clases);
-  clasesToUse = clases;
-  eyeIcon.setAttribute("class", "iso text-black pl-4 icon-eye-ellipse");
+  if(eyeIcon != null){
+    let clases = eyeIcon.getAttribute("class");
+    console.log(clases);
+    clasesToUse = clases;
+    eyeIcon.setAttribute("class", "iso text-black pl-4 icon-eye-ellipse");
+  }
 }
 
 function changeicon2() {
-  eyeIcon.setAttribute("class", clasesToUse);
+  if(eyeIcon != null){
+    eyeIcon.setAttribute("class", clasesToUse);
+  }
 }
 
 function extendBox(elmt) {
@@ -225,15 +245,19 @@ function showInput() {
   if (inputAllow == true) {
     second.classList.add("hidden");
     third.classList.remove("hidden");
-    eyeIcon.classList.remove("icon-iso");
-    eyeIcon.classList.add("icon-eye-close");
+    if(eyeIcon != null){
+        eyeIcon.classList.remove("icon-iso");
+        eyeIcon.classList.add("icon-eye-close");
+    }
     inputAllow = false;
     showInputScroll = false;
   } else {
     second.classList.remove("hidden");
     third.classList.add("hidden");
-    eyeIcon.classList.add("icon-iso");
-    eyeIcon.classList.remove("icon-eye-close");
+    if(eyeIcon != null){
+        eyeIcon.classList.add("icon-iso");
+        eyeIcon.classList.remove("icon-eye-close");
+    }
     inputAllow = true;
     showInputScroll = true;
   }
@@ -302,9 +326,13 @@ function openOverlayMenu() {
 
 function showMenuInput() {
   first.classList.toggle("hidden");
-  scroller.classList.toggle("hidden");
-  eyeIcon.classList.toggle("icon-iso");
-  eyeIcon.classList.toggle("icon-eye-home");
+  if(scroller != null) {
+    scroller.classList.toggle("hidden");
+  }
+  if(eyeIcon != null){
+      eyeIcon.classList.toggle("icon-iso");
+      eyeIcon.classList.toggle("icon-eye-home");
+  }
   if (searchBox.length >= 1) {
     let y = window.scrollY;
 
