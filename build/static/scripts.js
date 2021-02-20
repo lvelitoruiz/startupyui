@@ -362,7 +362,7 @@ thumb.onmousedown = function (event) {
       millions = 100;
     }
 
-    console.log(millions);
+    console.log(Math.floor(millions));
     let millionCounter = document.querySelectorAll(".million-counter")[0];
 
     if (millions >= 100) {
