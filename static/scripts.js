@@ -337,51 +337,54 @@ function getValueItem() {
 }
 
 let slider = document.querySelectorAll(".slider")[0];
-let thumb = slider.querySelector(".circular-indicator-used");
+if(slider != undefined){
 
-thumb.onmousedown = function (event) {
-  event.preventDefault(); // prevent selection start (browser action)
+    let thumb = slider.querySelector(".circular-indicator-used");
 
-  let shiftX = event.clientX - thumb.getBoundingClientRect().left;
-  // shiftY not needed, the thumb moves only horizontally
+    thumb.onmousedown = function (event) {
+      event.preventDefault(); // prevent selection start (browser action)
 
-  document.addEventListener("mousemove", onMouseMove);
-  document.addEventListener("mouseup", onMouseUp);
+      let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+      // shiftY not needed, the thumb moves only horizontally
 
-  function onMouseMove(event) {
-    let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
-    let rightEdge = slider.offsetWidth - thumb.offsetWidth;
-    let unitValue = rightEdge / 100;
-    let millions = newLeft / unitValue;
+      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener("mouseup", onMouseUp);
 
-    // the pointer is out of slider => lock the thumb within the bounaries
-    if (newLeft <= 0) {
-      newLeft = 0;
-      millions = 1;
-    }
-    if (newLeft > rightEdge) {
-      newLeft = rightEdge;
-      millions = 100;
-    }
+      function onMouseMove(event) {
+        let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
+        let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+        let unitValue = rightEdge / 100;
+        let millions = newLeft / unitValue;
 
-    console.log(millions);
-    let millionCounter = document.querySelectorAll(".million-counter")[0];
+        // the pointer is out of slider => lock the thumb within the bounaries
+        if (newLeft <= 0) {
+          newLeft = 0;
+          millions = 1;
+        }
+        if (newLeft > rightEdge) {
+          newLeft = rightEdge;
+          millions = 100;
+        }
 
-    if (millions >= 100) {
-      millionCounter.innerHTML = Math.floor(millions) + "m+";
-    } else {
-      millionCounter.innerHTML = Math.floor(millions) + "m";
-    }
+        console.log(millions);
+        let millionCounter = document.querySelectorAll(".million-counter")[0];
 
-    thumb.style.left = newLeft + "px";
-  }
+        if (millions >= 100) {
+          millionCounter.innerHTML = Math.floor(millions) + "m+";
+        } else {
+          millionCounter.innerHTML = Math.floor(millions) + "m";
+        }
 
-  function onMouseUp() {
-    document.removeEventListener("mouseup", onMouseUp);
-    document.removeEventListener("mousemove", onMouseMove);
-  }
-};
+        thumb.style.left = newLeft + "px";
+      }
 
-thumb.ondragstart = function () {
-  return false;
-};
+      function onMouseUp() {
+        document.removeEventListener("mouseup", onMouseUp);
+        document.removeEventListener("mousemove", onMouseMove);
+      }
+    };
+
+    thumb.ondragstart = function () {
+      return false;
+    };
+}
