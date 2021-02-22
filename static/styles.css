@@ -493,7 +493,7 @@
   }
 
   .modal-content {
-    padding: 40px 40px 78px !important;
+    padding: 40px 40px 130px !important;
   }
 
   .h-mt-md--80 {
@@ -1029,7 +1029,7 @@
 }
 
 .extensible-box.open {
-  max-height: 157px;
+  max-height: 260px;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
