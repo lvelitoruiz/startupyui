@@ -47,12 +47,16 @@ window.onload = function () {
       let inputcontent = inputHere[0].value;
       if (inputcontent.length >= 1) {
         let wider = inputcontent.length;
-        cleaner.style.display = "block";
-        cleaner2.style.display = "block";
+        if(cleaner2 != null) {
+            cleaner.style.display = "block";
+            cleaner2.style.display = "block";
+        }
         inputHere[0].style.width = wider * 11 + "px";
       } else {
-        cleaner.style.display = "none";
-        cleaner2.style.display = "none";
+        if(cleaner2 != null) {
+            cleaner.style.display = "none";
+            cleaner2.style.display = "none";
+        }
         inputHere[0].style.width = wide * 11 + "px";
       }
     });
