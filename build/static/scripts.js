@@ -24,8 +24,8 @@ var inputAllow = true;
 
 var extenders = document.getElementsByClassName("fade-out");
 
-let cleaner = document.querySelector("#remove-text");
-let cleaner2 = document.querySelector("#esc-sign");
+var cleaner = document.querySelector("#remove-text");
+var cleaner2 = document.querySelector("#esc-sign");
 
 var clasesToUse = "";
 
@@ -72,15 +72,25 @@ window.onload = function () {
     convoTriggers[i].addEventListener("click", showConvoOpen);
   }
 
-  menuIcon.addEventListener("click", showInput);
+  if (menuIcon != null) {
+    menuIcon.addEventListener("click", showInput);
+  }
 
-  eyeIcon.addEventListener("click", showMenuInput);
+  if (eyeIcon != null) {
+    eyeIcon.addEventListener("click", showMenuInput);
+  }
 
-  cleaner.addEventListener("click", cleanInput);
+  if (cleaner != null) {
+    cleaner.addEventListener("click", cleanInput);
+  }
 
-  menuResTrigger.addEventListener("click", openMenuRes);
+  if (menuResTrigger != null) {
+    menuResTrigger.addEventListener("click", openMenuRes);
+  }
 
-  overlayTriggerImage.addEventListener("click", openOverlayMenu);
+  if (overlayTriggerImage != null) {
+    overlayTriggerImage.addEventListener("click", openOverlayMenu);
+  }
 
   for (let i = 0; i < triggers.length; i++) {
     triggers[i].addEventListener("click", changeTab);
@@ -120,7 +130,7 @@ window.onload = function () {
     <div>
       <div class="flex justify-between">
         <div class="flex flex-col w-100">
-          <div class="flex items-center">  
+          <div class="flex items-center">
             <p class="font-bold mr-3 text-xs">Comrad Socks</p>
             <span class="text-xs bkg--blue2 px-2 py-1 mr-3">Mature</span>
           </div>
@@ -144,7 +154,7 @@ window.onload = function () {
   tippy("#myTag", {
     content: `
     <div>
-      <div class="flex justify-between w-100"> 
+      <div class="flex justify-between w-100">
         <p class="font-bold mr-3 text-xs text-cut">The Future of Venture Capitan Capitan</p>
         <i class="icon-eye-black text-xl text-white"></i>
       </div>
@@ -169,17 +179,25 @@ window.onscroll = function () {
 
     if (y >= 100) {
       if (showInputScroll) {
-        eyeIcon.classList.add("icon-eye-home");
-        eyeIcon.classList.remove("icon-iso");
+        if (eyeIcon != null) {
+          eyeIcon.classList.add("icon-eye-home");
+          eyeIcon.classList.remove("icon-iso");
+        }
         first.classList.add("hidden");
-        scroller.classList.remove("hidden");
+        if (scroller != null) {
+          scroller.classList.remove("hidden");
+        }
         second.classList.remove("hidden");
       }
     } else {
-      eyeIcon.classList.remove("icon-eye-close");
-      eyeIcon.classList.add("icon-iso");
-      eyeIcon.classList.remove("icon-eye-home");
-      scroller.classList.add("hidden");
+      if (eyeIcon != null) {
+        eyeIcon.classList.remove("icon-eye-close");
+        eyeIcon.classList.add("icon-iso");
+        eyeIcon.classList.remove("icon-eye-home");
+      }
+      if (scroller != null) {
+        scroller.classList.add("hidden");
+      }
       // second.classList.add("hidden");
       third.classList.add("hidden");
       first.classList.remove("hidden");
@@ -200,14 +218,18 @@ function cleanInput() {
 }
 
 function changeicon() {
-  let clases = eyeIcon.getAttribute("class");
-  console.log(clases);
-  clasesToUse = clases;
-  eyeIcon.setAttribute("class", "iso text-black pl-4 icon-eye-ellipse");
+  if (eyeIcon != null) {
+    let clases = eyeIcon.getAttribute("class");
+    console.log(clases);
+    clasesToUse = clases;
+    eyeIcon.setAttribute("class", "iso text-black pl-4 icon-eye-ellipse");
+  }
 }
 
 function changeicon2() {
-  eyeIcon.setAttribute("class", clasesToUse);
+  if (eyeIcon != null) {
+    eyeIcon.setAttribute("class", clasesToUse);
+  }
 }
 
 function extendBox(elmt) {
@@ -223,15 +245,19 @@ function showInput() {
   if (inputAllow == true) {
     second.classList.add("hidden");
     third.classList.remove("hidden");
-    eyeIcon.classList.remove("icon-iso");
-    eyeIcon.classList.add("icon-eye-close");
+    if (eyeIcon != null) {
+      eyeIcon.classList.remove("icon-iso");
+      eyeIcon.classList.add("icon-eye-close");
+    }
     inputAllow = false;
     showInputScroll = false;
   } else {
     second.classList.remove("hidden");
     third.classList.add("hidden");
-    eyeIcon.classList.add("icon-iso");
-    eyeIcon.classList.remove("icon-eye-close");
+    if (eyeIcon != null) {
+      eyeIcon.classList.add("icon-iso");
+      eyeIcon.classList.remove("icon-eye-close");
+    }
     inputAllow = true;
     showInputScroll = true;
   }
@@ -300,9 +326,13 @@ function openOverlayMenu() {
 
 function showMenuInput() {
   first.classList.toggle("hidden");
-  scroller.classList.toggle("hidden");
-  eyeIcon.classList.toggle("icon-iso");
-  eyeIcon.classList.toggle("icon-eye-home");
+  if (scroller != null) {
+    scroller.classList.toggle("hidden");
+  }
+  if (eyeIcon != null) {
+    eyeIcon.classList.toggle("icon-iso");
+    eyeIcon.classList.toggle("icon-eye-home");
+  }
   if (searchBox.length >= 1) {
     let y = window.scrollY;
 
@@ -334,52 +364,45 @@ function getValueItem() {
   }
 }
 
-let slider = document.querySelectorAll(".slider")[0];
-let thumb = slider.querySelector(".circular-indicator-used");
+var slider = document.querySelectorAll(".slider")[0];
+if (slider != undefined) {
+  let thumb = slider.querySelector(".circular-indicator-used");
 
-thumb.onmousedown = function (event) {
-  event.preventDefault(); // prevent selection start (browser action)
+  thumb.onmousedown = function (event) {
+    event.preventDefault(); // prevent selection start (browser action)
 
-  let shiftX = event.clientX - thumb.getBoundingClientRect().left;
-  // shiftY not needed, the thumb moves only horizontally
+    let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+    // shiftY not needed, the thumb moves only horizontally
 
-  document.addEventListener("mousemove", onMouseMove);
-  document.addEventListener("mouseup", onMouseUp);
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
 
-  function onMouseMove(event) {
-    let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
-    let rightEdge = slider.offsetWidth - thumb.offsetWidth;
-    let unitValue = rightEdge / 100;
-    let millions = newLeft / unitValue;
+    function onMouseMove(event) {
+      let newLeft =
+        event.clientX - shiftX - slider.getBoundingClientRect().left;
+      let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+      let unitValue = rightEdge / 100;
+      let millions = newLeft / unitValue;
 
-    // the pointer is out of slider => lock the thumb within the bounaries
-    if (newLeft <= 0) {
-      newLeft = 0;
-      millions = 1;
-    }
-    if (newLeft > rightEdge) {
-      newLeft = rightEdge;
-      millions = 100;
-    }
+      console.log(millions);
+      let millionCounter = document.querySelectorAll(".million-counter")[0];
 
-    console.log(millions);
-    let millionCounter = document.querySelectorAll(".million-counter")[0];
+      if (millions >= 100) {
+        millionCounter.innerHTML = Math.floor(millions) + "m+";
+      } else {
+        millionCounter.innerHTML = Math.floor(millions) + "m";
+      }
 
-    if (millions >= 100) {
-      millionCounter.innerHTML = Math.floor(millions) + "m+";
-    } else {
-      millionCounter.innerHTML = Math.floor(millions) + "m";
+      thumb.style.left = newLeft + "px";
     }
 
-    thumb.style.left = newLeft + "px";
-  }
+    function onMouseUp() {
+      document.removeEventListener("mouseup", onMouseUp);
+      document.removeEventListener("mousemove", onMouseMove);
+    }
+  };
 
-  function onMouseUp() {
-    document.removeEventListener("mouseup", onMouseUp);
-    document.removeEventListener("mousemove", onMouseMove);
-  }
-};
-
-thumb.ondragstart = function () {
-  return false;
-};
+  thumb.ondragstart = function () {
+    return false;
+  };
+}

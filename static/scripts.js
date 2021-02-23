@@ -76,23 +76,23 @@ window.onload = function () {
     convoTriggers[i].addEventListener("click", showConvoOpen);
   }
 
-  if(menuIcon != null){
+  if (menuIcon != null) {
     menuIcon.addEventListener("click", showInput);
   }
 
-  if(eyeIcon != null ){
+  if (eyeIcon != null) {
     eyeIcon.addEventListener("click", showMenuInput);
   }
 
-  if(cleaner != null ){
+  if (cleaner != null) {
     cleaner.addEventListener("click", cleanInput);
   }
 
-  if(menuResTrigger != null){
+  if (menuResTrigger != null) {
     menuResTrigger.addEventListener("click", openMenuRes);
   }
 
-  if(overlayTriggerImage != null){
+  if (overlayTriggerImage != null) {
     overlayTriggerImage.addEventListener("click", openOverlayMenu);
   }
 
@@ -183,23 +183,23 @@ window.onscroll = function () {
 
     if (y >= 100) {
       if (showInputScroll) {
-        if(eyeIcon != null) {
-            eyeIcon.classList.add("icon-eye-home");
-            eyeIcon.classList.remove("icon-iso");
+        if (eyeIcon != null) {
+          eyeIcon.classList.add("icon-eye-home");
+          eyeIcon.classList.remove("icon-iso");
         }
         first.classList.add("hidden");
-        if(scroller != null) {
-            scroller.classList.remove("hidden");
+        if (scroller != null) {
+          scroller.classList.remove("hidden");
         }
         second.classList.remove("hidden");
       }
     } else {
-      if(eyeIcon != null){
+      if (eyeIcon != null) {
         eyeIcon.classList.remove("icon-eye-close");
         eyeIcon.classList.add("icon-iso");
         eyeIcon.classList.remove("icon-eye-home");
       }
-      if(scroller != null) {
+      if (scroller != null) {
         scroller.classList.add("hidden");
       }
       // second.classList.add("hidden");
@@ -222,7 +222,7 @@ function cleanInput() {
 }
 
 function changeicon() {
-  if(eyeIcon != null){
+  if (eyeIcon != null) {
     let clases = eyeIcon.getAttribute("class");
     console.log(clases);
     clasesToUse = clases;
@@ -231,7 +231,7 @@ function changeicon() {
 }
 
 function changeicon2() {
-  if(eyeIcon != null){
+  if (eyeIcon != null) {
     eyeIcon.setAttribute("class", clasesToUse);
   }
 }
@@ -249,18 +249,18 @@ function showInput() {
   if (inputAllow == true) {
     second.classList.add("hidden");
     third.classList.remove("hidden");
-    if(eyeIcon != null){
-        eyeIcon.classList.remove("icon-iso");
-        eyeIcon.classList.add("icon-eye-close");
+    if (eyeIcon != null) {
+      eyeIcon.classList.remove("icon-iso");
+      eyeIcon.classList.add("icon-eye-close");
     }
     inputAllow = false;
     showInputScroll = false;
   } else {
     second.classList.remove("hidden");
     third.classList.add("hidden");
-    if(eyeIcon != null){
-        eyeIcon.classList.add("icon-iso");
-        eyeIcon.classList.remove("icon-eye-close");
+    if (eyeIcon != null) {
+      eyeIcon.classList.add("icon-iso");
+      eyeIcon.classList.remove("icon-eye-close");
     }
     inputAllow = true;
     showInputScroll = true;
@@ -330,12 +330,12 @@ function openOverlayMenu() {
 
 function showMenuInput() {
   first.classList.toggle("hidden");
-  if(scroller != null) {
+  if (scroller != null) {
     scroller.classList.toggle("hidden");
   }
-  if(eyeIcon != null){
-      eyeIcon.classList.toggle("icon-iso");
-      eyeIcon.classList.toggle("icon-eye-home");
+  if (eyeIcon != null) {
+    eyeIcon.classList.toggle("icon-iso");
+    eyeIcon.classList.toggle("icon-eye-home");
   }
   if (searchBox.length >= 1) {
     let y = window.scrollY;
@@ -350,7 +350,7 @@ function showMenuInput() {
 function showConvoOpen() {
   console.log("evening");
   let targetted = event.target;
-  let parent = targetted.parentNode;
+  let parent = targetted.parentNode.parentNode;
   let convo = parent.getElementsByClassName("convoBoxItems")[0];
   convo.classList.toggle("opened");
 }
@@ -369,54 +369,44 @@ function getValueItem() {
 }
 
 var slider = document.querySelectorAll(".slider")[0];
-if(slider != undefined){
+if (slider != undefined) {
+  let thumb = slider.querySelector(".circular-indicator-used");
 
-    let thumb = slider.querySelector(".circular-indicator-used");
+  thumb.onmousedown = function (event) {
+    event.preventDefault(); // prevent selection start (browser action)
 
-    thumb.onmousedown = function (event) {
-      event.preventDefault(); // prevent selection start (browser action)
+    let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+    // shiftY not needed, the thumb moves only horizontally
 
-      let shiftX = event.clientX - thumb.getBoundingClientRect().left;
-      // shiftY not needed, the thumb moves only horizontally
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
 
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp);
+    function onMouseMove(event) {
+      let newLeft =
+        event.clientX - shiftX - slider.getBoundingClientRect().left;
+      let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+      let unitValue = rightEdge / 100;
+      let millions = newLeft / unitValue;
 
-      function onMouseMove(event) {
-        let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
-        let rightEdge = slider.offsetWidth - thumb.offsetWidth;
-        let unitValue = rightEdge / 100;
-        let millions = newLeft / unitValue;
+      console.log(millions);
+      let millionCounter = document.querySelectorAll(".million-counter")[0];
 
-        // the pointer is out of slider => lock the thumb within the bounaries
-        if (newLeft <= 0) {
-          newLeft = 0;
-          millions = 1;
-        }
-        if (newLeft > rightEdge) {
-          newLeft = rightEdge;
-          millions = 100;
-        }
-
-        console.log(millions);
-        let millionCounter = document.querySelectorAll(".million-counter")[0];
-
-        if (millions >= 100) {
-          millionCounter.innerHTML = Math.floor(millions) + "m+";
-        } else {
-          millionCounter.innerHTML = Math.floor(millions) + "m";
-        }
-
-        thumb.style.left = newLeft + "px";
+      if (millions >= 100) {
+        millionCounter.innerHTML = Math.floor(millions) + "m+";
+      } else {
+        millionCounter.innerHTML = Math.floor(millions) + "m";
       }
 
-      function onMouseUp() {
-        document.removeEventListener("mouseup", onMouseUp);
-        document.removeEventListener("mousemove", onMouseMove);
-      }
-    };
+      thumb.style.left = newLeft + "px";
+    }
 
-    thumb.ondragstart = function () {
-      return false;
-    };
+    function onMouseUp() {
+      document.removeEventListener("mouseup", onMouseUp);
+      document.removeEventListener("mousemove", onMouseMove);
+    }
+  };
+
+  thumb.ondragstart = function () {
+    return false;
+  };
 }
