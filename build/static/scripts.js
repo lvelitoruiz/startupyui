@@ -346,7 +346,7 @@ function showMenuInput() {
 function showConvoOpen() {
   console.log("evening");
   let targetted = event.target;
-  let parent = targetted.parentNode;
+  let parent = targetted.parentNode.parentNode;
   let convo = parent.getElementsByClassName("convoBoxItems")[0];
   convo.classList.toggle("opened");
 }
