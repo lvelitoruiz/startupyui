@@ -191,6 +191,53 @@ window.onload = function () {
     allowHTML: true,
     interactive: true,
   });
+
+  if (document.querySelector("#menuSideElement")) {
+    let element = document.querySelector("#menuSideElement");
+    let element2 = document.querySelector("#sideMenuAlt");
+    let links = element.getElementsByTagName("li");
+    let links2 = element2.getElementsByTagName("li");
+    let parent = document.querySelector("#land-container");
+    let parent2 = document.querySelector("#ideals");
+    let topheight = parent.offsetTop;
+    let lowerheight = parent2.offsetTop + topheight;
+
+    for (let i = 0; i < links.length; i++) {
+      let linked = links[i].getElementsByTagName("a")[0];
+      linked.addEventListener("click", (e) => {
+        e.preventDefault();
+        let linkToClick = e.target;
+        let anchor = linkToClick.getAttribute("href");
+        let elementoTogo = document.querySelector(anchor);
+        let distance = elementoTogo.offsetTop;
+        let finaldistance = distance + topheight - 130;
+        console.log(finaldistance);
+        window.scrollTo({
+          top: finaldistance,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+
+    for (let i = 0; i < links2.length; i++) {
+      let linked = links2[i].getElementsByTagName("a")[0];
+      linked.addEventListener("click", (e) => {
+        e.preventDefault();
+        let linkToClick = e.target;
+        let anchor = linkToClick.getAttribute("href");
+        let elementoTogo = document.querySelector(anchor);
+        let distance = elementoTogo.offsetTop;
+        let finaldistance = distance + lowerheight - 130;
+        console.log(finaldistance);
+        window.scrollTo({
+          top: finaldistance,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+  }
 };
 
 window.onscroll = function () {
@@ -234,8 +281,8 @@ window.onscroll = function () {
     let parent2 = document.querySelector("#ideals");
     let topheight = parent.offsetTop;
     let lowerheight = parent2.offsetTop + topheight;
-    let yepheight = lowerheight - 120;
-    let notheight = topheight - 120;
+    let yepheight = lowerheight - 130;
+    let notheight = topheight - 130;
     let topheight2 = window.scrollY;
     console.log(lowerheight);
     if (topheight2 >= notheight) {
