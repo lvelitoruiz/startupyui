@@ -63,15 +63,15 @@ window.onload = function () {
       let inputcontent = inputHere[0].value;
       if (inputcontent.length >= 1) {
         let wider = inputcontent.length;
-        if(cleaner2 != null) {
-            cleaner.style.display = "block";
-            cleaner2.style.display = "block";
+        if (cleaner2 != null) {
+          cleaner.style.display = "block";
+          cleaner2.style.display = "block";
         }
         inputHere[0].style.width = wider * 11 + "px";
       } else {
-        if(cleaner2 != null) {
-            cleaner.style.display = "none";
-            cleaner2.style.display = "none";
+        if (cleaner2 != null) {
+          cleaner.style.display = "none";
+          cleaner2.style.display = "none";
         }
         inputHere[0].style.width = wide * 11 + "px";
       }
@@ -224,6 +224,36 @@ window.onscroll = function () {
       // menuIcon.removeEventListener("click", showInput);
       inputAllow = true;
       showInputScroll = true;
+    }
+  }
+
+  if (document.querySelector("#menuSideElement")) {
+    let element = document.querySelector("#menuSideElement");
+    let element2 = document.querySelector("#sideMenuAlt");
+    let parent = document.querySelector("#land-container");
+    let parent2 = document.querySelector("#ideals");
+    let topheight = parent.offsetTop;
+    let lowerheight = parent2.offsetTop + topheight;
+    let yepheight = lowerheight - 120;
+    let notheight = topheight - 120;
+    let topheight2 = window.scrollY;
+    console.log(lowerheight);
+    if (topheight2 >= notheight) {
+      let newTop = topheight2 - notheight;
+      element.style.paddingTop = "80px";
+      element.style.marginTop = newTop + "px";
+    } else {
+      element.style.paddingTop = "40px";
+      element.style.marginTop = "0px";
+    }
+
+    if (topheight2 >= yepheight) {
+      let newTop = topheight2 - yepheight;
+      element2.style.paddingTop = "80px";
+      element2.style.marginTop = newTop + "px";
+    } else {
+      element2.style.paddingTop = "40px";
+      element2.style.marginTop = "0px";
     }
   }
 };

@@ -1236,3 +1236,17 @@
   box-shadow: none !important;
   border: 1px solid #000;
 }
+
+#menuSideElement {
+  position: absolute !important;
+}
+
+#ideals {
+  position: relative;
+  background: black;
+  z-index: 100;
+}
+
+#sideMenuAlt {
+  position: absolute;
+}

@@ -9,6 +9,7 @@
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="static/rSlider.min.css" />
     <link rel="stylesheet" href="static/styles.css" />
     <link rel="stylesheet" href="static/fonts.css" type="text/css" />
     <link rel="stylesheet" href="static/icons.css" type="text/css" />
@@ -1133,8 +1134,8 @@
               ><span class="text-cut">Funding Amount</span></label
             >
           </div>
-          <div class="p-2 ml-5 mt-1">
-            <div class="slider-container">
+          <div class="p-2 ml-5 mt-30">
+            <!-- <div class="slider-container">
               <span class="circular-indicator active"></span>
               <div class="slider">
                 <div class="slider-bar"></div>
@@ -1144,7 +1145,8 @@
                 </p>
               </div>
               <span class="circular-indicator right"></span>
-            </div>
+            </div> -->
+            <input type="text" id="sliderRange" class="slider" />
           </div>
         </li>
       </ul>
@@ -1728,6 +1730,7 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="static/pikaday/pikaday.js"></script>
+    <script src="static/rSlider.min.js"></script>
     <script src="static/scripts.js?v=1.0"></script>
     <script>
       var vanillaModal = new VanillaModal.default();
