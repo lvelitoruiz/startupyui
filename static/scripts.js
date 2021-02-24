@@ -36,6 +36,22 @@ var dateInput1 = document.querySelector("#date1");
 var dateInput2 = document.querySelector("#date2");
 
 window.onload = function () {
+  if (document.querySelector("#sliderRange")) {
+    var mySlider = new rSlider({
+      target: "#sliderRange",
+      values: { min: 1, max: 100 },
+      range: true, // range slider
+      set: null, // an array of preselected values
+      width: null,
+      scale: false,
+      labels: false,
+      tooltip: true,
+      step: 1, // step size
+      disabled: false, // is disabled?
+      onChange: null, // callback
+    });
+  }
+
   if (searchBox.length >= 1) {
     console.log("we have a box here");
     let inputHere = searchBox[0].getElementsByTagName("input");
