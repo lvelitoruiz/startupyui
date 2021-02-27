@@ -39,7 +39,7 @@ window.onload = function () {
   if (document.querySelector("#sliderRange")) {
     var mySlider = new rSlider({
       target: "#sliderRange",
-      values: { min: 1, max: 100 },
+      values: { min: 0, max: 100 },
       range: true, // range slider
       set: null, // an array of preselected values
       width: null,
