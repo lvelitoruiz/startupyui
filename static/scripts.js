@@ -35,6 +35,16 @@ var selectElements = document.getElementsByClassName("custom-radio-checkbox");
 var dateInput1 = document.querySelector("#date1");
 var dateInput2 = document.querySelector("#date2");
 
+function show_main_page(){
+    _main_page.classList.remove("hidden");
+    _main_search_page.classList.add("hidden");
+}
+
+function show_search_page(){
+    _main_page.classList.add("hidden");
+    _main_search_page.classList.remove("hidden");
+}
+
 window.onload = function () {
   if (document.querySelector("#sliderRange")) {
     var mySlider = new rSlider({
@@ -244,7 +254,34 @@ window.onscroll = function () {
   if (searchBox.length >= 1) {
     let y = window.scrollY;
 
+    var search_input = document.getElementById("search");
+
     if (y >= 100) {
+      if(search_input.value == "") {
+        show_main_page();
+        if (eyeIcon != null) {
+            eyeIcon.classList.remove("icon-eye-close");
+            eyeIcon.classList.add("icon-iso");
+            eyeIcon.classList.remove("icon-eye-home");
+        }
+        if (scroller != null) {
+            scroller.classList.add("hidden");
+        }
+        // second.classList.add("hidden");
+        third.classList.add("hidden");
+        first.classList.remove("hidden");
+        // menuIcon.removeEventListener("click", showInput);
+        inputAllow = true;
+        showInputScroll = true;
+
+      } else {
+        show_search_page();
+      }
+    } else {
+      if(search_input.value != "") {
+          show_search_page();
+      }
+
       if (showInputScroll) {
         if (eyeIcon != null) {
           eyeIcon.classList.add("icon-eye-home");
@@ -256,21 +293,6 @@ window.onscroll = function () {
         }
         second.classList.remove("hidden");
       }
-    } else {
-      if (eyeIcon != null) {
-        eyeIcon.classList.remove("icon-eye-close");
-        eyeIcon.classList.add("icon-iso");
-        eyeIcon.classList.remove("icon-eye-home");
-      }
-      if (scroller != null) {
-        scroller.classList.add("hidden");
-      }
-      // second.classList.add("hidden");
-      third.classList.add("hidden");
-      first.classList.remove("hidden");
-      // menuIcon.removeEventListener("click", showInput);
-      inputAllow = true;
-      showInputScroll = true;
     }
   }
 
@@ -284,7 +306,6 @@ window.onscroll = function () {
     let yepheight = lowerheight - 130;
     let notheight = topheight - 130;
     let topheight2 = window.scrollY;
-    console.log(lowerheight);
     if (topheight2 >= notheight) {
       let newTop = topheight2 - notheight;
       element.style.paddingTop = "80px";
