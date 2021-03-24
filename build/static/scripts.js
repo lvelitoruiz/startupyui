@@ -3,6 +3,8 @@ var addTriggers = document.getElementsByClassName("addTrigger");
 var tabs = document.getElementsByClassName("items-tabs");
 var editBoxes = document.getElementsByClassName("box-info-edit");
 
+var nonEditables = document.getElementsByClassName("non-editables");
+
 var editTriggers = document.getElementsByClassName("launchEdit");
 var closeTriggers = document.getElementsByClassName("closeBox");
 
@@ -35,11 +37,28 @@ var selectElements = document.getElementsByClassName("custom-radio-checkbox");
 var dateInput1 = document.querySelector("#date1");
 var dateInput2 = document.querySelector("#date2");
 
+var selectsOne = document.querySelectorAll(".convoBoxItems");
+
 window.onload = function () {
   if (document.querySelector("#sliderRange")) {
     var mySlider = new rSlider({
       target: "#sliderRange",
-      values: { min: 1, max: 100 },
+      values: [
+        "100k",
+        "200k",
+        "300k",
+        "400k",
+        "500k",
+        "600k",
+        "700k",
+        "800k",
+        "900k",
+        "1m",
+        "5m",
+        "10m",
+        "50m",
+        "100m+",
+      ],
       range: true, // range slider
       set: null, // an array of preselected values
       width: null,
@@ -89,11 +108,17 @@ window.onload = function () {
   });
 
   for (let i = 0; i < convoTriggers.length; i++) {
-    convoTriggers[i].addEventListener("click", showConvoOpen);
+    convoTriggers[i].addEventListener("focus", showConvoOpen);
   }
 
   if (menuIcon != null) {
     menuIcon.addEventListener("click", showInput);
+  }
+
+  for (let i = 0; i < selectsOne.length; i++) {
+    // selectsOne[i].addEventListener("click", multipleItemsClick);
+    selectsOne[i].addEventListener("focus", multipleItems);
+    selectsOne[i].addEventListener("blur", closeItems);
   }
 
   if (eyeIcon != null) {
@@ -114,6 +139,10 @@ window.onload = function () {
 
   for (let i = 0; i < triggers.length; i++) {
     triggers[i].addEventListener("click", changeTab);
+  }
+
+  for (let i = 0; i < nonEditables.length; i++) {
+    nonEditables[i].addEventListener("focus", moveElements);
   }
 
   for (let i = 0; i < addTriggers.length; i++) {
@@ -191,6 +220,53 @@ window.onload = function () {
     allowHTML: true,
     interactive: true,
   });
+
+  if (document.querySelector("#menuSideElement")) {
+    let element = document.querySelector("#menuSideElement");
+    let element2 = document.querySelector("#sideMenuAlt");
+    let links = element.getElementsByTagName("li");
+    let links2 = element2.getElementsByTagName("li");
+    let parent = document.querySelector("#land-container");
+    let parent2 = document.querySelector("#ideals");
+    let topheight = parent.offsetTop;
+    let lowerheight = parent2.offsetTop + topheight;
+
+    for (let i = 0; i < links.length; i++) {
+      let linked = links[i].getElementsByTagName("a")[0];
+      linked.addEventListener("click", (e) => {
+        e.preventDefault();
+        let linkToClick = e.target;
+        let anchor = linkToClick.getAttribute("href");
+        let elementoTogo = document.querySelector(anchor);
+        let distance = elementoTogo.offsetTop;
+        let finaldistance = distance + topheight - 130;
+        console.log(finaldistance);
+        window.scrollTo({
+          top: finaldistance,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+
+    for (let i = 0; i < links2.length; i++) {
+      let linked = links2[i].getElementsByTagName("a")[0];
+      linked.addEventListener("click", (e) => {
+        e.preventDefault();
+        let linkToClick = e.target;
+        let anchor = linkToClick.getAttribute("href");
+        let elementoTogo = document.querySelector(anchor);
+        let distance = elementoTogo.offsetTop;
+        let finaldistance = distance + lowerheight - 130;
+        console.log(finaldistance);
+        window.scrollTo({
+          top: finaldistance,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+  }
 };
 
 window.onscroll = function () {
@@ -234,8 +310,8 @@ window.onscroll = function () {
     let parent2 = document.querySelector("#ideals");
     let topheight = parent.offsetTop;
     let lowerheight = parent2.offsetTop + topheight;
-    let yepheight = lowerheight - 120;
-    let notheight = topheight - 120;
+    let yepheight = lowerheight - 130;
+    let notheight = topheight - 130;
     let topheight2 = window.scrollY;
     console.log(lowerheight);
     if (topheight2 >= notheight) {
@@ -454,5 +530,100 @@ if (slider != undefined) {
 
   thumb.ondragstart = function () {
     return false;
+  };
+}
+
+function multipleItems(e) {
+  console.log("multiple items here");
+  // e.preventDefault();
+
+  e.target.addEventListener("keypress", (e) => {
+    let entered = e.keyCode;
+    if (entered === 13) {
+      let selected = e.target.selectedOptions;
+      for (let i = 0; i < selected.length; i++) {
+        console.log("enter push", selected[i].value);
+      }
+      e.target.classList.remove("opened");
+    }
+  });
+  // var select = this;
+  // var scroll = select.scrollTop;
+
+  // e.target.selected = !e.target.selected;
+
+  // setTimeout(function () {
+  //   select.scrollTop = scroll;
+  // }, 0);
+
+  // e.target.focus();
+}
+
+function closeItems(e) {
+  console.log("close items here");
+  // e.preventDefault();
+  let selected = e.target.selectedOptions;
+  for (let i = 0; i < selected.length; i++) {
+    console.log("enter push", selected[i].value);
+  }
+  e.target.classList.remove("opened");
+}
+
+// function multipleItemsClick(e) {
+//   var select = this;
+//   var scroll = select.scrollTop;
+
+//   e.target.selected = !e.target.selected;
+
+//   setTimeout(function () {
+//     select.scrollTop = scroll;
+//   }, 0);
+
+//   e.target.focus();
+// }
+
+function moveElements(e) {
+  let parent = e.target;
+  let firstElement = parent.querySelectorAll("a")[0];
+  firstElement.classList.add("activeElement");
+  let index1 = 0;
+  parent.onkeydown = (e) => {
+    let valueCode = e.keyCode;
+
+    if (valueCode !== 38 && valueCode !== 40 && valueCode !== 9) {
+      return false;
+    } else {
+      if (valueCode === 38) {
+        console.log("go up");
+        let elements = parent.querySelectorAll("a");
+        let prev = parent.querySelectorAll("a")[index1 - 1];
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("activeElement");
+        }
+        if (prev != undefined) {
+          prev.classList.add("activeElement");
+          index1 = index1 - 1;
+        } else {
+          parent.querySelectorAll("a")[index1].classList.add("activeElement");
+          index1 = index1;
+          console.log("too wide");
+        }
+      } else if (valueCode === 40) {
+        let elements = parent.querySelectorAll("a");
+        let next = parent.querySelectorAll("a")[index1 + 1];
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("activeElement");
+        }
+        if (next != undefined) {
+          next.classList.add("activeElement");
+          index1 = index1 + 1;
+        } else {
+          parent.querySelectorAll("a")[index1].classList.add("activeElement");
+          index1 = index1;
+          console.log("too far");
+        }
+        console.log("go down");
+      }
+    }
   };
 }

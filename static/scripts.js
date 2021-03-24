@@ -3,6 +3,8 @@ var addTriggers = document.getElementsByClassName("addTrigger");
 var tabs = document.getElementsByClassName("items-tabs");
 var editBoxes = document.getElementsByClassName("box-info-edit");
 
+var nonEditables = document.getElementsByClassName("non-editables");
+
 var editTriggers = document.getElementsByClassName("launchEdit");
 var closeTriggers = document.getElementsByClassName("closeBox");
 
@@ -35,11 +37,33 @@ var selectElements = document.getElementsByClassName("custom-radio-checkbox");
 var dateInput1 = document.querySelector("#date1");
 var dateInput2 = document.querySelector("#date2");
 
+var selectsOne = document.querySelectorAll(".convoBoxItems");
+
+var selectElms = document.querySelectorAll(".toselect");
+
+var noSelect = document.getElementsByClassName("showConvoNoSelect");
+var noSelectItems = document.querySelectorAll(".convoBoxNoSelect");
+
 window.onload = function () {
   if (document.querySelector("#sliderRange")) {
     var mySlider = new rSlider({
       target: "#sliderRange",
-      values: { min: 0, max: 100 },
+      values: [
+        "100k",
+        "200k",
+        "300k",
+        "400k",
+        "500k",
+        "600k",
+        "700k",
+        "800k",
+        "900k",
+        "1m",
+        "5m",
+        "10m",
+        "50m",
+        "100m+",
+      ],
       range: true, // range slider
       set: null, // an array of preselected values
       width: null,
@@ -89,11 +113,31 @@ window.onload = function () {
   });
 
   for (let i = 0; i < convoTriggers.length; i++) {
-    convoTriggers[i].addEventListener("click", showConvoOpen);
+    convoTriggers[i].addEventListener("focus", showConvoOpen);
+  }
+
+  for (let i = 0; i < noSelect.length; i++) {
+    noSelect[i].addEventListener("focus", showConvoOpenNoSelect);
   }
 
   if (menuIcon != null) {
     menuIcon.addEventListener("click", showInput);
+  }
+
+  for (let i = 0; i < selectsOne.length; i++) {
+    // selectsOne[i].addEventListener("click", multipleItemsClick);
+    selectsOne[i].addEventListener("focus", multipleItems);
+    selectsOne[i].addEventListener("blur", closeItems);
+  }
+
+  for (let i = 0; i < noSelectItems.length; i++) {
+    // selectsOne[i].addEventListener("click", multipleItemsClick);
+    selectsOne[i].addEventListener("blur", closeItemsNoSelect);
+  }
+
+  for (let i = 0; i < selectElms.length; i++) {
+    // selectsOne[i].addEventListener("click", multipleItemsClick);
+    selectElms[i].addEventListener("click", selectItemsDown);
   }
 
   if (eyeIcon != null) {
@@ -114,6 +158,10 @@ window.onload = function () {
 
   for (let i = 0; i < triggers.length; i++) {
     triggers[i].addEventListener("click", changeTab);
+  }
+
+  for (let i = 0; i < nonEditables.length; i++) {
+    nonEditables[i].addEventListener("focus", moveElements);
   }
 
   for (let i = 0; i < addTriggers.length; i++) {
@@ -441,10 +489,16 @@ function showMenuInput() {
 }
 
 function showConvoOpen() {
-  console.log("evening");
   let targetted = event.target;
   let parent = targetted.parentNode.parentNode;
   let convo = parent.getElementsByClassName("convoBoxItems")[0];
+  convo.classList.toggle("opened");
+}
+
+function showConvoOpenNoSelect() {
+  let targetted = event.target;
+  let parent = targetted.parentNode.parentNode;
+  let convo = parent.getElementsByClassName("convoBoxNoSelect")[0];
   convo.classList.toggle("opened");
 }
 
@@ -502,4 +556,134 @@ if (slider != undefined) {
   thumb.ondragstart = function () {
     return false;
   };
+}
+
+function multipleItems(e) {
+  console.log("multiple items here");
+  // e.preventDefault();
+
+  e.target.addEventListener("keypress", (e) => {
+    let entered = e.keyCode;
+    if (entered === 13) {
+      let selected = e.target.selectedOptions;
+      for (let i = 0; i < selected.length; i++) {
+        console.log("enter push", selected[i].value);
+      }
+      e.target.classList.remove("opened");
+    }
+  });
+  // var select = this;
+  // var scroll = select.scrollTop;
+
+  // e.target.selected = !e.target.selected;
+
+  // setTimeout(function () {
+  //   select.scrollTop = scroll;
+  // }, 0);
+
+  // e.target.focus();
+}
+
+function closeItems(e) {
+  console.log("close items here");
+  // e.preventDefault();
+  let selected = e.target.selectedOptions;
+  for (let i = 0; i < selected.length; i++) {
+    console.log("enter push", selected[i].value);
+  }
+  e.target.classList.remove("opened");
+}
+
+function closeItemsNoSelect(e) {
+  console.log("close items here");
+  // e.preventDefault();
+  let parent = e.target;
+  let selected = parent.querySelector(".activeElement");
+  for (let i = 0; i < selected.length; i++) {
+    console.log("enter push", selected[i]);
+  }
+  e.target.classList.remove("opened");
+}
+
+// function multipleItemsClick(e) {
+//   var select = this;
+//   var scroll = select.scrollTop;
+
+//   e.target.selected = !e.target.selected;
+
+//   setTimeout(function () {
+//     select.scrollTop = scroll;
+//   }, 0);
+
+//   e.target.focus();
+// }
+
+function moveElements(e) {
+  let parent = e.target;
+  let firstElement = parent.querySelectorAll("div")[0];
+  firstElement.classList.add("activeElement");
+  let index1 = 0;
+  parent.onkeydown = (e) => {
+    let valueCode = e.keyCode;
+
+    if (
+      valueCode !== 38 &&
+      valueCode !== 40 &&
+      valueCode !== 9 &&
+      valueCode !== 13
+    ) {
+      return false;
+    } else {
+      if (valueCode === 38) {
+        console.log("go up");
+        let elements = parent.querySelectorAll("div");
+        let prev = parent.querySelectorAll("div")[index1 - 1];
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("activeElement");
+        }
+        if (prev != undefined) {
+          prev.classList.add("activeElement");
+          index1 = index1 - 1;
+        } else {
+          parent.querySelectorAll("div")[index1].classList.add("activeElement");
+          index1 = index1;
+          console.log("too wide");
+        }
+      } else if (valueCode === 40) {
+        let elements = parent.querySelectorAll("div");
+        let next = parent.querySelectorAll("div")[index1 + 1];
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("activeElement");
+        }
+        if (next != undefined) {
+          next.classList.add("activeElement");
+          index1 = index1 + 1;
+        } else {
+          parent.querySelectorAll("div")[index1].classList.add("activeElement");
+          index1 = index1;
+          console.log("too far");
+        }
+        console.log("go down");
+      } else if (valueCode === 13) {
+        let el = parent.querySelectorAll(".activeElement")[0];
+        parent.classList.remove("opened");
+        console.log("this is the active Element: ", el);
+      }
+    }
+  };
+}
+
+function selectItemsDown(e) {
+  e.stopPropagation();
+  let targetted = e.target.closest(".toselect");
+  let parent = targetted.parentNode;
+  let elms = parent.querySelectorAll(".toselect");
+  for (let i = 0; i < elms.length; i++) {
+    elms[i].classList.remove("activeElement");
+  }
+  targetted.classList.add("activeElement");
+  console.log(targetted);
+  let el = parent.querySelectorAll(".activeElement")[0];
+  parent.classList.remove("opened");
+  console.log("this is the active Element: ", el);
 }

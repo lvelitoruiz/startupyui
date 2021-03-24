@@ -1085,6 +1085,10 @@
   border-top: none;
 }
 
+select.convoBoxItems.opened {
+  overflow: auto;
+}
+
 .custom-radio-checkbox span,
 .custom-radio-checkbox input {
   pointer-events: none;
@@ -1219,6 +1223,7 @@
 
 .rs-container .rs-scale span ins {
   margin-top: 30px;
+  display: none;
 }
 
 .rs-container .rs-pointer::after,
@@ -1252,5 +1257,64 @@
 }
 
 .c-header {
-  z-index: 200 !important;
+  /* z-index: 200 !important; */
+}
+
+.convoBoxItems option {
+  display: block;
+  position: relative;
+  /* background:  url(./img/multi-select.png) no-repeat 6px center; */
+  padding: 10px 15px;
+  height: auto;
+  cursor: pointer;
+  background: #fff !important;
+}
+
+.convoBoxItems option:hover {
+  /* background: #ececec url(./img/multi-select.png) no-repeat 6px center; */
+  background: #ececec !important;
+}
+
+.convoBoxItems option:checked {
+  /* background: #fff url("./img/multi-select-active.png") no-repeat 6px center; */
+}
+
+.no-form option {
+  -webkit-appearance: none;
+  background: #fff;
+  height: auto;
+  padding: 10px;
+}
+
+.showConvo {
+  background: url(../static/img/chevron.svg) no-repeat right center;
+  background-size: 16px 16px;
+}
+
+.height-in {
+  height: inherit;
+}
+
+.non-editables {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+
+.non-editables.opened {
+  min-height: 0px;
+  max-height: 600px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #000;
+  border-top: none;
+}
+
+.non-editables div.activeElement {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.non-editables div.activeElement::selection {
+  background: none;
 }
