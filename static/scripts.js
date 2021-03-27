@@ -35,14 +35,38 @@ var selectElements = document.getElementsByClassName("custom-radio-checkbox");
 var dateInput1 = document.querySelector("#date1");
 var dateInput2 = document.querySelector("#date2");
 
+var _main_search_page = document.getElementById("search-page");
+var _main_page = document.getElementById("main-page");
+
+if(has_filter == undefined) {
+    var has_filter = false;
+}
+
 function show_main_page(){
-    _main_page.classList.remove("hidden");
-    _main_search_page.classList.add("hidden");
+    if(_main_page != undefined){
+        _main_page.classList.remove("hidden");
+        _main_search_page.classList.add("hidden");
+    }
 }
 
 function show_search_page(){
-    _main_page.classList.add("hidden");
-    _main_search_page.classList.remove("hidden");
+    if(_main_search_page != undefined){
+        _main_page.classList.add("hidden");
+        _main_search_page.classList.remove("hidden");
+    }
+}
+
+function searchRedirect() {
+    if(document.getElementById("icon-changer").classList.contains('icon-eye-home')){
+        show_main_page();
+        eyeIcon.classList.remove("icon-eye-close");
+        eyeIcon.classList.add("icon-iso");
+        eyeIcon.classList.remove("icon-eye-home");
+        document.getElementById("search").value = "";
+        has_filter = false;
+    } else {
+        window.location.href = location.protocol + "//" + location.host + "/search";
+    }
 }
 
 window.onload = function () {
@@ -63,11 +87,10 @@ window.onload = function () {
   }
 
   if (searchBox.length >= 1) {
-    console.log("we have a box here");
     let inputHere = searchBox[0].getElementsByTagName("input");
     let pholder = inputHere[0].getAttribute("placeholder");
     let wide = pholder.length;
-    inputHere[0].style.width = wide * 11 + "px";
+    inputHere[0].style.width = wide * 20 + "px";
 
     inputHere[0].addEventListener("input", function () {
       let inputcontent = inputHere[0].value;
@@ -77,13 +100,13 @@ window.onload = function () {
           cleaner.style.display = "block";
           cleaner2.style.display = "block";
         }
-        inputHere[0].style.width = wider * 11 + "px";
+//        inputHere[0].style.width = wider * 11 + "px";
       } else {
         if (cleaner2 != null) {
           cleaner.style.display = "none";
           cleaner2.style.display = "none";
         }
-        inputHere[0].style.width = wide * 11 + "px";
+//        inputHere[0].style.width = wide * 11 + "px";
       }
     });
   }
@@ -107,7 +130,7 @@ window.onload = function () {
   }
 
   if (eyeIcon != null) {
-    eyeIcon.addEventListener("click", showMenuInput);
+    eyeIcon.addEventListener("click", searchRedirect);
   }
 
   if (cleaner != null) {
@@ -257,7 +280,7 @@ window.onscroll = function () {
     var search_input = document.getElementById("search");
 
     if (y >= 100) {
-      if(search_input.value == "") {
+      if(has_filter == false) {
         show_main_page();
         if (eyeIcon != null) {
             eyeIcon.classList.remove("icon-eye-close");
@@ -278,14 +301,14 @@ window.onscroll = function () {
         show_search_page();
       }
     } else {
-      if(search_input.value != "") {
+      if(has_filter == true) {
           show_search_page();
       }
 
       if (showInputScroll) {
         if (eyeIcon != null) {
-          eyeIcon.classList.add("icon-eye-home");
-          eyeIcon.classList.remove("icon-iso");
+//          eyeIcon.classList.add("icon-eye-home");
+//          eyeIcon.classList.remove("icon-iso");
         }
         first.classList.add("hidden");
         if (scroller != null) {

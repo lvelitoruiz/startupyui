@@ -1250,7 +1250,3 @@
 #sideMenuAlt {
   position: absolute;
 }
-
-.c-header {
-  z-index: 200 !important;
-}
