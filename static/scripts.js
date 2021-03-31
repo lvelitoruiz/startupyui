@@ -145,7 +145,7 @@ window.onload = function () {
   for (let i = 0; i < selectsOne.length; i++) {
     // selectsOne[i].addEventListener("click", multipleItemsClick);
     selectsOne[i].addEventListener("focus", multipleItems);
-    // selectsOne[i].addEventListener("click", multipleItemsClick);
+    selectsOne[i].addEventListener("click", multipleItemsClick);
     selectsOne[i].addEventListener("blur", closeItems);
   }
 
