@@ -87,21 +87,6 @@ function show_search_page() {
   }
 }
 
-function searchRedirect() {
-  if (
-    document.getElementById("icon-changer").classList.contains("icon-eye-home")
-  ) {
-    show_main_page();
-    eyeIcon.classList.remove("icon-eye-close");
-    eyeIcon.classList.add("icon-iso");
-    eyeIcon.classList.remove("icon-eye-home");
-    document.getElementById("search").value = "";
-    has_filter = false;
-  } else {
-    window.location.href = location.protocol + "//" + location.host + "/search";
-  }
-}
-
 var selectsOne = document.querySelectorAll(".convoBoxItems");
 
 var selectElms = document.querySelectorAll(".toselect");
@@ -110,37 +95,6 @@ var noSelect = document.getElementsByClassName("showConvoNoSelect");
 var noSelectItems = document.querySelectorAll(".convoBoxNoSelect");
 
 window.onload = function () {
-  if (document.querySelector("#sliderRange")) {
-    var mySlider = new rSlider({
-      target: "#sliderRange",
-      values: [
-        "100k",
-        "200k",
-        "300k",
-        "400k",
-        "500k",
-        "600k",
-        "700k",
-        "800k",
-        "900k",
-        "1m",
-        "5m",
-        "10m",
-        "50m",
-        "100m+",
-      ],
-      range: true, // range slider
-      set: null, // an array of preselected values
-      width: null,
-      scale: false,
-      labels: false,
-      tooltip: true,
-      step: 1, // step size
-      disabled: false, // is disabled?
-      onChange: null, // callback
-    });
-  }
-
   if (searchBox.length >= 1) {
     let inputHere = searchBox[0].getElementsByTagName("input");
     let pholder = inputHere[0].getAttribute("placeholder");
@@ -373,21 +327,30 @@ window.onscroll = function () {
     if (y >= 100) {
       show_search_header();
       if (has_filter == false) {
-        show_main_page();
+        _show_main_page();
         third.classList.add("hidden");
 
         inputAllow = true;
         showInputScroll = true;
       } else {
-        show_search_page();
+        _show_search_page();
       }
     } else {
       if (has_filter == true) {
-        show_search_page();
-        show_main_header();
+        _show_search_page();
+        show_search_header();
       } else {
-        show_main_page();
+        show_main_header();
+        _show_main_page();
       }
+    }
+  } else {
+    if (has_filter == true) {
+      _show_search_page();
+      show_search_header();
+    } else {
+      show_main_header();
+      _show_main_page();
     }
   }
 
