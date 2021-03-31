@@ -40,35 +40,38 @@ var dateInput2 = document.querySelector("#date2");
 var _main_search_page = document.getElementById("search-page");
 var _main_page = document.getElementById("main-page");
 
-if(has_filter == undefined) {
-    var has_filter = false;
+if (has_filter == undefined) {
+  var has_filter = false;
 }
 
-function show_main_page(){
-    if(_main_page != undefined){
-        _main_page.classList.remove("hidden");
-        _main_search_page.classList.add("hidden");
-    }
+function show_main_page() {
+  if (_main_page != undefined) {
+    _main_page.classList.remove("hidden");
+    _main_search_page.classList.add("hidden");
+  }
 }
 
-function show_search_page(){
-    if(_main_search_page != undefined){
-        _main_page.classList.add("hidden");
-        _main_search_page.classList.remove("hidden");
-    }
+function show_search_page() {
+  if (_main_search_page != undefined) {
+    _main_page.classList.add("hidden");
+    _main_search_page.classList.remove("hidden");
+  }
 }
 
 function searchRedirect() {
-    if(document.getElementById("icon-changer").classList.contains('icon-eye-home')){
-        show_main_page();
-        eyeIcon.classList.remove("icon-eye-close");
-        eyeIcon.classList.add("icon-iso");
-        eyeIcon.classList.remove("icon-eye-home");
-        document.getElementById("search").value = "";
-        has_filter = false;
-    } else {
-        window.location.href = location.protocol + "//" + location.host + "/search";
-    }
+  if (
+    document.getElementById("icon-changer").classList.contains("icon-eye-home")
+  ) {
+    show_main_page();
+    eyeIcon.classList.remove("icon-eye-close");
+    eyeIcon.classList.add("icon-iso");
+    eyeIcon.classList.remove("icon-eye-home");
+    document.getElementById("search").value = "";
+    has_filter = false;
+  } else {
+    window.location.href = location.protocol + "//" + location.host + "/search";
+  }
+}
 
 var selectsOne = document.querySelectorAll(".convoBoxItems");
 
@@ -133,13 +136,13 @@ window.onload = function () {
           cleaner.style.display = "block";
           cleaner2.style.display = "block";
         }
-//        inputHere[0].style.width = wider * 11 + "px";
+        //        inputHere[0].style.width = wider * 11 + "px";
       } else {
         if (cleaner2 != null) {
           cleaner.style.display = "none";
           cleaner2.style.display = "none";
         }
-//        inputHere[0].style.width = wide * 11 + "px";
+        //        inputHere[0].style.width = wide * 11 + "px";
       }
     });
   }
@@ -169,6 +172,7 @@ window.onload = function () {
   for (let i = 0; i < selectsOne.length; i++) {
     // selectsOne[i].addEventListener("click", multipleItemsClick);
     selectsOne[i].addEventListener("focus", multipleItems);
+    // selectsOne[i].addEventListener("click", multipleItemsClick);
     selectsOne[i].addEventListener("blur", closeItems);
   }
 
@@ -337,7 +341,7 @@ window.onscroll = function () {
     var search_input = document.getElementById("search");
 
     if (y >= 100) {
-      if(has_filter == false) {
+      if (has_filter == false) {
         show_main_page();
         if (eyeIcon != null) {
           eyeIcon.classList.remove("icon-eye-close");
@@ -357,14 +361,14 @@ window.onscroll = function () {
         show_search_page();
       }
     } else {
-      if(has_filter == true) {
-          show_search_page();
+      if (has_filter == true) {
+        show_search_page();
       }
 
       if (showInputScroll) {
         if (eyeIcon != null) {
-//          eyeIcon.classList.add("icon-eye-home");
-//          eyeIcon.classList.remove("icon-iso");
+          //          eyeIcon.classList.add("icon-eye-home");
+          //          eyeIcon.classList.remove("icon-iso");
         }
         first.classList.add("hidden");
         if (scroller != null) {
@@ -613,6 +617,15 @@ if (slider != undefined) {
 function multipleItems(e) {
   console.log("multiple items here");
   // e.preventDefault();
+  // let childs = e.target.querySelectorAll("option");
+  // for (let i = 0; i < childs.length; i++) {
+  //   childs[i].addEventListener("click", (e) => {
+  //     e.preventDefault();
+  //     let selectedstatus = e.target.getAttribute("selected");
+  //     e.target.selected ? true : false;
+  //     // e.target.selected = !e.target.selected;
+  //   });
+  // }
 
   e.target.addEventListener("keypress", (e) => {
     let entered = e.keyCode;
@@ -634,6 +647,19 @@ function multipleItems(e) {
   // }, 0);
 
   // e.target.focus();
+}
+
+function multipleItemsClick(e) {
+  let selectedElement = e.target;
+  let elUsed = selectedElement.selected;
+  if (elUsed) {
+    selectedElement.removeAttribute("selected");
+    selectedElement.selected = false;
+  } else {
+    selectedElement.setAttribute("selected", "");
+    selectedElement.selected = true;
+  }
+  e.preventDefault();
 }
 
 function closeItems(e) {
@@ -730,12 +756,12 @@ function selectItemsDown(e) {
   let targetted = e.target.closest(".toselect");
   let parent = targetted.parentNode;
   let elms = parent.querySelectorAll(".toselect");
-  for (let i = 0; i < elms.length; i++) {
-    elms[i].classList.remove("activeElement");
-  }
-  targetted.classList.add("activeElement");
+  // for (let i = 0; i < elms.length; i++) {
+  //   elms[i].classList.remove("activeElement");
+  // }
+  targetted.classList.toggle("activeElement");
   console.log(targetted);
-  let el = parent.querySelectorAll(".activeElement")[0];
-  parent.classList.remove("opened");
-  console.log("this is the active Element: ", el);
+  // let el = parent.querySelectorAll(".activeElement")[0];
+  // parent.classList.remove("opened");
+  // console.log("this is the active Element: ", el);
 }
