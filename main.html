@@ -35,6 +35,7 @@
           <a href="" class="color--gray" data-ref="#box1" data-modal-open>+ Add Description</a>
           <div class="g-modal" id="box1">
             <div class="g-modal__schedule">
+              
               <div class="flex items-center mb-4">
                 <p class="font-bold m-0 pr-2">Adding content to:</p>
                 <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Future of Housing</span>
@@ -183,7 +184,9 @@
               <div class="modal-footer justify-end">
                 <button class="bg-black text-white py-2 px-4">Next</button>
               </div>
+              
             </div>
+            
           </div>
           <p>High-quality skincare basics at an incredible value.</p>
         </div>
@@ -438,6 +441,17 @@
                 <div class="modal-footer justify-between">
                   <button class="py-2 px-4">Back</button>
                   <button class="bg-black text-white py-2 px-4">Next</button>
+                </div>
+                <div class="g-modal-alert">
+                  <div class="w-4/5 md:w-3/5 lg:w-3/6">
+                    <p class="font-bold">Confirm Close</p>
+                    <p>Are you sure you want to close? You will lose the content you’ve added.</p>
+                    <div class="flex mt-8">
+                      <button class="bg-white text-black py-2 px-4 mr-2 whitespace-no-wrap" onclick="closeAlertModal()">Go Back</button>
+                      <button class="w-full bkg--red text-black py-2 px-4 ml-2 whitespace-no-wrap" onclick="closeModalAll()">Confirm &
+                        Close</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

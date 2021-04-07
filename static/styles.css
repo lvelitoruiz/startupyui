@@ -361,7 +361,8 @@
   position: relative;
 }
 
-[data-modal-close] {
+[data-modal-close],
+.modal-repurpose {
   background: #eeeeee !important;
   border-left: 1px solid #000000 !important;
   border-bottom: 1px solid #000000 !important;
@@ -370,9 +371,16 @@
   box-shadow: none !important;
   width: 30px !important;
   height: 30px !important;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
 }
 
-[data-modal-close]:hover {
+[data-modal-close]:hover,
+.modal-repurpose:hover {
   background: black !important;
   color: white !important;
 }
@@ -1317,4 +1325,12 @@ select.convoBoxItems.opened {
 
 .non-editables div.activeElement::selection {
   background: none;
+}
+
+.g-modal-alert {
+  display: none;
+}
+
+.g-modal-alert.show {
+  display: block;
 }

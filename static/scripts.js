@@ -40,6 +40,8 @@ var dateInput2 = document.querySelector("#date2");
 var _main_search_page = document.getElementById("search-page");
 var _main_page = document.getElementById("main-page");
 
+var trigAlert = document.querySelectorAll(".modal-repurpose");
+
 if (has_filter == undefined) {
   var has_filter = false;
 }
@@ -152,6 +154,11 @@ window.onload = function () {
   for (let i = 0; i < noSelectItems.length; i++) {
     // selectsOne[i].addEventListener("click", multipleItemsClick);
     selectsOne[i].addEventListener("blur", closeItemsNoSelect);
+  }
+
+  for (let i = 0; i < trigAlert.length; i++) {
+    // selectsOne[i].addEventListener("click", multipleItemsClick);
+    trigAlert[i].addEventListener("click", launchAlertModal);
   }
 
   for (let i = 0; i < selectElms.length; i++) {
@@ -524,6 +531,7 @@ function showConvoOpen() {
   let parent = targetted.parentNode.parentNode;
   let convo = parent.getElementsByClassName("convoBoxItems")[0];
   convo.classList.toggle("opened");
+  convo.focus();
 }
 
 function showConvoOpenNoSelect() {
@@ -739,4 +747,31 @@ function selectItemsDown(e) {
   // let el = parent.querySelectorAll(".activeElement")[0];
   // parent.classList.remove("opened");
   // console.log("this is the active Element: ", el);
+}
+
+function launchAlertModal() {
+  console.log("launch modal alert");
+  let element = event.target;
+  let parent = element.parentNode;
+  let alertModal = parent.querySelectorAll(".g-modal-alert")[0];
+  console.log(parent.querySelectorAll(".g-modal-alert"));
+  if (alertModal) {
+    console.log(parent.querySelectorAll(".g-modal-alert"));
+    alertModal.style.display = "flex";
+  } else {
+    vanillaModal.close();
+  }
+}
+
+function closeAlertModal() {
+  let element = event.target;
+  let parent = element.closest(".g-modal-alert");
+  parent.style.display = "none";
+}
+
+function closeModalAll() {
+  let element = event.target;
+  let parent = element.closest(".g-modal-alert");
+  parent.style.display = "none";
+  vanillaModal.close();
 }
