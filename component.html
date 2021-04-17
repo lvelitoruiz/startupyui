@@ -1,0 +1,536 @@
+{% extends "_layout.html" %}
+
+{% block title %}Startupy{% endblock %}
+
+{% block head %}
+{%- endblock %}
+
+{% block content %}
+
+<div class="bg-gray-200">
+  <section class="container mx-auto p-6">
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold">Buttons</h3>
+      <div class="pb-4">
+        <button class="border-solid border border-black py-2 px-4 hover:opacity-75">Button Initial</button>
+      </div>
+      <div class="pb-4">
+        <button class="border-solid border bg-black text-white border-black py-2 px-4 hover:opacity-75">Button Hovering</button>
+      </div>
+      <div class="pb-4">
+        <button disabled class="border-solid border border-color--gray color--gray py-2 px-4 cursor-not-allowed">Button Initial</button>
+      </div>
+      <div class="pb-4">
+        <button class="bkg--blue2 text-white font-bold py-2 px-4 hover:opacity-75">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
+      </div>
+      <div class="pb-4">
+        <button class="bkg--blue3 color--blue font-bold py-2 px-4 hover:opacity-75">Join Monthly</button>
+      </div>
+      <div class="pb-4">
+        <button class="bg-white text-black font-bold py-2 px-4 hover:opacity-75">Join Monthly $20/mo</span></button>
+      </div>
+    </div>
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold">Input text area</h3>
+      <div class="mb-10 md:mb-0">
+        <div class="md:flex">
+          <div class="w-full pb-8 md:mr-4">
+            <p class="text-sm font-bold mb-1">Text Area Initial</p>
+            <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="2" id=""></textarea>
+          </div>
+          <div class="pb-8 w-full md:ml-4">
+            <p class="text-sm font-bold mb-1">Text Area Initial</p>
+            <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+          </div>
+        </div>
+        <div class="md:flex">
+          <div class="pb-8 w-full md:mr-4">
+            <p class="text-sm font-bold mb-1">Text Area Typing</p>
+            <textarea class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="2" id=""></textarea>
+          </div>
+          <div class="pb-8 w-full md:ml-4">
+            <p class="text-sm font-bold mb-1">Text Area Typing</p>
+            <textarea class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+          </div>
+        </div>
+        <div class="md:flex">
+          <div class="pb-8 w-full md:mr-4">
+            <p class="text-sm font-bold mb-1">Text Area Complete</p>
+            <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="2" id=""></textarea>
+          </div>
+          <div class="pb-8 w-full md:ml-4">
+            <p class="text-sm font-bold mb-1">Text Area Complete</p>
+            <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+          </div>
+        </div>
+        <div class="md:flex">
+          <div class="pb-8 w-full md:mr-4">
+            <p class="text-sm font-bold mb-1 color--purple-2">Text Area Error</p>
+            <textarea class="w-full border-solid border border-color--purple-2 color--purple-2 px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="2" id=""></textarea>
+            <p class="color--purple-2 font-bold text-sm">Error language, please correct above.</p>
+          </div>
+          <div class="pb-8 w-full color--purple-2 md:ml-4">
+            <p class="text-sm font-bold mb-1">Text Area Error</p>
+            <textarea class="w-full border-solid border border-color--purple-2 color--purple-2 px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+            <p class="color--purple-2 font-bold text-sm">Error language, please correct above.</p>
+          </div>
+        </div>
+        <div class="pb-8">
+          <p class="text-sm font-bold mb-1">Text Input Initial</p>
+          <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+        </div>
+        <div class="pb-8">
+          <p class="text-sm font-bold mb-1">Text Input Typing</p>
+          <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" name="" id="">
+        </div>
+        <div class="pb-8">
+          <p class="text-sm font-bold mb-1">Text Input Complete</p>
+          <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+        </div>
+        <div class="pb-8">
+          <p class="text-sm font-bold mb-1 color--purple-2">Text Input Complete</p>
+          <input class="w-full border-solid border border-color--purple-2 color--purple-2 px-4 py-3 focus:outline-none" type="text" name="" id="">
+          <p class="color--purple-2 font-bold text-sm">Error language, please correct above.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold">Curator</h3>
+      <div class="flex items-center mb-2">
+        <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+          <span class="text-xs">JN</span>
+        </div>
+        <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
+      </div>
+      <div class="flex items-center mb-2">
+        <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+          <span class="text-xs">JN</span>
+        </div>
+        <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span><span class="text-sm font-bold whitespace-no-wrap color--purple-2">MOD</span>
+      </div>
+      <div class="flex items-center mb-2">
+        <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+          <span class="text-xs">JN</span>
+        </div>
+      </div>
+    </div>
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold">Top of topic</h3>
+      <div class="mb-2">
+        <div class="flex items-center color--gray mb-3 justify-center">
+          <span class="text-xs">Last Updated: Jul 25, 2020</span>
+          <a class="text-xs ml-5 underline" href="">Changelog</a>
+        </div>
+        <div class="flex items-center justify-center">
+          <h2 class="text-2xl leading-tight md:text-4xl font-bold pr-6">The Future of Warehousing Long Topic Name</h2>
+          <i class="icon-eye text-4xl ml-3 color--gray"></i>
+        </div>
+      </div>
+      <div class="mb-2">
+        <div class="flex items-center color--gray mb-3 justify-center">
+          <span class="text-xs">Last Updated: Jul 25, 2020</span>
+          <a class="text-xs ml-5 underline" href="">Changelog</a>
+        </div>
+        <div class="flex items-center justify-center">
+          <h2 class="text-2xl leading-tight md:text-4xl font-bold pr-6">The Future of Warehousing Long Topic Name</h2>
+          <i class="icon-eye-black text-4xl ml-3 color--blue"></i>
+        </div>
+      </div>
+    </div>
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold">Person page</h3>
+      <div class="md:grid grid-cols-6 gap-4 mb-2">
+        <div class="md:col-start-2 col-span-4">
+          <div class="p-4 md:p-5">
+            <div class="flex">
+              <div class="mr-4 md:mr-8 hidden md:block">
+                <div class="border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-6">
+                  <span class="text-xs md:text-base">SM</span>
+                </div>
+              </div>
+              <div>
+                <div class="flex">
+                  <span class="text-xs bkg--blue2 px-2 py-1 mr-3 text-white">Curator</span>
+                  <div class="flex items-center color--gray font-bold">
+                    <i class="icon-eye text-base"></i>
+                    <span class="ml-2 text-xs">stephenopolus-mclongname</span>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <h2 class="text-2xl leading-tight md:text-4xl font-bold">Stephenopolus Mclongname</h2>
+                  <i class="icon-eye text-4xl ml-3"></i>
+                  <i class="icon-message text-4xl ml-3"></i>
+                </div>
+                <div class="my-4">
+                  <p>Startupy enthusiast. Bicycling advocate. </p>
+                </div>
+                <div class="flex mb-8 mt-8 items-center">
+                  <div class="mr-4 md:mr-8">
+                    <span class="text-xs color--gray font-bold">Member Since</span>
+                    <p>2020</p>
+                  </div>
+                </div>
+                <div class="md:grid grid-cols-6">
+                  <div class="col-span-4">
+                    <div class="flex mb-8 items-center flex-wrap">
+                      <a class="text-xs font-bold mr-8 mb-2" href="">
+                        <i class="icon-link"></i>
+                        <span>stephenopolusmc.com</span>
+                      </a>
+                      <a class="text-xs font-bold mr-8 mb-2" href="">
+                        <i class="icon-twitter"></i>
+                        <span>stephenopolusmclongname</span>
+                      </a>
+                      <a class="text-xs font-bold mr-8 mb-2" href="">
+                        <i class="icon-link"></i>
+                        <span>myfund.com</span>
+                      </a>
+                      <a class="text-xs font-bold mr-8 mb-2" href="">
+                        <i class="icon-link"></i>
+                        <span>mynewsletter.io</span>
+                      </a>
+                      <a class="text-xs font-bold mr-8 mb-2 color--gray" href="">
+                        <span>+ Add Link</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span class="font-bold text-sm color--gray">Top Topics</span>
+                  <div class="flex mt-2 items-center flex-wrap">
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize">Sustainability &amp; Climate Change</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize">Carbon Offsetting and Carbon Removal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:grid grid-cols-6 gap-4 mb-2">
+        <div class="md:col-start-2 col-span-4">
+          <div class="p-4 md:p-5">
+            <div class="flex">
+              <div class="mr-4 md:mr-8 hidden md:block">
+                <div class="border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-6">
+                  <span class="text-xs md:text-base">PM</span>
+                </div>
+              </div>
+              <div>
+                <div class="flex">
+                  <span class="text-xs bkg--blue2 px-2 py-1 mr-3 text-white">Moderator</span>
+                  <div class="flex items-center color--gray font-bold">
+                    <i class="icon-eye text-base"></i>
+                    <span class="ml-2 text-xs">Person Name</span>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <h2 class="text-2xl leading-tight md:text-4xl font-bold">Person Name</h2>
+                  <i class="icon-eye text-4xl ml-3"></i>
+                  <i class="icon-message text-4xl ml-3"></i>
+                </div>
+                <div class="my-4">
+                  <p>Startupy enthusiast. Bicycling advocate. </p>
+                </div>
+                <div class="flex mb-8 mt-8 items-center">
+                  <div class="mr-4 md:mr-8">
+                    <span class="text-xs color--gray font-bold">Member Since</span>
+                    <p>2021</p>
+                  </div>
+                </div>
+                <div class="md:grid grid-cols-6">
+                  <div class="col-span-4">
+                    <div class="flex mb-8 items-center flex-wrap">
+                      <a class="text-xs font-bold mr-8 mb-2" href="">
+                        <i class="icon-link"></i>
+                        <span>personname.com</span>
+                      </a>
+                      <a class="text-xs font-bold mr-8 mb-2" href="">
+                        <i class="icon-twitter"></i>
+                        <span>personname</span>
+                      </a>
+                      <a class="text-xs font-bold mr-8 mb-2" href="">
+                        <i class="icon-link"></i>
+                        <span>myfund.com/person-name</span>
+                      </a>
+                      <a class="text-xs font-bold mr-8 mb-2" href="">
+                        <i class="icon-link"></i>
+                        <span>mynewsletter.io/personnamedotcom</span>
+                      </a>
+                      <a class="text-xs font-bold mr-8 mb-2 color--gray" href="">
+                        <span>+ Add Link</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span class="font-bold text-sm color--gray">Top Curator of:</span>
+                  <div class="flex mt-2 items-center flex-wrap">
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize">Nothing Topic</span>
+                  </div>
+                </div>
+                <div class="flex mb-8 mt-8 items-center">
+                  <div>
+                    <div class="flex items-center">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+                        <span class="text-xs font-bold">HR</span>
+                      </div>
+                      <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+                        <span class="text-xs font-bold">EE</span>
+                      </div>
+                      <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+                        <span class="text-xs font-bold">JN</span>
+                      </div>
+                      <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+                        <span class="text-xs font-bold">JN</span>
+                      </div>
+                      <div class="mt-1">
+                        <p class="text-xs">Followed by <b>Abe Bee, Carly Dee, Erin Finch, Gretchen Hurst</b></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold">Highlights Counter</h3>
+      <div class="flex mb-2 items-center">
+        <div class="flex items-center">
+          <div class="mt-1 mr-2">
+            <p class="text-xs font-bold">Highlights</p>
+          </div>
+          <div class="border-solid border border-black bg-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex mb-2 items-center">
+        <div class="flex items-center">
+          <div class="mt-1 mr-2">
+            <p class="text-xs font-bold">Highlights</p>
+          </div>
+          <div class="border-solid border border-black bg-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+            <span class="text-white text-xs">39</span>
+          </div>
+          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+            <span class="text-xs">JN</span>
+          </div>
+          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+            <span class="text-xs">SA</span>
+          </div>
+          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+            <span class="text-xs">GG</span>
+          </div>
+          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+            <span class="text-xs">EE</span>
+          </div>
+          <div class="mt-1">
+            <p class="text-xs color--gray">+10</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex mb-2 items-center">
+        <div class="flex items-center">
+          <div class="mt-1 mr-2">
+            <p class="text-xs font-bold">Highlights</p>
+          </div>
+          <div class="border-solid border border-black bg-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+            <span class="text-white text-xs">39</span>
+          </div>
+          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+            <span class="text-xs">SA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold">Edit Profile</h3>
+      <div class="md:grid grid-cols-6 gap-4 mb-2">
+        <div class="md:col-start-2 col-span-4">
+          <div class="p-4 md:p-5">
+            <h3 class="font-bold mb-12 text-2xl text-center">Edit User Profile</h3>
+            <div class="mb-10 md:mb-0">
+              <div class="pb-8">
+                <p class="text-sm font-bold mb-1">First Name</p>
+                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+              </div>
+              <div class="pb-8">
+                <p class="text-sm font-bold mb-1">Last Name</p>
+                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+              </div>
+              <div class="pb-8">
+                <p class="text-sm font-bold mb-1">Bio</p>
+                <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+              </div>
+              <div class="pb-8">
+                <p class="text-sm font-bold mb-1">Twitter handle</p>
+                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+              </div>
+              <div class="pb-8">
+                <p class="text-sm font-bold mb-1">Instagram handle</p>
+                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+              </div>
+              <div class="pb-8">
+                <p class="text-sm font-bold mb-1">Website</p>
+                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+              </div>
+              <div class="pt-6">
+                <button class="border-solid border border-black py-2 px-4">Save Changes</button>
+              </div>
+            </div>
+            <div class="pt-24">
+              <h3 class="font-bold text-2xl text-center">Export Curations</h3>
+              <div class="pt-4">
+                <button class="border-solid border border-black py-2 px-4 w-full">Download curations as .CSV file</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold">Membership</h3>
+      <div class="md:grid md:grid-cols-12 gap-4 mt-8 md:mt-12">
+        <div class="md:col-start-2 md:col-span-10 lg:col-start-3 lg:col-span-8">
+          <div class="p-4 md:p-5">
+            <div class="pb-8 md:pb-16">
+              <span class="color--blue text-sm font-bold">Become a Member Today</span>
+              <p class="text-2xl leading-none font-bold mt-3 md:text-4xl">
+                <span class="ff-conv-PxGrotesk">Startupy</span> is a curated information environment for <span class="color--blue">builders.</span>
+                We give you a sane way to stay up to speed on the pulse of new markets, ideas, and people.
+              </p>
+            </div>
+            <div class="flex justify-center py-12">
+              <div class="w-full flex">
+                <div class="flex flex-col w-full pr-3">
+                  <div class="flex items-center mb-2">
+                    <span class="bkg--blue pl-1 pr-1 text-xs">Save 25%</span>
+                  </div>
+                  <div class="flex mb-6">
+                    <p class="leading-none text-2xl pr-1 font-bold md:text-4xl">
+                      $15
+                    </p>
+                    <p class="self-end color--gray text-sm">/month</p>
+                  </div>
+                  <div class="mb-10">
+                    <button class="bkg--blue2 text-white font-bold py-4 px-4 w-full hover:opacity-75">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full flex items-end">
+                <div class="flex flex-col w-full pl-3">
+                  <div class="flex mb-6">
+                    <p class="leading-none text-2xl pr-1 font-bold md:text-4xl">
+                      $20
+                    </p>
+                    <p class="self-end color--gray text-sm">/month</p>
+                  </div>
+                  <div class="mb-10">
+                    <button class="bkg--blue3 color--blue font-bold py-4 px-4 w-full hover:opacity-75">Join Monthly</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center pb-12 border-t border-solid border-black">
+              <div class="w-full flex pt-2">
+                <div class="flex flex-col w-full pr-3">
+                  <p class="font-bold text-sm">Group memberships</p>
+                  <p class="text-xs font-hairline mt-2"><a class="underline" href="">Click here</a> if you’re interested in a group membership for your org.</p>
+                </div>
+              </div>
+              <div class="w-full flex pt-2">
+                <div class="flex flex-col w-full pl-3">
+                  <p class="font-bold text-sm">Group memberships</p>
+                  <p class="text-xs font-hairline mt-2"><a class="underline" href="">Get a handy template</a> you can copy+paste for your boss.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </section>
+  <section>
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold p-6">Slider</h3>
+    </div>
+    <div class="text-center pb-12 md:pb-32">
+      <h2 class="font-bold text-2xl">Don’t take our word for it.</h2>
+    </div>
+    <div class="slider pb-12">
+      <div class="item">
+        <h3 class="title">Convincing Testimonial</h3>
+        <div class="info">
+          <p class="text">“Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam”</p>
+          <div class="flex items-center mt-2">
+            <div class="border-solid border border-color--blue rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center">
+              <span class="text-xs color--blue">KM</span>
+            </div>
+            <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 color--blue">Kathryn Murphy, CEO of X</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <h3 class="title">Irrefutable Testimonial</h3>
+        <div class="info opacity-25">
+          <p class="text">“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.”</p>
+          <div class="flex items-center mt-2">
+            <div class="border-solid border border-color--blue rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center">
+              <span class="text-xs color--blue">KM</span>
+            </div>
+            <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 color--blue">Kathryn Murphy, CEO of X</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <h3 class="title">Convincing Testimonial</h3>
+        <div class="info">
+          <p class="text">“Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam”</p>
+          <div class="flex items-center mt-2">
+            <div class="border-solid border border-color--blue rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center">
+              <span class="text-xs color--blue">KM</span>
+            </div>
+            <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 color--blue">Kathryn Murphy, CEO of X</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <h3 class="title">Convincing Testimonial</h3>
+        <div class="info">
+          <p class="text">“Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam”</p>
+          <div class="flex items-center mt-2">
+            <div class="border-solid border border-color--blue rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center">
+              <span class="text-xs color--blue">KM</span>
+            </div>
+            <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 color--blue">Kathryn Murphy, CEO of X</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-img--full flex items-center">
+    <div class="container mx-auto">
+      <div class="md:grid md:grid-cols-12 gap-4">
+        <div class="md:col-start-3 md:col-span-10 lg:col-start-5 lg:col-span-4">
+          <p class="text-white text-xl pb-8">Become a member to enter the 🐇 🕳</p>
+          <div class="pb-8">
+            <button class="bkg--blue2 text-white font-bold py-2 px-4 w-full hover:opacity-75">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
+          </div>
+          <div>
+            <button class="bg-white text-black font-bold py-2 px-4 w-full hover:opacity-75">Join Monthly $20/mo</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{%- endblock %}
+
+{% block scripts %}
+{%- endblock %}

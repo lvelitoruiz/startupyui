@@ -99,6 +99,10 @@
   color: #bb43f4;
 }
 
+.color--purple-2 {
+  color: #A80CF1;
+}
+
 .color--green {
   color: #2cf10c;
 }
@@ -109,6 +113,14 @@
 
 .border-color--blue {
   border-color: #0c3ef1;
+}
+
+.border-color--gray {
+  border-color: #a0a0a0;
+}
+
+.border-color--purple-2 {
+  border-color: #A80CF1;
 }
 
 .placeholder-blue-color::placeholder {
@@ -138,6 +150,10 @@
 
 .bkg--blue2 {
   background: #0c3ef1;
+}
+
+.bkg--blue3 {
+  background: #CAD5FF;
 }
 
 .bkg--green {
@@ -1333,4 +1349,115 @@ select.convoBoxItems.opened {
 
 .g-modal-alert.show {
   display: block;
+}
+
+.m-w-8 {
+  min-width: 2rem;
+}
+
+.m-h-8 {
+  min-height: 2rem;
+}
+
+.slider {
+  align-items: flex-start;
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+@media screen and (min-width: 490px) {
+  .slider {
+    padding-left: 24%;
+    padding-right: 24%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    padding-left: 14%;
+    padding-right: 14%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slider {
+    padding-left: 24%;
+    padding-right: 24%;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .slider {
+    padding-left: 34%;
+    padding-right: 34%;
+  }
+}
+
+.slider .item {
+  display: flex;
+  align-items: flex-start;
+  min-height: 250px;
+  padding-right: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  .slider .item {
+    padding-right: 120px;
+  }
+}
+
+.slider .item .title {
+  background-color: #0C3EF1;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 0px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-orientation: sideways;
+  text-align:right;
+  text-orientation: sideways;
+}
+
+@media screen and (min-width: 490px) {
+  .slider .item .title { 
+    font-size: 24px;
+  }
+}
+
+.slider .item .info {
+  width: 220px; 
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 490px) {
+  .slider .item .info {
+    width: 520px; 
+    padding-left: 10px;
+  }
+}
+
+.slider .item .info .text {
+  border: 1px solid #0C3EF1;
+  color: #0C3EF1;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 6px;
+}
+
+@media screen and (min-width: 490px) {
+  .slider .item .info .text {
+    font-size: 24px;
+    line-height: 30px;
+  } 
+}
+
+.bg-img--full {
+  background-image: url("./img/bg-color.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
