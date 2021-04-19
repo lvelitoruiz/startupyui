@@ -1459,5 +1459,24 @@ select.convoBoxItems.opened {
   background-image: url("./img/bg-color.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+}
+
+@media screen and (min-width: 768px) { 
+  .box-black .box-1 {
+    padding-top: 130px;
+  }
+
+  .box-black .box-2 {
+    padding-bottom: 130px;
+    position: relative;
+  }
+
+  .box-black .box-2 .icon {
+    color: white;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100px;
+  }
 }
