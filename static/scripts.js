@@ -266,6 +266,18 @@ window.onload = function () {
     interactive: true,
   });
 
+  tippy("#myToogle", {
+    content: `
+    <div class="p-3">
+      <div class="flex justify-between w-100">
+        <p class="font-bold text-xs text-cut">start•up•y / stärtˈəpˈē / adj.</p>
+      </div>
+      <p class="text-xs text-white pt-2">a state of mind that is non-linear and associative, meandering and attentive. To be startupy is to be ever curious, concerned with building things and uncovering unexpected connections and patterns between ideas.</p>
+    </div>`,
+    allowHTML: true,
+    interactive: true,
+  });
+
   if (document.querySelector("#menuSideElement")) {
     let element = document.querySelector("#menuSideElement");
     let element2 = document.querySelector("#sideMenuAlt");
