@@ -1501,8 +1501,6 @@ select.convoBoxItems.opened {
 }
 
 .box-2 p {
-  line-height: 19px;
-  font-size: 16px;
   padding-left: 10px;
 }
 
@@ -1528,8 +1526,6 @@ select.convoBoxItems.opened {
 }
 
 .box-1 p {
-  line-height: 24px;
-  font-size: 16px;
   padding-left: 10px;
 }
 
@@ -1585,9 +1581,49 @@ select.convoBoxItems.opened {
   margin: 0 auto;
 }
 
+.section-3 .block-2 .box-2 {
+  max-width: 80%;
+  margin-left: 18%;
+}
+
+.section-3 .block-2 .text-2 .bg-mobile-full {
+  width: 90%;
+}
+
+.section-4 .box-2 {
+  max-width: 78%;
+  margin-left: 20%;
+}
+
+.section-4 .box-mobile-2 {
+  margin: 0 auto;
+  width: 30%;
+}
+
+.section-4 .box-mobile-3 {
+  margin: 0 auto;
+}
+
+.box-2-mobile {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  align-items: flex-end;
+}
+
+.box-2-mobile img {
+  max-width: 99px;
+}
+
 @media screen and (min-width: 768px) { 
   .box-1-mobile {
     margin-left: 0;
+  }
+
+  .box-2-mobile {
+    display: initial;
+    margin: initial;
+    width: initial;
   }
 
   .section-2 .block-2 .box-r-mobile {
@@ -1614,9 +1650,13 @@ select.convoBoxItems.opened {
     margin: initial;
   }
 
+  .section-4 .box-2,
+  .section-3 .block-2 .box-2 {
+    max-width: initial;
+    margin-left: initial;
+  }
+
   .box-1 p {
-    line-height: 30px;
-    font-size: 24px;
     padding-left: 10px;
   }
 
@@ -1712,5 +1752,43 @@ select.convoBoxItems.opened {
 
   .section-3 .block-1 {
     padding-left: 50px;
+  }
+
+  .section-4 {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    max-width: 69%;
+  }
+
+  .section-4 .box-2 {
+    margin-left: 16px;
+    width: 40%;
+  }
+
+  .section-4 h3 {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+  }
+
+  .section-4 h3 p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .section-4 h3 span {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0px 7px 7px;
+    border-radius: 20px;
+    margin-left: 6px;
+  }
+
+  .section-4 .box-mobile-2 {
+    display: none;
   }
 }
