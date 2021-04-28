@@ -37,46 +37,71 @@ var selectElements = document.getElementsByClassName("custom-radio-checkbox");
 var dateInput1 = document.querySelector("#date1");
 var dateInput2 = document.querySelector("#date2");
 
+var _main_search_page = document.getElementById("search-page");
+var _main_page = document.getElementById("main-page");
+
+var trigAlert = document.querySelectorAll(".modal-repurpose");
+
+if (has_filter == undefined) {
+  var has_filter = false;
+}
+
+function show_main_page() {
+  if (_main_page != undefined) {
+    _main_page.classList.remove("hidden");
+    _main_search_page.classList.add("hidden");
+  }
+}
+
+function show_search_page() {
+  if (_main_search_page != undefined) {
+    _main_page.classList.add("hidden");
+    _main_search_page.classList.remove("hidden");
+  }
+}
+
+function searchRedirect() {
+  if (
+    document.getElementById("icon-changer").classList.contains("icon-eye-home")
+  ) {
+    show_main_page();
+    eyeIcon.classList.remove("icon-eye-close");
+    eyeIcon.classList.add("icon-iso");
+    eyeIcon.classList.remove("icon-eye-home");
+    document.getElementById("search").value = "";
+    has_filter = false;
+  } else {
+    window.location.href = location.protocol + "//" + location.host + "/search";
+  }
+}
+
+function show_main_page() {
+  if (_main_page != undefined && _main_search_page != undefined) {
+    _main_page.classList.remove("hidden");
+    _main_search_page.classList.add("hidden");
+  }
+}
+
+function show_search_page() {
+  if (_main_search_page != undefined && _main_page != undefined) {
+    _main_page.classList.add("hidden");
+    _main_search_page.classList.remove("hidden");
+  }
+}
+
 var selectsOne = document.querySelectorAll(".convoBoxItems");
 
-window.onload = function () {
-  if (document.querySelector("#sliderRange")) {
-    var mySlider = new rSlider({
-      target: "#sliderRange",
-      values: [
-        "100k",
-        "200k",
-        "300k",
-        "400k",
-        "500k",
-        "600k",
-        "700k",
-        "800k",
-        "900k",
-        "1m",
-        "5m",
-        "10m",
-        "50m",
-        "100m+",
-      ],
-      range: true, // range slider
-      set: null, // an array of preselected values
-      width: null,
-      scale: false,
-      labels: false,
-      tooltip: true,
-      step: 1, // step size
-      disabled: false, // is disabled?
-      onChange: null, // callback
-    });
-  }
+var selectElms = document.querySelectorAll(".toselect");
 
+var noSelect = document.getElementsByClassName("showConvoNoSelect");
+var noSelectItems = document.querySelectorAll(".convoBoxNoSelect");
+
+window.onload = function () {
   if (searchBox.length >= 1) {
-    console.log("we have a box here");
     let inputHere = searchBox[0].getElementsByTagName("input");
     let pholder = inputHere[0].getAttribute("placeholder");
     let wide = pholder.length;
-    inputHere[0].style.width = wide * 11 + "px";
+    inputHere[0].style.width = wide * 20 + "px";
 
     inputHere[0].addEventListener("input", function () {
       let inputcontent = inputHere[0].value;
@@ -86,13 +111,13 @@ window.onload = function () {
           cleaner.style.display = "block";
           cleaner2.style.display = "block";
         }
-        inputHere[0].style.width = wider * 11 + "px";
+        //        inputHere[0].style.width = wider * 11 + "px";
       } else {
         if (cleaner2 != null) {
           cleaner.style.display = "none";
           cleaner2.style.display = "none";
         }
-        inputHere[0].style.width = wide * 11 + "px";
+        //        inputHere[0].style.width = wide * 11 + "px";
       }
     });
   }
@@ -111,6 +136,10 @@ window.onload = function () {
     convoTriggers[i].addEventListener("focus", showConvoOpen);
   }
 
+  for (let i = 0; i < noSelect.length; i++) {
+    noSelect[i].addEventListener("focus", showConvoOpenNoSelect);
+  }
+
   if (menuIcon != null) {
     menuIcon.addEventListener("click", showInput);
   }
@@ -118,11 +147,27 @@ window.onload = function () {
   for (let i = 0; i < selectsOne.length; i++) {
     // selectsOne[i].addEventListener("click", multipleItemsClick);
     selectsOne[i].addEventListener("focus", multipleItems);
+    selectsOne[i].addEventListener("click", multipleItemsClick);
     selectsOne[i].addEventListener("blur", closeItems);
   }
 
+  for (let i = 0; i < noSelectItems.length; i++) {
+    // selectsOne[i].addEventListener("click", multipleItemsClick);
+    selectsOne[i].addEventListener("blur", closeItemsNoSelect);
+  }
+
+  for (let i = 0; i < trigAlert.length; i++) {
+    // selectsOne[i].addEventListener("click", multipleItemsClick);
+    trigAlert[i].addEventListener("click", launchAlertModal);
+  }
+
+  for (let i = 0; i < selectElms.length; i++) {
+    // selectsOne[i].addEventListener("click", multipleItemsClick);
+    selectElms[i].addEventListener("click", selectItemsDown);
+  }
+
   if (eyeIcon != null) {
-    eyeIcon.addEventListener("click", showMenuInput);
+    eyeIcon.addEventListener("click", searchRedirect);
   }
 
   if (cleaner != null) {
@@ -221,6 +266,18 @@ window.onload = function () {
     interactive: true,
   });
 
+  tippy("#myToogle", {
+    content: `
+    <div class="p-3">
+      <div class="flex justify-between w-100">
+        <p class="font-bold text-xs text-cut">start•up•y / stärtˈəpˈē / adj.</p>
+      </div>
+      <p class="text-xs text-white pt-2">a state of mind that is non-linear and associative, meandering and attentive. To be startupy is to be ever curious, concerned with building things and uncovering unexpected connections and patterns between ideas.</p>
+    </div>`,
+    allowHTML: true,
+    interactive: true,
+  });
+
   if (document.querySelector("#menuSideElement")) {
     let element = document.querySelector("#menuSideElement");
     let element2 = document.querySelector("#sideMenuAlt");
@@ -269,37 +326,50 @@ window.onload = function () {
   }
 };
 
+function show_search_header() {
+  first.classList.add("hidden");
+  scroller.classList.remove("hidden");
+  second.classList.remove("hidden");
+}
+
+function show_main_header() {
+  second.classList.add("hidden");
+  first.classList.remove("hidden");
+}
+
 window.onscroll = function () {
   if (searchBox.length >= 1) {
     let y = window.scrollY;
 
+    var search_input = document.getElementById("search");
+
     if (y >= 100) {
-      if (showInputScroll) {
-        if (eyeIcon != null) {
-          eyeIcon.classList.add("icon-eye-home");
-          eyeIcon.classList.remove("icon-iso");
-        }
-        first.classList.add("hidden");
-        if (scroller != null) {
-          scroller.classList.remove("hidden");
-        }
-        second.classList.remove("hidden");
+      show_search_header();
+      if (has_filter == false) {
+        _show_main_page();
+        third.classList.add("hidden");
+
+        inputAllow = true;
+        showInputScroll = true;
+      } else {
+        _show_search_page();
       }
     } else {
-      if (eyeIcon != null) {
-        eyeIcon.classList.remove("icon-eye-close");
-        eyeIcon.classList.add("icon-iso");
-        eyeIcon.classList.remove("icon-eye-home");
+      if (has_filter == true) {
+        _show_search_page();
+        show_search_header();
+      } else {
+        show_main_header();
+        _show_main_page();
       }
-      if (scroller != null) {
-        scroller.classList.add("hidden");
-      }
-      // second.classList.add("hidden");
-      third.classList.add("hidden");
-      first.classList.remove("hidden");
-      // menuIcon.removeEventListener("click", showInput);
-      inputAllow = true;
-      showInputScroll = true;
+    }
+  } else {
+    if (has_filter == true) {
+      _show_search_page();
+      show_search_header();
+    } else {
+      show_main_header();
+      _show_main_page();
     }
   }
 
@@ -313,7 +383,6 @@ window.onscroll = function () {
     let yepheight = lowerheight - 130;
     let notheight = topheight - 130;
     let topheight2 = window.scrollY;
-    console.log(lowerheight);
     if (topheight2 >= notheight) {
       let newTop = topheight2 - notheight;
       element.style.paddingTop = "80px";
@@ -470,10 +539,17 @@ function showMenuInput() {
 }
 
 function showConvoOpen() {
-  console.log("evening");
   let targetted = event.target;
   let parent = targetted.parentNode.parentNode;
   let convo = parent.getElementsByClassName("convoBoxItems")[0];
+  convo.classList.toggle("opened");
+  convo.focus();
+}
+
+function showConvoOpenNoSelect() {
+  let targetted = event.target;
+  let parent = targetted.parentNode.parentNode;
+  let convo = parent.getElementsByClassName("convoBoxNoSelect")[0];
   convo.classList.toggle("opened");
 }
 
@@ -536,6 +612,15 @@ if (slider != undefined) {
 function multipleItems(e) {
   console.log("multiple items here");
   // e.preventDefault();
+  // let childs = e.target.querySelectorAll("option");
+  // for (let i = 0; i < childs.length; i++) {
+  //   childs[i].addEventListener("click", (e) => {
+  //     e.preventDefault();
+  //     let selectedstatus = e.target.getAttribute("selected");
+  //     e.target.selected ? true : false;
+  //     // e.target.selected = !e.target.selected;
+  //   });
+  // }
 
   e.target.addEventListener("keypress", (e) => {
     let entered = e.keyCode;
@@ -559,12 +644,36 @@ function multipleItems(e) {
   // e.target.focus();
 }
 
+function multipleItemsClick(e) {
+  let selectedElement = e.target;
+  let elUsed = selectedElement.selected;
+  if (elUsed) {
+    selectedElement.removeAttribute("selected");
+    selectedElement.selected = false;
+  } else {
+    selectedElement.setAttribute("selected", "");
+    selectedElement.selected = true;
+  }
+  e.preventDefault();
+}
+
 function closeItems(e) {
   console.log("close items here");
   // e.preventDefault();
   let selected = e.target.selectedOptions;
   for (let i = 0; i < selected.length; i++) {
     console.log("enter push", selected[i].value);
+  }
+  e.target.classList.remove("opened");
+}
+
+function closeItemsNoSelect(e) {
+  console.log("close items here");
+  // e.preventDefault();
+  let parent = e.target;
+  let selected = parent.querySelector(".activeElement");
+  for (let i = 0; i < selected.length; i++) {
+    console.log("enter push", selected[i]);
   }
   e.target.classList.remove("opened");
 }
@@ -584,19 +693,24 @@ function closeItems(e) {
 
 function moveElements(e) {
   let parent = e.target;
-  let firstElement = parent.querySelectorAll("a")[0];
+  let firstElement = parent.querySelectorAll("div")[0];
   firstElement.classList.add("activeElement");
   let index1 = 0;
   parent.onkeydown = (e) => {
     let valueCode = e.keyCode;
 
-    if (valueCode !== 38 && valueCode !== 40 && valueCode !== 9) {
+    if (
+      valueCode !== 38 &&
+      valueCode !== 40 &&
+      valueCode !== 9 &&
+      valueCode !== 13
+    ) {
       return false;
     } else {
       if (valueCode === 38) {
         console.log("go up");
-        let elements = parent.querySelectorAll("a");
-        let prev = parent.querySelectorAll("a")[index1 - 1];
+        let elements = parent.querySelectorAll("div");
+        let prev = parent.querySelectorAll("div")[index1 - 1];
         for (let i = 0; i < elements.length; i++) {
           elements[i].classList.remove("activeElement");
         }
@@ -604,13 +718,13 @@ function moveElements(e) {
           prev.classList.add("activeElement");
           index1 = index1 - 1;
         } else {
-          parent.querySelectorAll("a")[index1].classList.add("activeElement");
+          parent.querySelectorAll("div")[index1].classList.add("activeElement");
           index1 = index1;
           console.log("too wide");
         }
       } else if (valueCode === 40) {
-        let elements = parent.querySelectorAll("a");
-        let next = parent.querySelectorAll("a")[index1 + 1];
+        let elements = parent.querySelectorAll("div");
+        let next = parent.querySelectorAll("div")[index1 + 1];
         for (let i = 0; i < elements.length; i++) {
           elements[i].classList.remove("activeElement");
         }
@@ -618,12 +732,58 @@ function moveElements(e) {
           next.classList.add("activeElement");
           index1 = index1 + 1;
         } else {
-          parent.querySelectorAll("a")[index1].classList.add("activeElement");
+          parent.querySelectorAll("div")[index1].classList.add("activeElement");
           index1 = index1;
           console.log("too far");
         }
         console.log("go down");
+      } else if (valueCode === 13) {
+        let el = parent.querySelectorAll(".activeElement")[0];
+        parent.classList.remove("opened");
+        console.log("this is the active Element: ", el);
       }
     }
   };
+}
+
+function selectItemsDown(e) {
+  e.stopPropagation();
+  let targetted = e.target.closest(".toselect");
+  let parent = targetted.parentNode;
+  let elms = parent.querySelectorAll(".toselect");
+  // for (let i = 0; i < elms.length; i++) {
+  //   elms[i].classList.remove("activeElement");
+  // }
+  targetted.classList.toggle("activeElement");
+  console.log(targetted);
+  // let el = parent.querySelectorAll(".activeElement")[0];
+  // parent.classList.remove("opened");
+  // console.log("this is the active Element: ", el);
+}
+
+function launchAlertModal() {
+  console.log("launch modal alert");
+  let element = event.target;
+  let parent = element.parentNode;
+  let alertModal = parent.querySelectorAll(".g-modal-alert")[0];
+  console.log(parent.querySelectorAll(".g-modal-alert"));
+  if (alertModal) {
+    console.log(parent.querySelectorAll(".g-modal-alert"));
+    alertModal.style.display = "flex";
+  } else {
+    vanillaModal.close();
+  }
+}
+
+function closeAlertModal() {
+  let element = event.target;
+  let parent = element.closest(".g-modal-alert");
+  parent.style.display = "none";
+}
+
+function closeModalAll() {
+  let element = event.target;
+  let parent = element.closest(".g-modal-alert");
+  parent.style.display = "none";
+  vanillaModal.close();
 }

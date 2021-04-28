@@ -1848,3 +1848,12 @@ select.convoBoxItems.opened {
   border-radius: 50%;
   background: black;
 }
+
+
+.changelog {
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.changelog:first-child {
+  border-top: 1px solid #cfcfcf;
+}

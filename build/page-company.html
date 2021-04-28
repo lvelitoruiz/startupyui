@@ -360,6 +360,7 @@
           <a href="" class="color--gray" data-ref="#box1" data-modal-open>+ Add Description</a>
           <div class="g-modal" id="box1">
             <div class="g-modal__schedule">
+              
               <div class="flex items-center mb-4">
                 <p class="font-bold m-0 pr-2">Adding content to:</p>
                 <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Future of Housing</span>
@@ -508,7 +509,9 @@
               <div class="modal-footer justify-end">
                 <button class="bg-black text-white py-2 px-4">Next</button>
               </div>
+              
             </div>
+            
           </div>
           <p>High-quality skincare basics at an incredible value.</p>
         </div>
@@ -676,13 +679,14 @@
                       </div>
                       <div class="mt-4">
                         <p class="text-sm font-bold mb-1">URL</p>
-                        <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text"
-                          placeholder="yoururl.com" name="" id="">
+                        <!-- <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text"
+                          placeholder="yoururl.com" name="" id=""> -->
+                          <div class="w-full border-solid border border-black px-4 py-3 focus:outline-none" contenteditable="true"><span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize">Url</span> <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize">Url</span></div>
                       </div>
                       <div class="mt-4">
                         <p class="text-sm font-bold mb-1">Content Type</p>
                         <div class="relative w-full">
-                          <button
+                          <!-- <button
                             class="h-50 w-full border-solid border border-black px-4 py-3 flex items-center h-8 justify-between focus:outline-none">
                             <span class="text-sm leading-none text-gray-500">
                               Choose
@@ -692,14 +696,16 @@
                               <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
-                            </svg>
+                            </svg> -->
+                            <input  class="w-full border-solid border border-black px-4 py-3 focus:outline-none showConvoNoSelect"
+                            placeholder="Choose" readonly type="text" name="" id="" >
                           </button>
-                          <div class="absolute bg-white flex flex-col w-full border border-black shadow-lg non-editables" contenteditable="true">
-                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Curated here</a>
-                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Authored</a>
-                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Mentioned In</a>
-                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Relationships</a>
-                            <a class="flex items-center h-8 px-3 text-sm hover:bg-gray-200" href="#">Watching</a>
+                          <div class="absolute bg-white flex flex-col w-full border border-black shadow-lg non-editables convoBoxNoSelect" contenteditable="true">
+                            <div class="flex items-center h-8 px-3 text-sm hover:bg-gray-200 toselect"><span>Curated here</span><input type="button" value="General" contenteditable="false" /> <p contenteditable="false">This is some text here</p></div>
+                            <div class="flex items-center h-8 px-3 text-sm hover:bg-gray-200 toselect"><span>Authored</span><input type="button" value="General" contenteditable="false" /> <p contenteditable="false">This is some text here</p></div>
+                            <div class="flex items-center h-8 px-3 text-sm hover:bg-gray-200 toselect"><span>Mentioned In</span><input type="button" value="General" contenteditable="false" /> <p contenteditable="false">This is some text here</p></div>
+                            <div class="flex items-center h-8 px-3 text-sm hover:bg-gray-200 toselect"><span>Relationships</span><input type="button" value="General" contenteditable="false" /> <p contenteditable="false">This is some text here</p></div>
+                            <div class="flex items-center h-8 px-3 text-sm hover:bg-gray-200 toselect"><span>Watching</span><input type="button" value="General" contenteditable="false" /> <p contenteditable="false">This is some text here</p></div>
                           </div>
                         </div>
                       </div>
@@ -760,6 +766,17 @@
                 <div class="modal-footer justify-between">
                   <button class="py-2 px-4">Back</button>
                   <button class="bg-black text-white py-2 px-4">Next</button>
+                </div>
+                <div class="g-modal-alert">
+                  <div class="w-4/5 md:w-3/5 lg:w-3/6">
+                    <p class="font-bold">Confirm Close</p>
+                    <p>Are you sure you want to close? You will lose the content you’ve added.</p>
+                    <div class="flex mt-8">
+                      <button class="bg-white text-black py-2 px-4 mr-2 whitespace-no-wrap" onclick="closeAlertModal()">Go Back</button>
+                      <button class="w-full bkg--red text-black py-2 px-4 ml-2 whitespace-no-wrap" onclick="closeModalAll()">Confirm &
+                        Close</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2427,7 +2444,8 @@
     </div>
     <div class="modal">
       <div class="modal-inner">
-        <span data-modal-close>&times;</span>
+        <!-- <span data-modal-close>&times;</span> -->
+        <span class="modal-repurpose">&times;</span>
         <div class="modal-content"></div>
       </div>
     </div>
