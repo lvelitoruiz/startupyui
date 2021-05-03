@@ -165,6 +165,7 @@ window.onload = function () {
 
   for (let i = 0; i < modalComboItemsSpan.length; i++) {
     modalComboItemsSpan[i].addEventListener('focus', keyListenItemsSpan);
+    modalComboItemsSpan[i].addEventListener('blur', closeModalCombo);
   }
 
   for (let i = 0; i < modalComboWriteOpen.length; i++) {
