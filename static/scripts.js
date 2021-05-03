@@ -831,6 +831,9 @@ function closeModalAll() {
   vanillaModal.close();
 }
 
+
+
+
 function checkEnter(event) {
   if(event.keyCode == 13) {
     event.preventDefault();
