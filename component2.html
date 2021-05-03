@@ -1,0 +1,261 @@
+{% extends "_layout.html" %}
+
+{% block title %}Startupy{% endblock %}
+
+{% block head %}
+{%- endblock %}
+
+{% block content %}
+
+<div class="bg-gray-200">
+  <section class="container mx-auto p-6">
+    <div class="mb-5">
+      <h3 class="mb-3 text-md font-bold">Form container</h3>
+      
+      <div class="mt-4 mr-4 w-full relative">
+          <p>This is a container for the inputs and other things, it extends at needed.</p>
+      </div>
+    </div>
+
+    <div class="mb-5">
+        <h3 class="mb-3 text-md font-bold">Native Inputs</h3>
+
+        <div class="mt-4 mr-4 w-full relative modal-input-container">
+            <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
+            <input class="w-full border-solid border border-gray px-4 py-3 focus:border-black focus:outline-none modal-input modal-input-validation modal-input-border" type="text" placeholder="Placeholder one" name="" id="">
+            <p class="color--purple-2 font-bold text-sm modal-error">Error language, please correct above.</p>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h3 class="mb-3 text-md font-bold">Span Inputs</h3>
+
+        <div class="mt-4 mr-4 w-full relative modal-input-container">
+            <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
+            <div class="w-full border-solid border border-gray px-4 py-3 focus:outline-none focus:border-black modal-input-span modal-input-border" contenteditable="false">
+                <div class="outline-none tabindex_class focus:outline-none modal-input modal-input-validation color--purple bkg--purple-transparent" tabindex="0" contenteditable="true" placeholder="Name of the company" id="company_name" uuid=""></div> 
+            </div>
+            <p class="color--purple-2 font-bold text-sm modal-error">Error language, please correct above.</p>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h3 class="mb-3 text-md font-bold">Span Inputs nobg enter</h3>
+
+        <div class="mt-4 mr-4 w-full relative modal-input-container">
+            <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
+            <div class="w-full border-solid border border-gray px-4 py-3 focus:outline-none focus:border-black modal-input-span modal-input-border" contenteditable="false">
+                <div class="outline-none tabindex_class focus:outline-none modal-input modal-input-validation modal-input-span-circle" tabindex="0" contenteditable="true" placeholder="Name of the company" id="company_name" uuid=""></div> 
+            </div>
+            <p class="color--purple-2 font-bold text-sm modal-error">Error language, please correct above.</p>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h3 class="mb-3 text-md font-bold">Span Inputs nobg onkeyup</h3>
+
+        <div class="mt-4 mr-4 w-full relative modal-input-container">
+            <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
+            <div class="w-full border-solid border border-gray px-4 py-3 focus:outline-none focus:border-black modal-input-span modal-input-border" contenteditable="false">
+                <div class="outline-none tabindex_class focus:outline-none modal-input modal-input-validation modal-input-span-circle modal-input-span-keys" tabindex="0" contenteditable="true" placeholder="Name of the company" id="company_name" uuid=""></div> 
+            </div>
+            <p class="color--purple-2 font-bold text-sm modal-error">Error language, please correct above.</p>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h3 class="mb-3 text-md font-bold">Native Selects</h3>
+
+        <div class="mt-4 mr-4 w-full relative modal-input-container">
+            <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
+            <input class="w-full border-solid border border-gray px-4 py-3 focus:border-black focus:outline-none modal-input modal-input-border modal-combo-open" type="text" name="" id="">
+            <select size="4" class="absolute bg-white flex flex-col w-full focus:border-black focus:outline-none border border-solid z-10 modal-combo-items" id="combo_type_relationships">
+                <option value="5fc60adb-2173-4fa9-87a6-ea9ce512aa34" name="founder">founder</option>
+                <option value="c6fbebd8-d922-4286-8a2f-7f8ec8e145e7" name="vestor">vestor</option>
+                <option value="16250da5-274a-4c2b-bc96-633057a6ce98" name="ceo">ceo</option>
+                <option value="cb78a351-e327-4d02-8c34-4280c7f0d164" name="advisor">advisor</option>
+                <option value="ae6ab5d2-9466-47d7-8519-2ed879527944" name="product">product</option>
+                <option value="d9d3b3db-a969-41a6-a262-b7140b4cfb2f" name="designer">designer</option>
+                <option value="9eb780ce-64cf-4e20-8e53-d1a98c8a11a8" name="community">community</option>
+                <option value="19c1c2b7-6251-4434-b779-e275ff70fa70" name="marketg">marketg</option>
+                <option value="f5cce354-5383-4f86-bbd1-29d24b17fe22" name="technology">technology</option>
+                <option value="e2949278-65bd-4961-8633-feec7992a634" name="copywritg">copywritg</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h3 class="mb-3 text-md font-bold">Native Multiple Selects</h3>
+
+        <div class="mt-4 mr-4 w-full relative modal-input-container">
+            <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
+            <input class="w-full border-solid border border-gray px-4 py-3 focus:border-black focus:outline-none modal-input modal-input-border modal-combo-open" type="text" name="" id="">
+            <select size="4" multiple class="absolute bg-white flex flex-col w-full focus:border-black focus:outline-none border border-solid z-10 modal-combo-items" id="combo_type_relationships">
+                <option value="5fc60adb-2173-4fa9-87a6-ea9ce512aa34" name="founder">founder</option>
+                <option value="c6fbebd8-d922-4286-8a2f-7f8ec8e145e7" name="vestor">vestor</option>
+                <option value="16250da5-274a-4c2b-bc96-633057a6ce98" name="ceo">ceo</option>
+                <option value="cb78a351-e327-4d02-8c34-4280c7f0d164" name="advisor">advisor</option>
+                <option value="ae6ab5d2-9466-47d7-8519-2ed879527944" name="product">product</option>
+                <option value="d9d3b3db-a969-41a6-a262-b7140b4cfb2f" name="designer">designer</option>
+                <option value="9eb780ce-64cf-4e20-8e53-d1a98c8a11a8" name="community">community</option>
+                <option value="19c1c2b7-6251-4434-b779-e275ff70fa70" name="marketg">marketg</option>
+                <option value="f5cce354-5383-4f86-bbd1-29d24b17fe22" name="technology">technology</option>
+                <option value="e2949278-65bd-4961-8633-feec7992a634" name="copywritg">copywritg</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h3 class="mb-3 text-md font-bold">No Native Multiple Selects</h3>
+
+        <div class="mt-4 mr-4 w-full relative modal-input-container">
+            <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
+            <input class="w-full border-solid border border-gray px-4 py-3 focus:border-black focus:outline-none modal-input modal-input-border modal-combo-open" type="text" name="" id="">
+            <div class="w-full extensible-box editable-extensible focus:outline-none data-count-roles-content dropdown_content border-solid border-l border-r border-b tabindex_class modal-combo-items" id="dropdown_input_human" contenteditable="true" tabindex="1">
+                <div class="flex items-center bkg--gray px-4 py-3 selectable no-usable activeElement" contenteditable="true">
+                  <p class="w-full">New entry</p>
+                  <a class="whitespace-no-wrap font-bold cursor-pointer" contenteditable="false">Create</a>
+                </div>
+                <div id="div_search_human" contenteditable="true">
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="aaron-bush" onclick="detail_person('aaron-bush')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">AB</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aaron Bush</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div>
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="aaron-cheung" onclick="detail_person('aaron-cheung')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">AC</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aaron Cheung</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div>
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="aaron-telch" onclick="detail_person('aaron-telch')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">AT</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aaron Telch</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div>
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="aashay-sanghvi" onclick="detail_person('aashay-sanghvi')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">AS</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aashay Sanghvi</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div>
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="chrissie-abbott" onclick="detail_person('chrissie-abbott')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">CA</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Chrissie Abbott</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div>
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="tami-abdollah" onclick="detail_person('tami-abdollah')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">TA</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Tami Abdollah</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div>
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="sammy-abdullah" onclick="detail_person('sammy-abdullah')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">SA</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Sammy Abdullah</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div>
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="abeba-birhane" onclick="detail_person('abeba-birhane')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">AB</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Abeba Birhane</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div>
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="aber-whitcomb" onclick="detail_person('aber-whitcomb')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">AW</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aber Whitcomb</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div>
+                <div class="box-hover border-solid border-b p-4 selectable" data-slug="abhijeet-dwivedi" onclick="detail_person('abhijeet-dwivedi')" contenteditable="true">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center mb-2" contenteditable="true">
+                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
+                            items-center justify-center mr-1" contenteditable="false">
+                        <span class="text-xs font-bold">AD</span>
+                      </div>
+                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Abhijeet Dwivedi</p>
+                    </div>
+
+                  </div>
+                    <p class="color--gray text-cut" contenteditable="false"></p>
+                </div></div>
+
+              </div>
+        </div>
+    </div>
+    
+  </section>
+</div>
+
+{%- endblock %}
+
+{% block scripts %}
+{%- endblock %}

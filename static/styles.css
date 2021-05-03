@@ -1857,3 +1857,53 @@ select.convoBoxItems.opened {
 .changelog:first-child {
   border-top: 1px solid #cfcfcf;
 }
+
+.modal-error {
+  display: none;
+}
+
+div.modal-input-span {
+  background: #fff;
+}
+
+div.modal-input {
+  display: inline-block;
+}
+
+.modal-error.active {
+  display: block;
+}
+
+.modal-combo-items {
+  min-height: 0;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.modal-combo-items.open-combo {
+  min-height: 0;
+  max-height: 300px;
+  transition: all 0.3s ease-in-out;
+  overflow: auto;
+  z-index: 100;
+}
+
+.modal-combo-items option {
+  display: block;
+    position: relative;
+    padding: 10px 15px;
+    height: auto;
+    cursor: pointer;
+    background: #fff !important;
+}
+
+[contenteditable][placeholder]:empty:before {
+  content: attr(placeholder);
+  color: grey;
+}
+
+.activeElement {
+  background: #eeeeee;
+}
