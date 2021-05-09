@@ -1,3 +1,7 @@
+.btn {
+  @apply px-4 py-2 bg-blue-600 text-white rounded;
+}
+
 .ff-conv-druk {
   font-family: "Conv_Druk Cond Super";
 }
@@ -81,9 +85,21 @@
 }
 
 /* preview */
+.c-preview {
+  position: relative;
+}
+
 .c-preview--img {
   width: 100%;
   height: auto;
+}
+
+.c-preview--icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 32px;
 }
 
 /* color */
@@ -1906,4 +1922,19 @@ div.modal-input {
 
 .activeElement {
   background: #eeeeee;
+}
+
+.eyes-gif img {
+  min-height: 210px;
+  object-fit: cover;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  line-height: 1;
 }
