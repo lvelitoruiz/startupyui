@@ -42,6 +42,17 @@ var _main_page = document.getElementById("main-page");
 
 var trigAlert = document.querySelectorAll(".modal-repurpose");
 
+var inputModal = document.querySelectorAll('.modal-input-validation');
+var inputModalSpan = document.querySelectorAll('.modal-input-span-circle');
+var inputModalSpanKeys = document.querySelectorAll('.modal-input-span-keys');
+var modalComboOpen = document.querySelectorAll('.modal-combo-open');
+var modalComboItems = document.querySelectorAll('.modal-combo-items');
+var modalComboWriteOpen = document.querySelectorAll('.modal-combo-write-open');
+var modalComboItemsSpan = document.querySelectorAll('.modal-combo-items-span');
+
+
+
+
 if (has_filter == undefined) {
   var has_filter = false;
 }
@@ -140,6 +151,37 @@ window.onload = function () {
     noSelect[i].addEventListener("focus", showConvoOpenNoSelect);
   }
 
+  for (let i = 0; i < inputModal.length; i++) {
+    inputModal[i].addEventListener("blur", modalError);
+  }
+
+  for (let i = 0; i < inputModalSpan.length; i++) {
+    inputModalSpan[i].addEventListener('keydown', checkEnter);
+  }
+
+  for (let i = 0; i < inputModalSpanKeys.length; i++) {
+    inputModalSpanKeys[i].addEventListener('keyup', keyListen);
+  }
+
+  for (let i = 0; i < modalComboItemsSpan.length; i++) {
+    modalComboItemsSpan[i].addEventListener('focus', keyListenItemsSpan);
+    modalComboItemsSpan[i].addEventListener('blur', closeModalCombo);
+  }
+
+  for (let i = 0; i < modalComboWriteOpen.length; i++) {
+    modalComboWriteOpen[i].addEventListener('keydown', keylistendown);
+  }
+  
+
+  for (let i = 0; i < modalComboOpen.length; i++) {
+    modalComboOpen[i].addEventListener('focus', openModalCombo);
+  }
+
+  for (let i = 0; i < modalComboItems.length; i++) {
+    modalComboItems[i].addEventListener('blur', closeModalCombo);
+    modalComboItems[i].addEventListener('keydown', getModalComboData);
+  }
+
   if (menuIcon != null) {
     menuIcon.addEventListener("click", showInput);
   }
@@ -189,6 +231,8 @@ window.onload = function () {
   for (let i = 0; i < nonEditables.length; i++) {
     nonEditables[i].addEventListener("focus", moveElements);
   }
+
+  
 
   for (let i = 0; i < addTriggers.length; i++) {
     addTriggers[i].addEventListener("click", removeElement, true);
@@ -786,4 +830,138 @@ function closeModalAll() {
   let parent = element.closest(".g-modal-alert");
   parent.style.display = "none";
   vanillaModal.close();
+}
+
+
+
+
+function checkEnter(event) {
+  if(event.keyCode == 13) {
+    event.preventDefault();
+    console.log(event.keyCode);
+    callOnEnter();
+    return false;
+  }
+}
+
+function keyListen(event) {
+    console.log(event.keyCode);
+    console.log(event.key);
+}
+
+function keylistendown(event) {
+  if(event.keyCode !== 40) {
+    openModalComboNoFocus();
+  } else {
+    event.preventDefault();
+    openModalCombo();
+  }
+}
+
+function keyListenItemsSpan(event) {
+  console.log(event.target);
+  let parent = event.target;
+  let index1 = 0;
+  console.log(parent);
+  parent.onkeydown = (e) => { 
+    let codekey = e.keyCode;
+    if(codekey !== 38 && codekey !== 40 && codekey !== 9 && codekey !== 13) {
+      return false;
+    } else {
+      if(codekey === 40) {
+        console.log('going down');
+        let elements = parent.querySelectorAll('div.selectable[contenteditable="true"]');
+        let next = elements[index1 + 1];
+        let actual = elements[index1];
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("activeElement");
+        }
+        if (next != undefined) {
+          next.classList.add("activeElement");
+          index1 = index1 + 1;
+        } else {
+          actual.classList.add("activeElement");
+          e.preventDefault();
+          index1 = index1;
+          console.log("too far");
+        }
+      } else if(codekey === 38) {
+        let elements = parent.querySelectorAll('div.selectable[contenteditable="true"]');
+        let prev = elements[index1 - 1];
+        let actual = elements[index1];
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("activeElement");
+        }
+        if (prev != undefined) {
+          prev.classList.add("activeElement");
+          index1 = index1 - 1;
+        } else {
+          e.preventDefault();
+          actual.classList.add("activeElement");
+          index1 = index1;
+          console.log("too wide");
+        }
+      } else if(codekey === 9 || codekey === 13) {
+        e.preventDefault();
+        let activeoption = parent.querySelectorAll('.activeElement')[0];
+        console.log(activeoption);
+        closeModalCombo(parent);
+      }
+    }
+  }
+}
+
+function callOnEnter() {
+  console.log('enter pressed');
+}
+
+
+function modalError() {
+  let targetted = event.target;
+  let content = targetted.value;
+  let contentEdited = targetted.innerText;
+  let parent = targetted.closest('.modal-input-container');
+  if(!content && !contentEdited) {
+    errorShow(targetted,parent);
+  } else if(content) {
+    errorHide(targetted,parent);
+  } else if(contentEdited) {
+    errorHide(targetted,parent);
+  }
+}
+
+function openModalCombo() {
+  let targetted = event.target;
+  let parent = targetted.closest('.modal-input-container');
+  let siblingCombo = parent.querySelector('.modal-combo-items');
+  siblingCombo.focus();
+  siblingCombo.classList.add('open-combo');
+}
+
+function openModalComboNoFocus() {
+  let targetted = event.target;
+  let parent = targetted.closest('.modal-input-container');
+  let siblingCombo = parent.querySelector('.modal-combo-items');
+  siblingCombo.classList.add('open-combo');
+}
+
+function closeModalCombo() {
+  let targetted = event.target;
+  targetted.classList.remove('open-combo');
+}
+
+function errorShow(targetted, parent) {
+  targetted.closest('.modal-input-border').classList.add('border-color--purple-2');
+  parent.querySelector('.modal-label').classList.add('color--purple-2');
+  parent.querySelector('.modal-error').classList.add('active');
+}
+
+function errorHide(targetted, parent) {
+  targetted.closest('.modal-input-border').classList.remove('border-color--purple-2');
+  parent.querySelector('.modal-label').classList.remove('color--purple-2');
+  parent.querySelector('.modal-error').classList.remove('active');
+}
+
+function getModalComboData() {
+  console.log('get that data boy');
 }
