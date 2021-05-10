@@ -13,7 +13,7 @@
       <h3 class="mb-3 text-md font-bold">Tooltip</h3>
       <div class="pb-4">
         <span
-          class="color--blue bkg--blue-transparent px-2 py-1 mb-2 text-sm mr-2 md:ml-2 md:mr-0"
+          class="c-badge color--blue bkg--blue-transparent mb-2 mr-2 md:ml-2 md:mr-0"
           id="myToogle"
           >Future of Housing</span
         >
@@ -22,22 +22,19 @@
     <div class="mb-5">
       <h3 class="mb-3 text-md font-bold">Buttons</h3>
       <div class="pb-4">
-        <button class="border-solid border border-black py-2 px-4 hover:opacity-75">Button Initial</button>
+        <button class="c-btn--primary">Button Initial</button>
       </div>
       <div class="pb-4">
-        <button class="border-solid border bg-black text-white border-black py-2 px-4 hover:opacity-75">Button Hovering</button>
+        <button disabled class="c-btn--disabled border-color--gray color--gray cursor-not-allowed">Button Disabled</button>
       </div>
       <div class="pb-4">
-        <button disabled class="border-solid border border-color--gray color--gray py-2 px-4 cursor-not-allowed">Button Initial</button>
+        <button class="c-btn--secondary bkg--blue2">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
       </div>
       <div class="pb-4">
-        <button class="bkg--blue2 text-white font-bold py-2 px-4 hover:opacity-75">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
+        <button class="c-btn--tertiry bkg--blue3 color--blue">Join Monthly</button>
       </div>
       <div class="pb-4">
-        <button class="bkg--blue3 color--blue font-bold py-2 px-4 hover:opacity-75">Join Monthly</button>
-      </div>
-      <div class="pb-4">
-        <button class="bg-white text-black font-bold py-2 px-4 hover:opacity-75">Join Monthly $20/mo</span></button>
+        <button class="c-btn--white">Join Monthly $20/mo</span></button>
       </div>
     </div>
     <div class="mb-5">
@@ -73,7 +70,7 @@
       </div>
     </div>
     <div class="mb-5">
-      <h3 class="mb-3 text-md font-bold">Buttons</h3>
+      <h3 class="mb-3 text-md font-bold">Radio buttons</h3>
       <div class="pb-4">
         <span><b>Sari Azout is a</b></span>
         <div>
@@ -94,60 +91,60 @@
         <div class="md:flex">
           <div class="w-full pb-8 md:mr-4">
             <p class="text-sm font-bold mb-1">Text Area Initial</p>
-            <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="2" id=""></textarea>
+            <textarea class="c-input border-gray" type="text" name="" cols="30" rows="2" id=""></textarea>
           </div>
           <div class="pb-8 w-full md:ml-4">
             <p class="text-sm font-bold mb-1">Text Area Initial</p>
-            <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+            <textarea class="c-input border-gray" type="text" name="" cols="30" rows="5" id=""></textarea>
           </div>
         </div>
         <div class="md:flex">
           <div class="pb-8 w-full md:mr-4">
             <p class="text-sm font-bold mb-1">Text Area Typing</p>
-            <textarea class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="2" id=""></textarea>
+            <textarea class="c-input border-black" type="text" name="" cols="30" rows="2" id=""></textarea>
           </div>
           <div class="pb-8 w-full md:ml-4">
             <p class="text-sm font-bold mb-1">Text Area Typing</p>
-            <textarea class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+            <textarea class="c-input border-black" type="text" name="" cols="30" rows="5" id=""></textarea>
           </div>
         </div>
         <div class="md:flex">
           <div class="pb-8 w-full md:mr-4">
             <p class="text-sm font-bold mb-1">Text Area Complete</p>
-            <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="2" id=""></textarea>
+            <textarea class="c-input border-gray" type="text" name="" cols="30" rows="2" id=""></textarea>
           </div>
           <div class="pb-8 w-full md:ml-4">
             <p class="text-sm font-bold mb-1">Text Area Complete</p>
-            <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+            <textarea class="c-input border-gray" type="text" name="" cols="30" rows="5" id=""></textarea>
           </div>
         </div>
         <div class="md:flex">
           <div class="pb-8 w-full md:mr-4">
             <p class="text-sm font-bold mb-1 color--purple-2">Text Area Error</p>
-            <textarea class="w-full border-solid border border-color--purple-2 color--purple-2 px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="2" id=""></textarea>
+            <textarea class="c-input border-color--purple-2 color--purple-2" type="text" name="" cols="30" rows="2" id=""></textarea>
             <p class="color--purple-2 font-bold text-sm">Error language, please correct above.</p>
           </div>
           <div class="pb-8 w-full color--purple-2 md:ml-4">
             <p class="text-sm font-bold mb-1">Text Area Error</p>
-            <textarea class="w-full border-solid border border-color--purple-2 color--purple-2 px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+            <textarea class="c-input border-color--purple-2 color--purple-2" type="text" name="" cols="30" rows="5" id=""></textarea>
             <p class="color--purple-2 font-bold text-sm">Error language, please correct above.</p>
           </div>
         </div>
         <div class="pb-8">
           <p class="text-sm font-bold mb-1">Text Input Initial</p>
-          <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+          <input class="c-input" type="text" name="" id="">
         </div>
         <div class="pb-8">
           <p class="text-sm font-bold mb-1">Text Input Typing</p>
-          <input class="w-full border-solid border border-black px-4 py-3 focus:outline-none" type="text" name="" id="">
+          <input class="c-input border-black" type="text" name="" id="">
         </div>
         <div class="pb-8">
           <p class="text-sm font-bold mb-1">Text Input Complete</p>
-          <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+          <input class="c-input" type="text" name="" id="">
         </div>
         <div class="pb-8">
           <p class="text-sm font-bold mb-1 color--purple-2">Text Input Complete</p>
-          <input class="w-full border-solid border border-color--purple-2 color--purple-2 px-4 py-3 focus:outline-none" type="text" name="" id="">
+          <input class="c-input border-color--purple-2 color--purple-2" type="text" name="" id="">
           <p class="color--purple-2 font-bold text-sm">Error language, please correct above.</p>
         </div>
       </div>
@@ -155,19 +152,19 @@
     <div class="mb-5">
       <h3 class="mb-3 text-md font-bold">Curator</h3>
       <div class="flex items-center mb-2">
-        <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+        <div class="c-curator--circle">
           <span class="text-xs">JN</span>
         </div>
-        <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
+        <span class="c-curator--text whitespace-no-wrap">Josh N.</span>
       </div>
       <div class="flex items-center mb-2">
-        <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+        <div class="c-curator--circle">
           <span class="text-xs">JN</span>
         </div>
-        <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span><span class="text-sm font-bold whitespace-no-wrap color--purple-2">MOD</span>
+        <span class="c-curator--text whitespace-no-wrap">Josh N.</span><span class="c-curator--text whitespace-no-wrap color--purple-2">MOD</span>
       </div>
       <div class="flex items-center mb-2">
-        <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+        <div class="c-curator--circle">
           <span class="text-xs">JN</span>
         </div>
       </div>
@@ -175,22 +172,22 @@
     <div class="mb-5">
       <h3 class="mb-3 text-md font-bold">Top of topic</h3>
       <div class="mb-2">
-        <div class="flex items-center color--gray mb-3 justify-center">
+        <div class="c-tf--top color--gray">
           <span class="text-xs">Last Updated: Jul 25, 2020</span>
           <a class="text-xs ml-5 underline" href="">Changelog</a>
         </div>
-        <div class="flex items-center justify-center">
-          <h2 class="text-2xl leading-tight md:text-4xl font-bold pr-6">The Future of Warehousing Long Topic Name</h2>
+        <div class="c-tf--title">
+          <h2 class="c-title pr-6">The Future of Warehousing Long Topic Name</h2>
           <i class="icon-eye text-4xl ml-3 color--gray"></i>
         </div>
       </div>
       <div class="mb-2">
-        <div class="flex items-center color--gray mb-3 justify-center">
+        <div class="c-tf--top color--gray">
           <span class="text-xs">Last Updated: Jul 25, 2020</span>
           <a class="text-xs ml-5 underline" href="">Changelog</a>
         </div>
-        <div class="flex items-center justify-center">
-          <h2 class="text-2xl leading-tight md:text-4xl font-bold pr-6">The Future of Warehousing Long Topic Name</h2>
+        <div class="c-tf--title">
+          <h2 class="c-title pr-6">The Future of Warehousing Long Topic Name</h2>
           <i class="icon-eye-black text-4xl ml-3 color--blue"></i>
         </div>
       </div>
@@ -202,20 +199,20 @@
           <div class="p-4 md:p-5">
             <div class="flex">
               <div class="mr-4 md:mr-8 hidden md:block">
-                <div class="border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-6">
+                <div class="c-curator--circle__large mt-6">
                   <span class="text-xs md:text-base">SM</span>
                 </div>
               </div>
               <div>
                 <div class="flex">
-                  <span class="text-xs bkg--blue2 px-2 py-1 mr-3 text-white">Curator</span>
+                  <span class="c-badge bkg--blue2 text-white mr-2">Curator</span>
                   <div class="flex items-center color--gray font-bold">
                     <i class="icon-eye text-base"></i>
                     <span class="ml-2 text-xs">stephenopolus-mclongname</span>
                   </div>
                 </div>
                 <div class="flex items-center">
-                  <h2 class="text-2xl leading-tight md:text-4xl font-bold">Stephenopolus Mclongname</h2>
+                  <h2 class="c-title w-full">Stephenopolus Mclongname</h2>
                   <i class="icon-eye text-4xl ml-3"></i>
                   <i class="icon-message text-4xl ml-3"></i>
                 </div>
@@ -256,8 +253,8 @@
                 <div>
                   <span class="font-bold text-sm color--gray">Top Topics</span>
                   <div class="flex mt-2 items-center flex-wrap">
-                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize">Sustainability &amp; Climate Change</span>
-                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize">Carbon Offsetting and Carbon Removal</span>
+                    <span class="color--blue bkg--blue-transparent c-badge mr-2 mb-2">Sustainability &amp; Climate Change</span>
+                    <span class="color--blue bkg--blue-transparent c-badge mr-2 mb-2">Carbon Offsetting and Carbon Removal</span>
                   </div>
                 </div>
               </div>
@@ -270,20 +267,20 @@
           <div class="p-4 md:p-5">
             <div class="flex">
               <div class="mr-4 md:mr-8 hidden md:block">
-                <div class="border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-6">
+                <div class="c-curator--circle__large mt-6">
                   <span class="text-xs md:text-base">PM</span>
                 </div>
               </div>
               <div>
                 <div class="flex">
-                  <span class="text-xs bkg--blue2 px-2 py-1 mr-3 text-white">Moderator</span>
+                  <span class="c-badge bkg--blue2 mr-3 text-white">Moderator</span>
                   <div class="flex items-center color--gray font-bold">
                     <i class="icon-eye text-base"></i>
                     <span class="ml-2 text-xs">Person Name</span>
                   </div>
                 </div>
                 <div class="flex items-center">
-                  <h2 class="text-2xl leading-tight md:text-4xl font-bold">Person Name</h2>
+                  <h2 class="c-title w-full">Person Name</h2>
                   <i class="icon-eye text-4xl ml-3"></i>
                   <i class="icon-message text-4xl ml-3"></i>
                 </div>
@@ -324,22 +321,22 @@
                 <div>
                   <span class="font-bold text-sm color--gray">Top Curator of:</span>
                   <div class="flex mt-2 items-center flex-wrap">
-                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize">Nothing Topic</span>
+                    <span class="color--blue bkg--blue-transparent c-badge mr-2 mb-2">Nothing Topic</span>
                   </div>
                 </div>
                 <div class="flex mb-8 mt-8 items-center">
                   <div>
                     <div class="flex items-center">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+                      <div class="c-curator--circle m-h-8 m-w-8 mr-2 mt-1">
                         <span class="text-xs font-bold">HR</span>
                       </div>
-                      <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+                      <div class="c-curator--circle m-h-8 m-w-8 mr-2 mt-1">
                         <span class="text-xs font-bold">EE</span>
                       </div>
-                      <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+                      <div class="c-curator--circle m-h-8 m-w-8 mr-2 mt-1">
                         <span class="text-xs font-bold">JN</span>
                       </div>
-                      <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+                      <div class="c-curator--circle m-h-8 m-w-8 mr-2 mt-1">
                         <span class="text-xs font-bold">JN</span>
                       </div>
                       <div class="mt-1">
@@ -361,7 +358,7 @@
           <div class="mt-1 mr-2">
             <p class="text-xs font-bold">Highlights</p>
           </div>
-          <div class="border-solid border border-black bg-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+          <div class="c-curator--circle border-black bg-black m-h-8 m-w-8 mr-2 mt-1">
             <span class="text-white text-xs font-bold">3</span>
           </div>
         </div>
@@ -371,19 +368,19 @@
           <div class="mt-1 mr-2">
             <p class="text-xs font-bold">Highlights</p>
           </div>
-          <div class="border-solid border border-black bg-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+          <div class="c-curator--circle border-black bg-black m-h-8 m-w-8 mr-2 mt-1">
             <span class="text-white text-xs">39</span>
           </div>
-          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+          <div class="c-curator--circle border-black m-h-8 m-w-8 mr-2 mt-1">
             <span class="text-xs">JN</span>
           </div>
-          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+          <div class="c-curator--circle border-black m-h-8 m-w-8 mr-2 mt-1">
             <span class="text-xs">SA</span>
           </div>
-          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+          <div class="c-curator--circle border-black m-h-8 m-w-8 mr-2 mt-1">
             <span class="text-xs">GG</span>
           </div>
-          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+          <div class="c-curator--circle border-black m-h-8 m-w-8 mr-2 mt-1">
             <span class="text-xs">EE</span>
           </div>
           <div class="mt-1">
@@ -396,10 +393,10 @@
           <div class="mt-1 mr-2">
             <p class="text-xs font-bold">Highlights</p>
           </div>
-          <div class="border-solid border border-black bg-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+          <div class="c-curator--circle border-black bg-black h-8 w-8 m-h-8 m-w-8 mr-2 mt-1">
             <span class="text-white text-xs">39</span>
           </div>
-          <div class="border-solid border border-black rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center mr-2 mt-1">
+          <div class="c-curator--circle border-black h-8 w-8 m-h-8 m-w-8 mr-2 mt-1">
             <span class="text-xs">SA</span>
           </div>
         </div>
@@ -410,40 +407,40 @@
       <div class="md:grid grid-cols-6 gap-4 mb-2">
         <div class="md:col-start-2 col-span-4">
           <div class="p-4 md:p-5">
-            <h3 class="font-bold mb-12 text-2xl text-center">Edit User Profile</h3>
+            <h3 class="c-sub-title mb-12">Edit User Profile</h3>
             <div class="mb-10 md:mb-0">
               <div class="pb-8">
                 <p class="text-sm font-bold mb-1">First Name</p>
-                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+                <input class="c-input" type="text" name="" id="">
               </div>
               <div class="pb-8">
                 <p class="text-sm font-bold mb-1">Last Name</p>
-                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+                <input class="c-input" type="text" name="" id="">
               </div>
               <div class="pb-8">
                 <p class="text-sm font-bold mb-1">Bio</p>
-                <textarea class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" cols="30" rows="5" id=""></textarea>
+                <textarea class="c-input" type="text" name="" cols="30" rows="5" id=""></textarea>
               </div>
               <div class="pb-8">
                 <p class="text-sm font-bold mb-1">Twitter handle</p>
-                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+                <input class="c-input" type="text" name="" id="">
               </div>
               <div class="pb-8">
                 <p class="text-sm font-bold mb-1">Instagram handle</p>
-                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+                <input class="c-input" type="text" name="" id="">
               </div>
               <div class="pb-8">
                 <p class="text-sm font-bold mb-1">Website</p>
-                <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+                <input class="c-input" type="text" name="" id="">
               </div>
               <div class="pt-6">
-                <button class="border-solid border border-black py-2 px-4">Save Changes</button>
+                <button class="c-btn--primary">Save Changes</button>
               </div>
             </div>
             <div class="pt-24">
-              <h3 class="font-bold text-2xl text-center">Export Curations</h3>
+              <h3 class="c-sub-title">Export Curations</h3>
               <div class="pt-4">
-                <button class="border-solid border border-black py-2 px-4 w-full">Download curations as .CSV file</button>
+                <button class="c-btn--primary w-full">Download curations as .CSV file</button>
               </div>
             </div>
           </div>
@@ -463,7 +460,7 @@
             <div class="p-4 md:p-5">
               <div class="pb-8 md:pb-16">
                 <span class="color--blue text-sm font-bold">Become a Member Today</span>
-                <p class="text-2xl leading-none font-bold mt-3 md:text-4xl">
+                <p class="c-title mt-3">
                   <span class="ff-conv-PxGrotesk">Startupy</span> is a curated information environment for <span class="color--blue">builders.</span>
                   We give you a sane way to stay up to speed on the pulse of new markets, ideas, and people.
                 </p>
@@ -472,29 +469,29 @@
                 <div class="w-full flex">
                   <div class="flex flex-col w-full pr-3">
                     <div class="flex items-center mb-2">
-                      <span class="bkg--blue pl-1 pr-1 text-xs">Save 25%</span>
+                      <span class="c-badge--small bkg--blue">Save 25%</span>
                     </div>
                     <div class="flex mb-6">
-                      <p class="leading-none text-2xl pr-1 font-bold md:text-4xl">
+                      <p class="c-title leading-none pr-1">
                         $15
                       </p>
                       <p class="self-end color--gray text-sm">/month</p>
                     </div>
                     <div class="mb-10">
-                      <button class="bkg--blue2 text-white font-bold py-4 px-4 w-full hover:opacity-75">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
+                      <button class="bkg--blue2 text-white c-btn--secondary w-full">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
                     </div>
                   </div>
                 </div>
                 <div class="w-full flex items-end">
                   <div class="flex flex-col w-full pl-3">
                     <div class="flex mb-6">
-                      <p class="leading-none text-2xl pr-1 font-bold md:text-4xl">
+                      <p class="c-title leading-none pr-1">
                         $20
                       </p>
                       <p class="self-end color--gray text-sm">/month</p>
                     </div>
                     <div class="mb-10">
-                      <button class="bkg--blue3 color--blue font-bold py-4 px-4 w-full hover:opacity-75">Join Monthly</button>
+                      <button class="bkg--blue3 color--blue c-btn--secondary w-full">Join Monthly</button>
                     </div>
                   </div>
                 </div>
@@ -525,7 +522,7 @@
       <h3 class="mb-3 text-md font-bold p-6">Slider</h3>
     </div>
     <div class="text-center pb-12 md:pb-32">
-      <h2 class="font-bold text-2xl">Don’t take our word for it.</h2>
+      <h2 class="c-sub-title">Don’t take our word for it.</h2>
     </div>
     <div class="slider pb-12">
       <div class="item">
@@ -533,10 +530,10 @@
         <div class="info">
           <p class="text">“Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam”</p>
           <div class="flex items-center mt-2">
-            <div class="border-solid border border-color--blue rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center">
+            <div class="c-curator--circle border-color--blue">
               <span class="text-xs color--blue">KM</span>
             </div>
-            <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 color--blue">Kathryn Murphy, CEO of X</span>
+            <span class="c-curator--text color--blue">Kathryn Murphy, CEO of X</span>
           </div>
         </div>
       </div>
@@ -545,10 +542,10 @@
         <div class="info opacity-25">
           <p class="text">“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.”</p>
           <div class="flex items-center mt-2">
-            <div class="border-solid border border-color--blue rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center">
+            <div class="c-curator--circle border-color--blue">
               <span class="text-xs color--blue">KM</span>
             </div>
-            <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 color--blue">Kathryn Murphy, CEO of X</span>
+            <span class="c-curator--text color--blue">Kathryn Murphy, CEO of X</span>
           </div>
         </div>
       </div>
@@ -557,10 +554,10 @@
         <div class="info">
           <p class="text">“Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam”</p>
           <div class="flex items-center mt-2">
-            <div class="border-solid border border-color--blue rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center">
+            <div class="c-curator--circle border-color--blue">
               <span class="text-xs color--blue">KM</span>
             </div>
-            <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 color--blue">Kathryn Murphy, CEO of X</span>
+            <span class="c-curator--text color--blue">Kathryn Murphy, CEO of X</span>
           </div>
         </div>
       </div>
@@ -569,7 +566,7 @@
         <div class="info">
           <p class="text">“Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam”</p>
           <div class="flex items-center mt-2">
-            <div class="border-solid border border-color--blue rounded-full h-8 w-8 m-h-8 m-w-8 flex items-center justify-center">
+            <div class="c-curator--circle border-color--blue">
               <span class="text-xs color--blue">KM</span>
             </div>
             <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2 color--blue">Kathryn Murphy, CEO of X</span>
@@ -584,10 +581,10 @@
         <div class="md:col-start-3 md:col-span-10 lg:col-start-5 lg:col-span-4">
           <p class="text-white text-xl pb-8">Become a member to enter the 🐇 🕳</p>
           <div class="pb-8">
-            <button class="bkg--blue2 text-white font-bold py-2 px-4 w-full hover:opacity-75">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
+            <button class="bkg--blue2 c-btn--secondary w-full">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
           </div>
           <div>
-            <button class="bg-white text-black font-bold py-2 px-4 w-full hover:opacity-75">Join Monthly $20/mo</span></button>
+            <button class="c-btn--white w-full">Join Monthly $20/mo</span></button>
           </div>
         </div>
       </div>
@@ -598,7 +595,7 @@
       <div class="md:grid md:grid-cols-12 gap-4 py-12 md:py-20">
         <div class="col-span-12 mb-8">
           <p
-            class="text-2xl text-white leading-none font-bold text-center mt-3 md:text-4xl p-4 md:p-0"
+            class="c-title text-white leading-none text-center mt-3 md:p-0"
           >
             One membership. Everything you need.
           </p>
@@ -608,14 +605,14 @@
             <div class="mt-2">
               <div class="flex">
                 <div class="flex items-center bg-white px-1">
-                  <h3 class="text-md font-bold px-1 py-2">
+                  <h3 class="c-card--title text-md">
                     Another Title of this Quote
                   </h3>
                 </div>
               </div>
-              <div class="">
+              <div>
                 <div
-                  class="border border-solid border-white p-2 max-h--200 overflow-auto"
+                  class="c-card--box max-h--200"
                 >
                   <p class="text-white">
                     Trust a community of curators and thinkers who sift through the best blogs, Twitter threads, podcasts, and videos so you don’t have to.
@@ -630,14 +627,14 @@
             <div class="mt-2">
               <div class="flex">
                 <div class="flex items-center bg-white px-1">
-                  <h3 class="text-md font-bold px-1 py-2">
+                  <h3 class="c-card--title text-md">
                     Another Title of this Quote
                   </h3>
                 </div>
               </div>
-              <div class="">
+              <div>
                 <div
-                  class="border border-solid border-white p-2 max-h--200 overflow-auto"
+                  class="c-card--box max-h--200"
                 >
                   <p class="text-white">
                     Explore a curated collection of startups, content, people, and topics and flow between them based on their connections
@@ -653,14 +650,14 @@
             <div class="mt-2">
               <div class="flex">
                 <div class="flex items-center bg-white px-1">
-                  <h3 class="text-md font-bold px-1 py-2">
+                  <h3 class="c-card--title text-md">
                     Another Title of this Quote
                   </h3>
                 </div>
               </div>
-              <div class="">
+              <div>
                 <div
-                  class="border border-solid border-white p-2 max-h--200 overflow-auto"
+                  class="c-card--box max-h--200"
                 >
                   <p class="text-white">
                     We show you highlights so you get the key insights in minutes, not hours. (Because nobody wants a long list of links.)
@@ -675,14 +672,14 @@
             <div class="mt-2">
               <div class="flex">
                 <div class="flex items-center bg-white px-1">
-                  <h3 class="text-md font-bold px-1 py-2">
+                  <h3 class="c-card--title text-md">
                     Another Title of this Quote
                   </h3>
                 </div>
               </div>
-              <div class="">
+              <div>
                 <div
-                  class="border border-solid border-white p-2 max-h--200 overflow-auto"
+                  class="c-card--box max-h--200"
                 >
                   <p class="text-white">
                     Be inspired by serendipitous knowledge when you need creative raw material, supporting research, or a shot of inspiration.
@@ -697,14 +694,14 @@
             <div class="mt-2">
               <div class="flex">
                 <div class="flex items-center bg-white px-1">
-                  <h3 class="text-md font-bold px-1 py-2">
+                  <h3 class="c-card--title text-md">
                     Another Title of this Quote
                   </h3>
                 </div>
               </div>
-              <div class="">
+              <div>
                 <div
-                  class="border border-solid border-white p-2 max-h--200 overflow-auto"
+                  class="c-card--box max-h--200"
                 >
                   <p class="text-white">
                     Discover  the people behind the scenes at up-and-coming startups  — the studio that designed the site, the angel investor that wrote the check,  the freelance copywriter, and others who are rarely showcased to the outside world.
@@ -719,14 +716,14 @@
             <div class="mt-2">
               <div class="flex">
                 <div class="flex items-center bg-white px-1">
-                  <h3 class="text-md font-bold px-1 py-2">
+                  <h3 class="c-card--title text-md">
                     Another Title of this Quote
                   </h3>
                 </div>
               </div>
-              <div class="">
+              <div>
                 <div
-                  class="border border-solid border-white p-2 max-h--200 overflow-auto"
+                  class="c-card--box max-h--200"
                 >
                   <p class="text-white">
                     Track what the smartes minds are saying and reading about the most relevant topics in a searchable, organized way
@@ -862,10 +859,10 @@
         <p>Create an account to become a contributing member of the Startupy community.</p>
         <div class="pt-10 pb-2">
           <p class="text-sm font-bold mb-1">Email address</p>
-          <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+          <input class="c-input" type="text" name="" id="">
         </div>
         <div class="pb-4">
-          <button class="w-full border-solid border border-black py-2 px-4 hover:opacity-75">Create Account</button>
+          <button class="w-full c-btn--primary">Create Account</button>
         </div>
         <div class="pt-8">
           <p class="text-xs font-bold pb-3">Join now and get unlimited access:</p>
@@ -884,7 +881,7 @@
       <div class="md:grid grid-cols-6 gap-4 mb-2">
         <div class="md:col-start-2 col-span-4">
           <div class="p-4 md:p-5">
-            <h3 class="font-bold mb-12 text-2xl text-center">🐇 🕳</h3>
+            <h3 class="c-sub-title">🐇 🕳</h3>
             <div class="mb-10 md:mb-0">
               <div class="border-solid border border-black py-10 px-8">
                 <h4 class="text-2xl font-bold mb-2">An invite to join Startupy</h4>
@@ -902,10 +899,10 @@
                 <div class="md:col-start-2 col-span-4">
                   <div class="pt-10 pb-2">
                     <p class="text-sm font-bold mb-1">Email address</p>
-                    <input class="w-full border-solid border border-gray px-4 py-3 focus:outline-none" type="text" name="" id="">
+                    <input class="c-input" type="text" name="" id="">
                   </div>
                   <div class="pb-4">
-                    <button class="w-full border-solid border border-black py-2 px-4 hover:opacity-75">Become a Curator</button>
+                    <button class="w-full c-btn--primary">Become a Curator</button>
                   </div>
                 </div>
               </div>
