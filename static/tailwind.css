@@ -226,6 +226,34 @@
   color: rgba(29, 78, 216, var(--tw-text-opacity));
 }
 
+.relationship-container {
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .relationship-container {
+    display: grid;
+    margin-top: 3rem;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .relationship-container--inner {
+    grid-column: span 8 / span 8;
+    grid-column-start: 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .relationship-container--inner {
+    grid-column: span 6 / span 6;
+    grid-column-start: 4;
+  }
+}
+
 /*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
