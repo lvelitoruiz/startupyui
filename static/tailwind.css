@@ -1,3 +1,231 @@
+.input-modal {
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+}
+
+.input-modal:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(29, 78, 216, var(--tw-border-opacity));
+}
+
+.input-modal {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.input-modal:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.input-modal {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+.input-modal-span {
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+}
+
+.input-modal-span:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(29, 78, 216, var(--tw-border-opacity));
+}
+
+.input-modal-span {
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+}
+
+.input-modal-span:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.input-modal-span {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+.input-modal-container {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.select-fake-modal {
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+  border-style: solid;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  width: 100%;
+}
+
+.select-fake-modal-option {
+  display: flex;
+  align-items: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.select-modal {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity))
+}
+
+.select-modal:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(29, 78, 216, var(--tw-border-opacity));
+}
+
+.select-modal {
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-modal:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.select-modal {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.modal-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  margin: 0px;
+  padding-right: 0.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  margin: 0px;
+  padding-right: 0.5rem;
+}
+
+.modal-label {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.25rem
+}
+
+.modal-initials {
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+  border-radius: 9999px;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  margin-right: 0.25rem;
+  width: 2rem;
+}
+
+@media (min-width: 768px) {
+  .item-tabs {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-column: span 12 / span 12;
+  }
+}
+
+.topic-filter--list {
+  display: flex;
+  overflow: auto;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .topic-filter--list {
+    justify-content: flex-end;
+  }
+}
+
+.topic-filter--item {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.topic-directory--item {
+  border-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+.topic-directory--item--pill {
+  background: rgba(12, 62, 241, 0.1);
+  color: #0c3ef1;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem
+}
+
+.topic-directory--item--options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.topic-directory--item--options--text {
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+}
+
+.topic-directory--item--options--number {
+  color: #a0a0a0;
+  padding-left: 0.5rem;
+}
+
+.topic-directory--item--options--eye {
+  cursor: pointer;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.topic-directory--item--options--eye:hover {
+  --tw-text-opacity: 1;
+  color: rgba(29, 78, 216, var(--tw-text-opacity));
+}
+
 /*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -806,6 +1034,8 @@ video {
   overflow: auto;
   padding: 0.5rem;
 }
+
+/* Modal input */
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;

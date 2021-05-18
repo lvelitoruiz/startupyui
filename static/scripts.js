@@ -752,7 +752,6 @@ function moveElements(e) {
       return false;
     } else {
       if (valueCode === 38) {
-        console.log("go up");
         let elements = parent.querySelectorAll("div");
         let prev = parent.querySelectorAll("div")[index1 - 1];
         for (let i = 0; i < elements.length; i++) {
@@ -764,7 +763,6 @@ function moveElements(e) {
         } else {
           parent.querySelectorAll("div")[index1].classList.add("activeElement");
           index1 = index1;
-          console.log("too wide");
         }
       } else if (valueCode === 40) {
         let elements = parent.querySelectorAll("div");
@@ -778,9 +776,7 @@ function moveElements(e) {
         } else {
           parent.querySelectorAll("div")[index1].classList.add("activeElement");
           index1 = index1;
-          console.log("too far");
         }
-        console.log("go down");
       } else if (valueCode === 13) {
         let el = parent.querySelectorAll(".activeElement")[0];
         parent.classList.remove("opened");
