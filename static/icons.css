@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-add-2:before {
+  content: "\e916";
+}
+
 .icon-elbow:before {
   content: "\e914";
 }
