@@ -22,7 +22,7 @@
 
         <div class="mt-4 mr-4 w-full relative modal-input-container">
             <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
-            <input class="w-full border-solid border border-gray px-4 py-3 focus:border-black focus:outline-none modal-input modal-input-validation modal-input-border" type="text" placeholder="Placeholder one" name="" id="">
+            <input class="c-input border-gray focus:border-black modal-input modal-input-validation modal-input-border" type="text" placeholder="Placeholder one" name="" id="">
             <p class="color--purple-2 font-bold text-sm modal-error">Error language, please correct above.</p>
         </div>
     </div>
@@ -32,7 +32,7 @@
 
         <div class="mt-4 mr-4 w-full relative modal-input-container">
             <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
-            <div class="w-full border-solid border border-gray px-4 py-3 focus:outline-none focus:border-black modal-input-span modal-input-border" contenteditable="false">
+            <div class="c-input border-gray focus:border-black modal-input-span modal-input-border" contenteditable="false">
                 <div class="outline-none tabindex_class focus:outline-none modal-input modal-input-validation color--purple bkg--purple-transparent" tabindex="0" contenteditable="true" placeholder="Name of the company" spellcheck="false" id="company_name" uuid=""></div> 
             </div>
             <p class="color--purple-2 font-bold text-sm modal-error">Error language, please correct above.</p>
@@ -44,7 +44,7 @@
 
         <div class="mt-4 mr-4 w-full relative modal-input-container">
             <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
-            <div class="w-full border-solid border border-gray px-4 py-3 focus:outline-none focus:border-black modal-input-span modal-input-border" contenteditable="false">
+            <div class="c-input border-gray focus:border-black modal-input-span modal-input-border" contenteditable="false">
                 <div class="outline-none tabindex_class focus:outline-none modal-input modal-input-validation modal-input-span-circle" tabindex="0" contenteditable="true" placeholder="Name of the company" id="company_name" uuid=""></div> 
             </div>
             <p class="color--purple-2 font-bold text-sm modal-error">Error language, please correct above.</p>
@@ -56,7 +56,7 @@
 
         <div class="mt-4 mr-4 w-full relative modal-input-container">
             <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
-            <div class="w-full border-solid border border-gray px-4 py-3 focus:outline-none focus:border-black modal-input-span modal-input-border" contenteditable="false">
+            <div class="c-input border-gray focus:border-black modal-input-span modal-input-border" contenteditable="false">
                 <div class="outline-none tabindex_class focus:outline-none modal-input modal-input-validation modal-input-span-circle modal-input-span-keys" tabindex="0" contenteditable="true" placeholder="Name of the company" id="company_name" uuid=""></div> 
             </div>
             <p class="color--purple-2 font-bold text-sm modal-error">Error language, please correct above.</p>
@@ -68,8 +68,8 @@
 
         <div class="mt-4 mr-4 w-full relative modal-input-container">
             <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
-            <input class="w-full border-solid border border-gray px-4 py-3 focus:border-black focus:outline-none modal-input modal-input-border modal-combo-open" type="text" name="" id="">
-            <select size="4" class="absolute bg-white flex flex-col w-full focus:border-black focus:outline-none border border-solid z-10 modal-combo-items" id="combo_type_relationships">
+            <input class="c-input border-gray modal-input modal-input-border modal-combo-open" type="text" name="" id="">
+            <select size="4" class="c-select--option modal-combo-items" id="combo_type_relationships">
                 <option value="5fc60adb-2173-4fa9-87a6-ea9ce512aa34" name="founder">founder</option>
                 <option value="c6fbebd8-d922-4286-8a2f-7f8ec8e145e7" name="vestor">vestor</option>
                 <option value="16250da5-274a-4c2b-bc96-633057a6ce98" name="ceo">ceo</option>
@@ -89,8 +89,8 @@
 
         <div class="mt-4 mr-4 w-full relative modal-input-container">
             <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
-            <input class="w-full border-solid border border-gray px-4 py-3 focus:border-black focus:outline-none modal-input modal-input-border modal-combo-open" type="text" name="" id="">
-            <select size="4" multiple class="absolute bg-white flex flex-col w-full focus:border-black focus:outline-none border border-solid z-10 modal-combo-items" id="combo_type_relationships">
+            <input class="c-input border-gray modal-input modal-input-border modal-combo-open" type="text" name="" id="">
+            <select size="4" multiple class="c-select--option modal-combo-items" id="combo_type_relationships">
                 <option value="5fc60adb-2173-4fa9-87a6-ea9ce512aa34" name="founder">founder</option>
                 <option value="c6fbebd8-d922-4286-8a2f-7f8ec8e145e7" name="vestor">vestor</option>
                 <option value="16250da5-274a-4c2b-bc96-633057a6ce98" name="ceo">ceo</option>
@@ -110,7 +110,7 @@
 
         <div class="mt-4 mr-4 w-full relative modal-input-container">
             <p class="text-sm font-bold mb-1 modal-label">Text Input</p>
-            <input class="w-full border-solid border border-gray px-4 py-3 focus:border-black focus:outline-none modal-input modal-input-border modal-combo-open" type="text" name="" id="">
+            <input class="c-input border-gray modal-input modal-input-border modal-combo-open" type="text" name="" id="">
             <div class="w-full extensible-box editable-extensible focus:outline-none data-count-roles-content dropdown_content border-solid border-l border-r border-b tabindex_class modal-combo-items" id="dropdown_input_human" contenteditable="true" tabindex="1">
                 <div class="flex items-center bkg--gray px-4 py-3 selectable no-usable activeElement" contenteditable="true">
                   <p class="w-full">New entry</p>
@@ -120,11 +120,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="aaron-bush" onclick="detail_person('aaron-bush')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">AB</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aaron Bush</p>
+                      <p class="text-xs font-bold" contenteditable="true">Aaron Bush</p>
                     </div>
 
                   </div>
@@ -133,11 +132,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="aaron-cheung" onclick="detail_person('aaron-cheung')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">AC</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aaron Cheung</p>
+                      <p class="text-xs font-bold" contenteditable="true">Aaron Cheung</p>
                     </div>
 
                   </div>
@@ -146,11 +144,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="aaron-telch" onclick="detail_person('aaron-telch')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">AT</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aaron Telch</p>
+                      <p class="text-xs font-bold" contenteditable="true">Aaron Telch</p>
                     </div>
 
                   </div>
@@ -159,11 +156,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="aashay-sanghvi" onclick="detail_person('aashay-sanghvi')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">AS</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aashay Sanghvi</p>
+                      <p class="text-xs font-bold" contenteditable="true">Aashay Sanghvi</p>
                     </div>
 
                   </div>
@@ -172,11 +168,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="chrissie-abbott" onclick="detail_person('chrissie-abbott')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">CA</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Chrissie Abbott</p>
+                      <p class="text-xs font-bold" contenteditable="true">Chrissie Abbott</p>
                     </div>
 
                   </div>
@@ -185,11 +180,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="tami-abdollah" onclick="detail_person('tami-abdollah')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">TA</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Tami Abdollah</p>
+                      <p class="text-xs font-bold" contenteditable="true">Tami Abdollah</p>
                     </div>
 
                   </div>
@@ -198,11 +192,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="sammy-abdullah" onclick="detail_person('sammy-abdullah')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">SA</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Sammy Abdullah</p>
+                      <p class="text-xs font-bold" contenteditable="true">Sammy Abdullah</p>
                     </div>
 
                   </div>
@@ -211,11 +204,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="abeba-birhane" onclick="detail_person('abeba-birhane')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">AB</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Abeba Birhane</p>
+                      <p class="text-xs font-bold" contenteditable="true">Abeba Birhane</p>
                     </div>
 
                   </div>
@@ -224,11 +216,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="aber-whitcomb" onclick="detail_person('aber-whitcomb')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">AW</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Aber Whitcomb</p>
+                      <p class="text-xs font-bold" contenteditable="true">Aber Whitcomb</p>
                     </div>
 
                   </div>
@@ -237,11 +228,10 @@
                 <div class="box-hover border-solid border-b p-4 selectable" data-slug="abhijeet-dwivedi" onclick="detail_person('abhijeet-dwivedi')" contenteditable="true">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center mb-2" contenteditable="true">
-                      <div class="border-solid border border-black rounded-full h-8 w-8 flex 
-                            items-center justify-center mr-1" contenteditable="false">
+                      <div class="c-curator--circle m-h-8 m-w-8 border-black mr-1" contenteditable="false">
                         <span class="text-xs font-bold">AD</span>
                       </div>
-                      <p class="text-xs m-0 mr-6 font-bold" contenteditable="true">Abhijeet Dwivedi</p>
+                      <p class="text-xs font-bold" contenteditable="true">Abhijeet Dwivedi</p>
                     </div>
 
                   </div>
