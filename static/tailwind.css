@@ -254,6 +254,26 @@
   }
 }
 
+.relationship-container--item {
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+  border-bottom-width: 1px;
+  display: flex;
+  display: grid;
+  margin-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.relationship-container--item--text {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(156, 163, 175, var(--tw-text-opacity));
+}
+
 /*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -961,36 +981,6 @@ video {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
-}
-
-/* select */
-
-.c-select--option {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-}
-
-.c-select--option:focus {
-  --tw-border-opacity: 1;
-  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
-}
-
-.c-select--option {
-  border-style: solid;
-  border-width: 1px;
-  display: flex;
-  flex-direction: column;
-}
-
-.c-select--option:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.c-select--option {
-  position: absolute;
-  width: 100%;
-  z-index: 10;
 }
 
 /* curatos */
