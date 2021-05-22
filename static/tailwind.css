@@ -65,10 +65,26 @@
 .select-fake-modal {
   --tw-border-opacity: 1;
   border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+}
+
+.select-fake-modal:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(29, 78, 216, var(--tw-border-opacity));
+}
+
+.select-fake-modal {
   border-style: solid;
   border-right-width: 1px;
   border-bottom-width: 1px;
   border-left-width: 1px;
+}
+
+.select-fake-modal:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.select-fake-modal {
   width: 100%;
 }
 
@@ -255,6 +271,7 @@
 }
 
 .relationship-container--item {
+  cursor: pointer;
   --tw-border-opacity: 1;
   border-color: rgba(209, 213, 219, var(--tw-border-opacity));
   border-bottom-width: 1px;
@@ -263,6 +280,7 @@
   margin-bottom: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
+  position: relative;
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
@@ -272,6 +290,54 @@
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgba(156, 163, 175, var(--tw-text-opacity));
+}
+
+.relationship-container--tooltip {
+  box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.1);
+  left: 0;
+  top: 50%;
+  z-index: 0;
+  transform: translate(0%,-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+  border-width: 1px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: absolute;
+  --tw-text-opacity: 1;
+  color: rgba(156, 163, 175, var(--tw-text-opacity));
+}
+
+.relationship-container--item:hover .relationship-container--tooltip {
+  box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.1);
+  left: 0;
+  top: 50%;
+  z-index: 10;
+  transform: translate(-100%,-50%);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+  border-width: 1px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: absolute;
+  --tw-text-opacity: 1;
+  color: rgba(156, 163, 175, var(--tw-text-opacity));
+}
+
+.relationship-container--tooltip--link {
+  text-decoration: underline;
 }
 
 /*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com */
