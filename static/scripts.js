@@ -52,6 +52,54 @@ var modalComboItemsSpan = document.querySelectorAll('.modal-combo-items-span');
 
 var changeWord = document.querySelector('#word-change');
 
+var sliderContainer = document.querySelector('#slider-testimonials');
+
+var sliderDistance = 0;
+var sliderIndex = 0;
+var sliderPrev = document.querySelector('#prev');
+var sliderNext = document.querySelector('#next');
+
+
+if(sliderContainer) {
+  sliderNext.addEventListener('click',sliderNextClick);
+  sliderPrev.addEventListener('click',sliderPrevClick);
+}
+
+function sliderNextClick() {
+  let elements = sliderContainer.querySelectorAll('.item');
+  let size = elements[0].offsetWidth;
+  sliderIndex += 1;
+  if(sliderIndex < elements.length) {
+    for(let i = 0; i < elements.length; i++) {
+      let changeItem = elements[i].querySelectorAll('.info')[0];
+      changeItem.classList.add('opacity-25')
+    }
+    console.log(sliderIndex);
+    elements[sliderIndex].querySelectorAll('.info')[0].classList.remove('opacity-25');
+    sliderDistance = sliderDistance + size;
+    sliderContainer.style.marginLeft = '-'+ sliderDistance +'px';
+  } else {
+    return false;
+  }
+}
+
+function sliderPrevClick() {
+  let elements = sliderContainer.querySelectorAll('.item');
+  let size = elements[0].offsetWidth;
+  sliderIndex -= 1;
+  if(sliderIndex >= 0) {
+    for(let i = 0; i < elements.length; i++) {
+      let changeItem = elements[i].querySelectorAll('.info')[0];
+      changeItem.classList.add('opacity-25')
+    }
+    console.log(sliderIndex);
+    elements[sliderIndex].querySelectorAll('.info')[0].classList.remove('opacity-25');
+    sliderDistance = sliderDistance - size;
+    sliderContainer.style.marginLeft = '-'+ sliderDistance +'px';
+  } else {
+    console.log('you went too low');
+  }
+}
 
 if(changeWord) {
 
