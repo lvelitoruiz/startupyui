@@ -50,8 +50,21 @@ var modalComboItems = document.querySelectorAll('.modal-combo-items');
 var modalComboWriteOpen = document.querySelectorAll('.modal-combo-write-open');
 var modalComboItemsSpan = document.querySelectorAll('.modal-combo-items-span');
 
+var changeWord = document.querySelector('#word-change');
 
 
+if(changeWord) {
+
+  count = 0;
+  wordsArray = ['builders.', 'founders.', 'funders.', 'creators.','creatives.'];
+  setInterval(function () {
+    changeWord.innerHTML = wordsArray[count];
+    count++;
+    if(count > 4) {
+      count = 0;
+    }
+  }, 2000);
+}
 
 if (has_filter == undefined) {
   var has_filter = false;
