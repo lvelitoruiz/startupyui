@@ -59,6 +59,28 @@ var sliderIndex = 0;
 var sliderPrev = document.querySelector('#prev');
 var sliderNext = document.querySelector('#next');
 
+var sliderItems = document.querySelectorAll('.item-testimonial');
+
+for(let i = 0; i < sliderItems.length; i++) {
+  sliderItems[i].addEventListener('click',sliderTouch);
+}
+
+function sliderTouch() {
+  let element = event.target.closest('.item-testimonial');
+  let multiplier = element.dataset.multiplier;
+  let size = element.offsetWidth;
+  let parent = element.parentNode;
+  for(let i = 0; i < sliderItems.length; i++) {
+    let infos = sliderItems[i].querySelectorAll('.info')[0];
+    infos.classList.add('opacity-25');
+  }
+  let info = element.querySelectorAll('.info')[0];
+  let sliderDistance = size * multiplier;
+  info.classList.remove('opacity-25');
+  console.log('multipica por: ',multiplier);
+  parent.style.marginLeft = '-'+ sliderDistance +'px';
+}
+
 
 if(sliderContainer) {
   sliderNext.addEventListener('click',sliderNextClick);
@@ -1022,3 +1044,4 @@ function errorHide(targetted, parent) {
 function getModalComboData() {
   console.log('get that data boy');
 }
+
