@@ -61,6 +61,25 @@ var sliderNext = document.querySelector('#next');
 
 var sliderItems = document.querySelectorAll('.item-testimonial');
 
+var triggerForm = document.querySelector('#hide-data');
+var triggerCompany = document.querySelector('#trigger-data');
+
+
+if(triggerForm) {
+  triggerForm.addEventListener('click', showForm);
+  triggerCompany.addEventListener('click', hideForm);
+}
+
+function showForm() {
+  document.querySelector('#company-data').classList.add('hidden');
+  document.querySelector('#company-form').classList.remove('hidden');
+}
+
+function hideForm() {
+  document.querySelector('#company-data').classList.remove('hidden');
+  document.querySelector('#company-form').classList.add('hidden');
+}
+
 for(let i = 0; i < sliderItems.length; i++) {
   sliderItems[i].addEventListener('click',sliderTouch);
 }
