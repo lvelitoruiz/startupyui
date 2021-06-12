@@ -50,8 +50,110 @@ var modalComboItems = document.querySelectorAll('.modal-combo-items');
 var modalComboWriteOpen = document.querySelectorAll('.modal-combo-write-open');
 var modalComboItemsSpan = document.querySelectorAll('.modal-combo-items-span');
 
+var changeWord = document.querySelector('#word-change');
+
+var sliderContainer = document.querySelector('#slider-testimonials');
+
+var sliderDistance = 0;
+var sliderIndex = 0;
+var sliderPrev = document.querySelector('#prev');
+var sliderNext = document.querySelector('#next');
+
+var sliderItems = document.querySelectorAll('.item-testimonial');
+
+var triggerForm = document.querySelector('#hide-data');
+var triggerCompany = document.querySelector('#trigger-data');
 
 
+if(triggerForm) {
+  triggerForm.addEventListener('click', showForm);
+  triggerCompany.addEventListener('click', hideForm);
+}
+
+function showForm() {
+  document.querySelector('#company-data').classList.add('hidden');
+  document.querySelector('#company-form').classList.remove('hidden');
+}
+
+function hideForm() {
+  document.querySelector('#company-data').classList.remove('hidden');
+  document.querySelector('#company-form').classList.add('hidden');
+}
+
+for(let i = 0; i < sliderItems.length; i++) {
+  sliderItems[i].addEventListener('click',sliderTouch);
+}
+
+function sliderTouch() {
+  let element = event.target.closest('.item-testimonial');
+  let multiplier = element.dataset.multiplier;
+  let size = element.offsetWidth;
+  let parent = element.parentNode;
+  for(let i = 0; i < sliderItems.length; i++) {
+    let infos = sliderItems[i].querySelectorAll('.info')[0];
+    infos.classList.add('opacity-25');
+  }
+  let info = element.querySelectorAll('.info')[0];
+  let sliderDistance = size * multiplier;
+  info.classList.remove('opacity-25');
+  console.log('multipica por: ',multiplier);
+  parent.style.marginLeft = '-'+ sliderDistance +'px';
+}
+
+
+if(sliderContainer) {
+  sliderNext.addEventListener('click',sliderNextClick);
+  sliderPrev.addEventListener('click',sliderPrevClick);
+}
+
+function sliderNextClick() {
+  let elements = sliderContainer.querySelectorAll('.item');
+  let size = elements[0].offsetWidth;
+  sliderIndex += 1;
+  if(sliderIndex < elements.length) {
+    for(let i = 0; i < elements.length; i++) {
+      let changeItem = elements[i].querySelectorAll('.info')[0];
+      changeItem.classList.add('opacity-25')
+    }
+    console.log(sliderIndex);
+    elements[sliderIndex].querySelectorAll('.info')[0].classList.remove('opacity-25');
+    sliderDistance = sliderDistance + size;
+    sliderContainer.style.marginLeft = '-'+ sliderDistance +'px';
+  } else {
+    return false;
+  }
+}
+
+function sliderPrevClick() {
+  let elements = sliderContainer.querySelectorAll('.item');
+  let size = elements[0].offsetWidth;
+  sliderIndex -= 1;
+  if(sliderIndex >= 0) {
+    for(let i = 0; i < elements.length; i++) {
+      let changeItem = elements[i].querySelectorAll('.info')[0];
+      changeItem.classList.add('opacity-25')
+    }
+    console.log(sliderIndex);
+    elements[sliderIndex].querySelectorAll('.info')[0].classList.remove('opacity-25');
+    sliderDistance = sliderDistance - size;
+    sliderContainer.style.marginLeft = '-'+ sliderDistance +'px';
+  } else {
+    console.log('you went too low');
+  }
+}
+
+if(changeWord) {
+
+  count = 0;
+  wordsArray = ['builders.', 'founders.', 'funders.', 'creators.','creatives.'];
+  setInterval(function () {
+    changeWord.innerHTML = wordsArray[count];
+    count++;
+    if(count > 4) {
+      count = 0;
+    }
+  }, 2000);
+}
 
 if (has_filter == undefined) {
   var has_filter = false;
@@ -752,7 +854,6 @@ function moveElements(e) {
       return false;
     } else {
       if (valueCode === 38) {
-        console.log("go up");
         let elements = parent.querySelectorAll("div");
         let prev = parent.querySelectorAll("div")[index1 - 1];
         for (let i = 0; i < elements.length; i++) {
@@ -764,7 +865,6 @@ function moveElements(e) {
         } else {
           parent.querySelectorAll("div")[index1].classList.add("activeElement");
           index1 = index1;
-          console.log("too wide");
         }
       } else if (valueCode === 40) {
         let elements = parent.querySelectorAll("div");
@@ -778,9 +878,7 @@ function moveElements(e) {
         } else {
           parent.querySelectorAll("div")[index1].classList.add("activeElement");
           index1 = index1;
-          console.log("too far");
         }
-        console.log("go down");
       } else if (valueCode === 13) {
         let el = parent.querySelectorAll(".activeElement")[0];
         parent.classList.remove("opened");
@@ -965,3 +1063,4 @@ function errorHide(targetted, parent) {
 function getModalComboData() {
   console.log('get that data boy');
 }
+

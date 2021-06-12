@@ -1,0 +1,34 @@
+{% extends "_layout.html" %}
+
+{% block title %}Startupy{% endblock %}
+
+{% block head %}
+{%- endblock %}
+
+{% block content %}
+
+{%- include 'header.html' %}
+
+<div class="bg-white tab-item container text-center mx-auto py-16 top-header">
+    <div class="flex items-center justify-center py-4">
+        <p class="text-4xl font-bold pb-6">404</p>
+    </div>
+    <div class="items-tabs md:grid md:grid-cols-11 mt-8 md:mt-12 tabs-active">
+        <p class="font-bold md:col-start-5 md:col-span-3 lg:col-start-5 lg:col-span-3 text-center">Looks like you went down the wrong rabbit hole. Let’s start again, shall we?</p>
+    </div>
+    <p class="text-center mt-16">
+        <a href="#" class="font-bold border-black pb-1 border-b-2">Go Back Home</a>
+    </p>
+    <p class="text-center mt-3">
+        <a href="#" class="font-bold border-black pb-1 border-b-2">Report a bug</a>
+    </p>
+
+    <img src="static/img/alice.gif" alt="" class="mt-32 mx-auto relative img-404" />
+</div>
+
+{%- include 'footer.html' %}
+
+{%- endblock %}
+
+{% block scripts %}
+{%- endblock %}
