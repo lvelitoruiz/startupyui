@@ -1177,6 +1177,40 @@ select.convoBoxItems.opened {
   line-height: 12px;
 }
 
+.slider--two {
+  display: flex;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.slider--two__content {
+  align-items: flex-start;
+  display: flex;
+  overflow: auto;
+  padding-left: 30px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.slider--two__content .item {
+  margin-right: 40px;
+  min-width: 80%;
+  max-width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+  .slider--two__content .item {
+    margin-right: 40px;
+    min-width: 40%;
+    max-width: 40%;
+  }
+}
+
+.slider--two__content .item .title {
+  margin-top: -33px;
+}
+
 .circular-indicator {
   display: inline-block;
   position: absolute;
