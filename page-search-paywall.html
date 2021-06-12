@@ -1,0 +1,666 @@
+{% extends "_layout.html" %}
+
+{% block title %}Startupy{% endblock %}
+
+{% block head %}
+{%- endblock %}
+
+{% block content %}
+
+<header class="c-header fixed w-full z-20 border-solid border-b">
+  <div class="c-header--top items-center justify-center flex md:justify-between">
+    <a class="text-xl md:pl-4" href=""><h1 class="ff-conv-PxGrotesk text-white">Startupy</h1></a>
+    <div class="hidden md:block"> 
+      <a class="text-white p-2 font-bold text-xs" href="">Our Manifesto</a>
+      <a class="text-white p-2 font-bold text-xs" href="">Join Membership</a>
+      <a class="text-white p-2 pr-4 font-bold text-xs" href="">Login</a>
+    </div>
+  </div>
+  <div class="bg-white">
+    <div class="container mx-auto">
+      <div class="flex items-center relative lg:grid lg:grid-cols-8">
+        <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
+          <span class="iso icon-iso text-black pl-4 hidden"></span>
+          <span class="iso icon-eye-close text-black pl-4"></span>
+        </div>
+        <div class="md:col-span-6 lg:p-0">
+          <div class="hidden"> 
+            <div class="flex items-center lg:grid lg:grid-cols-10">
+              <div class="md:col-start-1 md:col-span-10 lg:col-start-2 lg:col-span-10">
+                <div class="flex">
+                  <div class="hidden p-4 border-solid border-l whitespace-no-wrap lg:block">
+                    <ul class="text-xs">
+                      <li class="font-bold pb-2">Trending Topics</li>
+                      <li><a href="">Assistive Tech</a></li>
+                      <li><a href="">Personalized Finance</a></li>
+                      <li><a href="">Safety Tech</a></li>
+                      <li><a href="">Future of Warehousing</a></li>
+                      <li><a href="">Sustainable Brands</a></li>
+                    </ul>
+                  </div>
+                  <div class="hidden p-4 border-solid border-l whitespace-no-wrap lg:block">
+                    <ul class="text-xs">
+                      <li class="font-bold pb-2">Trending Topics</li>
+                      <li><a href="">Assistive Tech</a></li>
+                      <li><a href="">Personalized Finance</a></li>
+                      <li><a href="">Safety Tech</a></li>
+                      <li><a href="">Future of Warehousing</a></li>
+                      <li><a href="">Sustainable Brands</a></li>
+                    </ul>
+                  </div>
+                  <div class="hidden p-4 border-solid border-l w-full lg:block">
+                    <span class="font-bold pb-2 text-xs">Community Stats</span>
+                    <div class="flex">
+                      <div class="w-full">
+                        <span class="text-xs">Membership</span>
+                      </div>
+                      <div class="w-full">
+                        <span class="text-xs">Membership</span>
+                      </div>
+                      <div class="w-full">
+                        <span class="text-xs">Membership</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden p-4 border-solid border-l border-r lg:block">
+                    <span class="font-bold pb-2 text-xs">Mood</span>
+                    <div>
+                      <img class="img-mood" src="./static/img/mood.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-mobile">
+            <div class="search active p-5">
+              <div class="search--content">
+                <svg class="h-4 w-4 mr-3 color--gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input class="text-2xl focus:outline-none" type="text" placeholder="Search companies, content, topics, and people">
+                <div class="flex items-center hidden">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 ml-4">in: Sustainable Fashion</span>
+                  <p class="px-2 py-1">+</p>
+                  <span class="color--blue bkg--blue-transparent px-2 py-1">in: Sustainable Fashion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:col-span-1 lg:p-0 lg:w-auto">
+          <div class="p-4 nav">
+            <span class="icon-nav"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- agregar clase active para mostrar el nav -->
+  <div class="nav-mobile flex absolute bg-white w-full p-4 justify-between items-end">
+    <div>
+      <ul>
+        <li class="mb-4">
+          <a class="text-sm font-bold" href="">Our Manifesto</a>
+        </li>
+        <li class="mb-4">
+          <a class="text-sm font-bold" href="">Join Membership</a>
+        </li>
+        <li class="mb-4">
+          <a class="text-sm font-bold" href="">Login</a>
+        </li>
+      </ul>
+      <div class="flex">
+        <a class="ml-2 mr-2 text-xl" href="">
+          <span class="icon-twitter"></span>
+        </a>
+        <a class="ml-2 mr-2 text-xl" href="">
+          <span class="icon-twitter"></span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <ul class="text-right">
+        <li class="mb-6">
+          <a class="text-2xl" href="">Topics</a>
+        </li>
+        <li class="mb-6">
+          <a class="text-2xl" href="">Companies</a>
+        </li>
+        <li class="mb-6">
+          <a class="text-2xl" href="">People</a>
+        </li>
+      </ul>
+      <div class="flex justify-end">
+        <img src="./static/img/iso-color.svg" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="top-header relative">
+      <div class="container mx-auto">
+        <div class="md:grid grid-cols-8 gap-4">
+          <div class="hidden md:block md:col-span-3 lg:col-span-2">
+            {%- include 'nav-side.html' %}
+          </div>
+          <div class="md:col-span-5 lg:col-span-6">
+            <div class="p-5">
+              <div class="hidden md:block">
+                <ul class="flex overflow-auto pb-10 md:justify-end">
+                  <li class="pr-6 pl-5 md:pl-0">
+                    <span class="text-sm whitespace-no-wrap">Sort by:</span>
+                  </li>
+                  <li class="pr-6">
+                    <a class="text-sm whitespace-no-wrap" href="#">Alphabetical</a>
+                  </li>
+                  <li class="pr-6">
+                    <a class="text-sm whitespace-no-wrap" href="#">Date Added</a>
+                  </li>
+                  <li>
+                    <a class="text-sm whitespace-no-wrap" href="#">Most Connected</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="lg:ml-20">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">10</span> Topics</p>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Femtech</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">API Startups</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Artificial Intelligence</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">The Future of Venture Capital</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Ecommerce + Retail</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex py-8 items-center">
+                  <span class="color--blue bkg--blue-transparent px-2 py-1 text-sm">Another Topic Result</span>
+                  <span class="ml-3 icon-eye text-3xl"></span>
+                </div>
+                <div class="flex border-solid border-b pb-4 items-center mb-10">
+                  <a class="color--gray font-bold text-sm" href="">Show more results</a>
+                </div>
+              </div>
+              <div class="lg:ml-20">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">10</span> Companies</p>
+                </div>
+                <div>
+                  <div class="flex border-solid border-b py-4 hidden md:flex md:py-5">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Brightside
+                        </p>
+                        <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>brightside.com</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="border-solid border-b py-4 md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img flex items-center justify-center bg-black">
+                        <span class="text-white font-bold">CS</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Mighty
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>mighty.com</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex border-solid border-b py-4 hidden md:flex md:py-5">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Brightside
+                        </p>
+                        <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>brightside.com</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="border-solid border-b py-4 md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img flex items-center justify-center bg-black">
+                        <span class="text-white font-bold">CS</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Mighty
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>mighty.com</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex border-solid border-b py-4 hidden md:flex md:py-5">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Brightside
+                        </p>
+                        <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>brightside.com</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="border-solid border-b py-4 md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img flex items-center justify-center bg-black">
+                        <span class="text-white font-bold">CS</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Mighty
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>mighty.com</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex border-solid border-b py-4 hidden md:flex md:py-5">
+                    <div class="box-img flex items-center justify-center bg-black">
+                      <span class="text-white font-bold">CS</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Brightside
+                        </p>
+                        <span class="text-xs bkg--yellow px-2 py-1 mr-3">Aquired</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>brightside.com</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="border-solid border-b py-4 md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img flex items-center justify-center bg-black">
+                        <span class="text-white font-bold">CS</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Mighty
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--pink px-2 py-1 mr-3">Post-mortem</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>mighty.com</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:ml-20 mt-8">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">4</span> Content</p>
+                </div>
+                <div class="g-modal" id="box1">
+                  <div class="g-modal-small g-modal__schedule">
+                    <div class="schedule-item--title">
+                      <h3 class="title mt-0 mb-10 c-black">Texto Dumy</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet finibus ligula. Proin iaculis lacus sit amet mi tempor, ac pulvinar est aliquam. Curabitur eget mattis nulla. Sed ut iaculis risus. Morbi in laoreet orci, quis ullamcorper lorem. Donec commodo dapibus eros at scelerisque. Suspendisse a velit efficitur, blandit quam vitae, pretium ante. Nunc venenatis lacus nec mi vulputate, ultrices ultricies nulla suscipit. Integer non arcu ac turpis consectetur ultrices. Vestibulum ullamcorper odio augue, in bibendum ligula lacinia molestie. Vestibulum quis nisl a tortor congue dignissim. Mauris vestibulum velit sed sagittis ultricies. Proin quis faucibus nunc.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-solid border-b pb-6">
+                  <div class="flex mt-6 items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+                        <span class="text-xs">JN</span>
+                      </div>
+                      <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
+                    </div>
+                    <div>
+                      <a class="text-xs font-bold mr-4" href="">
+                        <i class="icon-link"></i>
+                        <span>Share</span>
+                      </a>
+                      <a class="text-xs font-bold" href="">
+                        <i class="icon-share"></i>
+                        <span>Visit</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize text-sm capitalize">Sustainability &amp; Climate Change</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize text-sm capitalize">Carbon Offsetting and Carbon Removal</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize text-sm capitalize">Future of Fashion</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize text-sm capitalize">Sustainable Brands</span>
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize text-sm capitalize">Sustainable Fashion</span>
+                    <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <div class="flex">
+                      <div class="flex items-center bg-black px-1 bg-hover">
+                        <h3 class="text-md text-white md:text-2xl">We need to take CO2 out of the sky</h3>
+                        <i class="icon-eye ml-2 text-3xl text-white"></i>
+                      </div>
+                    </div>
+                    <div class="fade-out">
+                      <div class="border border-solid border-black p-2 max-h--200 overflow-auto">
+                        <div class="flex mb-6">
+                          <span class="text-sm font-bold">Ryan Orbuch</span>
+                          <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+                        </div>
+                        <span class="color--gray text-xs font-bold">TL;DR</span>
+                        <p>"0-gigaton-scale negative emissions are necessary in essentially every emissions reduction scenario. We have no choice but to fund, research, and deploy them if we’re serious about keeping warming to 2 degrees; or close to it. We are not even close to on track. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient monte</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img class="w-full" src="./static/img/bk-box.png" alt="">
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Then I Met You</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Fuzzco</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Taschen</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Dieux Skin</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">SkinTe</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Crate &amp; Barrel</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Hansel From Basel</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Need Supply</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Another Co.</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Yet While</span>
+                    <a class="font-bold text-xs mr-2 mb-2 color--gray" href="">+3 more</a>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-10">
+                  <div class="flex mt-6 items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="border-solid border border-gray-600 rounded-full h-8 w-8 flex items-center justify-center">
+                        <span class="text-xs">JN</span>
+                      </div>
+                      <span class="pl-2 text-sm font-bold whitespace-no-wrap pr-2">Josh N.</span>
+                    </div>
+                    <div>
+                      <a class="text-xs font-bold mr-4" href="">
+                        <i class="icon-link"></i>
+                        <span>Share</span>
+                      </a>
+                      <a class="text-xs font-bold" href="">
+                        <i class="icon-share"></i>
+                        <span>Visit</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--blue bkg--blue-transparent px-2 py-1 mr-2 mb-2 capitalize text-sm capitalize">Future of Housing</span>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <div class="flex">
+                      <div class="flex items-center bg-black px-1 bg-hover md:max-w-md">
+                        <h3 class="text-md text-white md:text-2xl">Startups that offer new paths tohomeownership</h3>
+                        <i class="icon-eye ml-2 text-3xl text-white"></i>
+                      </div>
+                    </div>
+                    <div class="fade-out">
+                      <div class="border border-solid border-black p-2 max-h--200 overflow-auto">
+                        <div class="flex mb-6">
+                          <span class="text-sm font-bold">Ryan Orbuch</span>
+                          <span class="text-sm color--gray ml-2">Mar 25, 2020 5min</span>
+                        </div>
+                        <span class="color--gray text-xs font-bold">TL;DR</span>
+                        <p class="pb-3">"0-gigaton-scale negative emissions are necessary in essentially every emissions reduction scenario. We have no choice but to fund, research, and deploy them if we’re serious about keeping warming to 2 degrees; or close to it. We are not even close to on track. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient monte</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img src="./static/img/bk-box.png" alt="">
+                    </div>
+                  </div>
+                  <div class="flex mt-5 items-center flex-wrap">
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Upequity</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Flyhomes</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">ZeroDown</span>
+                    <span class="color--purple bkg--purple-transparent px-2 py-1 mr-2 mb-2 text-sm capitalize">Divvy Homes</span>
+                    <div class="flex color--gray cursor-pointer items-center mr-2 mb-2">
+                      <i class="icon-add text-2xl"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:ml-20 mt-20 border-solid border-t mt-16 pt-8">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">2</span> Startupy Members</p>
+                </div>
+                <div>
+                  <div class="flex py-5 hidden md:flex border-solid border-b">
+                    <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+                      <span class="text-xs md:text-base">RF</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Comrad Socks
+                        </p>
+                        <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>robert-fox</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="py-4 border-solid border-b md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+                        <span class="text-xs md:text-base">RF</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Comrad Socks
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>robert-fox</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex pt-5 pb-20 hidden md:flex border-solid border-b">
+                    <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+                      <span class="text-xs md:text-base">RF</span>
+                    </div>
+                    <div class="pl-4 lg:w-2/4">
+                      <div class="flex items-center flex-wrap">
+                        <p class="font-bold mr-3">
+                          Comrad Socks
+                        </p>
+                        <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>robert-fox</span>
+                        </a>
+                        <i class="icon-eye text-xl color--gray"></i>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                  <div class="pt-5 pb-20 border-solid border-b md:hidden">
+                    <div class="flex items-center">
+                      <div class="box-img border-solid border border-gray-600 rounded-full flex items-center justify-center h-8 w-8 md:h-20 md:w-20 mt-1">
+                        <span class="text-xs md:text-base">RF</span>
+                      </div>
+                      <p class="font-bold ml-3 mr-3 w-full">
+                        Comrad Socks
+                      </p>
+                      <i class="icon-eye text-xl color--gray"></i>
+                    </div>
+                    <div class="pt-4">
+                      <div class="flex items-center flex-wrap mb-2">
+                        <span class="text-xs bkg--blue px-2 py-1 mr-3">Mature</span>
+                        <a class="text-xs font-bold color--gray mr-3 md:mt-0" href="">
+                          <i class="icon-link"></i>
+                          <span>robert-fox</span>
+                        </a>
+                      </div>
+                      <p>Compression socks for men and women, designed to reduce soreness and swelling.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:ml-20 mt-8 mt-16">
+                <div class="flex">
+                  <p class="mr-10"><span class="font-bold">2</span> People</p>
+                </div>
+                <div class="mt-6">
+                  <div class="flex mb-8">
+                    <p class="flex bkg--yellow-transparent px-2 py-1">
+                      <span class="mr-2">Brooklyn Simmons</span>
+                      <span class="text-xs bg-yellow-400 px-2 py-1 mr-1">Founder</span>
+                    </p>
+                  </div>
+                  <div class="flex mb-8">
+                    <p class="flex bkg--yellow-transparent px-2 py-1">
+                      <span class="mr-2">Kathryn Murphy</span>
+                      <span class="text-xs bg-yellow-400 px-2 py-1">Founder</span>
+                    </p>
+                  </div>
+                  <div class="flex mb-8">
+                    <p class="flex bkg--yellow-transparent px-2 py-1">
+                      <span class="mr-2">Fuzzco</span>
+                      <span class="text-xs bg-yellow-400 px-2 py-1">Founder</span>
+                    </p>
+                  </div>
+                  <div class="flex mb-8">
+                    <p class="flex bkg--yellow-transparent px-2 py-1">
+                      <span class="mr-2">Sequioa Capital</span>
+                      <span class="text-xs bg-yellow-400 px-2 py-1">Founder</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="paywall paywall--interna">
+        <div class="container mx-auto">
+          <div class="lg:grid grid-cols-12 gap-4">
+            <div class="md:col-start-4 col-span-6">
+              <div class="px-4 py-10 md:px-8 lg:py-32">
+                <h3 class="text-2xl text-center font-bold leading-2 md:leading-9 md:text-md">🔓</h3>
+                <h3 class="text-xl text-center font-bold leading-2 mb-6 md:mb-8 md:leading-9 md:text-md">Become a member to enter the 🐇 🕳</h3>
+                <div class="text-center">
+                  <div class="mb-6 md:mb-8">
+                    <button class="c-btn--secondary bkg--blue2 w-full">Join Annual $15/mo <span class="text-xs">($180/yr)</span></button>
+                  </div>
+                  <div class="mb-6 md:mb-8">
+                    <button class="c-btn--white w-full">Join Monthly $20/mo</span></button>
+                  </div>
+                  <p class="text-sm">Learn more about becoming a <a class="underline" href="">Startupy Member</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="md:hidden">
+    {%- include 'nav-side-mobile.html' %}
+  </section>
+</main>
+
+{%- include 'footer.html' %}
+
+{%- endblock %}
+
+{% block scripts %}
+{%- endblock %}

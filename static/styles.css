@@ -659,6 +659,22 @@
   width: 100%;
 }
 
+.paywall--interna {
+  top: 130px;
+}  
+
+@media screen and (min-width: 768px) {
+  .paywall--interna {
+    position: absolute;
+    z-index: 1;
+    left: 29%;
+    right: 0;
+    bottom: 0;
+    top: 250px;
+    width: auto;
+  }  
+}
+
 .text-cut {
   white-space: nowrap;
   overflow: hidden;
