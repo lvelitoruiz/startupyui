@@ -659,6 +659,22 @@
   width: 100%;
 }
 
+.paywall--interna {
+  top: 130px;
+}  
+
+@media screen and (min-width: 768px) {
+  .paywall--interna {
+    position: absolute;
+    z-index: 1;
+    left: 29%;
+    right: 0;
+    bottom: 0;
+    top: 250px;
+    width: auto;
+  }  
+}
+
 .text-cut {
   white-space: nowrap;
   overflow: hidden;
@@ -1159,6 +1175,40 @@ select.convoBoxItems.opened {
   height: 52px;
   font-size: 10px;
   line-height: 12px;
+}
+
+.slider--two {
+  display: flex;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.slider--two__content {
+  align-items: flex-start;
+  display: flex;
+  overflow: auto;
+  padding-left: 30px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.slider--two__content .item {
+  margin-right: 40px;
+  min-width: 80%;
+  max-width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+  .slider--two__content .item {
+    margin-right: 40px;
+    min-width: 40%;
+    max-width: 40%;
+  }
+}
+
+.slider--two__content .item .title {
+  margin-top: -33px;
 }
 
 .circular-indicator {
@@ -1933,4 +1983,15 @@ div.modal-input {
   color: white;
   font-size: 36px;
   line-height: 1;
+}
+
+.initials-small {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.overflow-hidden {
+  overflow: hidden!important;
 }
