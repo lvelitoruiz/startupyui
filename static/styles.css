@@ -1995,3 +1995,7 @@ div.modal-input {
 .overflow-hidden {
   overflow: hidden!important;
 }
+
+.item.item-testimonial {
+  cursor: pointer;
+}
