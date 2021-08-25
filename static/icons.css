@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close-box:before {
+  content: "\e91a";
+}
+
 .icon-icon-book:before {
   content: "\e919";
 }
