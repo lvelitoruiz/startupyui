@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close:before {
+  content: "\e91b";
+}
+
 .icon-close-box:before {
   content: "\e91a";
 }
