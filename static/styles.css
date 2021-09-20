@@ -2035,3 +2035,18 @@ div.modal-input {
   position: fixed;
   z-index: 1;
 }
+
+.box-white--right {
+  bottom: 20px;
+  right: 10px;
+  left: initial;
+}
+
+.box-white--black {
+  background: #000000;
+  color: white;
+}
+
+.bkg--purple-transparent {
+  background: #f7e9fe;
+}
