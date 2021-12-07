@@ -424,6 +424,121 @@ window.onload = function () {
     interactive: true,
   });
 
+  tippy("#tooltip1", {
+    content: `
+    <div class="p-3">
+      <div class="flex justify-between w-100">
+        <p class="font-bold text-xs text-cut mb-2">Company name</p>
+      </div>
+      <a class="text-xs font-bold mr-8 mb-2" href="">
+        <i class="icon-link"></i>
+        <span>stephenopolusmc.com</span>
+      </a>
+      <p class="text-xs text-white pt-2">Company description. Lorem ipsum this is a long description that will occupy three rows or maybe four or five or six or seven and so it can come to look like this. We can introduce a max cap count.</p>
+      <p class="text-xs text-white pt-4">000 connections</p>
+      <div class="text-right">
+        <p class="text-xs text-white pt-4">Last updated 12 days ago</p>
+      </div>
+    </div>`,
+    allowHTML: true,
+    interactive: true,
+  });
+
+  tippy("#tooltip2", {
+    content: `
+    <div class="p-3">
+      <div class="flex justify-between items-center w-100 pb-2">
+        <p class="font-bold text-xs text-cut mb-2">Curator’s full name</p>
+        <span class="c-badge text-xs bkg--blue2 text-white">Curator</span>
+      </div>
+      <div class="flex mb-1 items-center flex-wrap"> 
+        <a class="text-xs font-bold mr-2 mb-2" href="">
+          <i class="icon-link"></i>
+          <span>curator.com</span>
+        </a>
+        <a class="text-xs font-bold mr-2 mb-2" href="">
+          <i class="icon-link"></i>
+          <span>@curator</span>
+        </a>
+        <a class="text-xs font-bold mr-2 mb-2" href="">
+          <i class="icon-link"></i>
+          <span>curator.com</span>
+        </a>
+      </div>
+      <p class="text-xs text-white pt-2">Curator’s bio. Most people don’t have bios so I think we can remove this. Or just apply conditional logic to display it when available.</p>
+      <p class="text-xs text-white pt-3 pb-1">Top curator in</p>
+      <div class="flex mb-1 items-center flex-wrap">
+        <span class="c-badge mb-2 mr-2 text-xs bkg--blue2 text-white">Future of Fandom</span>
+        <span class="c-badge mb-2 mr-2 text-xs bkg--blue2 text-white">Creator Monetization</span>
+        <span class="c-badge mb-2 mr-2 text-xs bkg--blue2 text-white">Infrastructure for Communities</span>
+      </div>
+      <div class="text-right">
+        <p class="text-xs text-white pt-4">Last updated 12 days ago</p>
+      </div>
+    </div>`,
+    allowHTML: true,
+    interactive: true,
+  });
+
+  tippy("#tooltip3", {
+    content: `
+    <div class="p-3">
+      <div class="flex justify-between items-center w-100 pb-2">
+        <p class="font-bold text-xs text-cut mb-2">Curator’s full name</p>
+
+      </div>
+      <div class="flex mb-1 items-center flex-wrap"> 
+        <a class="text-xs font-bold mr-2 mb-2" href="">
+          <i class="icon-link"></i>
+          <span>curator.com</span>
+        </a>
+        <a class="text-xs font-bold mr-2 mb-2" href="">
+          <i class="icon-link"></i>
+          <span>@curator</span>
+        </a>
+        <a class="text-xs font-bold mr-2 mb-2" href="">
+          <i class="icon-link"></i>
+          <span>curator.com</span>
+        </a>
+      </div>
+      <p class="text-xs text-white pt-2">Curator’s bio. Most people don’t have bios so I think we can remove this. Or just apply conditional logic to display it when available.</p>
+      <p class="text-xs text-white pt-3 pb-1">Top curator in</p>
+      <div class="flex mb-1 items-center flex-wrap">
+        <span class="mb-1 mr-1 text-xs c-badge ml-0 pl-0 text-white">Design</span>
+        <span class="c-badge mb-1 mr-1 text-xs ml-0 pl-0 text-white">Technology</span>
+        <span class="mb-1 mr-1 text-xs c-badge ml-0 pl-0 text-white">Founder</span>
+        <span class="mb-1 mr-1 text-xs c-badge ml-0 pl-0 text-white">Design</span>
+        <span class="c-badge mb-1 mr-1 text-xs ml-0 pl-0 text-white">Technology</span>
+        <span class="mb-1 mr-1 text-xs c-badge ml-0 pl-0 text-white">Founder</span>
+      </div>
+      <div class="text-right">
+        <p class="text-xs text-white pt-4">Last updated 12 days ago</p>
+      </div>
+    </div>`,
+    allowHTML: true,
+    interactive: true,
+  });
+
+  tippy("#tooltip4", {
+    content: `
+    <div class="p-3">
+      <div class="flex justify-between items-center w-100 pb-2">
+        <p class="font-bold text-xs text-cut mb-2">Topic</p>
+      </div>
+      <p class="text-xs text-white pt-2">000 connections</p>
+      <div class="flex mb-1 items-center flex-wrap">
+        <span class="mb-1 mr-1 text-xs c-badge ml-0 pl-0 text-white">00 content</span>
+        <span class="c-badge mb-1 mr-1 text-xs ml-0 pl-0 text-white">00 companies</span>
+        <span class="mb-1 mr-1 text-xs c-badge ml-0 pl-0 text-white">00 related topics</span>
+      </div>
+      <div class="text-right">
+        <p class="text-xs text-white pt-4">Last updated 12 days ago</p>
+      </div>
+    </div>`,
+    allowHTML: true,
+    interactive: true,
+  });
+
   if (document.querySelector("#menuSideElement")) {
     let element = document.querySelector("#menuSideElement");
     let element2 = document.querySelector("#sideMenuAlt");
